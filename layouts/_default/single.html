@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- *** LEFT COLUMN ***
+      _________________________________________________________ -->
+
+                    <div class="col-md-9" id="blog-post">
+
+                        <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}By <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format "January 2, 2006" }}</p>
+                        <p class="lead">{{ .Summary }}</p>
+
+                        <div id="post-content">
+                          {{ .Content }}
+                        </div>
+                        <!-- /#post-content -->
+                        {{ if .Site.DisqusShortname }}
+                        <div id="comments">
+                          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                            {{ template "_internal/disqus.html" . }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                    </div>
+                    <!-- /#blog-post -->
+
+                    <!-- *** LEFT COLUMN END *** -->
+
+                    <!-- *** RIGHT COLUMN *** -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS *** -->
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Text widget</h3>
+                            </div>
+
+                            <div class="panel-body text-widget">
+                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Search</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <form role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+
+        <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+    </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Categories</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="blog.html">Webdesign</a>
+                                    </li>
+                                    <li class="active"><a href="blog.html">Tutorials</a>
+                                    </li>
+                                    <li><a href="blog.html">Print</a>
+                                    </li>
+                                    <li><a href="blog.html">Our tips</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel sidebar-menu">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Tags</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <ul class="tag-cloud">
+                                    <li><a href="#"><i class="fa fa-tags"></i> html5</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> css3</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> jquery</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> ajax</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> php</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> responsive</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> visio</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-tags"></i> bootstrap</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+    </script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/front.js"></script>
+
+    <!-- owl carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+  </body>
+</html>

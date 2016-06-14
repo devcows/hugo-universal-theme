@@ -1,0 +1,58 @@
+<section class="bar background-white no-mb">
+    <div class="container">
+
+        <div class="col-md-12">
+            <div class="heading text-center">
+                <h2>From our blog</h2>
+            </div>
+
+            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                est. Mauris placerat eleifend leo. <span class="accent">Check our blog!</span>
+            </p>
+
+            <!-- *** BLOG HOMEPAGE *** -->
+
+            <div class="row">
+
+                {{ $posts := .Paginate (where .Data.Pages "Type" "post") }}
+                {{ range first 4 $posts.Pages }}
+                <div class="col-md-3 col-sm-6">
+                    <div class="box-image-text blog">
+                        <div class="top">
+                            <div class="image">
+                                <img src="img/portfolio-4.jpg" alt="" class="img-responsive">
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
+                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            {{ if .Params.author }}
+                            <p class="author-category">By <a href="#">{{ .Params.author }}</a> on {{ .Date.Format "January 2, 2006" }}
+                            {{ end }}
+                            </p>
+                            <p class="intro">{{ .Summary }}</p>
+                            <p class="read-more">
+                              <a href="{{ .Permalink }}" class="btn btn-template-main">Continue reading</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.box-image-text -->
+
+                </div>
+                {{ end }}
+
+            </div>
+            <!-- /.row -->
+
+            <!-- *** BLOG HOMEPAGE END *** -->
+
+        </div>
+    </div>
+    <!-- /.container -->
+</section>
+<!-- /.bar -->
