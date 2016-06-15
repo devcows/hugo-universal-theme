@@ -25,7 +25,6 @@
                     <div class="col-md-9" id="blog-post">
 
                         <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}By <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format "January 2, 2006" }}</p>
-                        <p class="lead">{{ .Summary }}</p>
 
                         <div id="post-content">
                           {{ .Content }}
@@ -50,9 +49,7 @@
 
                         <!-- *** MENUS AND WIDGETS *** -->
 
-                        {{ partial "categories.html" }}
-
-                        {{ partial "tags.html" }}
+                        {{ partial "sidebar.html" . }}
 
                         <!-- *** MENUS AND FILTERS END *** -->
 
