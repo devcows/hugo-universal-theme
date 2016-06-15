@@ -34,9 +34,7 @@
             <h4>Blog</h4>
 
             <div class="blog-entries">
-              {{ $posts := .Paginate (where .Data.Pages "Type" "post") }}
-              {{ range first 3 $posts.Pages }}
-
+                {{ range first 3 (where .Site.Pages "Type" "post") }}
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
                         <a href="#">
@@ -49,7 +47,7 @@
                         <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
                     </div>
                 </div>
-              {{ end }}
+                {{ end }}
             </div>
 
             <hr class="hidden-md hidden-lg">
