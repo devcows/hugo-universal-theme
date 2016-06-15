@@ -27,11 +27,13 @@
                         <section class="post">
                             <div class="row">
                                 <div class="col-md-4">
+                                  {{ if .Params.image }}
                                     <div class="image">
                                         <a href="{{ .Permalink }}">
-                                            <img src="{{ .Site.BaseURL }}img/blog-medium.jpg" class="img-responsive" alt="Example blog post alt">
+                                            <img src="{{ .Site.BaseURL}}{{ .Params.image }}" class="img-responsive" alt="">
                                         </a>
                                     </div>
+                                  {{ end }}
                                 </div>
                                 <div class="col-md-8">
                                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -39,8 +41,7 @@
                                         <p class="author-category">{{ if .Params.author }}By <a href="#">{{ .Params.author }}</a> {{ end }}in <a href="blog.html">Webdesign</a>
                                         </p>
                                         <p class="date-comments">
-                                            <a href="blog-post.html"><i class="fa fa-calendar-o"></i> {{ .Date.Format "January 2, 2006" }}</a>
-                                            <a href="blog-post.html"><i class="fa fa-comment-o"></i> 8 Comments</a>
+                                            <a href="{{ .Permalink }}"><i class="fa fa-calendar-o"></i> {{ .Date.Format "January 2, 2006" }}</a>
                                         </p>
                                     </div>
                                     <p class="intro">{{ .Summary }}</p>

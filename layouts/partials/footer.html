@@ -34,38 +34,22 @@
             <h4>Blog</h4>
 
             <div class="blog-entries">
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="#">
-                            <img class="img-responsive" src="{{ .Site.BaseURL }}img/detailsquare.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="#">Blog post name</a></h5>
-                    </div>
-                </div>
+              {{ $posts := .Paginate (where .Data.Pages "Type" "post") }}
+              {{ range first 3 $posts.Pages }}
 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
                         <a href="#">
-                            <img class="img-responsive" src="{{ .Site.BaseURL }}img/detailsquare.jpg" alt="">
+                          {{ if .Params.image }}
+                            <img src="{{ .Site.BaseURL}}{{ .Params.image }}" alt="" class="img-responsive">
+                          {{ end }}
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="#">Blog post name</a></h5>
+                        <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
                     </div>
                 </div>
-
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="#">
-                            <img class="img-responsive" src="{{ .Site.BaseURL }}img/detailsquare.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="#">Very very long blog post name</a></h5>
-                    </div>
-                </div>
+              {{ end }}
             </div>
 
             <hr class="hidden-md hidden-lg">
