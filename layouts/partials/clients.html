@@ -1,3 +1,5 @@
+{{ if isset .Site.Params "clients" }}
+{{ if gt (len .Site.Params.clients) 0 }}
 <section class="bar background-gray no-mb">
     <div class="container">
         <div class="row">
@@ -5,26 +7,12 @@
                 <div class="heading text-center">
                     <h2>Our clients</h2>
                 </div>
-
                 <ul class="owl-carousel customers">
+                    {{ range .Site.Params.clients }}
                     <li class="item">
-                        <img src="img/customer-1.png" alt="" class="img-responsive">
+                        <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive">
                     </li>
-                    <li class="item">
-                        <img src="img/customer-2.png" alt="" class="img-responsive">
-                    </li>
-                    <li class="item">
-                        <img src="img/customer-3.png" alt="" class="img-responsive">
-                    </li>
-                    <li class="item">
-                        <img src="img/customer-4.png" alt="" class="img-responsive">
-                    </li>
-                    <li class="item">
-                        <img src="img/customer-5.png" alt="" class="img-responsive">
-                    </li>
-                    <li class="item">
-                        <img src="img/customer-6.png" alt="" class="img-responsive">
-                    </li>
+                    {{ end }}
                 </ul>
                 <!-- /.owl-carousel -->
             </div>
@@ -32,3 +20,5 @@
         </div>
     </div>
 </section>
+{{ end }}
+{{ end }}

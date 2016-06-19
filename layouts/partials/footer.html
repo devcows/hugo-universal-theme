@@ -1,6 +1,6 @@
 <footer id="footer">
     <div class="container">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
             <h4>About us</h4>
 
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -27,18 +27,18 @@
             <hr class="hidden-md hidden-lg hidden-sm">
 
         </div>
-        <!-- /.col-md-3 -->
+        <!-- /.col-md-4 -->
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
 
-            <h4>Blog</h4>
+            <h4>Recent posts</h4>
 
             <div class="blog-entries">
                 {{ range first 3 (where .Site.Pages "Type" "post") }}
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
                         <a href="#">
-                          {{ if .Params.image }}
+                          {{ if isset .Params "image" }}
                             <img src="{{ .Site.BaseURL}}{{ .Params.image }}" alt="" class="img-responsive">
                           {{ end }}
                         </a>
@@ -53,9 +53,9 @@
             <hr class="hidden-md hidden-lg">
 
         </div>
-        <!-- /.col-md-3 -->
+        <!-- /.col-md-4 -->
 
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-4 col-sm-6">
 
             <h4>Contact</h4>
 
@@ -73,49 +73,8 @@
             <hr class="hidden-md hidden-lg hidden-sm">
 
         </div>
-        <!-- /.col-md-3 -->
+        <!-- /.col-md-4 -->
 
-
-
-        <div class="col-md-3 col-sm-6">
-
-            <h4>Photostream</h4>
-
-            <div class="photostream">
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare2.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare3.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare3.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare2.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="{{ .Site.BaseURL }}img/detailsquare.jpg" class="img-responsive" alt="#">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.col-md-3 -->
     </div>
     <!-- /.container -->
 </footer>
@@ -131,10 +90,11 @@ _________________________________________________________ -->
     <div class="container">
         <div class="col-md-12">
             <p class="pull-left">&copy; 2015. Your company / name goes here</p>
-            <p class="pull-right">Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>
+            <p class="pull-right">
+              Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
+              Ported by <a href="http://devcows.com">DevCows</a>
                 <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
             </p>
-
         </div>
     </div>
 </div>
