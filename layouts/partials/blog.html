@@ -18,10 +18,10 @@
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
-                        {{ if .Params.image }}
+                        {{ if .Params.banner }}
                           <div class="top">
                               <div class="image">
-                                  <img src="{{ .Site.BaseURL}}{{ .Params.image }}" alt="" class="img-responsive">
+                                  <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" alt="" class="img-responsive">
                               </div>
 
                               <div class="bg"></div>

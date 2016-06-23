@@ -27,10 +27,10 @@
                         <section class="post">
                             <div class="row">
                                 <div class="col-md-4">
-                                  {{ if .Params.image }}
+                                  {{ if .Params.banner }}
                                     <div class="image">
                                         <a href="{{ .Permalink }}">
-                                            <img src="{{ .Site.BaseURL}}{{ .Params.image }}" class="img-responsive" alt="">
+                                            <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
                                         </a>
                                     </div>
                                   {{ end }}
