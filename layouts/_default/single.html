@@ -32,9 +32,7 @@
                         <!-- /#post-content -->
                         {{ if .Site.DisqusShortname }}
                         <div id="comments">
-                          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                             {{ template "_internal/disqus.html" . }}
-                          </div>
                         </div>
                         {{ end }}
 
@@ -58,7 +56,6 @@
 
                     <!-- *** RIGHT COLUMN END *** -->
 
-
                 </div>
                 <!-- /.row -->
 
@@ -72,21 +69,7 @@
     </div>
     <!-- /#all -->
 
-    <!-- #### JAVASCRIPT FILES ### -->
+    {{ partial "scripts.html" . }}
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
-    </script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <script src="js/jquery.cookie.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/jquery.parallax-1.1.3.js"></script>
-    <script src="js/front.js"></script>
-
-    <!-- owl carousel -->
-    <script src="js/owl.carousel.min.js"></script>
   </body>
 </html>

@@ -8,7 +8,11 @@
                     <h2>Testimonials</h2>
                 </div>
 
-                <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
+                {{ if isset .Site.Params "testimonials_intro" }}
+                <p class="lead">
+                  {{ .Site.Params.testimonials_intro }}
+                </p>
+                {{ end }}
 
                 <!-- *** TESTIMONIALS CAROUSEL *** -->
 

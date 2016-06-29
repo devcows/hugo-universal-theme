@@ -6,9 +6,11 @@
                 <h2>From our blog</h2>
             </div>
 
-            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-                est. Mauris placerat eleifend leo. <a href="#" class="accent">Check our blog!</span>
+            {{ if isset .Site.Params "blog_intro" }}
+            <p class="lead">
+              {{ .Site.Params.blog_intro }}
             </p>
+            {{ end }}
 
             <!-- *** BLOG HOMEPAGE *** -->
 
@@ -18,7 +20,7 @@
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
-                        {{ if .Params.banner }}
+                        {{ if isset .Params "banner" }}
                           <div class="top">
                               <div class="image">
                                   <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" alt="" class="img-responsive">
@@ -35,7 +37,7 @@
 
                         <div class="content">
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                            {{ if .Params.author }}
+                            {{ if isset .Params "author" }}
                               <p class="author-category">By <a href="#">{{ .Params.author }}</a> on {{ .Date.Format "January 2, 2006" }}
                             {{ end }}
                             </p>
