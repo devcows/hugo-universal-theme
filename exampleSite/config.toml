@@ -5,20 +5,44 @@ title = "Universal"
 disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
+
 # Define the number of posts per page
 paginate = 10
 theme = "universal"
 
 [params]
     author = "DevCows"
-    # bio = "Blogger - Programmer - Gopher"
-    # location = "Earth"
-    # site_description = ""
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "info@devcows.com"
+
+    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
     copyright  = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
-    # avatar = "css/images/avatar.png"
-    # Format dates with Go's time formatting
     date_format = "2006-01-02"
-    logo = "images/logo.png"
+    logo = "img/logo.png"
+    address = """<p><strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      """
+    testimonials_intro = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    blog_intro = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
 
 [[params.menu]]
     name = "Home"
@@ -30,6 +54,16 @@ theme = "universal"
     url  = "/post"
     weight = 2
 
+[[params.menu]]
+    name = "FAQ"
+    url  = "/faq"
+    weight = 3
+
+[[params.menu]]
+    name = "Contact"
+    url  = "/contact"
+    weight = 4
+
 [social]
     github = "devcows"
 
@@ -37,11 +71,19 @@ theme = "universal"
 [params.widgets]
     categories = true
     tags = true
+    search = true
+
+[params.see_more]
+    icon = "fa fa-file-code-o"
+    title = "Do you want to see less?"
+    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+    link_url = "#"
+    link_text = "Check other homepages"
 
 [[params.carousel]]
     title = "Multipurpose responsive theme"
     description = "<p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>"
-    image = "images/carousel/template-homepage.png"
+    image = "img/carousel/template-homepage.png"
 
 [[params.carousel]]
     title = "46 HTML pages full of features"
@@ -51,7 +93,7 @@ theme = "universal"
                        <li>Google maps, Forms, Megamenu, CSS3 Animations and much more</li>
                        <li>+ 11 extra pages showing template features</li>
                      </ul>"""
-    image = "images/carousel/template-mac.png"
+    image = "img/carousel/template-mac.png"
 
 [[params.carousel]]
     title = "Design"
@@ -61,7 +103,7 @@ theme = "universal"
                         <li>Easily readable Roboto font and awesome icons</li>
                         <li>7 preprepared colour variations</li>
                      </ul>"""
-    image = "images/carousel/template-easy-customize.png"
+    image = "img/carousel/template-easy-customize.png"
 
 [[params.carousel]]
     title = "Easy to customize"
@@ -69,7 +111,7 @@ theme = "universal"
                         <li>7 preprepared colour variations.</li>
                         <li>Easily to change fonts</li>
                      </ul>"""
-    image = "images/carousel/template-easy-code.png"
+    image = "img/carousel/template-easy-code.png"
 
 [[params.features]]
     name = "Webdesign"
@@ -79,58 +121,78 @@ theme = "universal"
 [[params.features]]
     name = "Print"
     icon = "fa fa-print"
-    description = "Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an."
+    description = "Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil."
+
+[[params.features]]
+    name = "SEO and SEM"
+    icon = "fa fa-globe"
+    description = "Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect."
+
+[[params.features]]
+    name = "Consulting"
+    icon = "fa fa-lightbulb-o"
+    description = "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
+
+[[params.features]]
+    name = "Email Marketing"
+    icon = "fa fa-envelope-o"
+    description = "Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil."
+
+[[params.features]]
+    name = "UI/UX"
+    icon = "fa fa-user"
+    description = "Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect."
 
 [[params.testimonials]]
     text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
     name = "John McIntyre"
     position = "CEO, TransTech"
-    avatar = "images/testimonials/person-1.jpg"
+    avatar = "img/testimonials/person-1.jpg"
 
 [[params.testimonials]]
     text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
     name = "John McIntyre"
     position = "CEO, TransTech"
-    avatar = "images/testimonials/person-1.jpg"
+    avatar = "img/testimonials/person-2.jpg"
 
 [[params.testimonials]]
     text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
     name = "John McIntyre"
     position = "CEO, TransTech"
-    avatar = "images/testimonials/person-1.jpg"
+    avatar = "img/testimonials/person-3.png"
 
 [[params.testimonials]]
     text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
     name = "John McIntyre"
     position = "CEO, TransTech"
-    avatar = "images/testimonials/person-1.jpg"
+    avatar = "img/testimonials/person-4.jpg"
 
 [[params.testimonials]]
     text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
     name = "John McIntyre"
     position = "CEO, TransTech"
-    avatar = "images/clients/person-1.jpg"
+    avatar = "img/testimonials/person-1.jpg"
 
 [[params.clients]]
     name = "customer-1"
-    image = "images/clients/customer-1.png"
+    image = "img/clients/customer-1.png"
 
 [[params.clients]]
     name = "customer-2"
-    image = "images/clients/customer-2.png"
+    image = "img/clients/customer-2.png"
 
 [[params.clients]]
     name = "customer-3"
-    image = "images/clients/customer-3.png"
+    image = "img/clients/customer-3.png"
 
 [[params.clients]]
     name = "customer-4"
-    image = "images/clients/customer-4.png"
+    image = "img/clients/customer-4.png"
 
 [[params.clients]]
     name = "customer-5"
-    image = "images/clients/customer-5.png"
+    image = "img/clients/customer-5.png"
 
 [[params.clients]]
     name = "customer-6"
-    image = "images/clients/customer-6.png"
+    image = "img/clients/customer-6.png"
