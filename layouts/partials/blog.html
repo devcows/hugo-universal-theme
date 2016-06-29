@@ -1,16 +1,16 @@
+{{ if isset .Site.Params "recent_posts" }}
+{{ if .Site.Params.recent_posts.enable }}
 <section class="bar background-white no-mb">
     <div class="container">
 
         <div class="col-md-12">
             <div class="heading text-center">
-                <h2>From our blog</h2>
+                <h2>{{ .Site.Params.recent_posts.title }}</h2>
             </div>
 
-            {{ if isset .Site.Params "blog_intro" }}
             <p class="lead">
-              {{ .Site.Params.blog_intro }}
+              {{ .Site.Params.recent_posts.subtitle }}
             </p>
-            {{ end }}
 
             <!-- *** BLOG HOMEPAGE *** -->
 
@@ -62,3 +62,5 @@
     <!-- /.container -->
 </section>
 <!-- /.bar -->
+{{ end }}
+{{ end }}

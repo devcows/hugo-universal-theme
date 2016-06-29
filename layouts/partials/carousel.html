@@ -1,11 +1,12 @@
 {{ if isset .Site.Params "carousel" }}
-{{ if gt (len .Site.Params.carousel) 0 }}
+{{ if .Site.Params.carousel.enable }}
+{{ if gt (len .Site.Data.carousel) 0 }}
 <section>
     <div class="home-carousel">
         <div class="dark-mask"></div>
         <div class="container">
             <div class="homepage owl-carousel">
-                {{ range .Site.Params.carousel }}
+                {{ range .Site.Data.carousel }}
                 <div class="item">
                     <div class="row">
                         <div class="col-sm-5 right">
@@ -23,5 +24,6 @@
         </div>
     </div>
 </section>
+{{ end }}
 {{ end }}
 {{ end }}

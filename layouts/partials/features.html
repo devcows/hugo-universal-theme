@@ -1,10 +1,11 @@
 {{ if isset .Site.Params "features" }}
-{{ if gt (len .Site.Params.features) 0 }}
+{{ if .Site.Params.features.enable }}
+{{ if gt (len .Site.Data.features) 0 }}
 <section class="bar background-white">
     <div class="container">
         <div class="col-md-12">
             <div class="row">
-                {{ range .Site.Params.features }}
+                {{ range .Site.Data.features }}
                 <div class="col-md-4">
                     <div class="box-simple">
                         <div class="icon">
@@ -19,5 +20,6 @@
         </div>
     </div>
 </section>
+{{ end }}
 {{ end }}
 {{ end }}

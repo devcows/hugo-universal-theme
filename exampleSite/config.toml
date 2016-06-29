@@ -29,7 +29,7 @@ theme = "universal"
     email = "info@devcows.com"
 
     about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright  = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
     date_format = "2006-01-02"
     logo = "img/logo.png"
     address = """<p><strong>Universal Ltd.</strong>
@@ -41,8 +41,6 @@ theme = "universal"
         <strong>Great Britain</strong>
       </p>
       """
-    testimonials_intro = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
-    blog_intro = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
 
 [[params.menu]]
     name = "Home"
@@ -73,126 +71,43 @@ theme = "universal"
     tags = true
     search = true
 
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Testimonials"
+    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
 [params.see_more]
+    enable = true
     icon = "fa fa-file-code-o"
     title = "Do you want to see less?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "#"
     link_text = "Check other homepages"
 
-[[params.carousel]]
-    title = "Multipurpose responsive theme"
-    description = "<p>Business. Corporate. Agency.<br>Portfolio. Blog. E-commerce.</p>"
-    image = "img/carousel/template-homepage.png"
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
 
-[[params.carousel]]
-    title = "46 HTML pages full of features"
-    description = """<ul class="list-style-none">
-                       <li>Sliders and carousels</li>
-                       <li>4 Header variations</li>
-                       <li>Google maps, Forms, Megamenu, CSS3 Animations and much more</li>
-                       <li>+ 11 extra pages showing template features</li>
-                     </ul>"""
-    image = "img/carousel/template-mac.png"
-
-[[params.carousel]]
-    title = "Design"
-    description = """<ul class="list-style-none">
-                        <li>Clean and elegant design</li>
-                        <li>Full width and boxed mode</li>
-                        <li>Easily readable Roboto font and awesome icons</li>
-                        <li>7 preprepared colour variations</li>
-                     </ul>"""
-    image = "img/carousel/template-easy-customize.png"
-
-[[params.carousel]]
-    title = "Easy to customize"
-    description = """<ul class="list-style-none">
-                        <li>7 preprepared colour variations.</li>
-                        <li>Easily to change fonts</li>
-                     </ul>"""
-    image = "img/carousel/template-easy-code.png"
-
-[[params.features]]
-    name = "Webdesign"
-    icon = "fa fa-desktop"
-    description = "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
-
-[[params.features]]
-    name = "Print"
-    icon = "fa fa-print"
-    description = "Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil."
-
-[[params.features]]
-    name = "SEO and SEM"
-    icon = "fa fa-globe"
-    description = "Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect."
-
-[[params.features]]
-    name = "Consulting"
-    icon = "fa fa-lightbulb-o"
-    description = "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
-
-[[params.features]]
-    name = "Email Marketing"
-    icon = "fa fa-envelope-o"
-    description = "Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil."
-
-[[params.features]]
-    name = "UI/UX"
-    icon = "fa fa-user"
-    description = "Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect."
-
-[[params.testimonials]]
-    text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
-    name = "John McIntyre"
-    position = "CEO, TransTech"
-    avatar = "img/testimonials/person-1.jpg"
-
-[[params.testimonials]]
-    text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
-    name = "John McIntyre"
-    position = "CEO, TransTech"
-    avatar = "img/testimonials/person-2.jpg"
-
-[[params.testimonials]]
-    text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
-    name = "John McIntyre"
-    position = "CEO, TransTech"
-    avatar = "img/testimonials/person-3.png"
-
-[[params.testimonials]]
-    text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
-    name = "John McIntyre"
-    position = "CEO, TransTech"
-    avatar = "img/testimonials/person-4.jpg"
-
-[[params.testimonials]]
-    text = "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
-    name = "John McIntyre"
-    position = "CEO, TransTech"
-    avatar = "img/testimonials/person-1.jpg"
-
-[[params.clients]]
-    name = "customer-1"
-    image = "img/clients/customer-1.png"
-
-[[params.clients]]
-    name = "customer-2"
-    image = "img/clients/customer-2.png"
-
-[[params.clients]]
-    name = "customer-3"
-    image = "img/clients/customer-3.png"
-
-[[params.clients]]
-    name = "customer-4"
-    image = "img/clients/customer-4.png"
-
-[[params.clients]]
-    name = "customer-5"
-    image = "img/clients/customer-5.png"
-
-[[params.clients]]
-    name = "customer-6"
-    image = "img/clients/customer-6.png"
+[params.recent_posts]
+    enable = true
+    title = "From our blog"
+    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."

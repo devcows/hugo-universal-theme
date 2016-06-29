@@ -1,23 +1,22 @@
 {{ if isset .Site.Params "testimonials" }}
-{{ if gt (len .Site.Params.testimonials) 0 }}
+{{ if .Site.Params.testimonials.enable }}
+{{ if gt (len .Site.Data.testimonials) 0 }}
 <section class="bar background-pentagon no-mb">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="heading text-center">
-                    <h2>Testimonials</h2>
+                    <h2>{{ .Site.Params.testimonials.title }}</h2>
                 </div>
 
-                {{ if isset .Site.Params "testimonials_intro" }}
                 <p class="lead">
-                  {{ .Site.Params.testimonials_intro }}
+                  {{ .Site.Params.testimonials.subtitle }}
                 </p>
-                {{ end }}
 
                 <!-- *** TESTIMONIALS CAROUSEL *** -->
 
                 <ul class="owl-carousel testimonials same-height-row">
-                    {{ range .Site.Params.testimonials }}
+                    {{ range .Site.Data.testimonials }}
                     <li class="item">
                         <div class="testimonial same-height-always">
                             <div class="text">
@@ -45,5 +44,6 @@
     </div>
 </section>
 <!-- /.bar -->
+{{ end }}
 {{ end }}
 {{ end }}
