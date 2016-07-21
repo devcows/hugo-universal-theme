@@ -65,6 +65,12 @@ theme = "universal"
 [social]
     github = "devcows"
 
+[params.contact]
+    map = true
+    mapLat = 41.1333037
+    mapLng = 1.2467193
+    mapTitle = "DevCows"
+
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     categories = true

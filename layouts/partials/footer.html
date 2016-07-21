@@ -21,7 +21,7 @@
                 {{ range first 3 (where .Site.Pages "Type" "post") }}
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="#">
+                        <a href="{{ .Permalink }}">
                           {{ if isset .Params "banner" }}
                             <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" alt="" class="img-responsive">
                           {{ end }}
@@ -73,7 +73,7 @@ _________________________________________________________ -->
             {{ end }}
             <p class="pull-right">
               Template by <a href="http://bootstrapious.com/free-templates">Bootstrapious</a>.
-              Ported by <a href="http://devcows.com">DevCows</a>
+              Ported by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>
                 <!-- Not removing these links is part of the licence conditions of the template. Thanks for understanding :) -->
             </p>
         </div>
