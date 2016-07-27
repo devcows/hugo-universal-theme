@@ -20,20 +20,21 @@
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
-                        {{ if isset .Params "banner" }}
-                          <div class="top">
-                              <div class="image">
-                                  <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" alt="" class="img-responsive">
-                              </div>
-
-                              <div class="bg"></div>
-                              <div class="text">
-                                  <p class="buttons">
-                                      <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                  </p>
-                              </div>
-                          </div>
-                        {{ end }}
+                        <div class="top">
+                            <div class="image">
+                                {{ if isset .Params "banner" }}
+                                <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="" >
+                                {{ else }}
+                                <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                {{ end }}
+                            </div>
+                            <div class="bg"></div>
+                            <div class="text">
+                                <p class="buttons">
+                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
+                                </p>
+                            </div>
+                        </div>
 
                         <div class="content">
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>

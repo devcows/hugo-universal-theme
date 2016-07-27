@@ -27,13 +27,15 @@
                         <section class="post">
                             <div class="row">
                                 <div class="col-md-4">
-                                  {{ if .Params.banner }}
-                                    <div class="image">
-                                        <a href="{{ .Permalink }}">
-                                            <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
-                                        </a>
-                                    </div>
-                                  {{ end }}
+                                  <div class="image">
+                                      <a href="{{ .Permalink }}">
+                                          {{ if .Params.banner }}
+                                          <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
+                                          {{ else }}
+                                          <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                          {{ end }}
+                                      </a>
+                                  </div>
                                 </div>
                                 <div class="col-md-8">
                                     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>

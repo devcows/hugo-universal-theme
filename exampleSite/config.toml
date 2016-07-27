@@ -94,7 +94,7 @@ theme = "universal"
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
-    title = "Do you want to see less?"
+    title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "#"
     link_text = "Check other homepages"
