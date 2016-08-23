@@ -26,7 +26,7 @@ theme = "universal"
 		# - you're done. Happy mailing!
 		#
 		# Enable the contact form by entering your Formspree.io email
-		email = "info@devcows.com"
+		email = "your@email.com"
 
 		about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
 		copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
