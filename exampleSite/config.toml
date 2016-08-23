@@ -1,4 +1,4 @@
-baseurl = "http://www.yourdomain.com/"
+baseurl = "http://themes.gohugo.io/theme/hugo-universal-theme/"
 languageCode = "en-us"
 title = "Universal"
 # Enable comments by entering your Disqus shortname
@@ -11,109 +11,109 @@ paginate = 10
 theme = "universal"
 
 [params]
-    author = "DevCows"
+		author = "DevCows"
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io email
-    email = "info@devcows.com"
+		# Since this template is static, the contact form uses www.formspree.io as a
+		# proxy. The form makes a POST request to their servers to send the actual
+		# email. Visitors can send up to a 1000 emails each month for free.
+		#
+		# What you need to do for the setup?
+		#
+		# - set your email address under 'email' below
+		# - upload the generated site to your server
+		# - send a dummy email yourself to confirm your account
+		# - click the confirm link in the email from www.formspree.io
+		# - you're done. Happy mailing!
+		#
+		# Enable the contact form by entering your Formspree.io email
+		email = "info@devcows.com"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
-    date_format = "2006-01-02"
-    logo = "img/logo.png"
-    address = """<p><strong>Universal Ltd.</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
-        <br>45Y 73J
-        <br>England
-        <br>
-        <strong>Great Britain</strong>
-      </p>
-      """
-
-[[params.menu]]
-    name = "Home"
-    url  = "/"
-    weight = 1
+		about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+		copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+		date_format = "2006-01-02"
+		logo = "img/logo.png"
+		address = """<p><strong>Universal Ltd.</strong>
+				<br>13/25 New Avenue
+				<br>Newtown upon River
+				<br>45Y 73J
+				<br>England
+				<br>
+				<strong>Great Britain</strong>
+			</p>
+			"""
 
 [[params.menu]]
-    name = "Blog"
-    url  = "/post"
-    weight = 2
+		name = "Home"
+		url  = "/"
+		weight = 1
 
 [[params.menu]]
-    name = "FAQ"
-    url  = "/faq"
-    weight = 3
+		name = "Blog"
+		url  = "/post"
+		weight = 2
 
 [[params.menu]]
-    name = "Contact"
-    url  = "/contact"
-    weight = 4
+		name = "FAQ"
+		url  = "/faq"
+		weight = 3
+
+[[params.menu]]
+		name = "Contact"
+		url  = "/contact"
+		weight = 4
 
 [social]
-    github = "devcows"
+		github = "devcows"
 
 [params.contact]
-    map = true
-    mapLat = 41.1333037
-    mapLng = 1.2467193
-    mapTitle = "DevCows"
+		map = true
+		mapLat = 41.1333037
+		mapLng = 1.2467193
+		mapTitle = "DevCows"
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
-    categories = true
-    tags = true
-    search = true
+		categories = true
+		tags = true
+		search = true
 
 [params.carousel]
-    enable = true
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
+		enable = true
+		# All carousel items are defined in their own files. You can find example items
+		# at 'exampleSite/data/carousel'.
+		# For more informtion take a look at the README.
 
 [params.features]
-    enable = true
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
+		enable = true
+		# All features are defined in their own files. You can find example items
+		# at 'exampleSite/data/features'.
+		# For more informtion take a look at the README.
 
 [params.testimonials]
-    enable = true
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+		enable = true
+		# All testimonials are defined in their own files. You can find example items
+		# at 'exampleSite/data/testimonials'.
+		# For more informtion take a look at the README.
+		title = "Testimonials"
+		subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
 [params.see_more]
-    enable = true
-    icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+		enable = true
+		icon = "fa fa-file-code-o"
+		title = "Do you want to see more?"
+		subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+		link_url = "#"
+		link_text = "Check other homepages"
 
 [params.clients]
-    enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
+		enable = true
+		# All clients are defined in their own files. You can find example items
+		# at 'exampleSite/data/clients'.
+		# For more informtion take a look at the README.
+		title = "Our Clients"
+		subtitle = ""
 
 [params.recent_posts]
-    enable = true
-    title = "From our blog"
-    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+		enable = true
+		title = "From our blog"
+		subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
