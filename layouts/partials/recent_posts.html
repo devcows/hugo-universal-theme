@@ -16,7 +16,7 @@
 
             <div class="row">
 
-                {{ $posts := .Paginate (where .Data.Pages "Type" "post") }}
+                {{ $posts := .Paginate (where .Data.Pages "Type" "blog") }}
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
@@ -38,9 +38,11 @@
 
                         <div class="content">
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                            {{ if isset .Params "author" }}
-                              <p class="author-category">By <a href="#">{{ .Params.author }}</a> on {{ .Date.Format "January 2, 2006" }}
+                            <p class="author-category">
+                            {{ with .Params.author }}
+                            By <a href="#">{{ . }}</a>
                             {{ end }}
+                            on {{ .Date.Format "January 2, 2006" }}
                             </p>
                             <p class="intro">{{ .Summary }}</p>
                             <p class="read-more">

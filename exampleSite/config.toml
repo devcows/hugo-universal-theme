@@ -1,6 +1,7 @@
-baseurl = "http://themes.gohugo.io/theme/hugo-universal-theme/"
-languageCode = "en-us"
+baseurl = "http://http://replace-this-with-your-hugo-site.com"
 title = "Universal"
+theme = "hugo-universal-theme"
+languageCode = "en-us"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
@@ -8,9 +9,9 @@ googleAnalytics = ""
 
 # Define the number of posts per page
 paginate = 10
-theme = "hugo-universal-theme"
 
 [params]
+    viewMorePostLink     = "/blog/"
     author = "DevCows"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -42,6 +43,9 @@ theme = "hugo-universal-theme"
       </p>
       """
 
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
 [[params.menu]]
     name = "Home"
     url  = "/"
@@ -49,27 +53,18 @@ theme = "hugo-universal-theme"
 
 [[params.menu]]
     name = "Blog"
-    url  = "/post"
+    url  = "/blog/"
     weight = 2
 
 [[params.menu]]
     name = "FAQ"
-    url  = "/faq"
+    url  = "/faq/"
     weight = 3
 
 [[params.menu]]
     name = "Contact"
-    url  = "/contact"
+    url  = "/contact/"
     weight = 4
-
-[social]
-    github = "devcows"
-
-[params.contact]
-    map = true
-    mapLat = 41.1333037
-    mapLng = 1.2467193
-    mapTitle = "DevCows"
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
