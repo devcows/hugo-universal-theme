@@ -25,7 +25,7 @@ Go to the directory where you have your Hugo site and run:
 ```
 $ mkdir themes
 $ cd themes
-$ git clone https://github.com/devcows/hugo-universal-theme universal
+$ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
 For more information read the official [setup guide of Hugo](https://gohugo.io/overview/installing/).
