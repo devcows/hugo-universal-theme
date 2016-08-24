@@ -37,7 +37,7 @@ To take full advantage of the features in this theme you can add variables to yo
 ```toml
 baseurl = "http://www.yourdomain.com/"
 languageCode = "en-us"
-theme = "universal"
+theme = "hugo-universal-theme"
 title = "Universal"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "devcows"

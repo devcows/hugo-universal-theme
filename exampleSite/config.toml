@@ -8,7 +8,7 @@ googleAnalytics = ""
 
 # Define the number of posts per page
 paginate = 10
-theme = "universal"
+theme = "hugo-universal-theme"
 
 [params]
     author = "DevCows"
