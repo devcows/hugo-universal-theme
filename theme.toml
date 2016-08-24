@@ -2,13 +2,14 @@ name = "Universal"
 license = "MIT"
 licenselink = "https://github.com/devcows/hugo-universal-theme/blob/master/LICENSE"
 description = "A port of the Universal theme"
+homepage = "//github.com/devcows/hugo-universal-theme"
 tags = ["blog", "company", "portfolio", "projects", "minimal", "responsive"]
 features = ["blog", "themes", "disqus", "minimal", "responsive"]
 min_version = 0.15
 
 [author]
     name = "adrianmo"
-    homepage = "https://github.com/adrianmo"
+    homepage = "//github.com/adrianmo"
 
 # If Porting existing theme
 [original]

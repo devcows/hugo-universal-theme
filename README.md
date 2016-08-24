@@ -1,22 +1,25 @@
 # Universal Theme for Hugo
 
-Universal is clean and stylish universal website template built with Bootstrap. It stands out with its clean design and elegant typography.
+Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
 
-This Hugo theme is ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template).
+This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
 ![screenshot](https://raw.githubusercontent.com/devcows/hugo-universal-theme/master/images/screenshot.png)
 
+
 ## Features
 
-* Fully responsive
+* Responsive design
 * Customizable landing page
   * Carousel
   * Testimonials
   * Features
   * Customers
+* Contact page
 * Google search
-* Disqus
+* Disqus comments
 * Google Analytics
+
 
 ## Installation
 
@@ -28,135 +31,291 @@ $ cd themes
 $ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
-For more information read the official [setup guide of Hugo](https://gohugo.io/overview/installing/).
+For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
-## Configuration
 
-To take full advantage of the features in this theme you can add variables to your site config file, the following is the example config from the example site:
+## Getting started
+
+After installing the Universal theme successfully, we recommend you to take a look at the [exampleSite](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite) directory. You will find a working Hugo site configured with the Universal theme that you can use as a starting point for your site.
+
+First, let's take a look at the [config.toml](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+
+
+### Comments
+
+The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
 
 ```toml
-baseurl = "http://www.yourdomain.com/"
-languageCode = "en-us"
-theme = "hugo-universal-theme"
-title = "Universal"
-# Enable comments by entering your Disqus shortname
 disqusShortname = "devcows"
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
-# Define the number of posts per page
-paginate = 10
+```
 
-[params]
-    author = "DevCows"
+You can disable the comments system by leaving the `disqusShortname` empty.
 
-    # Since this template is static, the contact form uses www.formspree.io as a
-    # proxy. The form makes a POST request to their servers to send the actual
-    # email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What you need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the email from www.formspree.io
-    # - you're done. Happy mailing!
-    #
-    # Enable the contact form by entering your Formspree.io email
-    email = "info@devcows.com"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
-    date_format = "2006-01-02"
-    logo = "img/logo.png"
-    address = """<p><strong>Universal Ltd.</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
-        <br>45Y 73J
-        <br>England
-        <br>
-        <strong>Great Britain</strong>
-      </p>
-      """
+### Google Analytics
 
-[[params.menu]]
-    name = "Home"
-    url  = "/"
-    weight = 1
+You can optionally enable Google Analytics. Type your tracking code in the ``.
 
-[[params.menu]]
-    name = "Blog"
-    url  = "/post"
-    weight = 2
+```toml
+googleAnalytics = "UA-XXXXX-X"
+```
 
-[[params.menu]]
-    name = "FAQ"
-    url  = "/faq"
-    weight = 3
+Leave the `googleAnalytics` key empty to disable it.
 
+
+### Contact form
+
+You can optionally create a contact page and include a contact form.
+
+A contact page is just like a regular Hugo page. But it must include the field `id` with the value `contact`.
+
+```toml
++++
+title = "Contact"
+id = "contact"
++++
+```
+
+Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
+
+To enable the form in the contact page, just type your Formspree email in the `config.toml` file.
+
+```yaml
+email = "your@email.com"
+```
+
+### Menu
+
+You can also define the menu items that will appear in the top bar. Edit the `[[params.menu]]` entries to create your menu.
+
+```toml
 [[params.menu]]
     name = "Contact"
     url  = "/contact"
     weight = 4
+```
 
-[social]
-    github = "devcows"
+The `weight` parameter will determine the order of the menu entries.
 
-# Enable and disable widgets for the right sidebar
+
+### Sidebar widgets
+
+You can enable/disable the sidebar widgets that will be shown in the blog section. The following widgets are currently available:
+
+* Search bar (powered by Google)
+* Categories list
+* Tags list
+
+You can enable/disable them under `params.widgets`.
+
+```toml
 [params.widgets]
+    search = true
     categories = true
     tags = true
-    search = true
+```
 
+### Blog post thumbnails
+
+After creating a new post you can define a banner by entering the relative path to the image.
+
+```toml
+banner = "img/banners/banner-4.jpg"
+```
+
+It must contain a relative path to the banner inside the `static` directory.
+
+
+### Landing page
+
+The landing page consists in many sections that can be activated and configured individually. Let's go through all sections from top to bottom.
+
+#### Carousel
+
+The carousel content is configured in the data directory.
+
+```
+data
+└── carousel
+    ├── customizable.yaml
+    ├── design.yaml
+    ├── features.yaml
+    └── multipurpose.yaml
+```
+
+Each carousel entry is represented as a YAML file inside `data/carousel`. Let's see the `customizable.yaml` as an example of a carousel entry.
+
+```yaml
+weight: 4
+title: "Easy to customize"
+description: >
+  <ul class="list-style-none">
+    <li>7 preprepared colour variations.</li>
+    <li>Easily to change fonts</li>
+  </ul>
+image: "img/carousel/template-easy-code.png"
+```
+
+The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
+
+Once the carousel is configured, it must be explicitly enabled in the `config.toml` file.
+
+```toml
 [params.carousel]
     enable = true
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
+```
 
+#### Features
+
+Features are also defined in the `data` directory just like the carousel.
+
+```
+data
+└── features
+    ├── consulting.yaml
+    ├── email.yaml
+    ├── print.yaml
+    ├── seo.yaml
+    ├── uiux.yaml
+    └── webdesign.yaml
+```
+
+A feature file looks like this.
+
+```yaml
+weight: 4
+name: "Consulting"
+icon: "fa fa-lightbulb-o"
+description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
+```
+
+The `icon` field is the CSS class of an icon. In this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/).
+
+Once you have completed your features, enable them in the `config.toml` file.
+
+```toml
 [params.features]
     enable = true
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
+```
 
+#### Testimonials
+
+Testimonials are defined in the `data` directory.
+
+```
+data
+└── testimonials
+    ├── 1.yaml
+    ├── 2.yaml
+    ├── 3.yaml
+    ├── 4.yaml
+    └── 5.yaml
+```
+
+You can add as many testimonials files as you want. Be sure you fill in all fields as in the following example.
+
+```yaml
+text: "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections."
+name: "John McIntyre"
+position: "CEO, TransTech"
+avatar: "img/testimonials/person-1.jpg"
+```
+
+Then, enable it in the configuration file and add a title and subtitle.
+
+```toml
 [params.testimonials]
     enable = true
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
     title = "Testimonials"
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+```
 
+
+#### See more
+
+This section is used to provide a link to another place. It can be an external site, or a page or post within your Hugo site.
+
+You can enable it in the configuration file.
+
+```toml
 [params.see_more]
     enable = true
     icon = "fa fa-file-code-o"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
+    link_url = "http://your-site.com/more"
     link_text = "Check other homepages"
+```
 
+
+#### Clients
+
+The clients section is used to show a list of logos of companies you have collaborated with. The clients are defined in the `data` directory as YAML files.
+
+```
+data
+└── clients
+    ├── 1.yaml
+    ├── 2.yaml
+    ├── 3.yaml
+    ├── 4.yaml
+    ├── 5.yaml
+    └── 6.yaml
+```
+
+Each client file contains the following information.
+
+```yaml
+name: "customer-1"
+image: "img/clients/customer-1.png"
+```
+
+The `name` of the client and a relative path to the logo inside the `static` directory.
+
+Then, you can enable the section in the configuration file.
+
+```toml
 [params.clients]
     enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
+    title = "Our Partners"
+    subtitle = "We have proudly collaborated with the following companies."
+```
 
+#### Recent posts
+
+The recent posts sections shows the four latest published blog posts, with their featured image and a summary.
+
+You can enable it in the configuration file.
+
+```toml
 [params.recent_posts]
     enable = true
     title = "From our blog"
-    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+    subtitle = "Pellen
 ```
+
+## Nearly finished
+
+In order to see your site in action, run Hugo's built-in local server.
+
+```
+$ hugo server -w
+```
+
+Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+
+For more information check out the official [Hugo documentation](http://gohugo.io/overview/usage/).
 
 
 ## Contributing
 
 Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/devcows/hugo-universal-theme/issues) to let us know. Or make directly a [pull request](https://github.com/devcows/hugo-universal-theme/pulls).
 
+
 ## License
 
 This port is released under the MIT License. Check the [original theme license](http://bootstrapious.com/p/universal-business-e-commerce-template) for additional licensing information.
+
 
 ## Thanks
 
