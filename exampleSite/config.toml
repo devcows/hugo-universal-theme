@@ -1,4 +1,4 @@
-baseurl = "http://http://replace-this-with-your-hugo-site.com"
+baseurl = "http://replace-this-with-your-hugo-site.com"
 title = "Universal"
 theme = "hugo-universal-theme"
 languageCode = "en-us"
