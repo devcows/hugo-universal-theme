@@ -4,7 +4,7 @@
 
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand home" href="{{ .Site.BaseURL }}">                    
+                <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
                     <img src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Title }} logo" class="hidden-xs hidden-sm">
                     <img src="{{ .Site.BaseURL }}img/logo-small.png" alt="{{ .Title }} logo" class="visible-xs visible-sm">
                     <span class="sr-only">{{ .Title }} - go to homepage</span>
@@ -20,7 +20,6 @@
 
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
-                    {{ $root := . }}
                     {{ range .Site.Params.menu }}
                     <li class="dropdown">
                         <a href="{{ .url | absURL }}">{{ .name }}</a>
