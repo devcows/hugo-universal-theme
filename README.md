@@ -7,7 +7,30 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 ![screenshot](https://raw.githubusercontent.com/devcows/hugo-universal-theme/master/images/screenshot.png)
 
 
-## Features
+## Table of Contents
+
+* [Theme features](#theme-features)
+* [Installation](#installation)
+* [Configuration](#configuration)
+  * [Comments](#comments)
+  * [Google Analytics](#google-analytics)
+  * [Contact form](#contact-form)
+  * [Menu](#menu)
+  * [Sidebar widgets](#sidebar-widgets)
+  * [Blog post thumbnails](#blog-post-thumbnails)
+  * [Landing page](#landing-page)
+    * [Carousel](#carousel)
+    * [Features](#features)
+    * [Testimonials](#testimonials)
+    * [See more](#see-more)
+    * [Clients](#clients)
+    * [Recent posts](#recent-posts)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
+* [Thanks](#thanks)
+
+## Features
 
 * Responsive design
 * Customizable landing page
@@ -15,13 +38,14 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * Testimonials
   * Features
   * Customers
-* Contact page
+  * Recent posts
+* Contact form by Formspree
 * Google search
 * Disqus comments
 * Google Analytics
 
 
-## Installation
+## Installation
 
 Go to the directory where you have your Hugo site and run:
 
@@ -34,7 +58,7 @@ $ git clone https://github.com/devcows/hugo-universal-theme
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
-## Getting started
+## Configuration
 
 After installing the Universal theme successfully, we recommend you to take a look at the [exampleSite](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite) directory. You will find a working Hugo site configured with the Universal theme that you can use as a starting point for your site.
 
@@ -248,7 +272,7 @@ You can enable it in the configuration file.
 ```
 
 
-#### Clients
+#### Clients
 
 The clients section is used to show a list of logos of companies you have collaborated with. The clients are defined in the `data` directory as YAML files.
 
@@ -294,7 +318,7 @@ You can enable it in the configuration file.
     subtitle = "Pellen
 ```
 
-## Nearly finished
+## Usage
 
 In order to see your site in action, run Hugo's built-in local server.
 
@@ -307,7 +331,7 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 For more information check out the official [Hugo documentation](http://gohugo.io/overview/usage/).
 
 
-## Contributing
+## Contributing
 
 Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/devcows/hugo-universal-theme/issues) to let us know. Or make directly a [pull request](https://github.com/devcows/hugo-universal-theme/pulls).
 
@@ -317,6 +341,6 @@ Did you found a bug or got an idea for a new feature? Feel free to use the [issu
 This port is released under the MIT License. Check the [original theme license](http://bootstrapious.com/p/universal-business-e-commerce-template) for additional licensing information.
 
 
-## Thanks
+## Thanks
 
 Thanks to [Steve Francia](https://github.com/spf13) for creating Hugo and the awesome community around the project. And also thanks to [Bootstrapious](http://bootstrapious.com/) for creating this awesome theme.
