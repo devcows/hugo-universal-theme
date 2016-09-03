@@ -22,7 +22,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     {{ range .Site.Params.menu }}
                     <li class="dropdown">
-                        <a href="{{ .url | absURL }}">{{ .name }}</a>
+                        <a href="{{ .url }}">{{ .name }}</a>
                     </li>
                     {{ end }}
                 </ul>
