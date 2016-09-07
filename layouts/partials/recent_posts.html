@@ -21,7 +21,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
                         <div class="top">
-                            <div class="image">
+                            <div class="image" style="overflow:hidden">
                                 {{ if isset .Params "banner" }}
                                 <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="" >
                                 {{ else }}
