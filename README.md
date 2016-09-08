@@ -292,6 +292,7 @@ Each client file contains the following information.
 ```yaml
 name: "customer-1"
 image: "img/clients/customer-1.png"
+url: "http://www.customer-1.com"
 ```
 
 The `name` of the client and a relative path to the logo inside the `static` directory.
