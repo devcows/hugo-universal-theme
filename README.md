@@ -295,7 +295,7 @@ image: "img/clients/customer-1.png"
 url: "http://www.customer-1.com"
 ```
 
-The `name` of the client and a relative path to the logo inside the `static` directory.
+The `name` of the client. `image` is a relative path to the logo inside the `static` directory. And `url` is an optional field in case you want to link the logo to the client's website.
 
 Then, you can enable the section in the configuration file.
 
