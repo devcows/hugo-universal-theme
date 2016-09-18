@@ -17,8 +17,29 @@ $(function () {
     animations();
     counters();
     demo();
+    contactForm();
 
 });
+
+//Ajax contact
+function contactForm() {
+	var form = $('.contact-form');
+	form.submit(function () {
+		$this = $(this);
+		$.post($(this).attr('action'),
+					$this.serialize(),
+					function(data) {
+						$this
+						.prev()
+						.text("Thank you for getting in touch! We appreciate you contacting us, we try to respond as soon as possible. Have a great day ahead!.")
+						.fadeIn()
+						.delay(3000)
+						.fadeOut();
+					}
+					,'json');
+		return false;
+	});
+}
 
 /* for demo purpose only - can be deleted */
 
@@ -41,7 +62,7 @@ function demo() {
 
 	return false;
     });
-    
+
     $("#layout").change(function () {
 
 	if ($(this).val() !== '') {
@@ -50,14 +71,14 @@ function demo() {
 
             $('body').removeClass('wide');
             $('body').removeClass('boxed');
-            
+
             $('body').addClass(theme_layout);
 
 	    $.cookie("theme_layout", theme_layout, {expires: 365, path: '/'});
 	}
 
 	return false;
-    });    
+    });
 }
 
 /* slider homepage */
