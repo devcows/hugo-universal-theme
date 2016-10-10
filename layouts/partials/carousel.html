@@ -6,7 +6,7 @@
         <div class="dark-mask"></div>
         <div class="container">
             <div class="homepage owl-carousel">
-                {{ range .Site.Data.carousel }}
+                {{ range sort .Site.Data.carousel "weight" }}
                 <div class="item">
                     <div class="row">
                         <div class="col-sm-5 right">
