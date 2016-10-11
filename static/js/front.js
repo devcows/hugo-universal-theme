@@ -29,8 +29,8 @@ function contactForm() {
 		$.post($(this).attr('action'),
 					$this.serialize(),
 					function(data) {
-								$this.reset(); // clear form
-            
+								$this[0].reset(); // clear form
+
 								$this
 								.prev()
 								.html("<div class='alert alert-success' role='alert'>Thank you for getting in touch! We appreciate you contacting us, we try to respond as soon as possible. Have a great day ahead!.</div>")
