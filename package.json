@@ -1,0 +1,13 @@
+{
+  "name": "hugo-universal-theme",
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "install_hugo": "brew update && brew install hugo"
+  }
+}
