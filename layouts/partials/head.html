@@ -25,7 +25,12 @@
   <link href="{{ .Site.BaseURL }}css/animate.css" rel="stylesheet">
 
   <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-  <link href="{{ .Site.BaseURL }}css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  {{ if and (isset .Site.Params "style") .Site.Params.style }}
+    <link href="{{ .Site.BaseURL }}css/style.{{ .Site.Params.style }}.css" rel="stylesheet" id="theme-stylesheet">
+  {{ else }}
+    <link href="{{ .Site.BaseURL }}css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+  {{ end }}
+
 
   <!-- Custom stylesheet - for your changes -->
   <link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">

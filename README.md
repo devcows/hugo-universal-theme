@@ -15,6 +15,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 * [Theme features](#theme-features)
 * [Installation](#installation)
 * [Configuration](#configuration)
+  * [Style](#style)
   * [Comments](#comments)
   * [Google Analytics](#google-analytics)
   * [Contact form](#contact-form)
@@ -66,6 +67,17 @@ For more information read the official [setup guide](https://gohugo.io/overview/
 After installing the Universal theme successfully, we recommend you to take a look at the [exampleSite](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite) directory. You will find a working Hugo site configured with the Universal theme that you can use as a starting point for your site.
 
 First, let's take a look at the [config.toml](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+
+
+### Style
+
+You can change the color of the theme by modifying the following key.
+
+```toml
+style = "default"
+```
+
+Available options are: `default` (light-blue), `blue`, `green`, `marsala`, `pink`, `red`, `turquoise`, `violet`.
 
 
 ### Comments
