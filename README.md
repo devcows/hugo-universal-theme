@@ -105,7 +105,7 @@ id = "contact"
 
 You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`:
 
-```
+```yaml
 [params]
     ...
     latitude = "-12.043333"
