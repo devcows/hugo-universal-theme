@@ -1,0 +1,31 @@
+{{ if isset .Site.Params "social" }}
+{{ if .Site.Params.social.enable }}
+{{ if gt (len .Site.Data.social) 0 }}
+<section class="bar background-gray">
+    <div class="container">
+        <div class="col-md-12">
+		<div class="heading text-center">
+                    <h2>{{ .Site.Params.social.title }}</h2>
+                </div>
+
+                <p class="lead">
+                  {{ .Site.Params.social.subtitle }}
+                </p>
+            <div class="row">
+                {{ range sort .Site.Data.social "weight" }}
+                <div class="col-md-4">
+                    <div class="box-simple">
+                        <div class="icon">
+                           <a href="{{ .url }}" title="{{ .name }}"><i class="{{ .icon }}"></i></a>
+                        </div>
+                        <h3><a href="{{ .url }}" title="{{ .name }}">{{ .name }}</a></h3>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}
