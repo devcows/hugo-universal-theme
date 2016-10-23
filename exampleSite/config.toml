@@ -11,9 +11,12 @@ googleAnalytics = ""
 paginate = 10
 
 [params]
-    viewMorePostLink     = "/blog/"
+    viewMorePostLink = "/blog/"
     author = "DevCows"
 
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet		
+    style = "default"
+	
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
     # email. Visitors can send up to a 1000 emails each month for free.
