@@ -14,9 +14,9 @@ paginate = 10
     viewMorePostLink = "/blog/"
     author = "DevCows"
 
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet		
     style = "default"
-
+	
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
     # email. Visitors can send up to a 1000 emails each month for free.
@@ -117,3 +117,11 @@ paginate = 10
     enable = true
     title = "From our blog"
     subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+
+[params.social]
+    enable = true
+    # All social links are defined in their own files. You can find example items
+    # at 'exampleSite/data/social'.
+    # For more informtion take a look at the README.
+    title = "Talk to us"
+    subtitle = ""
