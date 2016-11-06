@@ -129,6 +129,7 @@ Since this Hugo sites are static, the contact form uses [Formspree](https://form
 To enable the form in the contact page, just type your Formspree email in the `config.toml` file.
 
 ```yaml
+[params]
 email = "your@email.com"
 ```
 
