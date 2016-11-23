@@ -13,6 +13,7 @@
         <!-- /.col-md-4 -->
         {{ end }}
 
+        {{ if isset .Site.Params "recent_posts" }} {{ if .Site.Params.recent_posts.enable }} 
         <div class="col-md-4 col-sm-6">
 
             <h4>Recent posts</h4>
@@ -40,6 +41,7 @@
 
         </div>
         <!-- /.col-md-4 -->
+        {{ end }} {{ end }}
 
         {{ if isset .Site.Params "address" }}
         <div class="col-md-4 col-sm-6">
