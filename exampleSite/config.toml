@@ -14,6 +14,9 @@ paginate = 10
     viewMorePostLink = "/blog/"
     author = "DevCows"
 
+	# Google Maps API key (if not set will default to not passing a key.)
+    googleMapsApiKey = ""
+	
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
