@@ -14,9 +14,9 @@ paginate = 10
     viewMorePostLink = "/blog/"
     author = "DevCows"
 
-	# Google Maps API key (if not set will default to not passing a key.)
+    # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = ""
-	
+
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
@@ -37,7 +37,10 @@ paginate = 10
 
     about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
     copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
-    date_format = "2006-01-02"
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
     logo = "img/logo.png"
     address = """<p><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
