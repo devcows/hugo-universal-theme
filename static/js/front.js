@@ -361,7 +361,7 @@ $.fn.alignElementsSameHeight = function () {
 }
 
 var windowWidth
-$(window).load(function () {
+$(function () {
   windowWidth = $(window).width()
 
   $(this).alignElementsSameHeight()
