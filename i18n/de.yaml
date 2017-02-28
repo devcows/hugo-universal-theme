@@ -1,0 +1,63 @@
+- id: home
+  translation: "Home"
+
+- id: templateBy
+  translation: "Design durch"
+
+- id: portedBy
+  translation: "Portiert nach Hugo durch"
+
+- id: contactGoTo
+  translation: "Zur Kontakt Seite"
+
+- id: contactAddrTitle
+  translation: "Addresse"
+
+- id: contactTitle
+  translation: "Kontakt"
+
+- id: contactForm
+  translation: "Kontakt Formular"
+
+- id: contactName
+  translation: "Ihr Name"
+
+- id: contactMail
+  translation: "Ihre Email Adresse"
+
+- id: contactMessage
+  translation: "Ihre Nachricht an uns"
+
+- id: contactSend 
+  translation: "Nachricht Senden"
+
+- id: navHome 
+  translation: "zur Hautpseite"
+
+- id: navToggle
+  translation: "Navigation Ein-/Ausblenden"
+
+- id: categoriesTitle
+  translation: "Kategorien"
+
+- id: searchTitle
+  translation: "Suche"
+
+- id: tagsTitle
+  translation: "Tags"
+
+- id: continueReading
+  translation: "Weiterlesen"
+
+- id: readMore
+  translation: "Mehr erfahren"
+
+- id: authorBy
+  translation: "Von"
+
+- id: recentPosts
+  translation: "Neue Beiträge"
+
+- id: aboutUs
+  translation: "Über uns"
+
