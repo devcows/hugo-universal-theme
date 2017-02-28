@@ -7,11 +7,11 @@
                 <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
                     <img src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Title }} logo" class="hidden-xs hidden-sm">
                     <img src="{{ .Site.BaseURL }}img/logo-small.png" alt="{{ .Title }} logo" class="visible-xs visible-sm">
-                    <span class="sr-only">{{ .Title }} - go to homepage</span>
+                    <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                        <span class="sr-only">Toggle navigation</span>
+                      <span class="sr-only">{{ i18n "navToggle" }}</span>
                         <i class="fa fa-align-justify"></i>
                     </button>
                 </div>

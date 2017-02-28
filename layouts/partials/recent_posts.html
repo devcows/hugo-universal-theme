@@ -31,7 +31,7 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
+                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> {{ i18n "readMore" }}</a>
                                 </p>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                             </p>
                             <p class="intro">{{ .Summary }}</p>
                             <p class="read-more">
-                              <a href="{{ .Permalink }}" class="btn btn-template-main">Continue reading</a>
+                              <a href="{{ .Permalink }}" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
                             </p>
                         </div>
                     </div>
