@@ -17,7 +17,7 @@
                         <p>{{ $element.description }}</p>
                     </div>
                 </div>
-		{{ if eq (mod $index 3) 2 }}
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
 			</div>
 		</div>
 		{{ end }}		
