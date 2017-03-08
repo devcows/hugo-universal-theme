@@ -115,13 +115,14 @@ id = "contact"
 +++
 ```
 
-You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`:
+You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click  opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
 
 ```yaml
 [params]
     ...
     latitude = "-12.043333"
     longitude = "-77.028333"
+    direction = "Desamparados Station, Distrito de Lima 15001, Peru"
 ```
 
 Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.

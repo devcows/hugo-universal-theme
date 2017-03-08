@@ -56,12 +56,12 @@ function map () {
       lat: lat,
       lng: lng,
       icon: image,
-      click: function(e) {
+      click: function (e) {
         // when we get an address with spaces ...
-        url = "https://maps.google.com?daddr=" + direction.split("match").join("replace");
-        window.open(url,'_blank');
+        var url = 'https://maps.google.com?daddr=' + direction.split('match').join('replace')
+        window.open(url, '_blank')
       },
-      title: direction,
+      title: direction
       /* ,
       infoWindow: {
       content: '<p>HTML Content</p>'
