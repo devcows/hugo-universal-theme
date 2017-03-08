@@ -12,6 +12,29 @@ googleAnalytics = ""
 # Define the number of posts per page
 paginate = 10
 
+[menu]
+
+[[menu.main]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 2
+
+[[menu.main]]
+    name = "FAQ"
+    identifier = "faq"
+    url  = "/faq/"
+    weight = 3
+
+[[menu.main]]
+    name = "Contact"
+    url  = "/contact/"
+    weight = 4
+
 [params]
     viewMorePostLink = "/blog/"
     author = "DevCows"
@@ -58,26 +81,6 @@ paginate = 10
 
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
-
-[[params.menu]]
-    name = "Home"
-    url  = "/"
-    weight = 1
-
-[[params.menu]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 2
-
-[[params.menu]]
-    name = "FAQ"
-    url  = "/faq/"
-    weight = 3
-
-[[params.menu]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 4
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
