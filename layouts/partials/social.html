@@ -15,10 +15,17 @@
                 {{ range sort .Site.Data.social "weight" }}
                 <div class="col-md-4">
                     <div class="box-simple">
+                      {{ if and (not .url) (eq (lower .name) "rss")  }}
+                        <div class="icon">
+                           <a href="{{ .Site.BaseUrl }}index.xml" title="{{ .name }}"><i class="{{ .icon }}"></i></a>
+                        </div>
+                        <h3><a href="{{ .Site.BaseUrl }}index.xml" title="{{ .name }}">{{ .name }}</a></h3>
+                        {{ else }}
                         <div class="icon">
                            <a href="{{ .url }}" title="{{ .name }}"><i class="{{ .icon }}"></i></a>
                         </div>
                         <h3><a href="{{ .url }}" title="{{ .name }}">{{ .name }}</a></h3>
+                        {{ end }}
                     </div>
                 </div>
                 {{ end }}
