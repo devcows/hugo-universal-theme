@@ -1,0 +1,14 @@
+{{ if isset .Site.Params "latitude" }}
+  {{ if isset .Site.Params "longitude" }}
+      <div class="hidden">
+        <input id="gmap-lat" value="{{ .Site.Params.latitude }}" />
+        <input id="gmap-lng" value="{{ .Site.Params.longitude }}" />
+        {{ if isset .Site.Params "direction" }}
+          <input id="gmap-dir" value="{{ .Site.Params.direction }}" />
+        {{ else }}
+          <input id="gmap-dir" value="{{ .Site.Params.latitude }},{{ .Site.Params.longitude }}" />
+        {{ end }}
+      </div>
+      <div id="map" />
+  {{ end }}
+{{ end }}
