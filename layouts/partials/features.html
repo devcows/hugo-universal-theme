@@ -14,13 +14,13 @@
                             <i class="{{ .icon }}"></i>
                         </div>
                         <h3>{{ $element.name }}</h3>
-                        <p>{{ $element.description }}</p>
+                        <p>{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
 		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
 			</div>
 		</div>
-		{{ end }}		
+		{{ end }}
         {{ end }}
     </div>
 </section>
