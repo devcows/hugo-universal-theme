@@ -1,3 +1,4 @@
 .DS_Store
 public/
 npm-debug.log
+/node_modules/*

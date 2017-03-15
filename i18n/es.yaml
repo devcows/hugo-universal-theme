@@ -1,0 +1,62 @@
+- id: home
+  translation: "Inicio"
+
+- id: templateBy
+  translation: "Plantilla creada por"
+
+- id: portedBy
+  translation: "Adaptada a Hugo por"
+
+- id: contactGoTo
+  translation: "Ir a la página de contacto"
+
+- id: contactAddrTitle
+  translation: "Dirección"
+
+- id: contactTitle
+  translation: "Contacto"
+
+- id: contactForm
+  translation: "Formulario de contacto"
+
+- id: contactName
+  translation: "Tu Nombre"
+
+- id: contactMail
+  translation: "Tu Email"
+
+- id: contactMessage
+  translation: "Tu Mensaje"
+
+- id: contactSend
+  translation: "Enviar mensaje"
+
+- id: navHome
+  translation: "ir a inicio"
+
+- id: navToggle
+  translation: "Cambiar Navegación"
+
+- id: categoriesTitle
+  translation: "Categorias"
+
+- id: searchTitle
+  translation: "Buscar"
+
+- id: tagsTitle
+  translation: "Palabras clave"
+
+- id: continueReading
+  translation: "Continuar leyendo"
+
+- id: readMore
+  translation: "Leer más"
+
+- id: authorBy
+  translation: "Por"
+
+- id: recentPosts
+  translation: "Posts recientes"
+
+- id: aboutUs
+  translation: "Sobre nosotros"

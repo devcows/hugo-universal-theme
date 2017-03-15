@@ -69,6 +69,14 @@ After installing the Universal theme successfully, we recommend you to take a lo
 First, let's take a look at the [config.toml](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
 
+### Language
+
+Available translations are in the `/i18n` directory. You can configure the language modifying the following key.
+
+```toml
+defaultContentLanguage = "en"
+```
+
 ### Style
 
 You can change the color of the theme by modifying the following key.

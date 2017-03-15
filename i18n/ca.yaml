@@ -1,0 +1,62 @@
+- id: home
+  translation: "Inici"
+
+- id: templateBy
+  translation: "Plantilla creada per"
+
+- id: portedBy
+  translation: "Adaptada a Hugo per"
+
+- id: contactGoTo
+  translation: "Anar a la pàgina de contacte"
+
+- id: contactAddrTitle
+  translation: "Adreça"
+
+- id: contactTitle
+  translation: "Contacte"
+
+- id: contactForm
+  translation: "Formulari de contacte"
+
+- id: contactName
+  translation: "El teu nom"
+
+- id: contactMail
+  translation: "El teu email"
+
+- id: contactMessage
+  translation: "El teu missatge"
+
+- id: contactSend
+  translation: "Enviar missatge"
+
+- id: navHome
+  translation: "anar a inici"
+
+- id: navToggle
+  translation: "Canviar Navigació"
+
+- id: categoriesTitle
+  translation: "Categories"
+
+- id: searchTitle
+  translation: "Buscar"
+
+- id: tagsTitle
+  translation: "Paraules clau"
+
+- id: continueReading
+  translation: "Continuar llegint"
+
+- id: readMore
+  translation: "Llegir més"
+
+- id: authorBy
+  translation: "Per"
+
+- id: recentPosts
+  translation: "Posts recents"
+
+- id: aboutUs
+  translation: "Sobre nosaltres"

@@ -23,7 +23,7 @@
   translation: "Your Name"
 
 - id: contactMail
-  translation: " Your Email"
+  translation: "Your Email"
 
 - id: contactMessage
   translation: "Your Message"
@@ -31,7 +31,7 @@
 - id: contactSend
   translation: "Send Message"
 
-- id: navHome 
+- id: navHome
   translation: "go to homepage"
 
 - id: navToggle
