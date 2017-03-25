@@ -29,7 +29,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
-    * [Meta tags] (#meta-tags)
+    * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
