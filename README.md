@@ -353,6 +353,37 @@ You can enable it in the configuration file.
     subtitle = "Pellen
 ```
 
+
+##### Meta Tags
+
+Description and Name `meta tags` are enabled.
+To set  default values for all pages can be done in the `config.toml` file as below.
+
+```toml
+[params]
+    defaultKeywords = ["devows", "hugo", "go"]
+	defaultDescription = "Site template made by devcows using hugo"
+```
+
+results in HTML
+
+```html
+<meta name="keywords" content="devows, hugo, go">
+<meta name="description" content="Site template made by devcows using hugo">
+```
+
+To not take the defaults from the `config.toml` file you can over ride these in the individual pages.
+See `faq.md` as an example
+
+```yaml
++++
+title = "FAQ"
+description = "Frequently asked questions"
+keywords = ["FAQ","How do I","questions","what if"]
++++
+```
+ 
+
 ## Usage
 
 In order to see your site in action, run Hugo's built-in local server.
