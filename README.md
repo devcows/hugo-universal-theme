@@ -29,6 +29,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
+    * [MetaTags] (#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -362,7 +363,7 @@ To set  default values for all pages can be done in the `config.toml` file as be
 ```toml
 [params]
     defaultKeywords = ["devows", "hugo", "go"]
-	defaultDescription = "Site template made by devcows using hugo"
+    defaultDescription = "Site template made by devcows using hugo"
 ```
 
 results in HTML
