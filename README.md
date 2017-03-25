@@ -355,7 +355,7 @@ You can enable it in the configuration file.
 ```
 
 
-##### Meta Tags
+#### Meta tags
 
 Description and Name `meta tags` are enabled.
 To set  default values for all pages can be done in the `config.toml` file as below.
