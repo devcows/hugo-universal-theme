@@ -357,7 +357,7 @@ You can enable it in the configuration file.
 
 #### Meta tags
 
-Description and Name `meta tags` are enabled.
+`Description` and `Keyword` `meta tags` are enabled.
 To set  default values for all pages can be done in the `config.toml` file as below.
 
 ```toml
@@ -373,8 +373,8 @@ results in HTML
 <meta name="description" content="Site template made by devcows using hugo">
 ```
 
-To not take the defaults from the `config.toml` file you can over ride these in the individual pages.
-See `faq.md` as an example
+To not take the defaults from the `config.toml` file you can override these in the individual pages.
+See `faq.md` in exampleSite for an example
 
 ```yaml
 +++
