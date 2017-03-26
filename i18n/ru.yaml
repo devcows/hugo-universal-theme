@@ -60,3 +60,10 @@
 
 - id: aboutUs
   translation: "О нас"
+  
+- id: newer
+  translation: "Следующая запись"
+
+- id: older
+  translation: "Предыдущая запись"
+
