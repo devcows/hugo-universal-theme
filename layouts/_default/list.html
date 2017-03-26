@@ -67,13 +67,13 @@
                             {{ if .Paginator.HasPrev }}
                             <li class="previous"><a href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">&larr; {{ i18n "newer" }}</a></li>
                             {{ else }}
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+                            <li class="previous disabled"><a href="#">&larr; {{ i18n "newer" }}</a></li>
                             {{ end }}
 
                             {{ if .Paginator.HasNext }}
                             <li class="next"><a href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">{{ i18n "older" }} &rarr;</a></li>
                             {{ else }}
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
+                            <li class="next disabled"><a href="#">{{ i18n "older" }} &rarr;</a></li>
                             {{ end }}
                         </ul>
                     </div>
