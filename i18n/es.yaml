@@ -62,7 +62,7 @@
   translation: "Sobre nosotros"
 
 - id: newer
-  translation: "Nuevo"
+  translation: "Más reciente"
 
 - id: older
-  translation: "Más viejo"
+  translation: "Más antiguo"
