@@ -60,3 +60,9 @@
 
 - id: aboutUs
   translation: "About us"
+
+- id: newer
+  translation: "Newer"
+
+- id: older
+  translation: "Older"

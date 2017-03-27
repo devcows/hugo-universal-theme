@@ -60,3 +60,9 @@
 
 - id: aboutUs
   translation: "Sobre nosaltres"
+
+- id: newer
+  translation: "Nuevo"
+
+- id: older
+  translation: "Más viejo"
