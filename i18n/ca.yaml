@@ -32,7 +32,7 @@
   translation: "Enviar missatge"
 
 - id: navHome
-  translation: "anar a inici"
+  translation: "anar a l'inici"
 
 - id: navToggle
   translation: "Canviar Navigació"
@@ -41,7 +41,7 @@
   translation: "Categories"
 
 - id: searchTitle
-  translation: "Buscar"
+  translation: "Cercar"
 
 - id: tagsTitle
   translation: "Paraules clau"
@@ -62,7 +62,7 @@
   translation: "Sobre nosaltres"
 
 - id: newer
-  translation: "Nuevo"
+  translation: "Més recent"
 
 - id: older
-  translation: "Más viejo"
+  translation: "Més antic"
