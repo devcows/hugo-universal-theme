@@ -29,6 +29,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
+    * [Social](#social)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -43,6 +44,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * Features
   * Customers
   * Recent posts
+  * Social
 * Contact form by Formspree
 * Google search
 * Disqus comments
@@ -352,6 +354,49 @@ You can enable it in the configuration file.
     title = "From our blog"
     subtitle = "Pellen
 ```
+
+#### Social
+
+All social links are defined in their own files.  You can enable it in the configuration file.
+
+```toml
+  [params.social]
+    enable = true
+    title = "Talk to us"
+    subtitle = ""
+```
+
+For every social link create a new file in data/social
+
+```
+data
+└── social
+    ├── facebook.yaml
+    ├── github.yaml
+    ├── gplus.yaml
+    ├── linkedin.yaml
+    ├── rss.yaml
+    ├── slideshare.yaml
+    └── twitter.yaml
+```
+
+Each social media file contains the following information.
+
+```yaml
+weight: 6
+name: "Github"
+icon: "fa fa-github"
+url: "https://github.com/spf13"
+```
+
+There is one special configuration. When the `name` is RSS and the `url` isn't set, then this link will point to the sites index.xml.
+
+```yaml
+weight: 2
+name: "RSS"
+icon: "fa fa-rss"
+```
+
 
 ## Usage
 
