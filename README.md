@@ -357,24 +357,24 @@ You can enable it in the configuration file.
 
 #### Meta tags
 
-`Description` and `Keyword` `meta tags` are enabled.
-To set  default values for all pages can be done in the `config.toml` file as below.
+`Description` and `Keywords` meta tags are available and can be customized.
+You can set default values for all pages in the `config.toml` file as below.
 
 ```toml
 [params]
-    defaultKeywords = ["devows", "hugo", "go"]
-    defaultDescription = "Site template made by devcows using hugo"
+    defaultKeywords = ["devcows", "hugo", "go"]
+    defaultDescription = "Site template made by Devcows using Hugo"
 ```
 
-results in HTML
+The result in HTML will be the following.
 
 ```html
-<meta name="keywords" content="devows, hugo, go">
-<meta name="description" content="Site template made by devcows using hugo">
+<meta name="keywords" content="devcows, hugo, go">
+<meta name="description" content="Site template made by Devcows using Hugo">
 ```
 
-To not take the defaults from the `config.toml` file you can override these in the individual pages.
-See `faq.md` in exampleSite for an example
+You can also override the default values from the `config.toml` by setting the `description` and `keywords` in the individual pages meta data.
+See the `faq.md` file in the `exampleSite` directory for an example.
 
 ```yaml
 +++
@@ -383,7 +383,7 @@ description = "Frequently asked questions"
 keywords = ["FAQ","How do I","questions","what if"]
 +++
 ```
- 
+
 
 ## Usage
 
