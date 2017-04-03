@@ -38,6 +38,8 @@ paginate = 10
 [params]
     viewMorePostLink = "/blog/"
     author = "DevCows"
+    defaultKeywords = ["devows", "hugo", "go"]
+    defaultDescription = "Site template made by devcows using hugo"
 
     # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = ""
