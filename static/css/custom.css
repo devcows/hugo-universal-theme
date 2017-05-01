@@ -8,3 +8,12 @@
 .box-simple {
   min-height: 230px;
 }
+
+.navbar ul.nav > li > a {
+  text-decoration: none;
+  color: #868686;
+}
+
+.navbar-brand>img {
+  height: 100%;
+}
