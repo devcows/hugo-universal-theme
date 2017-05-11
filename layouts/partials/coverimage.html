@@ -1,0 +1,5 @@
+{{ if isset .Params "coverimage" }}
+    <div class="container {{ if eq .Params.coverstyle "full"}}fullSize{{end}}" id="coverimage">
+        <img src="{{ .Params.coverimage }}" alt="" width="100%">
+    </div>
+{{ end }}

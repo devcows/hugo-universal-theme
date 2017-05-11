@@ -17,3 +17,14 @@
 .navbar-brand>img {
   height: 100%;
 }
+
+#coverimage {
+  background: red;
+  padding: 0 0;
+  margin-bottom: 40px;
+  margin-top: -40px;
+}
+
+.fullSize {
+  width: 100%
+}

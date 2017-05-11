@@ -16,11 +16,15 @@
         {{ partial "breadcrumbs.html" . }}
 
         <div id="content">
+
+            {{ partial "coverimage.html" . }}
+
             {{ if isset .Params "id" }}
 
-              {{ partial .Params.id . }}
+            {{ partial .Params.id . }}
 
             {{ else }}
+
 
             <div class="container">
 
@@ -29,7 +33,7 @@
                     <div class="col-md-12">
 
                         <div>
-                          {{ .Content }}
+                            {{ .Content }}
                         </div>
 
                     </div>
