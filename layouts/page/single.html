@@ -17,7 +17,7 @@
 
         <div id="content">
 
-            {{ partial "coverimage.html" . }}
+            {{ partial "custom/coverimage.html" . }}
 
             {{ if isset .Params "id" }}
 
@@ -45,6 +45,9 @@
             <!-- /.container -->
 
             {{ end }}
+
+            {{ partial "custom/machines.html" . }}
+
         </div>
         <!-- /#content -->
 
