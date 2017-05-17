@@ -1,0 +1,23 @@
+<section class="bar background-white">
+    <div class="container">
+        {{ range $index, $element := sort .Site.Data.memberships "weight" }}
+        {{ if eq (mod $index 3) 0 }}
+        <div class="col-md-12">
+            <div class="row">
+                {{ end }}
+                <div class="col-md-4">
+                    <div class="box-simple">
+                        <div class="">
+                            <a href="{{ $element.url }}"><img src="{{ .image }}" alt="{{ .machinealt }}" width="100%"></a>
+                        </div>
+                        <h3>{{ $element.name }}</h3>
+                        <p>...</p>
+                    </div>
+                </div>
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.memberships) 1 )) }}
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
