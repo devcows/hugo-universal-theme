@@ -22,6 +22,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * [Menu](#menu)
   * [Sidebar widgets](#sidebar-widgets)
   * [Blog post thumbnails](#blog-post-thumbnails)
+  * [Top bar](#top-bar)
   * [Landing page](#landing-page)
     * [Carousel](#carousel)
     * [Features](#features)
@@ -172,6 +173,34 @@ You can enable/disable them under `params.widgets`.
     search = true
     categories = true
     tags = true
+```
+
+### Top bar
+
+The top bar is typically used to provide contact information and social links. It is disabled by default, and it can be enabled inside the `params.topbar` settings.
+
+```toml
+[params.topbar]
+    enable = true
+    text = "<p>Contact us on +420 777 555 333 or hello@universal.com.</p>"
+```
+
+The `text` shows up on the left side and accepts HTML.
+
+The social links on the right side are configured as a top-level menu.
+
+```toml
+[[menu.topbar]]
+    weight = 1
+    name = "GitHub"
+    url = "https://github.com/devcows/hugo-universal-theme"
+    pre = "<i class='fa fa-2x fa-github'></i>"
+
+[[menu.topbar]]
+    weight = 2
+    name = "Facebook"
+    url = "http://facebook.com"
+    pre = "<i class='fa fa-2x fa-facebook'></i>"
 ```
 
 ### Blog post thumbnails
