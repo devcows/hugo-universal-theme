@@ -1,0 +1,18 @@
+{{ if .Site.Params.topbar.enable }}
+<div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5">
+        {{ .Site.Params.topbar.text | safeHTML }}
+      </div>
+      <div class="col-xs-7">
+        <div class="social">
+          {{ range .Site.Menus.topbar.ByWeight }}
+          <a href="{{ .URL }}" target="_blank" style="opacity: 1;">{{ .Pre }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
