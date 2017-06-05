@@ -35,7 +35,7 @@
   translation: "перейти на главную"
 
 - id: navToggle
-  translation: "Toggle Navigation"
+  translation: "Переключить навигацию"
 
 - id: categoriesTitle
   translation: "Категории"
