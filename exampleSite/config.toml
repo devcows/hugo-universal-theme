@@ -167,3 +167,16 @@ paginate = 10
     enable = true
     title = "From our blog"
     subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+
+[params.favicons]
+    # if disable will fall-back to the favicon.ico in the root directory.
+    # defaults have been generated with http://realfavicongenerator.com we suggest you use the same.
+    # For more informtion take a look at the README.
+    enable = true
+    # for android title background colour on tab switcher
+    theme_color = "#2b537a"
+    # for windows 7/8/10 tile background colour, if placed in sidebar.
+    # if disable fall-back to theme_color.
+    # Looks best if using standardised Windows colours ()
+    ms_tile_colour = "#2b5797"
+    safari_colour = "#5bbad5"

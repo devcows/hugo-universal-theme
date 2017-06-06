@@ -1,0 +1,22 @@
+{{ if isset .Site.Params "favicons" }}
+{{ if .Site.Params.favicons.enable }}
+<!-- Due to the nature of Favicons, it is best to put them in the root directory
+Rather than in a seperate folder, but will work from in a folder in most cases. -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.BaseURL }}favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="{{ .Site.BaseURL }}favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ .Site.BaseURL }}android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ .Site.BaseURL }}favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ .Site.Params.favicons.safari_colour }}">
+<meta name="msapplication-TileColor" content="{{ .Site.Params.favicons.ms_tile_colour }}">
+<meta name="msapplication-TileColor" content="{{ .Site.Params.favicons.theme_color }}">
+<meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}mstile-144x144.png">
+<meta name="theme-color" content="{{ .Site.Params.favicons.theme_color }}">
+<!-- For older browsers -->
+{{ else }}
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
+<!-- just use the plain favicon.ico, also acts as a fallback in case of can't find file. -->
+{{ end }}
+{{ end }}
