@@ -170,7 +170,7 @@ paginate = 10
 
 [params.favicons]
     # if disable will fall-back to the favicon.ico in the root directory.
-    # defaults have been generated with http://realfavicongenerator.com we suggest you use the same.
+    # defaults have been generated with http://realfavicongenerator.net we suggest you use the same.
     # For more informtion take a look at the README.
     enable = true
     # for android title background colour on tab switcher
