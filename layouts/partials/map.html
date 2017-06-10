@@ -3,6 +3,7 @@
       <div class="hidden">
         <input id="gmap-lat" value="{{ .Site.Params.latitude }}" />
         <input id="gmap-lng" value="{{ .Site.Params.longitude }}" />
+        <input id="gmap-marker" value="{{ .Site.BaseURL }}img/marker.png" />
         {{ if isset .Site.Params "direction" }}
           <input id="gmap-dir" value="{{ .Site.Params.direction }}" />
         {{ else }}
