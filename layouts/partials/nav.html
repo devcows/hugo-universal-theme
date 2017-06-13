@@ -20,8 +20,9 @@
 
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
+                  {{ $currentNode := . }}
                   {{ range .Site.Menus.main }}
-                  <li class="dropdown">
+                  <li class="dropdown {{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}active{{end}}">
                     {{ if .HasChildren }}
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">

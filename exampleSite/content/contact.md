@@ -1,6 +1,9 @@
 +++
 title = "Contact"
 id = "contact"
+[menu.main]
+    identifier = "contact"
+    weight = 4
 +++
 
 # We are here to help you

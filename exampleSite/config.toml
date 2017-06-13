@@ -26,17 +26,6 @@ paginate = 10
     url  = "/blog/"
     weight = 2
 
-[[menu.main]]
-    name = "FAQ"
-    identifier = "faq"
-    url  = "/faq/"
-    weight = 3
-
-[[menu.main]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 4
-
 # Top bar social links menu
 
 [[menu.topbar]]
