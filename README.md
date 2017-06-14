@@ -136,7 +136,9 @@ Certain versions of Safari use monochrome versions of favicons, with a backgroun
 
 safari_color sets this background color.
 
-browserconfig.xml is for Windows Phones and Android, in the case that a bookmark is set to homescreen.
+`browserconfig.xml` is for Windows 7/8/10 Start and Windows Phones Home, in the case that a bookmark is set to these it defines the Tile Icon and the Tile Title. If not set Windows assigns a random colour from the stadard set and the `favicon.ico`.
+
+`manifest.json` is for android phones, it sets the Tab Color on newer version of Chrome for Android and it also sets the Homescreen title for the app and an array of favicons for each size of screen. If not set defaults to index page title, default android grey, and to `favicon.ico`
 
 ### Contact form
 
