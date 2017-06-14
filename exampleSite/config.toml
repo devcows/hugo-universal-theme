@@ -175,7 +175,7 @@ paginate = 10
     enable = true
     # for android title background color on tab switcher
     theme_color = "#2b537a"
-    # for windows 7/8/10 tile background colour, if placed in start bar.
+    # for windows 7/8/10 tile background color, if placed in start bar.
     # if disable fall-back to theme_color.
     # Looks best if using standardised Windows colors 
     # (Teal 008299,Blue 2672EC,Purple 8C0095,Dark Purple 5133AB,Red AC193, Orange D24726, Green 008A00,Sky Blue 094AB2)
