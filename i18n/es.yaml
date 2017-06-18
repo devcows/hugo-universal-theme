@@ -66,3 +66,6 @@
 
 - id: older
   translation: "Más antiguo"
+
+- id: publishedOn
+  translation: "el"

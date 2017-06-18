@@ -67,3 +67,5 @@
 - id: older
   translation: "Предыдущая запись"
 
+- id: publishedOn
+  translation: "на"

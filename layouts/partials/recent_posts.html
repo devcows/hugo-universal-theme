@@ -40,9 +40,9 @@
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                             <p class="author-category">
                             {{ with .Params.author }}
-                            By <a href="#">{{ . }}</a>
+                            {{ i18n "authorBy" }} <a href="#">{{ . }}</a>
                             {{ end }}
-                            on {{ .Date.Format .Site.Params.date_format }}
+                            {{ i18n "publishedOn" }} {{ .Date.Format .Site.Params.date_format }}
                             </p>
                             <p class="intro">{{ .Summary }}</p>
                             <p class="read-more">

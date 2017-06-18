@@ -67,3 +67,5 @@
 - id: older
   translation: "Älter"
 
+- id: publishedOn
+  translation: "am"
