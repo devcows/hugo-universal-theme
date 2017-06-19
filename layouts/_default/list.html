@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
 
   {{ partial "head.html" . }}
 
@@ -42,7 +42,7 @@
                                     <div class="clearfix">
                                         <p class="author-category">
                                           {{ if isset .Params "author" }}
-                                          By <a href="#">{{ .Params.author }}</a>
+                                          {{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a>
                                           {{ end }}
                                           {{ if isset .Params "categories" }}
                                           {{ if gt (len .Params.categories) 0 }}

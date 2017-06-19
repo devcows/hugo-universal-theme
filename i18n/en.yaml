@@ -66,3 +66,6 @@
 
 - id: older
   translation: "Older"
+
+- id: publishedOn
+  translation: "on"
