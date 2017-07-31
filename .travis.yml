@@ -14,8 +14,6 @@ install:
 script:
   - npm run lint
   - cd exampleSite
-  - mkdir themes
-  - ln -s ../../ themes/hugo-universal-theme
   - hugo
 notifications:
   slack:
