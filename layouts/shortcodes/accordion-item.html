@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#{{.Parent.Get "id"}}" href="#{{.Get "id"}}">
+                {{ .Get "title"}}
+            </a>
+        </h4>
+    </div>
+    <div id="{{.Get "id"}}" class="panel-collapse collapse {{with .Get "expanded"}}in{{end}}">
+        <div class="panel-body">
+            {{.Inner}}
+        </div>
+    </div>
+</div>
