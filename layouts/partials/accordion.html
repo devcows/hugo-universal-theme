@@ -1,0 +1,7 @@
+{{ $id := $.Scratch.Get "id" }}
+{{ $content := $.Scratch.Get "content" }}
+<div class="panel-group accordion" id="{{ $id }}">
+    {{ range $content }}
+    {{ partial "accordion-item.html" . }}
+    {{ end }}
+</div>

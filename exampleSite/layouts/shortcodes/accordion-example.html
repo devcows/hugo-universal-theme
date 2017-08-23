@@ -1,0 +1,5 @@
+{{ $contentIndex := .Get "data" }}
+{{ $content := index .Site.Data $contentIndex }}
+{{ $.Scratch.Add "content" $content }}
+{{ $.Scratch.Add "id" (.Get "id") }}
+{{ partial "accordion.html" . }}
