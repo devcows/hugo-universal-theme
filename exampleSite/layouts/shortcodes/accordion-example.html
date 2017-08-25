@@ -1,5 +1,3 @@
 {{ $contentIndex := .Get "data" }}
 {{ $content := index .Site.Data $contentIndex }}
-{{ $.Scratch.Add "content" $content }}
-{{ $.Scratch.Add "id" (.Get "id") }}
-{{ partial "accordion.html" . }}
+{{ partial "accordion.html" (dict "context" . "accordionid" (.Get "id") "content" $content) }}
