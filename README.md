@@ -31,6 +31,8 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
     * [Meta tags](#meta-tags)
+* [Layout](#layout)
+  * [Accordion](#accordion)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -45,6 +47,8 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * Features
   * Customers
   * Recent posts
+* Layout
+  * Accordion
 * Contact form by Formspree
 * Google search
 * Disqus comments
@@ -413,6 +417,50 @@ keywords = ["FAQ","How do I","questions","what if"]
 +++
 ```
 
+## Layout
+
+The theme contains a number of partials that can be easily reused on any type of page. The intent is to give the user of the theme
+a maximum amount of flexibility in using, reusing and combining these partials.
+
+### Accordion
+
+The intent of the `accordion` partial is, in line with Hugo, to split content from layout. So it is
+up to the site builder to provide the data that is past to the partial. 
+
+Let's go over an example usage in the `exampleSite`.
+In `content/template-accordions.md`, we call a shortcode defined in the site itself:
+
+```
+{{% accordion-example id="accordion-test" data="accordion-data" %}}
+```
+
+This shortcode expects a single argument which refers to a specific set of data files
+from the `data` folder:
+
+```
+{{ $contentIndex := .Get "data" }}
+{{ $content := index .Site.Data $contentIndex }}
+{{ partial "accordion.html" (dict "context" . "accordionid" (.Get "id") "content" $content) }}
+```
+
+The partial is called with a `dict` containing these key/value pairs:
+* `context`: the current context (`.`)
+* `accordionid`: the id for this accordion and it's set of items. This allows the accordion to be used multiple
+  times on the same page.
+* `content`: a list of maps containing the content to be rendered. In the case of the example site, the list 
+  contains the 3 YAML files from `data/accordion-data`, each made available as a map.
+
+You can use data from the `data` folder or use [Data Driven Content](https://gohugo.io/templates/data-templates/#data-driven-content).
+What the data is or where it comes from is totally up to the site author.
+
+This theme expects an item of an accordion to have the following key/value pairs:
+* `id`: to identify each item within the accordion
+* `title`: the text box title
+* `content`: the text to render below the text box title.
+* `img`: an optional image to show left of the `content`
+
+If you want to render data with more key/value pairs, copy the theme's `layouts/partials/accordion-item.html` to
+your site `layouts/partials/` folder and adapt at will.
 
 ## Usage
 
