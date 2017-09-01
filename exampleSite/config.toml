@@ -17,25 +17,114 @@ paginate = 10
 # Main menu
 
 [[menu.main]]
-    name = "Home"
-    url  = "/"
-    weight = 1
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
 
 [[menu.main]]
-    name = "Blog"
-    url  = "/blog/"
-    weight = 2
+    name       = "Option 1: Default Page"
+    url        = "/"
+    weight     = 1
+    parent     = "menu.home"
 
 [[menu.main]]
-    name = "FAQ"
-    identifier = "faq"
-    url  = "/faq/"
-    weight = 3
+    name       = "Option 2: Application"
+    url        = "/"
+    weight     = 2
+    parent     = "menu.home"
 
 [[menu.main]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 4
+    name       = "Option 3: Startup"
+    url        = "/"
+    weight     = 3
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = "Option 4: Agency"
+    url        = "/"
+    weight     = 4
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = "Option 5: Portfolio"
+    url        = "/"
+    weight     = 5
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "menu.portfolio"
+    url        = "/portfolio/"
+    weight     = 3
+
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "section.portfolio"
+    url        = ""
+    weight     = 1
+    parent     = "menu.portfolio"
+
+[[menu.main]]
+    name       = "2 Columns"
+    url        = ""
+    weight     = 1
+    parent     = "section.portfolio"
+
+[[menu.main]]
+    name       = "2 Columns With Negative Space"
+    url        = ""
+    weight     = 1
+    parent     = "section.portfolio"
+
+[[menu.main]]
+    name       = "About"
+    identifier = "section.about"
+    url        = ""
+    weight     = 2
+    parent     = "menu.portfolio"
+
+[[menu.main]]
+    name       = "About Us"
+    url        = ""
+    weight     = 1
+    parent     = "section.about"
+
+[[menu.main]]
+    name       = "Our Team"
+    url        = ""
+    weight     = 2
+    parent     = "section.about"
+
+[[menu.main]]
+    name       = "Marketing"
+    identifier = "section.marketing"
+    url        = ""
+    weight     = 3
+    parent     = "menu.portfolio"
+
+[[menu.main]]
+    name       = "Packages"
+    url        = ""
+    weight     = 1
+    parent     = "section.marketing"
+
+[[menu.main]]
+    name       = "Blog"
+    identifier = "menu.blog"
+    url        = "/blog/"
+    weight     = 4
+
+[[menu.main]]
+    name       = "FAQ"
+    identifier = "menu.faq"
+    url        = "/faq/"
+    weight     = 5
+
+[[menu.main]]
+    name       = "Contact"
+    url        = "/contact/"
+    weight     = 6
 
 # Top bar social links menu
 
