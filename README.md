@@ -155,7 +155,113 @@ You can also define the menu items that will appear in the top bar. Edit the `[[
     weight = 4
 ```
 
-The `weight` parameter will determine the order of the menu entries.
+The `weight` parameter will determine the order of the menu entries. A top level menu item can contain a dropdown with 
+an optional image, sections and multiple columns of menu items.
+
+To create a single list of menu items in the dropdown, first give your top level menu item unique identifier:
+
+```toml
+[[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+```
+
+Now create additional menu items and use the above unique identifier as the value for the parent attribute:
+
+```
+[[menu.main]]
+    name       = "Option 1: Default Page"
+    url        = "/"
+    weight     = 1
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = "Option 2: Application"
+    url        = "/"
+    weight     = 2
+    parent     = "menu.home"
+```
+
+It is also possible to display a dropdown menu with 4 columns. This theme supports 2 variations:
+* 4 columns of menu items with sections
+* 2 column wide image + 2 columns of menu items with sections
+
+To display 4 columns of menu items, start using sections. Sections are menu items threated special by this theme:
+
+```
+[[menu.main]]
+    name       = "All Pages"
+    identifier = "menu.allpages"
+    url        = ""
+    weight     = 4
+
+[[menu.main]]
+    name       = "Home"
+    identifier = "section.ap-home"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 1
+
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "section.ap-portfolio"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 2
+
+[[menu.main]]
+    name       = "Shop"
+    identifier = "section.ap-shop"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 3
+
+[[menu.main]]
+    name       = "Blog"
+    identifier = "section.ap-blog"
+    url        = ""
+    weight     = 3
+    parent     = "menu.allpages"
+    post       = 4
+
+[[menu.main]]
+    name       = "Blog Listing Big"
+    url        = "/blog/"
+    weight     = 1
+    parent     = "section.ap-blog"
+
+```
+
+The above example shows a reduced version of the *All Pages* menu item from the example site. As you can see,
+we first create menu items with an identifier starting with `section.`. If you create entries like this, these
+will appear as section headers in your drop down. 
+
+Each of these entries contain values for both the `weight` and `post` attribute. The `post` attribute is hijacked
+to indicate in which column a section will be put in. Within a column, the `weight` value is respected to show the
+sections top to bottom.
+
+Use to the unique section identifier (e.g. `section.ap-blog`) as the `parent` value to add a menu item to a specific
+section. Using `weight` and `post` on the sections allow you to balance the columns with approximately the same
+amount of entries.
+
+To display a 2 column wide image and 2 columns of menu items, the process is similar as above. However, we hijack
+the `url` field of the top level menu item to link the image from our static assets:
+
+```
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "menu.portfolio"
+    url        = "/img/template-homepage.png"
+    weight     = 3
+```
+
+When a `url` is filled in, only column 1 and 2 (the `post` value in the section menu items) will be displayed.
+When using an image, don't configure section menu items in column 3 or 4. **These will not be rendered.**
 
 
 ### Sidebar widgets
