@@ -1,9 +1,12 @@
 {{ if isset .Site.Params "features" }}
 {{ if .Site.Params.features.enable }}
-{{ if gt (len .Site.Data.features) 0 }}
+{{ $myData := (index .Site.Data .Lang) }}
+{{ if $myData }}
+{{ if (isset $myData "features" ) }}
+{{ if gt (len $myData.features) 0 }}
 <section class="bar background-white">
     <div class="container">
-        {{ range $index, $element := sort .Site.Data.features "weight" }}
+        {{ range $index, $element := sort $myData.features "weight" }}
 		{{ if eq (mod $index 3) 0 }}
 		<div class="col-md-12">
             <div class="row">
@@ -17,13 +20,15 @@
                         <p>{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
-		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $myData.features) 1 )) }}
 			</div>
 		</div>
 		{{ end }}
         {{ end }}
     </div>
 </section>
+{{ end }}
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
