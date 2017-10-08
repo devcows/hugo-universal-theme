@@ -5,8 +5,8 @@
       <div class="col-xs-5">
         <p class="hidden-sm hidden-xs">
           {{ T "contactUsOn" }} {{ .Site.Params.email }} {{ T "or" }} {{ .Site.Params.phone }}</p>
-        <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-          <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+        <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone">{{ .Site.Params.phone }}</i></a>
+          <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope">{{ .Site.Params.email }}</i></a>
         </p>
       </div>
       <div class="col-xs-7">
