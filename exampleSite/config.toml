@@ -1,6 +1,7 @@
 baseurl = "https://example.org"
 title = "Universal"
 theme = "hugo-universal-theme"
+themesDir = "../.."
 languageCode = "en-us"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
