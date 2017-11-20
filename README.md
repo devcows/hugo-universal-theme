@@ -12,7 +12,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 
 ## Table of Contents
 
-* [Theme features](#theme-features)
+* [Features](#features)
 * [Installation](#installation)
 * [Configuration](#configuration)
   * [Style](#style)
