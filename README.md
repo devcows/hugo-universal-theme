@@ -1,7 +1,6 @@
 # Universal Theme for Hugo
 
-[![Build Status](https://travis-ci.org/devcows/hugo-universal-theme.svg?branch=master)](https://travis-ci.org/devcows/hugo-universal-theme)
-[![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
+This is a fork of [DevCows' Hugo Universal Theme](https://github.com/devcows/hugo-universal-theme).
 
 Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
 
