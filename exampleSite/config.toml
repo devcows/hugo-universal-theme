@@ -9,6 +9,8 @@ defaultContentLanguage = "en"
 disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
+# Enable URLs to be regenerated relative to sit root
+RelativeURLs = true
 
 # Define the number of posts per page
 paginate = 10
