@@ -5,13 +5,13 @@
   translation: "Template par"
 
 - id: portedBy
-  translation: "Porté pour Hugo par"
+  translation: "Porté sur Hugo par"
 
 - id: contactGoTo
   translation: "Aller à la page de contact"
 
 - id: contactAddrTitle
-  translation: "Addresse"
+  translation: "Adresse"
 
 - id: contactTitle
   translation: "Contact"
@@ -38,7 +38,7 @@
   translation: "Basculer la Navigation"
 
 - id: categoriesTitle
-  translation: "Categories"
+  translation: "Catégories"
 
 - id: searchTitle
   translation: "Recherche"
@@ -68,4 +68,4 @@
   translation: "Ancien"
 
 - id: publishedOn
-  translation: "sur"
+  translation: "le"
