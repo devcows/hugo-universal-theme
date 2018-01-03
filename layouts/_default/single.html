@@ -21,6 +21,9 @@
 				{{ end }}
 
         <div id="content">
+				{{ if .Params.custom_partials.begin }}
+				{{ partial .Params.custom_partials.begin . }}
+				{{ end }}
             <div class="container">
 
                 <div class="row">
@@ -66,6 +69,9 @@
 
             </div>
             <!-- /.container -->
+				{{ if .Params.custom_partials.end }}
+				{{ partial .Params.custom_partials.end . }}
+				{{ end }}
         </div>
         <!-- /#content -->
 
