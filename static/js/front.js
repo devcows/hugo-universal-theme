@@ -107,6 +107,18 @@ function sliders () {
       itemsMobile: [480, 1]
     })
 
+    $('.awards').owlCarousel({
+      items: 3,
+      navigation: true,
+      navigationText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+      ],
+      itemsDesktopSmall: [990, 3],
+      itemsTablet: [768, 2],
+      itemsMobile: [480, 1]
+    })
+
     $('.project').owlCarousel({
       navigation: true, // Show next and prev buttons
       navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
