@@ -2012,6 +2012,60 @@ fieldset[disabled] .btn-template-primary.active {
   border-top: solid 1px #4fbfa8;
   border-bottom: solid 1px #4fbfa8;
 }
+
+div.alert p {
+  position: relative;
+  display: block;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.alert p:first-child::before {
+  position: absolute;
+  top: -0.5rem;
+  left: -2.2rem;
+  font-family: 'FontAwesome';
+  font-size: 1.5rem;
+  color: #31708f;
+  content: '\f05a';
+  width: 1.5rem;
+  text-align: center;
+	padding-top: .25rem;
+}
+
+
+div.alert-warning p:first-child::before {
+  content: '\f071';
+}
+
+div.alert a {
+  text-decoration: none;
+  border-bottom: solid 1px #e4e4e4;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+div.alert a:hover {
+  border-bottom-color: transparent;
+}
+
+.alert-note {
+  color: #fff;
+  background-color: #03A9F4; /* Material LightBlue500 */
+  border-color: #bce8f1;
+}
+
+.alert-info {
+	font-weight: normal;
+}
+
+.alert-warning {
+  color: #fff;
+  background-color: #f44336; /* Material Red500 */
+  border-color: #ebccd1;
+}
+
 #blog-listing-big .post,
 #blog-homepage .post {
   margin-bottom: 60px;
