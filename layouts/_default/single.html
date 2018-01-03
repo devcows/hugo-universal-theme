@@ -35,6 +35,11 @@
                         <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
 
                         <div id="post-content">
+													{{ if .Params.show_banner_in_single }}
+                          {{ with .Params.banner }}
+                          <img src="{{ . | relURL }}" class="img-responsive banner">
+                          {{ end }}
+                          {{ end }}
                           {{ .Content }}
                         </div>
                         <!-- /#post-content -->
