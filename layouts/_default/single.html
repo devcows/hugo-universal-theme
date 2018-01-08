@@ -37,7 +37,7 @@
                         <div id="post-content">
 													{{ if .Params.show_banner_in_single }}
                           {{ with .Params.banner }}
-                          <img src="{{ . | relURL }}" class="img-responsive banner">
+                          <img src="{{ . | relURL }}" class="img-responsive center-block banner">
                           {{ end }}
                           {{ end }}
                           {{ .Content }}
