@@ -58,6 +58,10 @@
             </div>
             <!-- /.row -->
 
+            {{ if gt (len $posts.Pages) 4 }}
+            <a href="/blog" class="btn btn-small btn-template-main pull-right">{{ i18n "readMore" }}</a>
+            {{ end }}
+
             <!-- *** BLOG HOMEPAGE END *** -->
 
         </div>
