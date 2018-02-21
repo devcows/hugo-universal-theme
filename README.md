@@ -146,10 +146,11 @@ email = "your@email.com"
 
 ### Menu
 
-You can also define the menu items that will appear in the top bar. Edit the `[[params.menu]]` entries to create your menu.
+You can also define the menu items that will appear in the top bar. Edit the `[[menu.main]]` entries to create your menu.
 
 ```toml
-[[params.menu]]
+[menu]
+[[menu.main]]
     name = "Contact"
     url  = "/contact"
     weight = 4
