@@ -54,13 +54,16 @@
 
             {{ if isset .Site.Params "address" }}
             <section>
-
               <h3 class="text-uppercase"> {{ i18n "contactAddrTitle" }}</h3>
-
                 {{ .Site.Params.address | safeHTML }}
-
             </section>
+            {{ end }}
 
+            {{ if isset .Site.Params "phone" }}
+            <section>
+              <h3 class="text-uppercase"> {{ i18n "contactPhoneTitle" }}</h3>
+                {{ .Site.Params.phone | safeHTML }}
+            </section>
             {{ end }}
 
         </div>

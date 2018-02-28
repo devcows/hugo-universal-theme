@@ -13,6 +13,9 @@
 - id: contactAddrTitle
   translation: "地址"
 
+- id: contactAddrTitle
+  translation: "电话号码"
+
 - id: contactTitle
   translation: "联系"
 

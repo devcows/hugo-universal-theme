@@ -13,6 +13,9 @@
 - id: contactAddrTitle
   translation: "Адрес"
 
+- id: contactPhoneTitle
+  translation: "Номер телефона"
+
 - id: contactTitle
   translation: "Контакты"
 
