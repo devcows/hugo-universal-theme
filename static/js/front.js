@@ -1,4 +1,3 @@
-/* global $this: true */
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "animationsSlider" }] */
 
 if ($.cookie('themeCSSpath')) {
