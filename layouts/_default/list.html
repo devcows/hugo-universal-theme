@@ -32,7 +32,11 @@
                                           {{ if .Params.banner }}
                                           <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
                                           {{ else }}
-                                          <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                            {{ with .Resources.GetMatch "banner*"}}
+                                              <img src="{{ .RelPermalink }}"class="img-responsive" alt="">
+                                            {{ else }}
+                                            <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                            {{ end }}
                                           {{ end }}
                                       </a>
                                   </div>
