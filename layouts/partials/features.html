@@ -10,11 +10,13 @@
 		{{ end }}
 				<div class="col-md-4">
                     <div class="box-simple">
-                        <div class="icon">
+                          <div class="icon">
                             <i class="{{ .icon }}"></i>
-                        </div>
+                            <a href="{{ .url }}"> 
+                          </div>
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
+                        </a>
                     </div>
                 </div>
 		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
