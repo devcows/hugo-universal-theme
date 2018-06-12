@@ -12,11 +12,17 @@
                     <div class="box-simple">
                           <div class="icon">
                             <i class="{{ .icon }}"></i>
+                        {{ if .url }}
                             <a href="{{ .url }}"> 
                           </div>
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                         </a>
+                        {{ else }}
+                        </div>
+                        <h3>{{ $element.name }}</h3>
+                        <p>{{ $element.description | markdownify }}</p>
+                        {{ end }}
                     </div>
                 </div>
 		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
