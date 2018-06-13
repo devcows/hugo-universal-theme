@@ -10,16 +10,18 @@
 		{{ end }}
 				<div class="col-md-4">
                     <div class="box-simple">
+                      {{ if .url }}
+                       <a href="{{ .url }}"> 
                           <div class="icon">
                             <i class="{{ .icon }}"></i>
-                        {{ if .url }}
-                            <a href="{{ .url }}"> 
                           </div>
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
-                        </a>
+                      </a>
                         {{ else }}
-                        </div>
+                        <div class="icon">
+                            <i class="{{ .icon }}"></i>
+                          </div>
                         <h3>{{ $element.name }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                         {{ end }}
