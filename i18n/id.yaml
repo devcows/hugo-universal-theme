@@ -1,0 +1,71 @@
+- id: home
+  translation: "Beranda"
+
+- id: templateBy
+  translation: "Templat dibuat oleh"
+
+- id: portedBy
+  translation: "Diadapatasi ke Hugo oleh"
+
+- id: contactGoTo
+  translation: "Ke laman kontak"
+
+- id: contactAddrTitle
+  translation: "Alamat"
+
+- id: contactTitle
+  translation: "Kontak"
+
+- id: contactForm
+  translation: "Formulir pertanyaan"
+
+- id: contactName
+  translation: "Nama Anda"
+
+- id: contactMail
+  translation: "Surel Anda"
+
+- id: contactMessage
+  translation: "Pesan Anda"
+
+- id: contactSend
+  translation: "Kirim pesan"
+
+- id: navHome
+  translation: "ke laman utama"
+
+- id: navToggle
+  translation: "Buka navigasi"
+
+- id: categoriesTitle
+  translation: "Kategori"
+
+- id: searchTitle
+  translation: "Cari"
+
+- id: tagsTitle
+  translation: "Tags"
+
+- id: continueReading
+  translation: "Lanjutkan membaca"
+
+- id: readMore
+  translation: "Baca selengkapnya"
+
+- id: authorBy
+  translation: "Oleh"
+
+- id: recentPosts
+  translation: "Kiriman terkini"
+
+- id: aboutUs
+  translation: "Tentang kami"
+
+- id: newer
+  translation: "Terbaru"
+
+- id: older
+  translation: "Lebih lama"
+
+- id: publishedOn
+  translation: "pada"
