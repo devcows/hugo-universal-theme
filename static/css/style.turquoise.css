@@ -474,13 +474,24 @@ ul.list-style-none {
   margin-left: 7px;
 }
 .navbar-affixed-top {
-  position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 .navbar-affixed-top.affix {
   -webkit-box-shadow: 0 0 5px #cccccc;
   box-shadow: 0 0 5px #cccccc;
+}
+.navbar-affixed-top.affix + section {
+  margin-top: 62px;
+}
+@supports (position: sticky) {
+  .navbar-affixed-top {
+    position: sticky;
+  }
+  .navbar-affixed-top.affix + section {
+    margin-top: 0;
+  }
 }
 #login-modal {
   overflow: hidden;
