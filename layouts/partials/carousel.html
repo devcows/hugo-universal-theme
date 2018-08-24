@@ -14,7 +14,7 @@
                             {{ .description | safeHTML }}
                         </div>
                         <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .image }}" alt="">
+                            <img class="img-responsive" src="{{ .Site.BaseURL }}{{ .image }}" alt="">
                         </div>
                     </div>
                 </div>
