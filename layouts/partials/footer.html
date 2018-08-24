@@ -22,7 +22,7 @@
                 {{ range first 3 (where .Site.Pages "Type" "blog") }}
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="{{ .Permalink }}">
+                        <a href="{{ .Permalink | safeURL }}">
                           {{ if isset .Params "banner" }}
                             <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="{{ .Title }}">
                           {{ else }}
@@ -31,7 +31,7 @@
                         </a>
                     </div>
                     <div class="name same-height-always">
-                        <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+                        <h5><a href="{{ .Permalink | safeURL }}">{{ .Title }}</a></h5>
                     </div>
                 </div>
                 {{ end }}
