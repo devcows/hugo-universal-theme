@@ -8,7 +8,6 @@
                 <div class="heading text-center">
                     <h2>{{ .Site.Params.clients.title }}</h2>
                 </div>
-
                 <p class="lead">
                   {{ .Site.Params.clients.subtitle }}
                 </p>
@@ -18,10 +17,10 @@
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
                           <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                            <img src="{{ .Site.BaseURL }}{{ .image }}" alt="{{ .name }}" class="img-responsive" />
                           </a>
                         {{ else }}
-                          <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                          <img src="{{ .Site.BaseURL }}{{ .image }}" alt="{{ .name }}" class="img-responsive" />
                         {{ end }}
                     </li>
                     {{ end }}

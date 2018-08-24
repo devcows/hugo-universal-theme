@@ -1,0 +1,2 @@
+baseurl = 'dat://xxx/'
+publishDir = 'public-dat'
