@@ -10,7 +10,9 @@
                 </div>
 
                 <p class="lead">
+                  <a href= "{{ .Site.Params.clients.url }}" target="_blank">
                   {{ .Site.Params.clients.subtitle }}
+                  </a>
                 </p>
 
                 <ul class="owl-carousel customers">
@@ -18,10 +20,10 @@
                     <li class="item" title="{{ .name }}">
                         {{ if .url }}
                           <a href="{{ .url }}" target="_blank">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                            <img src="{{ .Site.BaseURL }}{{ .image }}" alt="{{ .name }}" class="img-responsive" />
                           </a>
                         {{ else }}
-                          <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                          <img src="{{ .Site.BaseURL }}{{ .image }}" alt="{{ .name }}" class="img-responsive" />
                         {{ end }}
                     </li>
                     {{ end }}
