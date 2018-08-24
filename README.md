@@ -111,6 +111,9 @@ googleAnalytics = "UA-XXXXX-X"
 
 Leave the `googleAnalytics` key empty to disable it.
 
+### Logo
+
+You can select the logos using the logo and logo_small parameters. The logo_small value will be used when the site is rendered on small screens.
 
 ### Contact form
 
