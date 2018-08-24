@@ -439,7 +439,7 @@ $ hugo --config config.toml,config_todat.toml
 ```
 
 A new folder will be created, share that folder on the dat network, then copy the dat address and use it as the baseURL, do not forget to add a slash at the end of the baseURL.
-Run the command again, and reload the dat sharing, the website should be nice looking on the beakerbrowser.
+Run the command again, and reload the dat sharing, the website should be nice looking on the beakerbrowser. Be careful, small caps and capitals are treated differently on dat, while it is not on http sites (image file names,...).
 
 ## Contributing
 
