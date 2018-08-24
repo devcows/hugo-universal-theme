@@ -10,12 +10,19 @@
                 <div class="item">
                     <div class="row">
                         <div class="col-sm-5 right">
-                            <h1>{{ .title }}</h1>
+                            <h1>{{ .title | safeHTML}}</h1>
                             {{ .description | safeHTML }}
                         </div>
                         <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .Site.BaseURL }}{{ .image }}" alt="">
-                        </div>
+                            <img class="img-responsive" src="{{ $.Site.BaseURL }}{{ .image }}" alt="">
+                            
+                            {{ if .source }}
+                            
+                            <p><small> image {{ .source | safeHTML}} </small> </p>
+                            
+                            {{ end }}
+                        </div>    
+                        
                     </div>
                 </div>
                 {{ end }}
