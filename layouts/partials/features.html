@@ -10,13 +10,13 @@
         {{ end }}
                 <div class="col-md-4">
                     <div class="box-simple">
-                        {{ with $element.link }}
-                        <a href="{{ $element.link }}">
+                        {{ with $element.url }}
+                        <a href="{{ $element.url }}">
                         {{ end }}
                             <div class="icon">
                                 <i class="{{ .icon }}"></i>
                             </div>
-                        {{ with $element.link }}
+                        {{ with $element.url }}
                         </a>
                         {{ end }}
                         <h3>{{ $element.name | markdownify }}</h3>
