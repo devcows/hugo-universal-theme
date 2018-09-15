@@ -13,7 +13,7 @@
                         <div class="icon">
                             <i class="{{ .icon }}"></i>
                         </div>
-                        <h3>{{ $element.name }}</h3>
+                        <h3>{{ $element.name | markdownify }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
