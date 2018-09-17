@@ -76,5 +76,5 @@
 - id: 404Message
   translation: "We are sorry – this page is not here anymore"
 
-- id: 404GoHome
+- id: 404NavHome
   translation: "Перейти на главную"

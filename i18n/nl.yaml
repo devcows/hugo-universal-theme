@@ -76,5 +76,5 @@
 - id: 404Message
   translation: "Het spijt ons – deze pagina is er niet meer"
 
-- id: 404GoHome
+- id: 404NavHome
   translation: "Ga naar de homepage"

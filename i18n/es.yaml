@@ -76,5 +76,5 @@
 - id: 404Message
   translation: "Lo sentimos – esta página ya no está aquí"
 
-- id: 404GoHome
+- id: 404NavHome
   translation: "Ir a la página de inicio"
