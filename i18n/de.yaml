@@ -32,7 +32,7 @@
   translation: "Nachricht senden"
 
 - id: navHome 
-  translation: "zur Hautpseite"
+  translation: "zur Hauptseite"
 
 - id: navToggle
   translation: "Navigation ein-/ausblenden"
