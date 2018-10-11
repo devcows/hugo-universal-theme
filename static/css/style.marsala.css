@@ -1143,7 +1143,10 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .home-carousel {
   position: relative;
-  background: url('../img/photogrid.jpg') center center repeat;
+  /*background: url('../img/photogrid.jpg') center center repeat;
+  background-size: cover;*/
+  background-image: url("data:image/svg+xml,%3Csvg%3E%3Cpath+fill%3D%22none%22+stroke%3D%22%231a2b2a%22+strokeWidth%3D%221.5px%22+d%3D%22M15+40H0m45+0H15m30-20H15m30+20h15M15+20H0m45+0h15M10+60h10M40+0h10M10+0L0+30l15+10+25+20L20+0l25+20+15+10-10+30%22%3E%3C%2Fpath%3E%3Cpath+fill%3D%22none%22+stroke%3D%22%231a2b2a%22+strokeWidth%3D%221.5px%22+d%3D%22M60+52l-10+8H40M20+0H10L0+8m0+0l15+12+30+20+15+12%22%3E%3C%2Fpath%3E%3Cpath+fill%3D%22none%22+stroke%3D%22%231a2b2a%22+strokeWidth%3D%221.5px%22+d%3D%22M0+52l15-12+30-20L60+8+50+0l10+30-15+10-25+20L40+0+15+20+0+30l10+30z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+  background-repeat: repeat;
   background-size: cover;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
