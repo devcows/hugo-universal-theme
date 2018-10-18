@@ -62,8 +62,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
   <meta name="twitter:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
-  {{ if .Params.banner }}<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.banner }}">
-  {{ else }}<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.twitterImage }}">
+  {{ if .Params.banner }}<meta name="twitter:image" content="{{ .Params.banner | absURL }}">
+  {{ else }}<meta name="twitter:image" content="{{ .Site.Params.twitterImage | absURL }}">
   {{ end }}<meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
 
   <!-- Facebook OpenGraph tags -->
