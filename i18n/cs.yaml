@@ -1,0 +1,71 @@
+- id: home
+  translation: "Domovská stránka"
+
+- id: templateBy
+  translation: "Šablona od"
+
+- id: portedBy
+  translation: "Na Hugo přidal"
+
+- id: contactGoTo
+  translation: "Přejít na stránku s kontakty"
+
+- id: contactAddrTitle
+  translation: "Adresa"
+
+- id: contactTitle
+  translation: "Kontakt"
+
+- id: contactForm
+  translation: "Kontakní formulář"
+
+- id: contactName
+  translation: "Vaše jméno"
+
+- id: contactMail
+  translation: "Váš e-mail"
+
+- id: contactMessage
+  translation: "Vaše zpráva"
+
+- id: contactSend
+  translation: "Odeslat zprávu"
+
+- id: navHome
+  translation: "Přejít na domovskou stránku"
+
+- id: navToggle
+  translation: "Přepnout prohlížení"
+
+- id: categoriesTitle
+  translation: "Kategorie"
+
+- id: searchTitle
+  translation: "Hledat"
+
+- id: tagsTitle
+  translation: "Tags"
+
+- id: continueReading
+  translation: "Pokračovat ve čtení"
+
+- id: readMore
+  translation: "Více"
+
+- id: authorBy
+  translation: "Autor:"
+
+- id: recentPosts
+  translation: "Poslední články"
+
+- id: aboutUs
+  translation: "O nás"
+
+- id: newer
+  translation: "Nové"
+
+- id: older
+  translation: "Starší"
+
+- id: publishedOn
+  translation: "dne"
