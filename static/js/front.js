@@ -25,6 +25,7 @@ $(function () {
 // Ajax contact
 function contactFormAjax () {
   var form = $('.contact-form-ajax')
+  if (typeof form === 'undefined') return false
   form.submit(function () {
     $this = $(this)
     $.post($(this).attr('action'),
