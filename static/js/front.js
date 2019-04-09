@@ -19,12 +19,13 @@ $(function () {
   animations()
   counters()
   demo()
-  contactForm()
+  contactFormAjax()
 })
 
 // Ajax contact
-function contactForm () {
-  var form = $('.contact-form')
+function contactFormAjax () {
+  var form = $('.contact-form-ajax')
+  if (typeof form === 'undefined') return false
   form.submit(function () {
     $this = $(this)
     $.post($(this).attr('action'),
