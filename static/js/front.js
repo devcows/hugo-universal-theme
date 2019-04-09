@@ -20,7 +20,6 @@ $(function () {
   counters()
   demo()
   contactFormAjax()
-  contactFormPost()
 })
 
 // Ajax contact
@@ -40,10 +39,6 @@ function contactFormAjax () {
       , 'json')
     return false
   })
-}
-
-function contactFormPost(){
-    var form = $('.contact-form-post')
 }
 
 /* for demo purpose only - can be deleted */
