@@ -15,11 +15,7 @@
 
                 <div id="contact-message"></div>
 
-                {{ if .Site.Params.contact_form_ajax }}
-                <form class="contact-form-ajax" method="post" action="https://formspree.io/{{ .Site.Params.email }}">
-                {{ else }}
-                <form class="contact-form-post" method="post" action="https://formspree.io/{{ .Site.Params.email }}">
-                {{ end }}
+                <form class="contact-form-{{ with .Site.Params.contact_form_ajax }}ajax{{ else }}post{{ end }}" method="post" action="https://formspree.io/{{ .Site.Params.email }}">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
