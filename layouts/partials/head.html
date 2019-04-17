@@ -67,6 +67,7 @@
   {{ end }}<meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
 
   <!-- Facebook OpenGraph tags -->
+  <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
   <meta property="og:title" content="{{ .Title }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ .URL }}/" />
