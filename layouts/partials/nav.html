@@ -23,14 +23,14 @@
                   {{ $current := . }}
                   {{ range .Site.Menus.main }}
                   {{ $topLevel := replace .URL "/" "" }}
-                  {{ $dropdown_klass := "dropdown" }}
+                  {{ $li_dropdown_class := "dropdown" }}
                   {{ if not $current.IsHome }}
                      {{ if or (eq $current.RelPermalink .URL) (eq $current.Type $topLevel) }}
-                       {{ $dropdown_klass = "dropdown active" }}
+                       {{ $li_dropdown_class = "dropdown active" }}
                      {{ end }}
                   {{ end }}
 
-                  <li class="{{ $dropdown_klass }}">
+                  <li class="{{ $li_dropdown_class }}">
                     {{ if .HasChildren }}
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
