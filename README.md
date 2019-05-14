@@ -159,7 +159,9 @@ You can also define the menu items that will appear in the top bar. Edit the `[[
     weight = 4
 ```
 
-The `weight` parameter will determine the order of the menu entries.
+The `weight` key will determine the order of the menu entries.
+
+**Important:** Do not change the `identifier` key of existing menu entries!
 
 
 ### Sidebar widgets
