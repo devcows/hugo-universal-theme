@@ -408,7 +408,7 @@ The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can b
 
 Besides, certain [Open Graph](http://ogp.me/) metadata is automatically set:
 
-- `article:published_time`, `article:modified_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
+- `article:published_time`, `article:modified_time`, `og:updated_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
 - `article:section` and `article:tag` are set based on [Hugo's `categories` and `tags` taxonomies](https://gohugo.io/content-management/taxonomies/#default-taxonomies). Since there can only be one `article:section`, only the first element of the `categories` array is used as `article:section`.
 
 You can set default values for all pages in the `config.toml` file as below:
