@@ -28,7 +28,7 @@
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       {{ range .Children }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        <li><a href="{{ .URL }}">{{ with .Pre }}{{ . | markdownify }}{{ end }}{{ .Name }}{{ with .Post }}{{ . | markdownify }}{{ end }}</a></li>
                       {{ end }}
                     </ul>
                     {{ else }}

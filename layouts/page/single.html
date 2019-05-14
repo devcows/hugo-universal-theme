@@ -14,6 +14,11 @@
         </header>
 
         {{ partial "breadcrumbs.html" . }}
+        {{ if or .Params.header.image .Params.header.carousel }}
+        {{ partial "header_image.html" . }}
+        {{ else }}
+        <div class="article-no-header"></div>
+        {{ end }}
 
         <div id="content">
             {{ if isset .Params "id" }}
@@ -21,6 +26,10 @@
               {{ partial .Params.id . }}
 
             {{ else }}
+
+            {{ if .Params.custom_partials.begin }}
+            {{ partial .Params.custom_partials.begin . }}
+            {{ end }}
 
             <div class="container">
 
@@ -39,6 +48,10 @@
 
             </div>
             <!-- /.container -->
+
+            {{ if .Params.custom_partials.end }}
+            {{ partial .Params.custom_partials.end . }}
+            {{ end }}
 
             {{ end }}
         </div>

@@ -14,8 +14,16 @@
         </header>
 
         {{ partial "breadcrumbs.html" . }}
+				{{ if or .Params.header.image .Params.header.carousel }}
+				{{ partial "header_image.html" . }}
+				{{ else }}
+				<div class="article-no-header"></div>
+				{{ end }}
 
         <div id="content">
+				{{ if .Params.custom_partials.begin }}
+				{{ partial .Params.custom_partials.begin . }}
+				{{ end }}
             <div class="container">
 
                 <div class="row">
@@ -27,6 +35,11 @@
                         <p class="text-muted text-uppercase mb-small text-right">{{ if .Params.author }}{{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a> | {{ end }}{{ .Date.Format .Site.Params.date_format }}</p>
 
                         <div id="post-content">
+													{{ if .Params.show_banner_in_single }}
+                          {{ with .Params.banner }}
+                          <img src="{{ . | relURL }}" class="img-responsive center-block banner">
+                          {{ end }}
+                          {{ end }}
                           {{ .Content }}
                         </div>
                         <!-- /#post-content -->
@@ -61,6 +74,9 @@
 
             </div>
             <!-- /.container -->
+				{{ if .Params.custom_partials.end }}
+				{{ partial .Params.custom_partials.end . }}
+				{{ end }}
         </div>
         <!-- /#content -->
 

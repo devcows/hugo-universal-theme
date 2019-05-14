@@ -19,7 +19,11 @@
 
         {{ partial "features.html" . }}
 
+				{{ if and (isset .Site.Params "testimonials") .Site.Params.testimonials.enable }}
         {{ partial "testimonials.html" . }}
+				{{ else if and (isset .Site.Params "awards") .Site.Params.awards.enable }}
+        {{ partial "awards.html" . }}
+				{{ end }}
 
         {{ partial "see_more.html" . }}
 
