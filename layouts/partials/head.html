@@ -3,11 +3,12 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title | markdownify | plainify }}</title>
+  {{ $title_plain := .Title | markdownify | plainify }}
+  <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
   <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.defaultKeywords ", " }}{{ end }}">
-  {{ $description := default .Site.Params.defaultDescription .Description }}
-  <meta name="description" content="{{ $description | markdownify | plainify }}">
+  {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
+  <meta name="description" content="{{ $description_plain }}">
 
   {{ .Hugo.Generator }}
 
@@ -57,10 +58,10 @@
   {{ $image_ext := path.Ext $image }}
   <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:title" content="{{ .Title | markdownify | plainify }}">
+  <meta property="og:title" content="{{ $title_plain }}">
   <meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
   <meta property="og:url" content="{{ .Permalink }}" />
-  <meta property="og:description" content="{{ $description | markdownify | plainify }}">
+  <meta property="og:description" content="{{ $description_plain }}">
   <meta property="og:image" content="{{ $image | absURL }}">
   <meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
   {{ with .Params.banner_alt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
@@ -84,9 +85,9 @@
   <!-- Twitter Card meta tags -->
   <meta name="twitter:card" content="summary{{ if and $is_blog $has_image }}_large_image{{ end }}">
   {{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
-  <meta name="twitter:title" content="{{ .Title | markdownify | plainify | truncate 70 }}">
+  <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
   <meta name="twitter:image" content="{{ $image | absURL }}">
-  <meta name="twitter:description" content="{{ $description | markdownify | plainify | truncate 200 }}">
+  <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
   {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 
 </head>
