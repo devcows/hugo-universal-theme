@@ -981,11 +981,18 @@ fieldset[disabled] .btn-template-primary.active {
   letter-spacing: 0.08em;
   font-weight: 700;
   font-size: 12px;
+  text-decoration: none;
 }
 .panel.sidebar-menu ul.tag-cloud li a:hover {
   color: #4fbfa8;
-  text-decoration: none;
   border-color: #4fbfa8;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a {
+  color: #FFFFFF;
+  background-color: #4fbfa8;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a:hover {
+  color: #FFFFFF;
 }
 .panel.sidebar-menu ul.popular,
 .panel.sidebar-menu ul.recent {
