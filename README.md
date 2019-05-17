@@ -392,7 +392,7 @@ You can enable it in the configuration file.
 
 ### Meta tags
 
-The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. Some of it is set by default in `config.toml` but can also be customized by setting the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
+The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `config.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
 
 | HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `config.toml` |
 | :------------------------------------------------------- | :------------------------- | :-------------------------------- |
