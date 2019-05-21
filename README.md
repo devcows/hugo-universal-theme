@@ -32,6 +32,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [Recent posts](#recent-posts)
     * [Meta tags](#meta-tags)
 * [Usage](#usage)
+    * [on Dat](#publish on dat)
 * [Contributing](#contributing)
 * [License](#license)
 * [Thanks](#thanks)
@@ -432,6 +433,16 @@ Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your b
 
 For more information check out the official [Hugo documentation](http://gohugo.io/overview/usage/).
 
+###publish on dat
+
+To create a version of the website to publish in on dat, you will need to run:
+
+```
+$ hugo --config config.toml,config_todat.toml
+```
+
+A new folder will be created, share that folder on the dat network, then copy the dat address and use it as the baseURL, do not forget to add a slash at the end of the baseURL.
+Run the command again, and reload the dat sharing, the website should be nice looking on the beakerbrowser. Be careful, small caps and capitals are treated differently on dat, while it is not on http sites (image file names,...).
 
 ## Contributing
 

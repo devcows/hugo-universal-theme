@@ -31,13 +31,13 @@
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> {{ i18n "readMore" }}</a>
+                                    <a href="{{ .Permalink | safeURL }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> {{ i18n "readMore" }}</a>
                                 </p>
                             </div>
                         </div>
 
                         <div class="content">
-                            <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                            <h4><a href="{{ .Permalink | safeURL }}">{{ .Title }}</a></h4>
                             <p class="author-category">
                             {{ with .Params.author }}
                             {{ i18n "authorBy" }} <a href="#">{{ . }}</a>
@@ -46,7 +46,7 @@
                             </p>
                             <p class="intro">{{ .Summary }}</p>
                             <p class="read-more">
-                              <a href="{{ .Permalink }}" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
+                              <a href="{{ .Permalink | safeURL }}" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
                             </p>
                         </div>
                     </div>
