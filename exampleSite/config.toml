@@ -18,22 +18,25 @@ paginate = 10
 # Main menu
 
 [[menu.main]]
+    identifier="home"
     name = "Home"
     url  = "/"
     weight = 1
 
 [[menu.main]]
+    identifier="blog"
     name = "Blog"
     url  = "/blog/"
     weight = 2
 
 [[menu.main]]
-    name = "FAQ"
     identifier = "faq"
+    name = "FAQ"
     url  = "/faq/"
     weight = 3
 
 [[menu.main]]
+    identifier = "contact"
     name = "Contact"
     url  = "/contact/"
     weight = 4
@@ -70,6 +73,11 @@ paginate = 10
     defaultKeywords = ["devows", "hugo", "go"]
     defaultDescription = "Site template made by devcows using hugo"
 
+    # Social media
+    facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
+    twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
+    default_sharing_image = "img/sharing-default.png"
+
     # Google Maps API key (if not set will default to not passing a key.)
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
 
@@ -90,6 +98,7 @@ paginate = 10
     #
     # Enable the contact form by entering your Formspree.io email
     email = "your@email.com"
+    contact_form_ajax = false
 
     about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
     copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."

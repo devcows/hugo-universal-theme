@@ -30,7 +30,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
-    * [Meta tags](#meta-tags)
+  * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -140,11 +140,12 @@ You can optionally add the google maps widget defining latitude and longitude in
 
 Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
 
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file.
+To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free).
 
 ```yaml
 [params]
 email = "your@email.com"
+contact_form_ajax = false
 ```
 
 ### Menu
@@ -158,7 +159,9 @@ You can also define the menu items that will appear in the top bar. Edit the `[[
     weight = 4
 ```
 
-The `weight` parameter will determine the order of the menu entries.
+The `weight` key will determine the order of the menu entries.
+
+**Important:** Do not change the `identifier` key of existing menu entries!
 
 
 ### Sidebar widgets
@@ -387,26 +390,54 @@ You can enable it in the configuration file.
 ```
 
 
-#### Meta tags
+### Meta tags
 
-`Description` and `Keywords` meta tags are available and can be customized.
-You can set default values for all pages in the `config.toml` file as below.
+The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `config.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
+
+| HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `config.toml` |
+| :------------------------------------------------------- | :------------------------- | :-------------------------------- |
+| `article:author`                                         | `facebook_author`          | -                                 |
+| `article:publisher`                                      | `facebook_site`            | `facebook_site`                   |
+| `author`                                                 | `author`                   | -                                 |
+| `description` / `og:description` / `twitter:description` | `description`              | `defaultDescription`              |
+| `keywords`                                               | `keywords`                 | `defaultKeywords`                 |
+| `og:image` / `twitter:image`                             | `banner`                   | `default_sharing_image`           |
+| `title` / `og:title` / `twitter:title`                   | `title`                    | -                                 |
+| `twitter:creator`                                        | `twitter_author`           | -                                 |
+| `twitter:site`                                           | `twitter_site`             | `twitter_site`                    |
+
+Besides, certain [Open Graph](http://ogp.me/) metadata is automatically set:
+
+- `article:published_time`, `article:modified_time`, `og:updated_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
+- `article:section` and `article:tag` are set based on [Hugo's `categories` and `tags` taxonomies](https://gohugo.io/content-management/taxonomies/#default-taxonomies). Since there can only be one `article:section`, only the first element of the `categories` array is used as `article:section`.
+
+You can set default values for all pages in the `config.toml` file as below:
 
 ```toml
 [params]
     defaultKeywords = ["devcows", "hugo", "go"]
     defaultDescription = "Site template made by Devcows using Hugo"
+    default_sharing_image = "img/sharing-default.png"
+    facebook_site = "https://www.facebook.com/GolangSociety/"
+    twitter_site = "GoHugoIO"
 ```
 
-The result in HTML will be the following.
+The resulting HTML will be the following:
 
 ```html
 <meta name="keywords" content="devcows, hugo, go">
 <meta name="description" content="Site template made by Devcows using Hugo">
+<meta property="og:description" content="Site template made by Devcows using Hugo">
+<meta property="og:image" content="img/sharing-default.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="420">
+<meta property="article:publisher" content="https://www.facebook.com/GolangSociety/">
+<meta name="twitter:description" content="Site template made by Devcows using Hugo">
+<meta name="twitter:site" content="@GoHugoIO">
 ```
 
-You can also override the default values from the `config.toml` by setting the `description` and `keywords` in the individual pages meta data.
-See the `faq.md` file in the `exampleSite` directory for an example.
+You can also override the default values from the `config.toml` by setting the respective keys in the individual pages front matter. As an example, here's the front matter from the [`faq.md` file](exampleSite/content/faq.md) in the [`exampleSite` directory](exampleSite):
 
 ```yaml
 +++
@@ -414,6 +445,16 @@ title = "FAQ"
 description = "Frequently asked questions"
 keywords = ["FAQ","How do I","questions","what if"]
 +++
+```
+
+Which results in the following HTML:
+
+```html
+<title>FAQ</title>
+<meta name="keywords" content="FAQ,How do I,questions,what if">
+<meta name="description" content="Frequently asked questions">
+<meta property="og:description" content="Frequently asked questions">
+<meta name="twitter:description" content="Frequently asked questions">
 ```
 
 

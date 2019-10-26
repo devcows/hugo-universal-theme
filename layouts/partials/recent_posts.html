@@ -16,7 +16,7 @@
 
             <div class="row">
 
-                {{ $posts := .Paginate (where .Data.Pages "Type" "blog") }}
+                {{ $posts := .Paginate (where .Site.RegularPages "Type" "blog") }}
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">

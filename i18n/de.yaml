@@ -8,7 +8,7 @@
   translation: "Portiert nach Hugo durch"
 
 - id: contactGoTo
-  translation: "Zur Kontakt Seite"
+  translation: "Zur Kontaktseite"
 
 - id: contactAddrTitle
   translation: "Adresse"
@@ -17,25 +17,25 @@
   translation: "Kontakt"
 
 - id: contactForm
-  translation: "Kontakt Formular"
+  translation: "Kontaktformular"
 
 - id: contactName
   translation: "Ihr Name"
 
 - id: contactMail
-  translation: "Ihre Email Adresse"
+  translation: "Ihre E-Mail-Adresse"
 
 - id: contactMessage
   translation: "Ihre Nachricht an uns"
 
 - id: contactSend 
-  translation: "Nachricht Senden"
+  translation: "Nachricht senden"
 
 - id: navHome 
-  translation: "zur Hautpseite"
+  translation: "zur Hauptseite"
 
 - id: navToggle
-  translation: "Navigation Ein-/Ausblenden"
+  translation: "Navigation ein-/ausblenden"
 
 - id: categoriesTitle
   translation: "Kategorien"
