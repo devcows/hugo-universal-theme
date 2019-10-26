@@ -253,13 +253,14 @@ ul.list-style-none {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  line-height: 20px;
+  line-height: 24px;
   font-size: 12px;
   text-align: center;
-  vertical-align: bottom;
 }
 #top .social a:hover {
   color: #fff;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #top .social a:hover.facebook {
   background-color: #4460ae;
@@ -275,6 +276,10 @@ ul.list-style-none {
 }
 #top .social a:hover.email {
   background-color: #4a7f45;
+}
+#top .social a:hover {
+  background: #4fbfa8;
+  color: #fff;
 }
 #top .login {
   float: right;
@@ -3529,7 +3534,7 @@ a.list-group-item.active > .badge,
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
  * http://geedmo.github.com/yamm3
- * 
+ *
  * @geedmo - Licensed under the MIT license
  */
 .yamm .nav,
