@@ -197,13 +197,13 @@ The social links on the right side are configured as a top-level menu.
     weight = 1
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fas fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
     url = "http://facebook.com"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fas fa-2x fa-facebook'></i>"
 ```
 
 ### Blog post thumbnails
@@ -276,7 +276,7 @@ A feature file looks like this.
 ```yaml
 weight: 4
 name: "Consulting"
-icon: "fa fa-lightbulb-o"
+icon: "fas fa-lightbulb-o"
 description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
 ```
 
@@ -331,7 +331,7 @@ You can enable it in the configuration file.
 ```toml
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
+    icon = "far fa-file-code"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "http://your-site.com/more"
