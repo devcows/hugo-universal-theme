@@ -65,11 +65,6 @@
   <meta property="og:image" content="{{ $image | absURL }}">
   <meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
   {{ with .Params.banner_alt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
-  {{ $image_local :=  printf "/static/%s" $image}}
-  {{ with (imageConfig $image_local) }}
-    <meta property="og:image:width" content="{{ .Width }}">
-    <meta property="og:image:height" content="{{ .Height }}">
-  {{ end }}
   {{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
   {{ if $is_blog }}
     {{ with .Param "facebook_site" }}<meta property="article:publisher" content="https://www.facebook.com/{{ . }}/">{{ end }}
