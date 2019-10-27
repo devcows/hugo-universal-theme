@@ -6,7 +6,9 @@
   {{ $title_plain := .Title | markdownify | plainify }}
   <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
-  <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.defaultKeywords ", " }}{{ end }}">
+  {{ if isset . "Keyworks" }}
+    <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.defaultKeywords ", " }}{{ end }}">
+  {{ end }}
   {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
   <meta name="description" content="{{ $description_plain }}">
 
@@ -62,14 +64,18 @@
   <meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
   <meta property="og:url" content="{{ .Permalink }}" />
   <meta property="og:description" content="{{ $description_plain }}">
-  <meta property="og:image" content="{{ $image | absURL }}">
-  <meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
-  {{ with .Params.banner_alt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
-  {{ $image_local :=  printf "/static/%s" $image}}
-  {{ with (imageConfig $image_local) }}
-    <meta property="og:image:width" content="{{ .Width }}">
-    <meta property="og:image:height" content="{{ .Height }}">
+
+  {{ if $has_image }}
+    <meta property="og:image" content="{{ $image | absURL }}">
+    <meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
+    {{ with .Params.banner_alt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
+    {{ $image_local :=  printf "/static/%s" $image}}
+    {{ with (imageConfig $image_local) }}
+      <meta property="og:image:width" content="{{ .Width }}">
+      <meta property="og:image:height" content="{{ .Height }}">
+    {{ end }}
   {{ end }}
+
   {{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
   {{ if $is_blog }}
     {{ with .Param "facebook_site" }}<meta property="article:publisher" content="https://www.facebook.com/{{ . }}/">{{ end }}
@@ -86,7 +92,9 @@
   <meta name="twitter:card" content="summary{{ if and $is_blog $has_image }}_large_image{{ end }}">
   {{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
   <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
-  <meta name="twitter:image" content="{{ $image | absURL }}">
+  {{ if $has_image }}
+    <meta name="twitter:image" content="{{ $image | absURL }}">
+  {{ end }}
   <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
   {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 
