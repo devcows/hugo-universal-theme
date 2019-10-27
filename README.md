@@ -334,7 +334,7 @@ You can enable it in the configuration file.
 ```toml
 [params.see_more]
     enable = true
-    icon = "far fa-file-code"
+    icon = "far fa-file-alt"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "http://your-site.com/more"
