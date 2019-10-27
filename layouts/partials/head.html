@@ -6,7 +6,7 @@
   {{ $title_plain := .Title | markdownify | plainify }}
   <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
-  {{ if isset . "Keyworks" }}
+  {{ if isset . "Keywords" }}
     <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.defaultKeywords ", " }}{{ end }}">
   {{ end }}
   {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
