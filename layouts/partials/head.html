@@ -55,6 +55,8 @@
   {{ $is_blog := and (eq .Type "blog") (eq .Kind "page") }}
   {{ $has_image :=  isset .Params "banner" }}
   {{ $image := cond $has_image .Params.banner .Site.Params.default_sharing_image }}
+  {{ $is_valid_image := fileExists $image }}
+  {{ if $is_valid_image }}
   {{ $image_ext := path.Ext $image }}
   <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -70,6 +72,7 @@
     <meta property="og:image:width" content="{{ .Width }}">
     <meta property="og:image:height" content="{{ .Height }}">
   {{ end }}
+  {{ end }}
   {{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
   {{ if $is_blog }}
     {{ with .Param "facebook_site" }}<meta property="article:publisher" content="https://www.facebook.com/{{ . }}/">{{ end }}
@@ -83,10 +86,12 @@
   {{ end }}
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="summary{{ if and $is_blog $has_image }}_large_image{{ end }}">
+  <meta name="twitter:card" content="summary{{ if (and $is_blog (and $has_image $is_valid_image)) }}_large_image{{ end }}">
   {{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
   <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
+  {{ if $is_valid_image }}
   <meta name="twitter:image" content="{{ $image | absURL }}">
+  {{ end }}
   <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
   {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 
