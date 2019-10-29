@@ -3,7 +3,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-5">
-        {{ .Site.Params.topbar.text | safeHTML }}
+        <p class="hidden-sm hidden-xs">
+          {{ T "contactUsOn" }} {{ .Site.Params.email }} {{ T "or" }} {{ .Site.Params.phone }}</p>
+        <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone">{{ .Site.Params.phone }}</i></a>
+          <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope">{{ .Site.Params.email }}</i></a>
+        </p>
       </div>
       <div class="col-xs-7">
         <div class="social">

@@ -1,12 +1,15 @@
 {{ if isset .Site.Params "carousel" }}
 {{ if .Site.Params.carousel.enable }}
-{{ if gt (len .Site.Data.carousel) 0 }}
+{{ $myData := (index .Site.Data .Lang) }}
+{{ if $myData }}
+{{ if (isset $myData "carousel" ) }}
+{{ if gt (len $myData.carousel) 0 }}
 <section>
     <div class="home-carousel">
         <div class="dark-mask"></div>
         <div class="container">
             <div class="homepage owl-carousel">
-                {{ range sort .Site.Data.carousel "weight" }}
+                {{ range sort $myData.carousel "weight" }}
                 <div class="item">
                     <div class="row">
                         <div class="col-sm-5 right">
@@ -24,6 +27,8 @@
         </div>
     </div>
 </section>
+{{ end }}
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
