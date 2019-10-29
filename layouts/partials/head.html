@@ -7,10 +7,10 @@
   <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
   {{ $keywords := .Site.Params.defaultKeywords }}
-  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . | uniq }}{{ end }}{{ end }}
-  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . | uniq }}{{ end }}{{ end }}
+  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
   {{ if gt (len $keywords) 0 }}
-  <meta name="keywords" content="{{ delimit $keywords ", " }}">
+  <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
   {{ end }}
   {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
   <meta name="description" content="{{ $description_plain }}">
