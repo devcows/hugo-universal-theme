@@ -6,7 +6,7 @@
   {{ $title_plain := .Title | markdownify | plainify }}
   <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
-  {{ $keywords := .Site.Params.defaultKeywords }}
+  {{ $keywords := .Site.Params.defaultKeywords | default "" }}
   {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
   {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
   {{ if gt (len $keywords) 0 }}
