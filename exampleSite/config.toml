@@ -71,6 +71,7 @@ paginate = 10
     viewMorePostLink = "/blog/"
     author = "DevCows"
     defaultKeywords = ["devows", "hugo", "go"]
+    mainSections = ["blog"]
     defaultDescription = "Site template made by devcows using hugo"
 
     # Social media
