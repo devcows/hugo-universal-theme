@@ -253,13 +253,15 @@ ul.list-style-none {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  line-height: 20px;
+  line-height: 24px;
   font-size: 12px;
   text-align: center;
-  vertical-align: bottom;
 }
 #top .social a:hover {
   color: #fff;
+  background: #4fbfa8;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #top .social a:hover.facebook {
   background-color: #4460ae;
