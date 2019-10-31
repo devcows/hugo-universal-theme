@@ -55,8 +55,8 @@ button {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-a i.fa,
-button i.fa {
+a i[class^="fa"],
+button i[class^="fa"] {
   margin: 0 5px;
 }
 .clickable {
@@ -107,11 +107,11 @@ div.section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.heading h1 i.fa,
-.heading h2 i.fa,
-.heading h3 i.fa,
-.heading h4 i.fa,
-.heading h5 i.fa {
+.heading h1 i[class^="fa"],
+.heading h2 i[class^="fa"],
+.heading h3 i[class^="fa"],
+.heading h4 i[class^="fa"],
+.heading h5 i[class^="fa"] {
   display: inline-block;
   background: #da4d4d;
   width: 30px;
