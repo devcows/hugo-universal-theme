@@ -261,7 +261,7 @@ Once the carousel is configured, it must be explicitly enabled in the `config.to
 
 #### Features
 
-Features are also defined in the `data` directory just like the carousel.
+Features are also defined in the `data` directory just like the carousel:
 
 ```
 data
@@ -274,16 +274,25 @@ data
     └── webdesign.yaml
 ```
 
-A feature file looks like this.
+The content of the `consulting.yaml` example feature file looks like this:
 
 ```yaml
 weight: 4
 name: "Consulting"
-icon: "fas fa-lightbulb-o"
+icon: "fas fa-lightbulb"
+url: ""
 description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
 ```
 
-The `icon` field is the CSS class of an icon. In this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/).
+The meaning of the individual YAML keys is as follows:
+
+| Key | Description |
+| --- | ----------- |
+| `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
+| `name` | The title text below the feature icon; Markdown is supported |
+| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/) |
+| `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
+| `description` | A short text below the title text to describe the feature; Markdown is supported |
 
 Once you have completed your features, enable them in the `config.toml` file.
 
