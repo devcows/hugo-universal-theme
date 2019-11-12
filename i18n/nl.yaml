@@ -69,3 +69,12 @@
 
 - id: publishedOn
   translation: "op"
+
+- id: 404Error
+  translation: "Fout 404: Pagina niet gevonden"
+
+- id: 404Message
+  translation: "Het spijt ons – deze pagina is er niet meer"
+
+- id: 404NavHome
+  translation: "Ga naar de homepage"

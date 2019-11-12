@@ -6,7 +6,12 @@
   {{ $title_plain := .Title | markdownify | plainify }}
   <title>{{ $title_plain }}</title>
   <meta name="author" content="{{ .Param "author" }}" />
-  <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ delimit .Site.Params.defaultKeywords ", " }}{{ end }}">
+  {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
+  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if gt (len $keywords) 0 }}
+  <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
+  {{ end }}
   {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
   <meta name="description" content="{{ $description_plain }}">
 
@@ -16,7 +21,7 @@
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Bootstrap and Font Awesome CSS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- CSS animations  -->
@@ -54,7 +59,9 @@
   <!-- Facebook OpenGraph tags -->
   {{ $is_blog := and (eq .Type "blog") (eq .Kind "page") }}
   {{ $has_image :=  isset .Params "banner" }}
-  {{ $image := cond $has_image .Params.banner .Site.Params.default_sharing_image }}
+  {{ $image := cond $has_image .Params.banner (.Site.Params.default_sharing_image | default "img/sharing-default.png") }}
+  {{ $is_valid_image := print "static/" $image | fileExists }}
+  {{ if $is_valid_image }}
   {{ $image_ext := path.Ext $image }}
   <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">
@@ -70,6 +77,7 @@
     <meta property="og:image:width" content="{{ .Width }}">
     <meta property="og:image:height" content="{{ .Height }}">
   {{ end }}
+  {{ end }}
   {{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
   {{ if $is_blog }}
     {{ with .Param "facebook_site" }}<meta property="article:publisher" content="https://www.facebook.com/{{ . }}/">{{ end }}
@@ -83,10 +91,12 @@
   {{ end }}
 
   <!-- Twitter Card meta tags -->
-  <meta name="twitter:card" content="summary{{ if and $is_blog $has_image }}_large_image{{ end }}">
+  <meta name="twitter:card" content="summary{{ if (and $is_blog (and $has_image $is_valid_image)) }}_large_image{{ end }}">
   {{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
   <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
+  {{ if $is_valid_image }}
   <meta name="twitter:image" content="{{ $image | absURL }}">
+  {{ end }}
   <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
   {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 

@@ -69,3 +69,12 @@
 
 - id: publishedOn
   translation: "il"
+
+- id: 404Error
+  translation: "Errore 404: Pagina non trovata"
+
+- id: 404Message
+  translation: "Siamo spiacenti – questa pagina non è più qui"
+
+- id: 404NavHome
+  translation: "Vai alla homepage"

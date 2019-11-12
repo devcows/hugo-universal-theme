@@ -200,13 +200,13 @@ The social links on the right side are configured as a top-level menu.
     weight = 1
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fas fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
     url = "http://facebook.com"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fas fa-2x fa-facebook'></i>"
 ```
 
 ### Blog post thumbnails
@@ -261,7 +261,7 @@ Once the carousel is configured, it must be explicitly enabled in the `config.to
 
 #### Features
 
-Features are also defined in the `data` directory just like the carousel.
+Features are also defined in the `data` directory just like the carousel:
 
 ```
 data
@@ -274,16 +274,25 @@ data
     └── webdesign.yaml
 ```
 
-A feature file looks like this.
+The content of the `consulting.yaml` example feature file looks like this:
 
 ```yaml
 weight: 4
 name: "Consulting"
-icon: "fa fa-lightbulb-o"
+icon: "fas fa-lightbulb"
+url: ""
 description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
 ```
 
-The `icon` field is the CSS class of an icon. In this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/).
+The meaning of the individual YAML keys is as follows:
+
+| Key | Description |
+| --- | ----------- |
+| `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
+| `name` | The title text below the feature icon; Markdown is supported |
+| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/) |
+| `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
+| `description` | A short text below the title text to describe the feature; Markdown is supported |
 
 Once you have completed your features, enable them in the `config.toml` file.
 
@@ -334,7 +343,7 @@ You can enable it in the configuration file.
 ```toml
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
+    icon = "far fa-file-alt"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "http://your-site.com/more"
@@ -378,7 +387,7 @@ Then, you can enable the section in the configuration file.
 
 #### Recent posts
 
-The recent posts sections shows the four latest published blog posts, with their featured image and a summary.
+The recent posts sections shows the four latest published blog posts, with their featured image and a summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
 
 You can enable it in the configuration file.
 

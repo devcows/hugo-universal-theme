@@ -69,3 +69,12 @@
 
 - id: publishedOn
   translation: "am"
+
+- id: 404Error
+  translation: "Fehler 404: Seite nicht gefunden"
+
+- id: 404Message
+  translation: "Tut uns leid – diese Seite scheint nicht mehr hier zu sein"
+
+- id: 404NavHome
+  translation: "Zur Startseite gehen"
