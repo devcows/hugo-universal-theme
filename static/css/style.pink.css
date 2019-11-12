@@ -55,8 +55,8 @@ button {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-a i.fa,
-button i.fa {
+a i[class^="fa"],
+button i[class^="fa"] {
   margin: 0 5px;
 }
 .clickable {
@@ -107,11 +107,11 @@ div.section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.heading h1 i.fa,
-.heading h2 i.fa,
-.heading h3 i.fa,
-.heading h4 i.fa,
-.heading h5 i.fa {
+.heading h1 i[class^="fa"],
+.heading h2 i[class^="fa"],
+.heading h3 i[class^="fa"],
+.heading h4 i[class^="fa"],
+.heading h5 i[class^="fa"] {
   display: inline-block;
   background: #c27baa;
   width: 30px;
@@ -253,13 +253,15 @@ ul.list-style-none {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  line-height: 20px;
+  line-height: 24px;
   font-size: 12px;
   text-align: center;
-  vertical-align: bottom;
 }
 #top .social a:hover {
   color: #fff;
+  background: #c27baa;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #top .social a:hover.facebook {
   background-color: #4460ae;
@@ -981,11 +983,18 @@ fieldset[disabled] .btn-template-primary.active {
   letter-spacing: 0.08em;
   font-weight: 700;
   font-size: 12px;
+  text-decoration: none;
 }
 .panel.sidebar-menu ul.tag-cloud li a:hover {
   color: #c27baa;
-  text-decoration: none;
   border-color: #c27baa;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a {
+  color: #FFFFFF;
+  background-color: #c27baa;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a:hover {
+  color: #FFFFFF;
 }
 .panel.sidebar-menu ul.popular,
 .panel.sidebar-menu ul.recent {
@@ -3529,7 +3538,7 @@ a.list-group-item.active > .badge,
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
  * http://geedmo.github.com/yamm3
- * 
+ *
  * @geedmo - Licensed under the MIT license
  */
 .yamm .nav,

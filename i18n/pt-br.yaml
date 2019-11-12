@@ -62,10 +62,19 @@
   translation: "Sobre nós"
 
 - id: newer
-  translation: "Mais novas"
+  translation: "Mais novos"
 
 - id: older
   translation: "Mais antigos"
 
 - id: publishedOn
   translation: "em"
+
+- id: 404Error
+  translation: "Error 404: Page not found"
+
+- id: 404Message
+  translation: "We are sorry – this page is not here anymore"
+
+- id: 404NavHome
+  translation: "Vá à página inicial"

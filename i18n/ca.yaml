@@ -69,3 +69,12 @@
 
 - id: publishedOn
   translation: "el"
+
+- id: 404Error
+  translation: "Error 404: Pàgina no trobada"
+
+- id: 404Message
+  translation: "Ho sentim – aquesta pàgina no es pot trobar en aquest lloc"
+
+- id: 404NavHome
+  translation: "Anar a l'inici"

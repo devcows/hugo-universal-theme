@@ -3,42 +3,39 @@
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ .Title }}</title>
-  <meta name="author" content="{{ .Site.Author.name }}" />
-
-  {{ if .Keywords }}
-  <meta name="keywords" content="{{ delimit .Keywords ", " }}">
-  {{ else if .Site.Params.DefaultKeywords }}
-  <meta name="keywords" content="{{ delimit .Site.Params.DefaultKeywords ", " }}">	
+  {{ $title_plain := .Title | markdownify | plainify }}
+  <title>{{ $title_plain }}</title>
+  <meta name="author" content="{{ .Param "author" }}" />
+  {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
+  {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if isset .Params "keywords" }}{{ range .Params.keywords }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
+  {{ if gt (len $keywords) 0 }}
+  <meta name="keywords" content="{{ delimit (uniq $keywords) ", " }}">
   {{ end }}
-
-  {{ if .Description }}
-  <meta name="description" content="{{ .Description }}">
-  {{ else if .Site.Params.DefaultDescription }}
-  <meta name="description" content="{{ .Site.Params.DefaultDescription }}">	
-  {{ end }}
+  {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
+  <meta name="description" content="{{ $description_plain }}">
 
   {{ .Hugo.Generator }}
 
+  <!-- Font -->
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 
-  <!-- Bootstrap and Font Awesome css -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap and Font Awesome CSS -->
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <!-- Css animations  -->
-  <link href="{{ .Site.BaseURL }}css/animate.css" rel="stylesheet">
+  <!-- CSS animations  -->
+  <link href="{{ "css/animate.css" | relURL}}" rel="stylesheet">
 
   <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-  {{ if and (isset .Site.Params "style") .Site.Params.style }}
-    <link href="{{ .Site.BaseURL }}css/style.{{ .Site.Params.style }}.css" rel="stylesheet" id="theme-stylesheet">
+  {{ with .Site.Params.style }}
+    <link href="{{ "css/style" | relURL}}.{{ . }}.css" rel="stylesheet" id="theme-stylesheet">
   {{ else }}
-    <link href="{{ .Site.BaseURL }}css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="{{ "css/style.default.css" | relURL}}" rel="stylesheet" id="theme-stylesheet">
   {{ end }}
 
-
   <!-- Custom stylesheet - for your changes -->
-  <link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">
+  <link href="{{ "css/custom.css" | relURL}}" rel="stylesheet">
 
   <!-- Responsivity for older IE -->
   {{ `
@@ -48,20 +45,59 @@
     <![endif]-->
   ` | safeHTML }}
 
-  <!-- Favicon and apple touch icons-->
-  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/apple-touch-icon.png" />
-  <!-- owl carousel css -->
+  <!-- Favicon and Apple touch icons-->
+  <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | relURL }}" />
 
-  <link href="{{ .Site.BaseURL }}css/owl.carousel.css" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}css/owl.theme.css" rel="stylesheet">
+  <!-- owl carousel CSS -->
+  <link href="{{ "css/owl.carousel.css" | relURL}}" rel="stylesheet">
+  <link href="{{ "css/owl.theme.css" | relURL}}" rel="stylesheet">
 
+  <!-- RSS feed -->
   <link rel="alternate" href="{{ "/index.xml" | absURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="{{ .Title }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ .URL }}/" />
-  <meta property="og:image" content="{{ .Site.Params.logo }}" />
+  {{ $is_blog := and (eq .Type "blog") (eq .Kind "page") }}
+  {{ $has_image :=  isset .Params "banner" }}
+  {{ $image := cond $has_image .Params.banner (.Site.Params.default_sharing_image | default "img/sharing-default.png") }}
+  {{ $is_valid_image := print "static/" $image | fileExists }}
+  {{ if $is_valid_image }}
+  {{ $image_ext := path.Ext $image }}
+  <meta property="og:locale" content="{{ replace .Site.LanguageCode "-" "_" }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ $title_plain }}">
+  <meta property="og:type" content="{{ cond $is_blog "article" "website" }}">
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:description" content="{{ $description_plain }}">
+  <meta property="og:image" content="{{ $image | absURL }}">
+  <meta property="og:image:type" content="image/{{ if eq $image_ext ".svg" }}svg+xml{{ else }}{{ trim $image_ext "." }}{{ end }}">
+  {{ with .Params.banner_alt }}<meta property="og:image:alt" content="{{ . | markdownify | plainify }}">{{ end }}
+  {{ $image_local :=  printf "/static/%s" $image}}
+  {{ with (imageConfig $image_local) }}
+    <meta property="og:image:width" content="{{ .Width }}">
+    <meta property="og:image:height" content="{{ .Height }}">
+  {{ end }}
+  {{ end }}
+  {{ with .Lastmod }}<meta property="og:updated_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
+  {{ if $is_blog }}
+    {{ with .Param "facebook_site" }}<meta property="article:publisher" content="https://www.facebook.com/{{ . }}/">{{ end }}
+    {{ with .Param "facebook_author" }}<meta property="article:author" content="https://www.facebook.com/{{ . }}/">{{ end }}
+    {{ with .Params.categories }}<meta property="article:section" content="{{ index . 0 }}">{{ end }}
+    {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">
+    {{ end }}
+    {{ if gt .ExpiryDate .PublishDate }}<meta property="article:expiration_time" content="{{ .ExpiryDate.Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
+    {{ with .PublishDate }}<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
+    {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z0700" }}">{{ end }}
+  {{ end }}
+
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary{{ if (and $is_blog (and $has_image $is_valid_image)) }}_large_image{{ end }}">
+  {{ with .Param "twitter_site" }}<meta name="twitter:site" content="@{{ . }}">{{ end }}
+  <meta name="twitter:title" content="{{ $title_plain | truncate 70 }}">
+  {{ if $is_valid_image }}
+  <meta name="twitter:image" content="{{ $image | absURL }}">
+  {{ end }}
+  <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
+  {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
 
 </head>
