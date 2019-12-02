@@ -1,18 +1,22 @@
 {{ if .Site.Params.topbar.enable }}
-<div id="top">
+<!-- top bar start -->
+<div class="top-bar">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-5">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6 d-md-block d-none">
         {{ .Site.Params.topbar.text | safeHTML }}
       </div>
-      <div class="col-xs-7">
-        <div class="social">
-          {{ range .Site.Menus.topbar.ByWeight }}
-          <a href="{{ .URL }}" target="_blank" style="opacity: 1;">{{ .Pre }}</a>
-          {{ end }}
+      <div class="col-md-6">
+        <div class="d-flex justify-content-md-end justify-content-between">
+          <ul class="social-custom list-inline">
+            {{ range .Site.Menus.topbar.ByWeight }}
+            <li class="list-inline-item"><a href="{{ .URL }}" target="_blank">{{ .Pre }}</a></li>
+            {{ end }}
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- top bar end -->
 {{ end }}

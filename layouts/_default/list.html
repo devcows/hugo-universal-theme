@@ -17,7 +17,7 @@
 
         <div id="content">
             <div class="container">
-                <div class="row">
+                <div class="row bar">
                     <!-- *** LEFT COLUMN *** -->
 
                     <div class="col-md-9" id="blog-listing-medium">
@@ -30,16 +30,16 @@
                                   <div class="image">
                                       <a href="{{ .Permalink }}">
                                           {{ if .Params.banner }}
-                                          <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="">
+                                          <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-fluid" alt="">
                                           {{ else }}
-                                          <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                          <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-fluid" alt="">
                                           {{ end }}
                                       </a>
                                   </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-                                    <div class="clearfix">
+                                    <h2 class="h3 mt-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                                    <div class="d-flex flex-wrap justify-content-between text-xs">
                                         <p class="author-category">
                                           {{ if isset .Params "author" }}
                                           {{ i18n "authorBy" }} <a href="#">{{ .Params.author }}</a>
@@ -56,24 +56,24 @@
                                         </p>
                                     </div>
                                     <p class="intro">{{ .Summary }}</p>
-                                    <p class="read-more"><a href="{{ .Permalink }}" class="btn btn-template-main">{{ i18n "continueReading" }}</a>
+                                    <p class="read-more text-right"><a href="{{ .Permalink }}" class="btn btn-template-outlined">{{ i18n "continueReading" }}</a>
                                     </p>
                                 </div>
                             </div>
                         </section>
                         {{ end }}
 
-                        <ul class="pager">
+                        <ul class="pager d-flex align-items-center justify-content-between list-unstyled">
                             {{ if .Paginator.HasPrev }}
-                            <li class="previous"><a href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">&larr; {{ i18n "newer" }}</a></li>
+                            <li class="previous"><a class="btn btn-template-outlined" href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">&larr; {{ i18n "newer" }}</a></li>
                             {{ else }}
-                            <li class="previous disabled"><a href="#">&larr; {{ i18n "newer" }}</a></li>
+                            <li class="previous disabled"><a class="btn btn-template-outlined" href="#">&larr; {{ i18n "newer" }}</a></li>
                             {{ end }}
 
                             {{ if .Paginator.HasNext }}
-                            <li class="next"><a href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">{{ i18n "older" }} &rarr;</a></li>
+                            <li class="next"><a class="btn btn-template-outlined" href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">{{ i18n "older" }} &rarr;</a></li>
                             {{ else }}
-                            <li class="next disabled"><a href="#">{{ i18n "older" }} &rarr;</a></li>
+                            <li class="next disabled"><a class="btn btn-template-outlined" href="#">{{ i18n "older" }} &rarr;</a></li>
                             {{ end }}
                         </ul>
                     </div>

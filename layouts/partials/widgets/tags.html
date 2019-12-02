@@ -8,11 +8,11 @@
     </div>
 
     <div class="panel-body">
-        <ul class="tag-cloud">
+        <ul class="tag-cloud list-inline">
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.tags }}
-            <li{{ if eq $current.RelPermalink ($name | urlize | lower | printf "/tags/%s/") }} class="active"{{ end }}>
-                <a href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower }}"><i class="fas fa-tags"></i> {{ $name }}</a>
+            <li class="list-inline-item">
+                <a{{ if eq $current.RelPermalink ($name | urlize | lower | printf "/tags/%s/") }} class="active"{{ end }} href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower }}"><i class="fas fa-tags"></i> {{ $name }}</a>
             </li>
             {{ end }}
         </ul>
