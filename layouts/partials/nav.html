@@ -1,65 +1,56 @@
-<div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+<header class="nav-holder make-sticky">
+  <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
+        <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="{{ .Title }} logo" class="d-none d-md-inline-block">
+        <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo_small }}" alt="{{ .Title }} logo" class="d-inline-block d-md-none">
+        <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
+      </a>
+      <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
+        <span class="sr-only">{{ i18n "navToggle" }}</span>
+        <i class="fa fa-align-justify"></i>
+      </button>
+      <div class="navbar-collapse collapse" id="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            {{ $current := . }}
+            {{ range .Site.Menus.main }}
+            {{ $topLevel := replace .URL "/" "" }}
+            <li class="dropdown{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq (default (trim .URL "/") .Identifier) "blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }} active{{ end }}">
+              {{ if .HasChildren }}
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                {{ range .Children }}
+                  <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+              {{ else }}
+              <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end  }}
+            </li>
+            {{ end }}
+          </ul>
+      </div>
+      <!--/.nav-collapse -->
 
-    <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+          <div class="collapse clearfix" id="search">
 
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
-                    <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="hidden-xs hidden-sm">
-                    <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="visible-xs visible-sm">
-                    <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
-                </a>
-                <div class="navbar-buttons">
-                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
-                      <span class="sr-only">{{ i18n "navToggle" }}</span>
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
-            </div>
-            <!--/.navbar-header -->
+              <form class="navbar-form" role="search">
+                  <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                      <span class="input-group-btn">
 
-            <div class="navbar-collapse collapse" id="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                  {{ $current := . }}
-                  {{ range .Site.Menus.main }}
-                  {{ $topLevel := replace .URL "/" "" }}
-                  <li class="dropdown{{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq (default (trim .URL "/") .Identifier) "blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }} active{{ end }}">
-                    {{ if .HasChildren }}
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      {{ range .Children }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                      {{ end }}
-                    </ul>
-                    {{ else }}
-                    <a href="{{ .URL }}">{{ .Name }}</a>
-                    {{ end  }}
-                  </li>
-                  {{ end }}
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
+                  <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
 
-            <div class="collapse clearfix" id="search">
+              </span>
+                  </div>
+              </form>
 
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <span class="input-group-btn">
+          </div>
+          <!--/.nav-collapse -->
 
-                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
-
-                </span>
-                    </div>
-                </form>
-
-            </div>
-            <!--/.nav-collapse -->
-
-        </div>
+      </div>
     </div>
     <!-- /#navbar -->
-
-</div>
+  </header>
 
 <!-- *** NAVBAR END ***-->

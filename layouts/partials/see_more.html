@@ -1,17 +1,16 @@
 {{ if isset .Site.Params "see_more" }}
 {{ if .Site.Params.see_more.enable }}
-<section class="bar background-image-fixed-2 no-mb color-white text-center">
+<section style="background: url(../img/fixed-background-2.jpg) center top no-repeat; background-size: cover;" class="bar no-mb color-white text-center bg-fixed relative-positioned">
     <div class="dark-mask"></div>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="icon icon-lg"><i class="{{ .Site.Params.see_more.icon }}"></i>
-                </div>
+                <div class="icon icon-outlined icon-lg"><i class="{{ .Site.Params.see_more.icon }}"></i></div>
                 <h3 class="text-uppercase">{{ .Site.Params.see_more.title | markdownify }}</h3>
                 <p class="lead">{{ .Site.Params.see_more.subtitle | markdownify }}</p>
                 <p class="text-center">
                     {{ with .Site.Params.see_more.link_url }}
-                    <a href="{{ . }}" class="btn btn-template-transparent-black btn-lg">
+                    <a href="{{ . }}" class="btn btn-template-outlined-white btn-lg">
                     {{ end }}
                         {{ with .Site.Params.see_more.link_text }}
                         {{ . | markdownify }}

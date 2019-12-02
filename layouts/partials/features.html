@@ -13,13 +13,13 @@
                         {{ with $element.url }}
                         <a href="{{ $element.url }}">
                         {{ end }}
-                            <div class="icon">
+                            <div class="icon-outlined">
                                 <i class="{{ .icon }}"></i>
                             </div>
                         {{ with $element.url }}
                         </a>
                         {{ end }}
-                        <h3>{{ $element.name | markdownify }}</h3>
+                        <h3 class="h4">{{ $element.name | markdownify }}</h3>
                         <p>{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
