@@ -5,7 +5,7 @@
         <div class="col-md-4 col-sm-6">
             <h4>{{ i18n "aboutUs" }}</h4>
 
-            {{ .Site.Params.about_us | markdownify }}
+            {{ .Site.Params.about_us | safeHTML }}
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -48,7 +48,7 @@
 
           <h4>{{ i18n "contactTitle" }}</h4>
 
-            {{ .Site.Params.address | markdownify }}
+            {{ .Site.Params.address | safeHTML }}
 
             <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
 
