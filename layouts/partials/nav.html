@@ -2,8 +2,8 @@
   <div id="navbar" role="navigation" class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand home" href="{{ .Site.BaseURL }}">
-        <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="{{ .Title }} logo" class="d-none d-md-inline-block">
-        <img src="{{ .Site.BaseURL }}{{ .Site.Params.logo_small }}" alt="{{ .Title }} logo" class="d-inline-block d-md-none">
+        <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Title }} logo" class="d-none d-md-inline-block">
+        <img src="{{ .Site.Params.logo_small | relURL }}" alt="{{ .Title }} logo" class="d-inline-block d-md-none">
         <span class="sr-only">{{ .Title }} - {{ i18n "navHome" }}</span>
       </a>
       <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
@@ -30,25 +30,25 @@
             {{ end }}
           </ul>
       </div>
-      <!--/.nav-collapse -->
 
-          <div class="collapse clearfix" id="search">
+      <div class="collapse clearfix" id="search">
 
-              <form class="navbar-form" role="search">
-                  <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search">
-                      <span class="input-group-btn">
+          <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <span class="input-group-btn">
 
-                  <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+              <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
 
-              </span>
-                  </div>
-              </form>
-
-          </div>
-          <!--/.nav-collapse -->
+          </span>
+              </div>
+          </form>
 
       </div>
+      <!--/.collapse -->
+
+      </div>
+
     </div>
     <!-- /#navbar -->
   </header>

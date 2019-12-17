@@ -4,11 +4,9 @@
             {{ if isset .Site.Params "about_us" }}
             <div class="col-lg-3">
                 <h4 class="h6">{{ i18n "aboutUs" }}</h4>
-
-                {{ .Site.Params.about_us | markdownify }}
+                {{ .Site.Params.about_us | safeHTML }}
                 <hr class="d-block d-lg-none">
             </div>
-            <!-- /.col-lg-3 -->
             {{ end }}
 
             <div class="col-lg-3">
@@ -62,6 +60,24 @@
                 </p>
             </div>
             </div>
+
+            <hr class="hidden-md hidden-lg">
+            {{ end }} {{ end }}
+
+        </div>
+        <!-- /.col-md-4 -->
+
+        {{ if isset .Site.Params "address" }}
+        <div class="col-md-4 col-sm-6">
+
+          <h4>{{ i18n "contactTitle" }}</h4>
+
+            {{ .Site.Params.address | safeHTML }}
+
+            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+   
         </div>
     </div>
     <!-- /#copyright -->

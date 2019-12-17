@@ -23,7 +23,7 @@
                         <h3>{{ i18n "404Message" | markdownify }}</h3>
                         <h4 class="text-muted">{{ i18n "404Error" | markdownify }}</h4>
 
-                        <p class="buttons"><a href="{{ .Site.BaseURL }}" class="btn btn-template-main"><i class="fas fa-home"></i> {{ i18n "404NavHome" | markdownify }}</a>
+                        <p class="buttons"><a href="{{ "/" | relURL }}" class="btn btn-template-main"><i class="fas fa-home"></i> {{ i18n "404NavHome" | markdownify }}</a>
                         </p>
                     </div>
 
