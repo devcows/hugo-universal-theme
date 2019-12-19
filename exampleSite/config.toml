@@ -127,11 +127,8 @@ paginate = 10
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or hello@universal.com.</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-      </p>
-      """
+    text = """<p>Contact us on +420 777 555 333 or hello@universal.com.</p>
+           """
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
@@ -161,11 +158,11 @@ paginate = 10
 
 [params.see_more]
     enable = true
-    icon = "far fa-file-alt"
+    icon = "far fa-file-code"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "#"
-    link_text = "Check other homepages"
+    link_text = "See another homepage"
 
 [params.clients]
     enable = true
