@@ -36,7 +36,7 @@
             {{ if isset .Site.Params "address" }}
             <div class="col-lg-3">
                 <h4 class="h6">{{ i18n "contactTitle" }}</h4>
-                {{ .Site.Params.address | markdownify }}
+                {{ .Site.Params.address | safeHTML }}
                 <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
             </div>
             <!-- /.col-lg-3 -->
@@ -56,32 +56,9 @@
                 <div class="col-lg-8 text-right text-center-md">
                     <p>{{ i18n "templateBy" | markdownify }} <a href="https://bootstrapious.com/p/big-bootstrap-tutorial">Bootstrapious </a> & <a href="https://fity.cz/ostrava">Fity</a></p>
                     <!-- Please do not remove the backlink to us unless you purchase the Attribution-free License at https://bootstrapious.com/donate. Thank you. -->
-                    {{ i18n "portedBy" | markdownify }} <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
-                </p>
+                    <p>{{ i18n "portedBy" | markdownify }} <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.</p>
             </div>
-            </div>
-
-            <hr class="hidden-md hidden-lg">
-            {{ end }} {{ end }}
-
-        </div>
-        <!-- /.col-md-4 -->
-
-        {{ if isset .Site.Params "address" }}
-        <div class="col-md-4 col-sm-6">
-
-          <h4>{{ i18n "contactTitle" }}</h4>
-
-            {{ .Site.Params.address | safeHTML }}
-
-            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
-
-            <hr class="hidden-md hidden-lg hidden-sm">
-   
         </div>
     </div>
-    <!-- /#copyright -->
-
 </footer>
 <!-- /#footer -->
-
