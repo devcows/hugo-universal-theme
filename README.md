@@ -395,9 +395,12 @@ The meaning of the individual YAML keys is as follows:
 
 Once you have completed your features, enable them in the `config.toml` file.
 
+The `two_features_per_row` setting defaults to false if unspecified and will layout 3 features per row.
+
 ```toml
 [params.features]
     enable = true
+    two_features_per_row = false
 ```
 
 #### Testimonials

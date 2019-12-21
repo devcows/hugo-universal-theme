@@ -446,6 +446,7 @@ paginate = 10
 
 [params.features]
     enable = true
+    two_features_per_row = false 
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
     # For more informtion take a look at the README.

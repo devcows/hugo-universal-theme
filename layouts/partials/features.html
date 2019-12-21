@@ -4,11 +4,24 @@
 <section class="bar background-white">
     <div class="container">
         {{ range $index, $element := sort .Site.Data.features "weight" }}
-        {{ if eq (mod $index 3) 0 }}
+
+
+        {{ if $.Site.Params.features.two_features_per_row }} 
+            {{ if eq (mod $index 2) 0 }}
         <div class="col-md-12">
             <div class="row">
+            {{ end }}
+        {{ else }}
+            {{ if eq (mod $index 3) 0 }}
+        <div class="col-md-12">
+            <div class="row">
+            {{ end }}
         {{ end }}
+                {{ if $.Site.Params.features.two_features_per_row }}
+                <div class="col-md-6">
+                {{else}}
                 <div class="col-md-4">
+                {{ end }}
                     <div class="box-simple">
                         {{ with $element.url }}
                         <a href="{{ $element.url }}">
@@ -23,9 +36,16 @@
                         <p>{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
-        {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+        {{ if $.Site.Params.features.two_features_per_row }} 
+            {{ if eq (mod $index 2) 1 }}
             </div>
         </div>
+            {{ end }}
+        {{ else }}
+            {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
+            </div>
+        </div>
+            {{ end }}
         {{ end }}
         {{ end }}
     </div>
