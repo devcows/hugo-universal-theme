@@ -128,11 +128,16 @@ id = "contact"
 +++
 ```
 
-You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click  opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
+You can enable or disable google maps in the section `params` at `config.toml`. `enableGoogleMaps` must be setted `true` or `false`, If you want disable google maps, just set `enableGoogleMaps = false`, then the `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored by default.
+
+You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
 
 ```yaml
 [params]
     ...
+    enableGoogleMaps = true
+    googleMapsApiKey = ""
+
     latitude = "-12.043333"
     longitude = "-77.028333"
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"

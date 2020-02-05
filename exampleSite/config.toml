@@ -83,6 +83,9 @@ paginate = 10
     enableGoogleMaps = true
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
 
+    latitude = "-12.043333"
+    longitude = "-77.028333"
+
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 
@@ -119,8 +122,6 @@ paginate = 10
         <strong>Great Britain</strong>
       </p>
       """
-    latitude = "-12.043333"
-    longitude = "-77.028333"
 
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
