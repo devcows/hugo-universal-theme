@@ -15,7 +15,7 @@
   {{ $description_plain := default .Site.Params.defaultDescription .Description | markdownify | plainify }}
   <meta name="description" content="{{ $description_plain }}">
 
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
 
   <!-- Font -->
   <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>

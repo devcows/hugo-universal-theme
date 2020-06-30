@@ -5,7 +5,7 @@
         <div class="col-md-4 col-sm-6">
             <h4>{{ i18n "aboutUs" }}</h4>
 
-            {{ .Site.Params.about_us | markdownify }}
+            {{ .Site.Params.about_us | safeHTML }}
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -24,9 +24,9 @@
                     <div class="image same-height-always">
                         <a href="{{ .Permalink }}">
                           {{ if isset .Params "banner" }}
-                            <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="{{ .Title }}">
+                            <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="{{ .Title }}">
                           {{ else }}
-                            <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="{{ .Title }}">
+                            <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="{{ .Title }}">
                           {{ end }}
                         </a>
                     </div>
@@ -48,7 +48,7 @@
 
           <h4>{{ i18n "contactTitle" }}</h4>
 
-            {{ .Site.Params.address | markdownify }}
+            {{ .Site.Params.address | safeHTML }}
 
             <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
 

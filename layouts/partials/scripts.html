@@ -11,9 +11,10 @@
 {{ else }}
 <script src="//maps.googleapis.com/maps/api/js?v=3.exp"></script>
 {{ end }}
-<script src="{{ .Site.BaseURL }}js/hpneo.gmaps.js"></script>
-<script src="{{ .Site.BaseURL }}js/gmaps.init.js"></script>
-<script src="{{ .Site.BaseURL }}js/front.js"></script>
+<script src="{{ "js/hpneo.gmaps.js" | relURL }}"></script>
+<script src="{{ "js/gmaps.init.js" | relURL }}"></script>
+<script src="{{ "js/front.js" | relURL }}"></script>
 
 <!-- owl carousel -->
-<script src="{{ .Site.BaseURL }}js/owl.carousel.min.js"></script>
+<script src="{{ "js/owl.carousel.min.js" | relURL }}"></script>
+
