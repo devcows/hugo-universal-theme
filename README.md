@@ -128,17 +128,22 @@ id = "contact"
 +++
 ```
 
-You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click  opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
+You can enable or disable the Google Maps widget on the contact page by setting `params.enableGoogleMaps` to `true` or `false` in `config.toml`. Make sure to also provide a valid `googleMapsApiKey` if you decide to enable the widget – otherwise it likely won't work. By clicking on the pin, Google Maps opens a route description with the coordinates `latitude` and `longitude`. Additionally, you can define the `direction` if you want to have another destination for the directions or the Google Maps entry of your company. If `enableGoogleMaps` is set to `false` on the other hand, the subsequent `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored.
+
+Example configuration:
 
 ```yaml
 [params]
     ...
+    enableGoogleMaps = true
+    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
     latitude = "-12.043333"
     longitude = "-77.028333"
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
 ```
 
-Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
+Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
 
 To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free).
 
