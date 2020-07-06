@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading text-center">
-                    <h2>{{ .Site.Params.clients.title }}</h2>
+                    <h2>{{ .Site.Params.clients.title | markdownify }}</h2>
                 </div>
 
                 <p class="lead">
-                  {{ .Site.Params.clients.subtitle }}
+                  {{ .Site.Params.clients.subtitle | markdownify }}
                 </p>
 
                 <ul class="owl-carousel customers">

@@ -47,30 +47,31 @@ paginate = 10
     weight = 1
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fab fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
     url = "http://facebook.com"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fab fa-2x fa-facebook'></i>"
 
 [[menu.topbar]]
     weight = 3
     name = "Twitter"
     url = "http://twitter.com"
-    pre = "<i class='fa fa-2x fa-twitter'></i>"
+    pre = "<i class='fab fa-2x fa-twitter'></i>"
 
 [[menu.topbar]]
     weight = 4
     name = "Email"
     url = "mailto:your@email.com"
-    pre = "<i class='fa fa-2x fa-envelope'></i>"
+    pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
     viewMorePostLink = "/blog/"
     author = "DevCows"
     defaultKeywords = ["devows", "hugo", "go"]
+    mainSections = ["blog"]
     defaultDescription = "Site template made by devcows using hugo"
 
     # Social media
@@ -78,8 +79,12 @@ paginate = 10
     twitter_site = "GoHugoIO" # the Twitter handle of your site (without the '@')
     default_sharing_image = "img/sharing-default.png"
 
-    # Google Maps API key (if not set will default to not passing a key.)
+    # Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
+    enableGoogleMaps = true
     googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
+    latitude = "-12.043333"
+    longitude = "-77.028333"
 
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
@@ -108,7 +113,7 @@ paginate = 10
 
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
-    address = """<p><strong>Universal Ltd.</strong>
+    address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
         <br>Newtown upon River
         <br>45Y 73J
@@ -117,8 +122,6 @@ paginate = 10
         <strong>Great Britain</strong>
       </p>
       """
-    latitude = "-12.043333"
-    longitude = "-77.028333"
 
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
@@ -127,8 +130,8 @@ paginate = 10
 [params.topbar]
     enable = true
     text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or hello@universal.com.</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """
 
@@ -160,7 +163,7 @@ paginate = 10
 
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
+    icon = "far fa-file-alt"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "#"

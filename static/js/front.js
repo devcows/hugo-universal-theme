@@ -110,7 +110,7 @@ function sliders () {
 
     $('.project').owlCarousel({
       navigation: true, // Show next and prev buttons
-      navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
       slideSpeed: 300,
       paginationSpeed: 400,
       autoPlay: true,
@@ -122,7 +122,7 @@ function sliders () {
 
     $('.homepage').owlCarousel({
       navigation: false, // Show next and prev buttons
-      navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+      navigationText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
       slideSpeed: 2000,
       paginationSpeed: 1000,
       autoPlay: true,

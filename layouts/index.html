@@ -7,13 +7,9 @@
 
     <div id="all">
 
-        <header>
+        {{ partial "top.html" . }}
 
-          {{ partial "top.html" . }}
-
-          {{ partial "nav.html" . }}
-
-        </header>
+        {{ partial "nav.html" . }}
 
         {{ partial "carousel.html" . }}
 
