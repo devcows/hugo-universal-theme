@@ -69,3 +69,12 @@
 
 - id: publishedOn
   translation: "le"
+
+- id: 404Error
+  translation: "Erreur 404: Page introuvable"
+
+- id: 404Message
+  translation: "Nous sommes désolés – cette page n'est plus là"
+
+- id: 404NavHome
+  translation: "Aller à l'accueil"

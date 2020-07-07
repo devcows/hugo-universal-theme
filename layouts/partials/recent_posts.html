@@ -5,7 +5,7 @@
 
         <div class="col-md-12">
             <div class="heading text-center">
-                <h2>{{ .Site.Params.recent_posts.title }}</h2>
+                <h2>{{ .Site.Params.recent_posts.title | markdownify }}</h2>
             </div>
 
             <p class="lead">
@@ -15,23 +15,22 @@
             <!-- *** BLOG HOMEPAGE *** -->
 
             <div class="row">
-
-                {{ $posts := .Paginate (where .Data.Pages "Type" "blog") }}
+                {{ $posts := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections) }}
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
                         <div class="top">
                             <div class="image" style="overflow:hidden">
                                 {{ if isset .Params "banner" }}
-                                <img src="{{ .Site.BaseURL}}{{ .Params.banner }}" class="img-responsive" alt="" >
+                                <img src="{{ .Params.banner | relURL }}" class="img-responsive" alt="" >
                                 {{ else }}
-                                <img src="{{ .Site.BaseURL}}img/placeholder.png" class="img-responsive" alt="">
+                                <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="">
                                 {{ end }}
                             </div>
                             <div class="bg"></div>
                             <div class="text">
                                 <p class="buttons">
-                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> {{ i18n "readMore" }}</a>
+                                    <a href="{{ .Permalink }}" class="btn btn-template-transparent-primary"><i class="fas fa-link"></i> {{ i18n "readMore" }}</a>
                                 </p>
                             </div>
                         </div>

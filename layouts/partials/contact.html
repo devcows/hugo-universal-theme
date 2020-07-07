@@ -15,7 +15,7 @@
 
                 <div id="contact-message"></div>
 
-                <form class="contact-form" method="post" action="https://formspree.io/{{ .Site.Params.email }}">
+                <form {{ with .Site.Params.contact_form_ajax }}class="contact-form-ajax"{{ else }}{{ end }} method="post" action="https://formspree.io/{{ .Site.Params.email }}">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="col-sm-12 text-center">
-                          <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i>{{ i18n "contactSend" }}</button>
+                          <button type="submit" class="btn btn-template-main"><i class="far fa-envelope"></i>{{ i18n "contactSend" }}</button>
 
                         </div>
                     </div>

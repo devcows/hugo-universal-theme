@@ -30,7 +30,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
-    * [Meta tags](#meta-tags)
+  * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [License](#license)
@@ -128,23 +128,29 @@ id = "contact"
 +++
 ```
 
-You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click  opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
+You can enable or disable the Google Maps widget on the contact page by setting `params.enableGoogleMaps` to `true` or `false` in `config.toml`. Make sure to also provide a valid `googleMapsApiKey` if you decide to enable the widget – otherwise it likely won't work. By clicking on the pin, Google Maps opens a route description with the coordinates `latitude` and `longitude`. Additionally, you can define the `direction` if you want to have another destination for the directions or the Google Maps entry of your company. If `enableGoogleMaps` is set to `false` on the other hand, the subsequent `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored.
+
+Example configuration:
 
 ```yaml
 [params]
     ...
+    enableGoogleMaps = true
+    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
     latitude = "-12.043333"
     longitude = "-77.028333"
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
 ```
 
-Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
+Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
 
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file.
+To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free).
 
 ```yaml
 [params]
 email = "your@email.com"
+contact_form_ajax = false
 ```
 
 ### Menu
@@ -158,7 +164,9 @@ You can also define the menu items that will appear in the top bar. Edit the `[[
     weight = 4
 ```
 
-The `weight` parameter will determine the order of the menu entries.
+The `weight` key will determine the order of the menu entries.
+
+**Important:** Do not change the `identifier` key of existing menu entries!
 
 
 ### Sidebar widgets
@@ -197,13 +205,13 @@ The social links on the right side are configured as a top-level menu.
     weight = 1
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fas fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
     url = "http://facebook.com"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fas fa-2x fa-facebook'></i>"
 ```
 
 ### Blog post thumbnails
@@ -258,7 +266,7 @@ Once the carousel is configured, it must be explicitly enabled in the `config.to
 
 #### Features
 
-Features are also defined in the `data` directory just like the carousel.
+Features are also defined in the `data` directory just like the carousel:
 
 ```
 data
@@ -271,16 +279,25 @@ data
     └── webdesign.yaml
 ```
 
-A feature file looks like this.
+The content of the `consulting.yaml` example feature file looks like this:
 
 ```yaml
 weight: 4
 name: "Consulting"
-icon: "fa fa-lightbulb-o"
+icon: "fas fa-lightbulb"
+url: ""
 description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
 ```
 
-The `icon` field is the CSS class of an icon. In this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/).
+The meaning of the individual YAML keys is as follows:
+
+| Key | Description |
+| --- | ----------- |
+| `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
+| `name` | The title text below the feature icon; Markdown is supported |
+| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/) |
+| `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
+| `description` | A short text below the title text to describe the feature; Markdown is supported |
 
 Once you have completed your features, enable them in the `config.toml` file.
 
@@ -331,7 +348,7 @@ You can enable it in the configuration file.
 ```toml
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
+    icon = "far fa-file-alt"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "http://your-site.com/more"
@@ -375,7 +392,7 @@ Then, you can enable the section in the configuration file.
 
 #### Recent posts
 
-The recent posts sections shows the four latest published blog posts, with their featured image and a summary.
+The recent posts sections shows the four latest published blog posts, with their featured image and a summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
 
 You can enable it in the configuration file.
 
@@ -387,26 +404,54 @@ You can enable it in the configuration file.
 ```
 
 
-#### Meta tags
+### Meta tags
 
-`Description` and `Keywords` meta tags are available and can be customized.
-You can set default values for all pages in the `config.toml` file as below.
+The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `config.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
+
+| HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `config.toml` |
+| :------------------------------------------------------- | :------------------------- | :-------------------------------- |
+| `article:author`                                         | `facebook_author`          | -                                 |
+| `article:publisher`                                      | `facebook_site`            | `facebook_site`                   |
+| `author`                                                 | `author`                   | -                                 |
+| `description` / `og:description` / `twitter:description` | `description`              | `defaultDescription`              |
+| `keywords`                                               | `keywords`                 | `defaultKeywords`                 |
+| `og:image` / `twitter:image`                             | `banner`                   | `default_sharing_image`           |
+| `title` / `og:title` / `twitter:title`                   | `title`                    | -                                 |
+| `twitter:creator`                                        | `twitter_author`           | -                                 |
+| `twitter:site`                                           | `twitter_site`             | `twitter_site`                    |
+
+Besides, certain [Open Graph](http://ogp.me/) metadata is automatically set:
+
+- `article:published_time`, `article:modified_time`, `og:updated_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
+- `article:section` and `article:tag` are set based on [Hugo's `categories` and `tags` taxonomies](https://gohugo.io/content-management/taxonomies/#default-taxonomies). Since there can only be one `article:section`, only the first element of the `categories` array is used as `article:section`.
+
+You can set default values for all pages in the `config.toml` file as below:
 
 ```toml
 [params]
     defaultKeywords = ["devcows", "hugo", "go"]
     defaultDescription = "Site template made by Devcows using Hugo"
+    default_sharing_image = "img/sharing-default.png"
+    facebook_site = "https://www.facebook.com/GolangSociety/"
+    twitter_site = "GoHugoIO"
 ```
 
-The result in HTML will be the following.
+The resulting HTML will be the following:
 
 ```html
 <meta name="keywords" content="devcows, hugo, go">
 <meta name="description" content="Site template made by Devcows using Hugo">
+<meta property="og:description" content="Site template made by Devcows using Hugo">
+<meta property="og:image" content="img/sharing-default.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="420">
+<meta property="article:publisher" content="https://www.facebook.com/GolangSociety/">
+<meta name="twitter:description" content="Site template made by Devcows using Hugo">
+<meta name="twitter:site" content="@GoHugoIO">
 ```
 
-You can also override the default values from the `config.toml` by setting the `description` and `keywords` in the individual pages meta data.
-See the `faq.md` file in the `exampleSite` directory for an example.
+You can also override the default values from the `config.toml` by setting the respective keys in the individual pages front matter. As an example, here's the front matter from the [`faq.md` file](exampleSite/content/faq.md) in the [`exampleSite` directory](exampleSite):
 
 ```yaml
 +++
@@ -414,6 +459,16 @@ title = "FAQ"
 description = "Frequently asked questions"
 keywords = ["FAQ","How do I","questions","what if"]
 +++
+```
+
+Which results in the following HTML:
+
+```html
+<title>FAQ</title>
+<meta name="keywords" content="FAQ,How do I,questions,what if">
+<meta name="description" content="Frequently asked questions">
+<meta property="og:description" content="Frequently asked questions">
+<meta name="twitter:description" content="Frequently asked questions">
 ```
 
 

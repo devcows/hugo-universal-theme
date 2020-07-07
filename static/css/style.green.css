@@ -55,8 +55,8 @@ button {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
-a i.fa,
-button i.fa {
+a i[class^="fa"],
+button i[class^="fa"] {
   margin: 0 5px;
 }
 .clickable {
@@ -107,11 +107,11 @@ div.section {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
-.heading h1 i.fa,
-.heading h2 i.fa,
-.heading h3 i.fa,
-.heading h4 i.fa,
-.heading h5 i.fa {
+.heading h1 i[class^="fa"],
+.heading h2 i[class^="fa"],
+.heading h3 i[class^="fa"],
+.heading h4 i[class^="fa"],
+.heading h5 i[class^="fa"] {
   display: inline-block;
   background: #6aae7a;
   width: 30px;
@@ -253,13 +253,15 @@ ul.list-style-none {
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  line-height: 20px;
+  line-height: 24px;
   font-size: 12px;
   text-align: center;
-  vertical-align: bottom;
 }
 #top .social a:hover {
   color: #fff;
+  background: #6aae7a;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #top .social a:hover.facebook {
   background-color: #4460ae;
@@ -474,26 +476,24 @@ ul.list-style-none {
   margin-left: 7px;
 }
 .navbar-affixed-top {
-  top: -32px;
-}
-.navbar-affixed-top.affix-top {
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.navbar-affixed-top.affix {
-  position: fixed;
-  width: 100%;
   top: 0;
   z-index: 1000;
+  width: 100%;
+}
+.navbar-affixed-top.affix {
   -webkit-box-shadow: 0 0 5px #cccccc;
   box-shadow: 0 0 5px #cccccc;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
 }
-body.boxed .navbar-affixed-top.affix {
-  position: static;
+.navbar-affixed-top.affix + section {
+  margin-top: 62px;
+}
+@supports (position: sticky) {
+  .navbar-affixed-top {
+    position: sticky;
+  }
+  .navbar-affixed-top.affix + section {
+    margin-top: 0;
+  }
 }
 #login-modal {
   overflow: hidden;
@@ -981,11 +981,18 @@ fieldset[disabled] .btn-template-primary.active {
   letter-spacing: 0.08em;
   font-weight: 700;
   font-size: 12px;
+  text-decoration: none;
 }
 .panel.sidebar-menu ul.tag-cloud li a:hover {
   color: #6aae7a;
-  text-decoration: none;
   border-color: #6aae7a;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a {
+  color: #FFFFFF;
+  background-color: #6aae7a;
+}
+.panel.sidebar-menu ul.tag-cloud li.active a:hover {
+  color: #FFFFFF;
 }
 .panel.sidebar-menu ul.popular,
 .panel.sidebar-menu ul.recent {
@@ -1726,7 +1733,7 @@ fieldset[disabled] .btn-template-primary.active {
   border: none;
 }
 #heading-breadcrumbs {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-green.png') center center repeat;
   padding: 20px 0;
   margin-bottom: 40px;
 }
@@ -1755,7 +1762,7 @@ fieldset[disabled] .btn-template-primary.active {
   padding: 60px 0;
 }
 .bar.background-pentagon {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-green.png') center center repeat;
   border-top: solid 1px #999999;
   border-bottom: solid 1px #999999;
 }
@@ -3529,7 +3536,7 @@ a.list-group-item.active > .badge,
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
  * http://geedmo.github.com/yamm3
- * 
+ *
  * @geedmo - Licensed under the MIT license
  */
 .yamm .nav,
