@@ -1,0 +1,27 @@
+{{ if isset .Site.Params "usecases" }}
+{{ if .Site.Params.usecases.enable }}
+{{ if gt (len .Site.Data.usecases) 0 }}
+<section class="bar background-pentagon">
+    <div class="container use-cases">
+        {{ range $index, $element := sort .Site.Data.usecases "weight" }}
+		{{ if eq (mod $index 3) 0 }}
+		<div class="col-md-12">
+            <div class="row">
+		{{ end }}
+				<div class="col-md-4" color="white">
+                    <div class="box-simple item">
+                        <img alt="" src="{{ .image | absURL }}">
+                        <h3>{{ $element.name }}</h3>
+                        <p>{{ $element.description | markdownify }}</p>
+                    </div>
+                </div>
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.usecases) 1 )) }}
+			</div>
+		</div>
+		{{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

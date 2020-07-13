@@ -8,3 +8,27 @@
 .box-simple {
   min-height: 230px;
 }
+
+.box-simple .icon-image {
+  width: 82px;
+  height: 82px;
+  padding: 20px;
+  border-radius: 40px;
+  border: solid 1px #d45500;
+
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.box-simple:hover .icon-image {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.use-cases .item {
+  background: #fff;
+  padding: 40px;
+}
