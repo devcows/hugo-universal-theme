@@ -50,7 +50,9 @@
 
             {{ .Site.Params.address | safeHTML }}
 
-            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
+            {{ if not (eq .RelPermalink "/contact/") }}
+                <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
+            {{ end }}
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
