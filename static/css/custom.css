@@ -6,7 +6,7 @@
 }
 
 .box-simple {
-  min-height: 230px;
+  min-height: 320px;
 }
 
 .box-simple .icon-image {
@@ -35,5 +35,8 @@
 
 .justified-text {
   text-align: justify;
+}
+
+.line-height {
   line-height:2.5rem;
 }

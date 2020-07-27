@@ -20,7 +20,7 @@
                         </a>
                         {{ end }}
                         <h3>{{ $element.name | markdownify }}</h3>
-                        <p class="justified-text">{{ $element.description | markdownify }}</p>
+                        <p class="justified-text line-height">{{ $element.description | markdownify }}</p>
                     </div>
                 </div>
         {{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Site.Data.features) 1 )) }}
