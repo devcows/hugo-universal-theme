@@ -46,15 +46,15 @@
         {{ if isset .Site.Params "address" }}
         <div class="col-md-4 col-sm-6">
 
-          <h4>{{ i18n "contactTitle" }}</h4>
-
-            {{ .Site.Params.address | safeHTML }}
-
-            {{ if not (eq .RelPermalink "/contact/") }}
-                <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
-            {{ end }}
+          {{ if not (eq .RelPermalink "/contact/") }}
+            <h4>{{ i18n "contactTitle" }}</h4>
+            <p><a href="mailto:hello@upperdelta.com">hello@upperdelta.com</a></p>
+            <p>{{ .Site.Params.phone | safeHTML }}</p>
+            </br>
+            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
+          {{ end }}
 
         </div>
         <!-- /.col-md-4 -->
