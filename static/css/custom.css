@@ -32,3 +32,8 @@
   background: #fff;
   padding: 40px;
 }
+
+.justified-text {
+  text-align: justify;
+  line-height:2.5rem;
+}
