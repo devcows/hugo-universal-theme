@@ -392,7 +392,7 @@ Then, you can enable the section in the configuration file.
 
 #### Recent posts
 
-The recent posts sections shows the four latest published blog posts, with their featured image and a summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
+The recent posts sections shows the four latest published blog posts, with their featured image and an optional summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
 
 You can enable it in the configuration file.
 
@@ -401,6 +401,7 @@ You can enable it in the configuration file.
     enable = true
     title = "From our blog"
     subtitle = "Pellen
+    hide_summary = false
 ```
 
 
