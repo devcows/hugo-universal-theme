@@ -15,6 +15,11 @@
 <script src="{{ "js/hpneo.gmaps.js" | relURL }}"></script>
 <script src="{{ "js/gmaps.init.js" | relURL }}"></script>
 {{ end }}
+{{ if .Site.Params.enableRecaptchaInContactForm }}
+{{ if .Site.Params.googleRecaptchaKey }}
+<script src="//www.google.com/recaptcha/api.js" async defer></script>
+{{ end }}
+{{ end }}
 <script src="{{ "js/front.js" | relURL }}"></script>
 
 <!-- owl carousel -->
