@@ -30,11 +30,11 @@ jobs:
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}/exampleSite          
+          ls ${{ github.workspace }}/exampleSite/public          
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public  # directorio source para hacer el deploy (debe coincidir con lo configurado para hacer el build en config.toml), eg hace el Deploy desde ./docs
+          publish_dir: ./exampleSite/public  # directorio source para hacer el deploy (debe coincidir con lo configurado para hacer el build en config.toml), eg hace el Deploy desde ./docs
           
