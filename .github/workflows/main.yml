@@ -28,6 +28,11 @@ jobs:
           hugo config
           hugo --minify
 
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+          ls
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
