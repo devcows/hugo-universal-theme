@@ -9,7 +9,7 @@ defaultContentLanguage = "en"
 disqusShortname = "devcows"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = ""
-# publishDir = "../pub" # defaults to ./public
+
 
 # Define the number of posts per page
 paginate = 10
