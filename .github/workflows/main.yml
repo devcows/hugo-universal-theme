@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: ./exampleSite    
     steps:
       - uses: actions/checkout@v2
         with:
@@ -21,7 +24,6 @@ jobs:
           extended: true
 
       - name: Build
-        working-directory: ./exampleSite
         run: | 
           hugo config
           hugo --minify
