@@ -30,8 +30,7 @@ jobs:
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
-          ls ${{ github.workspace }}/public
+          ls ${{ github.workspace }}/exampleSite          
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
