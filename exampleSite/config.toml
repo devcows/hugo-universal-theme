@@ -1,4 +1,4 @@
-baseurl = "https://chepo92.github.io/hugo-universal-theme/" # Configure URL
+baseurl = "https://devcows.github.io/hugo-universal-theme/" # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "Universal"
 theme = "hugo-universal-theme"
 themesDir = "../.."
