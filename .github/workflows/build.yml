@@ -1,12 +1,7 @@
-name: github pages
-
-on:
-  push:
-    branches:
-      - master  # Set a branch to deploy
-
+name: Build project with Hugo
+on: push
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,10 +21,3 @@ jobs:
       - name: Build
         run: | 
           hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./exampleSite/public  # if not specified it defaults to ./public. source directory of the built files to make the deploy (must match the build to directory in config.toml), eg ./docs, ./public, ./exampleSite/public
-          
