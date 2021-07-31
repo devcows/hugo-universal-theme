@@ -65,7 +65,7 @@ paginate = 10
 [[menu.topbar]]
     weight = 4
     name = "Email"
-    url = "mailto:your@email.com"
+    url = "mailto:hello@universal.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
 
 [params]
@@ -132,8 +132,8 @@ paginate = 10
 [params.topbar]
     enable = true
     text = """<p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or hello@universal.com.</p>
-      <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-      <a href="#" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      <p class="hidden-md hidden-lg"><a href="tel:+420 777 555 333" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="mailto:hello@universal.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """
 
