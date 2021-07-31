@@ -1,9 +1,10 @@
 # Universal Theme for Hugo
 
-[![Build Status](https://travis-ci.org/devcows/hugo-universal-theme.svg?branch=master)](https://travis-ci.org/devcows/hugo-universal-theme)
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
 Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
+
+Demo site: <a href="https://devcows.github.io/hugo-universal-theme/" target="_blank">https://devcows.github.io/hugo-universal-theme</a>
 
 This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
