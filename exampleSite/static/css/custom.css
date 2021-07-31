@@ -1,0 +1,11 @@
+/* your styles go here */
+/* Example site test */
+
+.box-image-text .image {
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.box-simple {
+    min-height: 230px;
+}
