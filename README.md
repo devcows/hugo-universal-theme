@@ -260,11 +260,14 @@ image: "img/carousel/template-easy-code.png"
 
 The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
 
-Once the carousel is configured, it must be explicitly enabled in the `config.toml` file.
+Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 
 ```toml
-[params.carousel]
+[params.carouselHomepage]
     enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
 ```
 
 #### Features

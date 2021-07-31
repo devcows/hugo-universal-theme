@@ -143,11 +143,26 @@ paginate = 10
     tags = true
     search = true
 
-[params.carousel]
-    enable = true
+[params.carouselCustomers]
+    items = 6
+    auto_play = false
+    slide_speed = 2000
+    pagination_speed = 1000
+
+[params.carouselTestimonals]
+    items = 4
+    auto_play = false
+    slide_speed = 2000
+    pagination_speed = 1000
+
+[params.carouselHomepage]
     # All carousel items are defined in their own files. You can find example items
     # at 'exampleSite/data/carousel'.
     # For more informtion take a look at the README.
+    enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
 
 [params.features]
     enable = true
