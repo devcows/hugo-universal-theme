@@ -1,9 +1,7 @@
-name: Lint
-
+name: Linters
 on: push
-
 jobs:
-  run-linters:
+  linters:
     name: Run linters
     runs-on: ubuntu-latest
 

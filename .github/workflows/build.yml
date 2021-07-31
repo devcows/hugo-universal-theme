@@ -1,7 +1,5 @@
 name: Build project with Hugo
-
 on: push
-
 jobs:
   build:
     runs-on: ubuntu-latest
