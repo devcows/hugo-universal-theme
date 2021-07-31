@@ -1,9 +1,9 @@
-name: github pages
+name: Build project with Hugo
 
 on: push
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
