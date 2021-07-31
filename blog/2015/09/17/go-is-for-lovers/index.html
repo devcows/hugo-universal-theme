@@ -1,0 +1,503 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=robots content="all,follow">
+<meta name=googlebot content="index,follow,snippet,archive">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Go is for lovers</title>
+<meta name=author content="DevCows">
+<meta name=keywords content="devows,hugo,go">
+<meta name=description content="Site template made by devcows using hugo">
+<meta name=generator content="Hugo 0.86.1">
+<link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800" rel=stylesheet type=text/css>
+<link rel=stylesheet href=//use.fontawesome.com/releases/v5.11.2/css/all.css>
+<link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
+<link href=/hugo-universal-theme/css/animate.css rel=stylesheet>
+<link href=/hugo-universal-theme/css/style.default.css rel=stylesheet id=theme-stylesheet>
+<link href=/hugo-universal-theme/css/custom.css rel=stylesheet><!--[if lt IE 9]><script src=https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js></script>
+<script src=https://oss.maxcdn.com/respond/1.4.2/respond.min.js></script><![endif]-->
+<link rel="shortcut icon" href=/hugo-universal-theme/img/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon href=/hugo-universal-theme/img/apple-touch-icon.png>
+<link href=/hugo-universal-theme/css/owl.carousel.css rel=stylesheet>
+<link href=/hugo-universal-theme/css/owl.theme.css rel=stylesheet>
+<link rel=alternate href=https://devcows.github.io/index.xml type=application/rss+xml title=Universal>
+<meta property="og:locale" content="en_us">
+<meta property="og:site_name" content="Universal">
+<meta property="og:title" content="Go is for lovers">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://devcows.github.io/hugo-universal-theme/blog/2015/09/17/go-is-for-lovers/">
+<meta property="og:description" content="Site template made by devcows using hugo">
+<meta property="og:image" content="https://devcows.github.io/hugo-universal-theme/img/banners/banner-2.jpg">
+<meta property="og:image:type" content="image/jpg">
+<meta property="og:image:width" content="1000">
+<meta property="og:image:height" content="750">
+<meta property="og:updated_time" content="2015-09-17T13:47:08+0200">
+<meta property="article:author" content="https://www.facebook.com/GolangSociety/">
+<meta property="article:section" content="programming">
+<meta property="article:tag" content="go">
+<meta property="article:published_time" content="2015-09-17T13:47:08+0200">
+<meta property="article:modified_time" content="2015-09-17T13:47:08+0200">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content="@GoHugoIO">
+<meta name=twitter:title content="Go is for lovers">
+<meta name=twitter:image content="https://devcows.github.io/hugo-universal-theme/img/banners/banner-2.jpg">
+<meta name=twitter:description content="Site template made by devcows using hugo">
+</head>
+<body>
+<div id=all>
+<header class=navbar-affixed-top data-spy=affix data-offset-top=62>
+<div class="navbar navbar-default yamm" role=navigation id=navbar>
+<div class=container>
+<div class=navbar-header>
+<a class="navbar-brand home" href=/hugo-universal-theme/>
+<img src=/hugo-universal-theme/img/logo.png alt="Go is for lovers logo" class="hidden-xs hidden-sm">
+<img src=/hugo-universal-theme/img/logo-small.png alt="Go is for lovers logo" class="visible-xs visible-sm">
+<span class=sr-only>Go is for lovers - go to homepage</span>
+</a>
+<div class=navbar-buttons>
+<button type=button class="navbar-toggle btn-template-main" data-toggle=collapse data-target=#navigation>
+<span class=sr-only>Toggle Navigation</span>
+<i class="fas fa-align-justify"></i>
+</button>
+</div>
+</div>
+<div class="navbar-collapse collapse" id=navigation>
+<ul class="nav navbar-nav navbar-right">
+<li class=dropdown>
+<a href=/hugo-universal-theme/>Home</a>
+</li>
+<li class=dropdown>
+<a href=/hugo-universal-theme/blog/>Blog</a>
+</li>
+<li class=dropdown>
+<a href=/hugo-universal-theme/faq/>FAQ</a>
+</li>
+<li class=dropdown>
+<a href=/hugo-universal-theme/contact/>Contact</a>
+</li>
+</ul>
+</div>
+<div class="collapse clearfix" id=search>
+<form class=navbar-form role=search>
+<div class=input-group>
+<input type=text class=form-control placeholder=Search>
+<span class=input-group-btn>
+<button type=submit class="btn btn-template-main"><i class="fas fa-search"></i></button>
+</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</header>
+<div id=heading-breadcrumbs>
+<div class=container>
+<div class=row>
+<div class=col-md-12>
+<h1>Go is for lovers</h1>
+</div>
+</div>
+</div>
+</div>
+<div id=content>
+<div class=container>
+<div class=row>
+<div class=col-md-9 id=blog-post>
+<p class="text-muted text-uppercase mb-small text-right">
+September 17, 2015
+</p>
+<div id=post-content>
+<p>Hugo uses the excellent <a href=http://golang.org/>go</a> <a href=http://golang.org/pkg/html/template/>html/template</a> library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in go templates.</p>
+<p>This document is a brief primer on using go templates. The <a href=http://golang.org/pkg/html/template/>go docs</a>
+provide more details.</p>
+<h2 id=introduction-to-go-templates>Introduction to Go Templates</h2>
+<p>Go templates provide an extremely simple template language. It adheres to the
+belief that only the most basic of logic belongs in the template or view layer.
+One consequence of this simplicity is that go templates parse very quickly.</p>
+<p>A unique characteristic of go templates is they are content aware. Variables and
+content will be sanitized depending on the context of where they are used. More
+details can be found in the <a href=http://golang.org/pkg/html/template/>go docs</a>.</p>
+<h2 id=basic-syntax>Basic Syntax</h2>
+<p>Go lang templates are html files with the addition of variables and
+functions.</p>
+<p><strong>Go variables and functions are accessible within {{ }}</strong></p>
+<p>Accessing a predefined variable &ldquo;foo&rdquo;:</p>
+<pre><code>{{ foo }}
+</code></pre>
+<p><strong>Parameters are separated using spaces</strong></p>
+<p>Calling the add function with input of 1, 2:</p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<p><strong>Methods and fields are accessed via dot notation</strong></p>
+<p>Accessing the Page Parameter &ldquo;bar&rdquo;</p>
+<pre><code>{{ .Params.bar }}
+</code></pre>
+<p><strong>Parentheses can be used to group items together</strong></p>
+<pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
+</code></pre>
+<h2 id=variables>Variables</h2>
+<p>Each go template has a struct (object) made available to it. In hugo each
+template is passed either a page or a node struct depending on which type of
+page you are rendering. More details are available on the
+<a href=/layout/variables>variables</a> page.</p>
+<p>A variable is accessed by referencing the variable name.</p>
+<pre><code>&lt;title&gt;{{ .Title }}&lt;/title&gt;
+</code></pre>
+<p>Variables can also be defined and referenced.</p>
+<pre><code>{{ $address := &quot;123 Main St.&quot;}}
+{{ $address }}
+</code></pre>
+<h2 id=functions>Functions</h2>
+<p>Go template ship with a few functions which provide basic functionality. The go
+template system also provides a mechanism for applications to extend the
+available functions with their own. <a href=/layout/functions>Hugo template
+functions</a> provide some additional functionality we believe
+are useful for building websites. Functions are called by using their name
+followed by the required parameters separated by spaces. Template
+functions cannot be added without recompiling hugo.</p>
+<p><strong>Example:</strong></p>
+<pre><code>{{ add 1 2 }}
+</code></pre>
+<h2 id=includes>Includes</h2>
+<p>When including another template you will pass to it the data it will be
+able to access. To pass along the current context please remember to
+include a trailing dot. The templates location will always be starting at
+the /layout/ directory within Hugo.</p>
+<p><strong>Example:</strong></p>
+<pre><code>{{ template &quot;chrome/header.html&quot; . }}
+</code></pre>
+<h2 id=logic>Logic</h2>
+<p>Go templates provide the most basic iteration and conditional logic.</p>
+<h3 id=iteration>Iteration</h3>
+<p>Just like in go, the go templates make heavy use of range to iterate over
+a map, array or slice. The following are different examples of how to use
+range.</p>
+<p><strong>Example 1: Using Context</strong></p>
+<pre><code>{{ range array }}
+    {{ . }}
+{{ end }}
+</code></pre>
+<p><strong>Example 2: Declaring value variable name</strong></p>
+<pre><code>{{range $element := array}}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<p><strong>Example 2: Declaring key and value variable name</strong></p>
+<pre><code>{{range $index, $element := array}}
+    {{ $index }}
+    {{ $element }}
+{{ end }}
+</code></pre>
+<h3 id=conditionals>Conditionals</h3>
+<p>If, else, with, or, & and provide the framework for handling conditional
+logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
+<p>Go Templates treat the following values as false:</p>
+<ul>
+<li>false</li>
+<li>0</li>
+<li>any array, slice, map, or string of length zero</li>
+</ul>
+<p><strong>Example 1: If</strong></p>
+<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Example 2: If -> Else</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{else}}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<p><strong>Example 3: And & Or</strong></p>
+<pre><code>{{ if and (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+</code></pre>
+<p><strong>Example 4: With</strong></p>
+<p>An alternative way of writing &ldquo;if&rdquo; and then referencing the same value
+is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+and skips the block if the variable is absent.</p>
+<p>The first example above could be simplified as:</p>
+<pre><code>{{ with .Params.title }}&lt;h4&gt;{{ . }}&lt;/h4&gt;{{ end }}
+</code></pre>
+<p><strong>Example 5: If -> Else If</strong></p>
+<pre><code>{{ if isset .Params &quot;alt&quot; }}
+    {{ index .Params &quot;alt&quot; }}
+{{ else if isset .Params &quot;caption&quot; }}
+    {{ index .Params &quot;caption&quot; }}
+{{ end }}
+</code></pre>
+<h2 id=pipes>Pipes</h2>
+<p>One of the most powerful components of go templates is the ability to
+stack actions one after another. This is done by using pipes. Borrowed
+from unix pipes, the concept is simple, each pipeline&rsquo;s output becomes the
+input of the following pipe.</p>
+<p>Because of the very simple syntax of go templates, the pipe is essential
+to being able to chain together function calls. One limitation of the
+pipes is that they only can work with a single value and that value
+becomes the last parameter of the next pipeline.</p>
+<p>A few simple examples should help convey how to use the pipe.</p>
+<p><strong>Example 1 :</strong></p>
+<pre><code>{{ if eq 1 1 }} Same {{ end }}
+</code></pre>
+<p>is the same as</p>
+<pre><code>{{ eq 1 1 | if }} Same {{ end }}
+</code></pre>
+<p>It does look odd to place the if at the end, but it does provide a good
+illustration of how to use the pipes.</p>
+<p><strong>Example 2 :</strong></p>
+<pre><code>{{ index .Params &quot;disqus_url&quot; | html }}
+</code></pre>
+<p>Access the page parameter called &ldquo;disqus_url&rdquo; and escape the HTML.</p>
+<p><strong>Example 3 :</strong></p>
+<pre><code>{{ if or (or (isset .Params &quot;title&quot;) (isset .Params &quot;caption&quot;)) (isset .Params &quot;attr&quot;)}}
+Stuff Here
+{{ end }}
+</code></pre>
+<p>Could be rewritten as</p>
+<pre><code>{{  isset .Params &quot;caption&quot; | or isset .Params &quot;title&quot; | or isset .Params &quot;attr&quot; | if }}
+Stuff Here
+{{ end }}
+</code></pre>
+<h2 id=context-aka-the-dot>Context (aka. the dot)</h2>
+<p>The most easily overlooked concept to understand about go templates is that {{ . }}
+always refers to the current context. In the top level of your template this
+will be the data set made available to it. Inside of a iteration it will have
+the value of the current item. When inside of a loop the context has changed. .
+will no longer refer to the data available to the entire page. If you need to
+access this from within the loop you will likely want to set it to a variable
+instead of depending on the context.</p>
+<p><strong>Example:</strong></p>
+<pre><code>  {{ $title := .Site.Title }}
+  {{ range .Params.tags }}
+    &lt;li&gt; &lt;a href=&quot;{{ $baseurl }}/tags/{{ . | urlize | lower  }}&quot;&gt;{{ . }}&lt;/a&gt; - {{ $title }} &lt;/li&gt;
+  {{ end }}
+</code></pre>
+<p>Notice how once we have entered the loop the value of {{ . }} has changed. We
+have defined a variable outside of the loop so we have access to it from within
+the loop.</p>
+<h1 id=hugo-parameters>Hugo Parameters</h1>
+<p>Hugo provides the option of passing values to the template language
+through the site configuration (for sitewide values), or through the meta
+data of each specific piece of content. You can define any values of any
+type (supported by your front matter/config format) and use them however
+you want to inside of your templates.</p>
+<h2 id=using-content-page-parameters>Using Content (page) Parameters</h2>
+<p>In each piece of content you can provide variables to be used by the
+templates. This happens in the <a href=/content/front-matter>front matter</a>.</p>
+<p>An example of this is used in this documentation site. Most of the pages
+benefit from having the table of contents provided. Sometimes the TOC just
+doesn&rsquo;t make a lot of sense. We&rsquo;ve defined a variable in our front matter
+of some pages to turn off the TOC from being displayed.</p>
+<p>Here is the example front matter:</p>
+<pre><code>---
+title: &quot;Permalinks&quot;
+date: &quot;2013-11-18&quot;
+aliases:
+  - &quot;/doc/permalinks/&quot;
+groups: [&quot;extras&quot;]
+groups_weight: 30
+notoc: true
+---
+</code></pre><p>Here is the corresponding code inside of the template:</p>
+<pre><code>  {{ if not .Params.notoc }}
+    &lt;div id=&quot;toc&quot; class=&quot;well col-md-4 col-sm-6&quot;&gt;
+    {{ .TableOfContents }}
+    &lt;/div&gt;
+  {{ end }}
+</code></pre>
+<h2 id=using-site-config-parameters>Using Site (config) Parameters</h2>
+<p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
+parameters, which are values which will be available to you in chrome.</p>
+<p>For instance, you might declare:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>params</span>:
+  <span style=color:#f92672>CopyrightHTML</span>: <span style=color:#e6db74>&#34;Copyright &amp;#xA9; 2013 John Doe. All Rights Reserved.&#34;</span>
+  <span style=color:#f92672>TwitterUser</span>: <span style=color:#e6db74>&#34;spf13&#34;</span>
+  <span style=color:#f92672>SidebarRecentLimit</span>: <span style=color:#ae81ff>5</span>
+</code></pre></div><p>Within a footer layout, you might then declare a <code>&lt;footer></code> which is only
+provided if the <code>CopyrightHTML</code> parameter is provided, and if it is given,
+you would declare it to be HTML-safe, so that the HTML entity is not escaped
+again. This would let you easily update just your top-level config file each
+January 1st, instead of hunting through your templates.</p>
+<pre><code>{{if .Site.Params.CopyrightHTML}}&lt;footer&gt;
+&lt;div class=&quot;text-center&quot;&gt;{{.Site.Params.CopyrightHTML | safeHtml}}&lt;/div&gt;
+&lt;/footer&gt;{{end}}
+</code></pre><p>An alternative way of writing the &ldquo;if&rdquo; and then referencing the same value
+is to use &ldquo;with&rdquo; instead. With rebinds the context <code>.</code> within its scope,
+and skips the block if the variable is absent:</p>
+<pre><code>{{with .Site.Params.TwitterUser}}&lt;span class=&quot;twitter&quot;&gt;
+&lt;a href=&quot;https://twitter.com/{{.}}&quot; rel=&quot;author&quot;&gt;
+&lt;img src=&quot;/images/twitter.png&quot; width=&quot;48&quot; height=&quot;48&quot; title=&quot;Twitter: {{.}}&quot;
+ alt=&quot;Twitter&quot;&gt;&lt;/a&gt;
+&lt;/span&gt;{{end}}
+</code></pre><p>Finally, if you want to pull &ldquo;magic constants&rdquo; out of your layouts, you can do
+so, such as in this example:</p>
+<pre><code>&lt;nav class=&quot;recent&quot;&gt;
+  &lt;h1&gt;Recent Posts&lt;/h1&gt;
+  &lt;ul&gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
+    &lt;li&gt;&lt;a href=&quot;{{.RelPermalink}}&quot;&gt;{{.Title}}&lt;/a&gt;&lt;/li&gt;
+  {{end}}&lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+</div>
+<div id=comments>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//devcows.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+</div>
+<div class=col-md-3>
+<div class="panel panel-default sidebar-menu">
+<div class=panel-heading>
+<h3 class=panel-title>Search</h3>
+</div>
+<div class=panel-body>
+<form action=//google.com/search method=get accept-charset=utf-8 role=search>
+<div class=input-group>
+<input type=search name=q class=form-control placeholder=Search>
+<input type=hidden name=sitesearch value=https://devcows.github.io/>
+<span class=input-group-btn>
+<button type=submit class="btn btn-template-main"><i class="fas fa-search"></i></button>
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="panel panel-default sidebar-menu">
+<div class=panel-heading>
+<h3 class=panel-title>Categories</h3>
+</div>
+<div class=panel-body>
+<ul class="nav nav-pills nav-stacked">
+<li>
+<a href=/hugo-universal-theme/categories/lorem>lorem (1)</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/categories/programming>programming (2)</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/categories/pseudo>pseudo (1)</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/categories/starting>starting (1)</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="panel sidebar-menu">
+<div class=panel-heading>
+<h3 class=panel-title>Tags</h3>
+</div>
+<div class=panel-body>
+<ul class=tag-cloud>
+<li>
+<a href=/hugo-universal-theme/tags/go><i class="fas fa-tags"></i> go</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/tags/golang><i class="fas fa-tags"></i> golang</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/tags/hugo><i class="fas fa-tags"></i> hugo</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/tags/ipsum><i class="fas fa-tags"></i> ipsum</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/tags/programming><i class="fas fa-tags"></i> programming</a>
+</li>
+<li>
+<a href=/hugo-universal-theme/tags/theme><i class="fas fa-tags"></i> theme</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id=footer>
+<div class=container>
+<div class="col-md-4 col-sm-6">
+<h4>About us</h4>
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<hr class="hidden-md hidden-lg hidden-sm">
+</div>
+<div class="col-md-4 col-sm-6">
+<h4>Recent posts</h4>
+<div class=blog-entries>
+<div class="item same-height-row clearfix">
+<div class="image same-height-always">
+<a href=https://devcows.github.io/hugo-universal-theme/blog/2015/10/02/linked-post/>
+<img src=/hugo-universal-theme/img/banners/banner-4.jpg class=img-responsive alt="Linked post">
+</a>
+</div>
+<div class="name same-height-always">
+<h5><a href=https://devcows.github.io/hugo-universal-theme/blog/2015/10/02/linked-post/>Linked post</a></h5>
+</div>
+</div>
+<div class="item same-height-row clearfix">
+<div class="image same-height-always">
+<a href=https://devcows.github.io/hugo-universal-theme/blog/2015/09/17/go-is-for-lovers/>
+<img src=/hugo-universal-theme/img/banners/banner-2.jpg class=img-responsive alt="Go is for lovers">
+</a>
+</div>
+<div class="name same-height-always">
+<h5><a href=https://devcows.github.io/hugo-universal-theme/blog/2015/09/17/go-is-for-lovers/>Go is for lovers</a></h5>
+</div>
+</div>
+<div class="item same-height-row clearfix">
+<div class="image same-height-always">
+<a href=https://devcows.github.io/hugo-universal-theme/blog/2015/08/03/hugo-is-for-lovers/>
+<img src=/hugo-universal-theme/img/banners/banner-3.jpg class=img-responsive alt="Hugo is for lovers">
+</a>
+</div>
+<div class="name same-height-always">
+<h5><a href=https://devcows.github.io/hugo-universal-theme/blog/2015/08/03/hugo-is-for-lovers/>Hugo is for lovers</a></h5>
+</div>
+</div>
+</div>
+<hr class="hidden-md hidden-lg">
+</div>
+<div class="col-md-4 col-sm-6">
+<h4>Contact</h4>
+<p class=text-uppercase><strong>Universal Ltd.</strong>
+<br>13/25 New Avenue
+<br>Newtown upon River
+<br>45Y 73J
+<br>England
+<br>
+<strong>Great Britain</strong>
+</p>
+<a href=/contact class="btn btn-small btn-template-main">Go to contact page</a>
+<hr class="hidden-md hidden-lg hidden-sm">
+</div>
+</div>
+</footer>
+<div id=copyright>
+<div class=container>
+<div class=col-md-12>
+<p class=pull-left>Copyright (c) 2015 - 2016, YourCompany; all rights reserved.</p>
+<p class=pull-right>
+Template by <a href=https://bootstrapious.com/p/universal-business-e-commerce-template>Bootstrapious</a>.
+Ported to Hugo by <a href=https://github.com/devcows/hugo-universal-theme>DevCows</a>.
+</p>
+</div>
+</div>
+</div>
+</div>
+<script src=//code.jquery.com/jquery-3.1.1.min.js integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin=anonymous></script>
+<script src=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script>
+<script src=//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js></script>
+<script src=//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js></script>
+<script src=//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js></script>
+<script src=//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y&v=3.exp"></script>
+<script src=/hugo-universal-theme/js/hpneo.gmaps.js></script>
+<script src=/hugo-universal-theme/js/gmaps.init.js></script>
+<script src=/hugo-universal-theme/js/front.js></script>
+<script src=/hugo-universal-theme/js/owl.carousel.min.js></script>
+</body>
+</html>
