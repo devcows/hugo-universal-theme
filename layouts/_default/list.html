@@ -43,13 +43,9 @@
                                           {{ if isset .Params "categories" }}
                                           {{ if gt (len .Params.categories) 0 }}
                                           in 
-					    {{ range first 1 .Params.categories }}
-
-					      <a href="{{ "categories/" | relURL }}{{ . | urlize | lower }}">{{ . }}</a>
-					    {{ end }}
-					    {{ range after 1 .Params.categories }}
-
-					      , <a href="{{ "categories/" | relURL }}{{ . | urlize | lower }}">{{ . }}</a>
+					    {{ range $index, $category := .Params.categories }}
+					      {{ if $index }}, {{end}}
+					      <a href="{{ "categories/" | relURL }}{{ . | urlize | lower }}">{{ $category }}</a>
 					    {{ end }}
                                           {{ end }}
                                           {{ end }}
