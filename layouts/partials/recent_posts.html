@@ -39,7 +39,8 @@
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                             <p class="author-category">
                             {{ with .Params.author }}
-                            {{ i18n "authorBy" }} <a href="#">{{ . }}</a>
+                            {{ i18n "authorBy" }}
+			      <a href="{{ printf "/%s/%s" "authors" ( . | urlize) }}">{{ . }}</a>
                             {{ end }}
                             {{ i18n "publishedOn" }} {{ .Date.Format .Site.Params.date_format }}
                             </p>
