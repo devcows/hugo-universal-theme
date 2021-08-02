@@ -39,7 +39,7 @@
                                         <p class="author-category">
                                           {{ if isset .Params "author" }}
 					  {{ i18n "authorBy" }}
-					   <a href="{{ printf "/%s/%s" "authors" (.Params.author | urlize) }}">{{ .Params.author }}</a>
+					   <a href="{{ printf "%s/%s" ("authors" | relURL) (.Params.author | urlize) }}">{{ .Params.author }}</a>
                                           {{ end }}
                                           {{ if isset .Params "categories" }}
                                           {{ if gt (len .Params.categories) 0 }}
