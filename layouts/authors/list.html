@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        {{ partial "nav.html" . }}
+
+        {{ partial "breadcrumbs.html" . }}
+
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <!-- *** LEFT COLUMN *** -->
+
+                    <div class="col-md-9" id="blog-listing-medium">
+
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="{{ .Permalink }}">
+                                          {{ if .Params.photo }}
+                                          <img src="{{ .Params.photo | relURL }}" class="img-responsive" alt="">
+                                          {{ else }}
+                                          <img src="{{ "img/placeholder.png" | relURL }}" class="img-responsive" alt="">
+                                          {{ end }}
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+					<h2>Posts</h2>
+                                           <ul>
+                                             {{ range .Data.Pages }}
+                                               <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                             {{ end }}
+                                            </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <ul class="pager">
+                            {{ if .Paginator.HasPrev }}
+                            <li class="previous"><a href="{{ .Paginator.Prev.URL | relURL }}">&larr; {{ i18n "newer" }}</a></li>
+                            {{ else }}
+                            <li class="previous disabled"><a href="#">&larr; {{ i18n "newer" }}</a></li>
+                            {{ end }}
+
+                            {{ if .Paginator.HasNext }}
+                            <li class="next"><a href="{{ .Paginator.Next.URL | relURL }}">{{ i18n "older" }} &rarr;</a></li>
+                            {{ else }}
+                            <li class="next disabled"><a href="#">{{ i18n "older" }} &rarr;</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <!-- /.col-md-9 -->
+
+                    <!-- *** LEFT COLUMN END *** -->
+
+                    <!-- *** RIGHT COLUMN ***
+       _________________________________________________________ -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS *** -->
+
+                        {{ partial "sidebar.html" . }}
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
+
+
