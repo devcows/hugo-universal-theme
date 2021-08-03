@@ -1,8 +1,8 @@
-name: Linters
-on: push
+name: Eslint
+on: [push, pull_request]
 jobs:
   linters:
-    name: Run linters
+    name: Run Eslint
     runs-on: ubuntu-latest
 
     steps:
@@ -18,9 +18,5 @@ jobs:
       - name: Install Node.js dependencies
         run: npm ci
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          eslint: true
-          prettier: false
-          stylelint: false
+      - name: Run eslint
+        run: npm run eslint
