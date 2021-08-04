@@ -1,9 +1,14 @@
 # Universal Theme for Hugo
 
-[![Build Status](https://travis-ci.org/devcows/hugo-universal-theme.svg?branch=master)](https://travis-ci.org/devcows/hugo-universal-theme)
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
 Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
+
+Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
+
+Sponsor this project:
+- [https://paypal.me/ryanfox1985](https://paypal.me/ryanfox1985)
+- [https://www.patreon.com/ryanfox1985](https://www.patreon.com/ryanfox1985)
 
 This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
@@ -257,11 +262,14 @@ image: "img/carousel/template-easy-code.png"
 
 The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
 
-Once the carousel is configured, it must be explicitly enabled in the `config.toml` file.
+Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 
 ```toml
-[params.carousel]
+[params.carouselHomepage]
     enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
 ```
 
 #### Features
@@ -392,7 +400,7 @@ Then, you can enable the section in the configuration file.
 
 #### Recent posts
 
-The recent posts sections shows the four latest published blog posts, with their featured image and a summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
+The recent posts sections shows the four latest published blog posts, with their featured image and an optional summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
 
 You can enable it in the configuration file.
 
@@ -401,6 +409,7 @@ You can enable it in the configuration file.
     enable = true
     title = "From our blog"
     subtitle = "Pellen
+    hide_summary = false
 ```
 
 
