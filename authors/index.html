@@ -4,7 +4,7 @@
 <meta name=robots content="all,follow">
 <meta name=googlebot content="index,follow,snippet,archive">
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Hugo is for lovers</title>
+<title>Authors</title>
 <meta name=author content="DevCows">
 <meta name=keywords content="devows,hugo,go">
 <meta name=description content="Site template made by devcows using hugo">
@@ -23,23 +23,19 @@
 <link rel=alternate href=https://devcows.github.io/index.xml type=application/rss+xml title=Universal>
 <meta property="og:locale" content="en_us">
 <meta property="og:site_name" content="Universal">
-<meta property="og:title" content="Hugo is for lovers">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://devcows.github.io/hugo-universal-theme/blog/2015/08/03/hugo-is-for-lovers/">
+<meta property="og:title" content="Authors">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://devcows.github.io/hugo-universal-theme/authors/">
 <meta property="og:description" content="Site template made by devcows using hugo">
-<meta property="og:image" content="https://devcows.github.io/hugo-universal-theme/img/banners/banner-3.jpg">
-<meta property="og:image:type" content="image/jpg">
-<meta property="og:image:width" content="1000">
-<meta property="og:image:height" content="750">
-<meta property="og:updated_time" content="2015-08-03T13:39:46+0200">
-<meta property="article:section" content="pseudo">
-<meta property="article:tag" content="hugo">
-<meta property="article:published_time" content="2015-08-03T13:39:46+0200">
-<meta property="article:modified_time" content="2015-08-03T13:39:46+0200">
-<meta name=twitter:card content="summary_large_image">
+<meta property="og:image" content="https://devcows.github.io/hugo-universal-theme/img/sharing-default.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="420">
+<meta property="og:updated_time" content="2021-08-01T21:29:20+0200">
+<meta name=twitter:card content="summary">
 <meta name=twitter:site content="@GoHugoIO">
-<meta name=twitter:title content="Hugo is for lovers">
-<meta name=twitter:image content="https://devcows.github.io/hugo-universal-theme/img/banners/banner-3.jpg">
+<meta name=twitter:title content="Authors">
+<meta name=twitter:image content="https://devcows.github.io/hugo-universal-theme/img/sharing-default.png">
 <meta name=twitter:description content="Site template made by devcows using hugo">
 </head>
 <body>
@@ -49,9 +45,9 @@
 <div class=container>
 <div class=navbar-header>
 <a class="navbar-brand home" href=/hugo-universal-theme/>
-<img src=/hugo-universal-theme/img/logo.png alt="Hugo is for lovers logo" class="hidden-xs hidden-sm">
-<img src=/hugo-universal-theme/img/logo-small.png alt="Hugo is for lovers logo" class="visible-xs visible-sm">
-<span class=sr-only>Hugo is for lovers - go to homepage</span>
+<img src=/hugo-universal-theme/img/logo.png alt="Authors logo" class="hidden-xs hidden-sm">
+<img src=/hugo-universal-theme/img/logo-small.png alt="Authors logo" class="visible-xs visible-sm">
+<span class=sr-only>Authors - go to homepage</span>
 </a>
 <div class=navbar-buttons>
 <button type=button class="navbar-toggle btn-template-main" data-toggle=collapse data-target=#navigation>
@@ -65,7 +61,7 @@
 <li class=dropdown>
 <a href=/hugo-universal-theme/>Home</a>
 </li>
-<li class=dropdown>
+<li class="dropdown active">
 <a href=/hugo-universal-theme/blog/>Blog</a>
 </li>
 <li class=dropdown>
@@ -93,7 +89,7 @@
 <div class=container>
 <div class=row>
 <div class=col-md-12>
-<h1>Hugo is for lovers</h1>
+<h1>Authors</h1>
 </div>
 </div>
 </div>
@@ -101,72 +97,11 @@
 <div id=content>
 <div class=container>
 <div class=row>
-<div class=col-md-9 id=blog-post>
-<p class="text-muted text-uppercase mb-small text-right">
-August 3, 2015
-</p>
-<div id=post-content>
-<h2 id=step-1-install-hugo>Step 1. Install Hugo</h2>
-<p>Goto <a href=https://github.com/spf13/hugo/releases>hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-<p>More complete instructions are available at <a href=/overview/installing/>installing hugo</a></p>
-<h2 id=step-2-build-the-docs>Step 2. Build the Docs</h2>
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-<p>Follow the following steps:</p>
-<ol>
-<li>Clone the <a href=http://github.com/spf13/hugo>hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to http://localhost:1313</li>
-</ol>
-<p>Corresponding pseudo commands:</p>
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-<h2 id=step-3-change-the-docs-site>Step 3. Change the docs site</h2>
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-<p>Open your <a href=http://vim.spf13.com>favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-<h2 id=step-4-have-fun>Step 4. Have fun</h2>
-<p>The best way to learn something is to play with it.</p>
-</div>
-<div id=comments>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//devcows.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
+<div class=col-md-9 id=blog-listing-medium>
+<ul class=pager>
+<li class="previous disabled"><a href=#>&larr; Newer</a></li>
+<li class="next disabled"><a href=#>Older &rarr;</a></li>
+</ul>
 </div>
 <div class=col-md-3>
 <div class="panel panel-default sidebar-menu">
