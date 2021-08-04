@@ -111,7 +111,7 @@
                         {{ end }}
                     </li>
                   {{ else }}
-                  <li class="dropdown">
+                  <li class="dropdown {{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq (default (trim .URL "/") .Identifier) "blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }} active{{ end }}">
                     <a href="{{ .URL }}">{{ .Name }}</a>
                   </li>
                   {{ end }}
