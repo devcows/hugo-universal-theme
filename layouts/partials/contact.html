@@ -35,6 +35,12 @@
                                 <textarea id="message" class="form-control" name="message" required></textarea>
                             </div>
                         </div>
+                        {{ if and .Site.Params.enableRecaptchaInContactForm .Site.Params.googleRecaptchaKey }}
+                        <div class="col-sm-12">
+                            <div class="g-recaptcha" data-sitekey="{{ .Site.Params.googleRecaptchaKey }}"></div>
+                            <br/>
+                        </div>
+                        {{ end }}
 
                         <div class="col-sm-12 text-center">
                           <button type="submit" class="btn btn-template-main"><i class="far fa-envelope"></i>{{ i18n "contactSend" }}</button>

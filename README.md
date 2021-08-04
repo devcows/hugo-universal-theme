@@ -137,11 +137,11 @@ You can enable or disable the Google Maps widget on the contact page by setting 
 
 Example configuration:
 
-```yaml
+```toml
 [params]
     ...
     enableGoogleMaps = true
-    googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+    googleMapsApiKey = "site_key_for_google_maps"
 
     latitude = "-12.043333"
     longitude = "-77.028333"
@@ -150,12 +150,15 @@ Example configuration:
 
 Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
 
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free).
+To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
 
-```yaml
+```toml
 [params]
-email = "your@email.com"
-contact_form_ajax = false
+    email = "your@email.com"
+    contact_form_ajax = false
+
+    enableRecaptchaInContactForm = true
+    googleRecaptchaKey = "site_key_for_google_recaptcha"
 ```
 
 ### Menu
