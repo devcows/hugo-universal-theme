@@ -1,0 +1,80 @@
+- id: home
+  translation: "Página Inicial"
+
+- id: templateBy
+  translation: "Template por"
+
+- id: portedBy
+  translation: "Portado para o Hugo por"
+
+- id: contactGoTo
+  translation: "Vá à página de contato"
+
+- id: contactAddrTitle
+  translation: "Endereço"
+
+- id: contactTitle
+  translation: "Contato"
+
+- id: contactForm
+  translation: "Formulário de contato"
+
+- id: contactName
+  translation: "Seu Nome"
+
+- id: contactMail
+  translation: "Seu Email"
+
+- id: contactMessage
+  translation: "Sua Mensagem"
+
+- id: contactSend
+  translation: "Enviar Mensagem"
+
+- id: navHome
+  translation: "vá à página inicial"
+
+- id: navToggle
+  translation: "Alternar Navegação"
+
+- id: categoriesTitle
+  translation: "Categorias"
+
+- id: searchTitle
+  translation: "Buscar"
+
+- id: tagsTitle
+  translation: "Tags"
+
+- id: continueReading
+  translation: "Continuar lendo"
+
+- id: readMore
+  translation: "Leia mais"
+
+- id: authorBy
+  translation: "Por"
+
+- id: recentPosts
+  translation: "Posts recentes"
+
+- id: aboutUs
+  translation: "Sobre nós"
+
+- id: newer
+  translation: "Mais novos"
+
+- id: older
+  translation: "Mais antigos"
+
+- id: publishedOn
+  translation: "em"
+
+- id: 404Error
+  translation: "Error 404: Page not found"
+
+- id: 404Message
+  translation: "We are sorry – this page is not here anymore"
+
+- id: 404NavHome
+  translation: "Vá à página inicial"

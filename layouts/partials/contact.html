@@ -7,7 +7,7 @@
 
                 {{ .Content }}
 
-                {{ if isset .Site.Params "email" }}
+                {{ if isset .Site.Params "formspree_action" }}
 
                 <div class="heading">
                   <h3>{{ i18n "contactForm" }}</h3>
@@ -15,7 +15,7 @@
 
                 <div id="contact-message"></div>
 
-                <form class="contact-form" method="post" action="https://formspree.io/{{ .Site.Params.email }}">
+                <form {{ with .Site.Params.contact_form_ajax }}class="contact-form-ajax"{{ else }}{{ end }} method="post" action="{{ .Site.Params.formspree_action }}">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
@@ -26,7 +26,7 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label for="email">{{ i18n "contactMail" }}</label>
-                                <input type="text" class="form-control" name="email" id="email" required>
+                                <input type="email" autocomplete="email" class="form-control" name="email" id="email" required>
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="col-sm-12 text-center">
-                          <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i>{{ i18n "contactSend" }}</button>
+                          <button type="submit" class="btn btn-template-main"><i class="far fa-envelope"></i>{{ i18n "contactSend" }}</button>
 
                         </div>
                     </div>

@@ -5,13 +5,13 @@
   translation: "Template par"
 
 - id: portedBy
-  translation: "Porté pour Hugo par"
+  translation: "Porté sur Hugo par"
 
 - id: contactGoTo
   translation: "Aller à la page de contact"
 
 - id: contactAddrTitle
-  translation: "Addresse"
+  translation: "Adresse"
 
 - id: contactTitle
   translation: "Contact"
@@ -38,7 +38,7 @@
   translation: "Basculer la Navigation"
 
 - id: categoriesTitle
-  translation: "Categories"
+  translation: "Catégories"
 
 - id: searchTitle
   translation: "Recherche"
@@ -68,4 +68,13 @@
   translation: "Ancien"
 
 - id: publishedOn
-  translation: "sur"
+  translation: "le"
+
+- id: 404Error
+  translation: "Erreur 404: Page introuvable"
+
+- id: 404Message
+  translation: "Nous sommes désolés – cette page n'est plus là"
+
+- id: 404NavHome
+  translation: "Aller à l'accueil"
