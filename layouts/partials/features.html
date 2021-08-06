@@ -20,7 +20,7 @@
                 {{ if lt $feature_index (len $features) }}
                     {{ $element := index $features $feature_index }}
 
-                    <div class="col-md-{{ div 12 $elements }}">
+                    <div class="col-md-{{ div 12 $elements }} {{ $j }}">
                         <div class="box-simple">
                             {{ with $element.url }}
                             <a href="{{ $element.url }}">
