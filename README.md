@@ -139,7 +139,6 @@ Example configuration:
 
 ```toml
 [params]
-    ...
     enableGoogleMaps = true
     googleMapsApiKey = "site_key_for_google_maps"
 
