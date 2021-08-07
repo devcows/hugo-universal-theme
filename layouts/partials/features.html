@@ -20,7 +20,7 @@
                 {{ if lt $feature_index (len $features) }}
                     {{ $element := index $features $feature_index }}
 
-                    <div class="col-md-{{ div 12 $elements }} col-{{ $j }} col-{{ if eq (mod $i 2) 0 }}odd{{ else }}even{{ end }}">
+                    <div class="col-md-{{ div 12 $elements }} col-{{ $j }} col-{{ if eq (mod $j 2) 0 }}odd{{ else }}even{{ end }}">
                         <div class="box-simple">
                             {{ with $element.url }}
                             <a href="{{ $element.url }}">
