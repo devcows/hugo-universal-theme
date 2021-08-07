@@ -415,11 +415,12 @@ The meaning of the individual YAML keys is as follows:
 | `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
 | `description` | A short text below the title text to describe the feature; Markdown is supported |
 
-Once you have completed your features, enable them in the `config.toml` file.
+Once you have completed your features, enable them in the `config.toml` file. Also the number of elements per row can be defined, by default is 3 (choose a divisor of 12 like 2, 3, 4 or 6).
 
 ```toml
 [params.features]
     enable = true
+    cols = 3
 ```
 
 #### Testimonials

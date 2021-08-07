@@ -490,6 +490,7 @@ paginate = 10
 
 [params.features]
     enable = true
+    cols = 3 # Default: 3, Available values 2,3,4,6
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
     # For more informtion take a look at the README.
