@@ -35,6 +35,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
+    * [Footer](#footer)
   * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -521,6 +522,44 @@ You can enable it in the configuration file.
     hide_summary = false
 ```
 
+#### Footer
+
+In the footer there are three blocks customizables: "About us", "Recent posts" and contact. Each block can be set via parameters.
+
+##### About us
+
+A text can be defined, in case there is no text defined the entire block will be hidden:
+
+```toml
+[params]
+    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+```
+
+##### Recent posts
+
+Recent posts block can be enabled or disabled (hidden).
+
+```toml
+[params.footer.recent_posts]
+    enable = true
+```
+
+##### Contact
+
+A text can be defined, in case there is no text defined the entire block will be hidden:
+
+```toml
+[params]
+    address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      """
+```
 
 ### Meta tags
 
