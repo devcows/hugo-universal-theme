@@ -524,7 +524,7 @@ You can enable it in the configuration file.
 
 #### Footer
 
-In the footer there are three blocks customizables: "About us", "Recent posts" and contact. Each block can be set via parameters.
+In the footer there are three blocks customizables: `About us`, `Recent posts` and `contact`. Each block can be set via parameters.
 
 ##### About us
 
