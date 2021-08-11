@@ -50,8 +50,14 @@
 
                                         </p>
                                         {{ if isset .Params "date" }}
+
+                                        {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                                        {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                            {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                                        {{ end }}
+
                                         <p class="date-comments">
-                                            <a href="{{ .Permalink }}"><i class="far fa-calendar"></i> {{ .Date.Format .Site.Params.date_format }}</a>
+                                            <a href="{{ .Permalink }}"><i class="far fa-calendar"></i> {{ $createdAt }}</a>
                                         </p>
                                         {{ end }}
                                     </div>

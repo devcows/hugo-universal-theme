@@ -78,3 +78,39 @@
 
 - id: 404NavHome
   translation: "Anar a l'inici"
+
+- id: January
+  translation: Gener
+
+- id: February
+  translation: Febrer
+
+- id: March
+  translation: Març
+
+- id: April
+  translation: Abril
+
+- id: May
+  translation: Maig
+
+- id: June
+  translation: Juny
+
+- id: July
+  translation: Juliol
+
+- id: August
+  translation: Agost
+
+- id: September
+  translation: Setembre
+
+- id: October
+  translation: Octubre
+
+- id: November
+  translation: Novembre
+
+- id: December
+  translation: Desembre

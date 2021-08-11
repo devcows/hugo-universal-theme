@@ -41,7 +41,13 @@
 			    {{ if isset .Params "authors" }}
 			      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
                             {{ end }}
-                            {{ i18n "publishedOn" }} {{ .Date.Format .Site.Params.date_format }}
+                            {{ if .Params.date }}
+                                {{ $createdAt := .Date.Format .Site.Params.date_format }}
+                                {{ range $index, $month := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
+                                    {{ $createdAt = replace $createdAt $month (i18n $month) }}
+                                {{ end }}
+                                {{ i18n "publishedOn" }} {{ $createdAt }}
+                            {{ end }}
                             </p>
                             {{ if not .Site.Params.recent_posts.hide_summary }}
                             <p class="intro">{{ .Summary }}</p>
