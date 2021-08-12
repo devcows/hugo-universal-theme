@@ -1,8 +1,13 @@
 /* your styles go here */
 
 .box-image-text .image {
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 190px;
+  max-height: 190px;
+}
+
+.box-image-text .image img {
+  max-height: 190px;
+  margin: auto;
 }
 
 .box-simple {
