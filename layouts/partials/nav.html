@@ -19,12 +19,27 @@
             <div class="navbar-collapse collapse" id="navigation">
                 <ul class="nav navbar-nav navbar-right">
                   {{ $current := . }}
-                  {{ $topLevel := replace .URL "/" "" }}
+                  
                   {{ range .Site.Menus.main.ByWeight }}
+                  {{ $topLevel := replace .URL "/" "" }}
                   {{ $active := "" }}
-                  {{ if eq $current.RelPermalink .URL | or (eq $current.Type $topLevel) | or (and (eq (default (trim .URL "/") .Identifier) "blog") (in (slice "taxonomy" "taxonomyTerm") $current.Kind)) }}
+
+                  {{ if eq $current.RelPermalink .URL }}
                     {{ $active = "active" }}
                   {{ end }}
+
+                  {{ if eq $current.Type $topLevel }}
+                    {{ $active = "active" }}
+                  {{ end }}
+
+                  {{ if and (or (eq $current.URL .URL) (eq "term" $current.Kind)) (in (slice "page" "term") $current.Kind) }}
+                    {{ range (split .URL "/") }}
+                      {{ if eq "blog" . }}
+                        {{ $active = "active" }}
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+
                   {{ if .HasChildren }}
                     <!-- Check if the first child marks a menu section identifier -->
                     {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
