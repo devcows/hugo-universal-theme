@@ -80,25 +80,25 @@
   translation: "Zur Startseite gehen"
 
 - id: January
-  translation: January
+  translation: Januar
 
 - id: February
-  translation: February
+  translation: Februar
 
 - id: March
-  translation: March
+  translation: März
 
 - id: April
   translation: April
 
 - id: May
-  translation: May
+  translation: Mai
 
 - id: June
   translation: June
 
 - id: July
-  translation: July
+  translation: Juni
 
 - id: August
   translation: August
@@ -107,10 +107,10 @@
   translation: September
 
 - id: October
-  translation: October
+  translation: Oktober
 
 - id: November
   translation: November
 
 - id: December
-  translation: December
+  translation: Dezember
