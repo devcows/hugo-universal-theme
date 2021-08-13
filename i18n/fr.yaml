@@ -78,3 +78,39 @@
 
 - id: 404NavHome
   translation: "Aller à l'accueil"
+
+- id: January
+  translation: janvier
+
+- id: February
+  translation: février
+
+- id: March
+  translation: mars
+
+- id: April
+  translation: avril
+
+- id: May
+  translation: mai
+
+- id: June
+  translation: juin
+
+- id: July
+  translation: juillet
+
+- id: August
+  translation: aout
+
+- id: September
+  translation: septembre
+
+- id: October
+  translation: octobre
+
+- id: November
+  translation: novembre
+
+- id: December
+  translation: décembre

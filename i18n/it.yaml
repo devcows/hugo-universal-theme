@@ -78,3 +78,39 @@
 
 - id: 404NavHome
   translation: "Vai alla homepage"
+
+- id: January
+  translation: gennaio
+
+- id: February
+  translation: febbraio
+
+- id: March
+  translation: marzo
+
+- id: April
+  translation: aprile
+
+- id: May
+  translation: maggio
+
+- id: June
+  translation: giugno
+
+- id: July
+  translation: luglio
+
+- id: August
+  translation: agosto
+
+- id: September
+  translation: settembre
+
+- id: October
+  translation: ottobre
+
+- id: November
+  translation: novembre
+
+- id: December
+  translation: dicembre
