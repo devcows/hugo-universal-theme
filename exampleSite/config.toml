@@ -437,6 +437,9 @@ paginate = 10
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
+    disabled_logo = false
+    logo_text = "Universal"
+
     logo = "img/logo.png"
     logo_small = "img/logo-small.png"
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
