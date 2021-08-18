@@ -515,7 +515,7 @@ The recent posts sections shows the four latest published blog posts, with their
 You can enable it in the configuration file.
 
 ```toml
-summaryLength = 50
+summaryLength = 70
 
 [params.recent_posts]
     enable = true
