@@ -515,12 +515,16 @@ The recent posts sections shows the four latest published blog posts, with their
 You can enable it in the configuration file.
 
 ```toml
+summaryLength = 50
+
 [params.recent_posts]
     enable = true
     title = "From our blog"
     subtitle = "Pellen
     hide_summary = false
 ```
+
+Recent posts use `.Summary` property and by default, Hugo automatically takes the first 70 words of your content as its summary and stores it into the `.Summary` page variable for use in your templates. You may customize the summary length by setting summaryLength in your site configuration.
 
 #### Footer
 
