@@ -1,83 +1,83 @@
 - id: home
-  translation: "Home"
+  translation: "首頁"
 
 - id: templateBy
-  translation: "Template door"
+  translation: "模板源自"
 
 - id: portedBy
-  translation: "Omgezet naar Hugo door"
+  translation: "移植至 Hugo 源自"
 
 - id: contactGoTo
-  translation: "Ga naar de contactpagina"
+  translation: "前往聯絡資訊"
 
 - id: contactAddrTitle
-  translation: "Adres"
+  translation: "地址"
 
 - id: contactTitle
-  translation: "Contact"
+  translation: "聯絡資訊"
 
 - id: contactForm
-  translation: "Contactformulier"
+  translation: "聯絡表單"
 
 - id: contactName
-  translation: "Je naam"
+  translation: "你的名字"
 
 - id: contactMail
-  translation: "Je e-mailadres"
+  translation: "你的 Email"
 
 - id: contactMessage
-  translation: "Je bericht"
+  translation: "你的訊息"
 
 - id: contactSend
-  translation: "Verstuur bericht"
+  translation: "發送訊息"
 
 - id: navHome
-  translation: "ga naar de homepage"
+  translation: "返回首頁"
 
 - id: navToggle
-  translation: "Navigation Aan/Uit"
+  translation: "切換導覽列"
 
 - id: categoriesTitle
-  translation: "Categorieën"
+  translation: "分類"
 
 - id: searchTitle
-  translation: "Zoeken"
+  translation: "搜尋"
 
 - id: tagsTitle
-  translation: "Tags"
+  translation: "標籤"
 
 - id: continueReading
-  translation: "Ga door met lezen"
+  translation: "繼續閱讀"
 
 - id: readMore
-  translation: "Lees meer"
+  translation: "閱讀更多"
 
 - id: authorBy
-  translation: "Door"
+  translation: "由"
 
 - id: recentPosts
-  translation: "Recente berichten"
+  translation: "最新文章"
 
 - id: aboutUs
-  translation: "Over ons"
+  translation: "關於我們"
 
 - id: newer
-  translation: "Nieuwer"
+  translation: "更新"
 
 - id: older
-  translation: "Ouder"
+  translation: "更舊"
 
 - id: publishedOn
-  translation: "op"
+  translation: "在"
 
 - id: 404Error
-  translation: "Fout 404: Pagina niet gevonden"
+  translation: "Error 404: 找不到該頁面"
 
 - id: 404Message
-  translation: "Het spijt ons – deze pagina is er niet meer"
+  translation: "抱歉 – 你所搜尋的頁面不在這裡"
 
 - id: 404NavHome
-  translation: "Ga naar de homepage"
+  translation: "返回首頁"
 
 - id: January
   translation: January

@@ -1,83 +1,83 @@
 - id: home
-  translation: "Home"
+  translation: "Acasă"
 
 - id: templateBy
-  translation: "Template door"
+  translation: "Șablon de"
 
 - id: portedBy
-  translation: "Omgezet naar Hugo door"
+  translation: "Portat în Hugo de"
 
 - id: contactGoTo
-  translation: "Ga naar de contactpagina"
+  translation: "Du-te la pagina de contact"
 
 - id: contactAddrTitle
-  translation: "Adres"
+  translation: "Adresă"
 
 - id: contactTitle
   translation: "Contact"
 
 - id: contactForm
-  translation: "Contactformulier"
+  translation: "Formă de contact"
 
 - id: contactName
-  translation: "Je naam"
+  translation: "Numele tău"
 
 - id: contactMail
-  translation: "Je e-mailadres"
+  translation: "Email-ul tău"
 
 - id: contactMessage
-  translation: "Je bericht"
+  translation: "Mesajul tău"
 
 - id: contactSend
-  translation: "Verstuur bericht"
+  translation: "Trimite mesaj"
 
 - id: navHome
-  translation: "ga naar de homepage"
+  translation: "Mergi acasă"
 
 - id: navToggle
-  translation: "Navigation Aan/Uit"
+  translation: "Comută Navigarea"
 
 - id: categoriesTitle
-  translation: "Categorieën"
+  translation: "Categorii"
 
 - id: searchTitle
-  translation: "Zoeken"
+  translation: "Caută"
 
 - id: tagsTitle
-  translation: "Tags"
+  translation: "Etichete"
 
 - id: continueReading
-  translation: "Ga door met lezen"
+  translation: "Citește în continuare"
 
 - id: readMore
-  translation: "Lees meer"
+  translation: "Citește mai mult"
 
 - id: authorBy
-  translation: "Door"
+  translation: "De"
 
 - id: recentPosts
-  translation: "Recente berichten"
+  translation: "Articole recente"
 
 - id: aboutUs
-  translation: "Over ons"
+  translation: "Despre Noi"
 
 - id: newer
-  translation: "Nieuwer"
+  translation: "Mai noi"
 
 - id: older
-  translation: "Ouder"
+  translation: "Mai vechi"
 
 - id: publishedOn
-  translation: "op"
+  translation: "pe"
 
 - id: 404Error
-  translation: "Fout 404: Pagina niet gevonden"
+  translation: "Eroare 404: Pagina nu a fost găsită"
 
 - id: 404Message
-  translation: "Het spijt ons – deze pagina is er niet meer"
+  translation: "Ne pare rău – această pagină nu mai este aici"
 
 - id: 404NavHome
-  translation: "Ga naar de homepage"
+  translation: "Mergi acasă"
 
 - id: January
   translation: January

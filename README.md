@@ -1,9 +1,14 @@
 # Universal Theme for Hugo
 
-[![Build Status](https://travis-ci.org/devcows/hugo-universal-theme.svg?branch=master)](https://travis-ci.org/devcows/hugo-universal-theme)
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
 Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
+
+Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
+
+Sponsor this project:
+- [https://paypal.me/ryanfox1985](https://paypal.me/ryanfox1985)
+- [https://www.patreon.com/ryanfox1985](https://www.patreon.com/ryanfox1985)
 
 This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
@@ -30,6 +35,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     * [See more](#see-more)
     * [Clients](#clients)
     * [Recent posts](#recent-posts)
+    * [Footer](#footer)
   * [Meta tags](#meta-tags)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -114,7 +120,16 @@ Leave the `googleAnalytics` key empty to disable it.
 
 ### Logo
 
-You can select the logos using the logo and logo_small parameters. The logo_small value will be used when the site is rendered on small screens.
+A logo can be selected, two parameters `logo` and `logo_small` can be defined. By default `logo` is used for medium and big screens and the `logo_small` value will be used when the site is rendered on small screens. Also there is the posibility to disable the logo and render a alternative text.
+
+```toml
+[params]
+    disabled_logo = false
+    logo_text = "Universal"
+
+    logo = "img/logo.png"
+    logo_small = "img/logo-small.png"
+```
 
 ### Contact form
 
@@ -129,24 +144,31 @@ id = "contact"
 +++
 ```
 
-You can optionally add the google maps widget defining latitude and longitude in the section `params` at `config.toml`. On pin click  opens Google Maps directions with the coordinates. Additionally you can define direction if you want to have a different target set for directions or the google maps entry of your company.:
+You can enable or disable the Google Maps widget on the contact page by setting `params.enableGoogleMaps` to `true` or `false` in `config.toml`. Make sure to also provide a valid `googleMapsApiKey` if you decide to enable the widget – otherwise it likely won't work. By clicking on the pin, Google Maps opens a route description with the coordinates `latitude` and `longitude`. Additionally, you can define the `direction` if you want to have another destination for the directions or the Google Maps entry of your company. If `enableGoogleMaps` is set to `false` on the other hand, the subsequent `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored.
 
-```yaml
+Example configuration:
+
+```toml
 [params]
-    ...
+    enableGoogleMaps = true
+    googleMapsApiKey = "site_key_for_google_maps"
+
     latitude = "-12.043333"
     longitude = "-77.028333"
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
 ```
 
-Since this Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
+Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
 
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free).
+To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
 
-```yaml
+```toml
 [params]
-email = "your@email.com"
-contact_form_ajax = false
+    email = "your@email.com"
+    contact_form_ajax = false
+
+    enableRecaptchaInContactForm = true
+    googleRecaptchaKey = "site_key_for_google_recaptcha"
 ```
 
 ### Menu
@@ -160,7 +182,113 @@ You can also define the menu items that will appear in the top bar. Edit the `[[
     weight = 4
 ```
 
-The `weight` key will determine the order of the menu entries.
+The `weight` parameter will determine the order of the menu entries. A top level menu item can contain a dropdown with 
+an optional image, sections and multiple columns of menu items.
+
+To create a single list of menu items in the dropdown, first give your top level menu item unique identifier:
+
+```toml
+[[menu.main]]
+    name       = "Home"
+    identifier = "menu.home"
+    url        = "/"
+    weight     = 1
+```
+
+Now create additional menu items and use the above unique identifier as the value for the parent attribute:
+
+```
+[[menu.main]]
+    name       = "Option 1: Default Page"
+    url        = "/"
+    weight     = 1
+    parent     = "menu.home"
+
+[[menu.main]]
+    name       = "Option 2: Application"
+    url        = "/"
+    weight     = 2
+    parent     = "menu.home"
+```
+
+It is also possible to display a dropdown menu with 4 columns. This theme supports 2 variations:
+* 4 columns of menu items with sections
+* 2 column wide image + 2 columns of menu items with sections
+
+To display 4 columns of menu items, start using sections. Sections are menu items threated special by this theme:
+
+```
+[[menu.main]]
+    name       = "All Pages"
+    identifier = "menu.allpages"
+    url        = ""
+    weight     = 4
+
+[[menu.main]]
+    name       = "Home"
+    identifier = "section.ap-home"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 1
+
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "section.ap-portfolio"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 2
+
+[[menu.main]]
+    name       = "Shop"
+    identifier = "section.ap-shop"
+    url        = ""
+    weight     = 1
+    parent     = "menu.allpages"
+    post       = 3
+
+[[menu.main]]
+    name       = "Blog"
+    identifier = "section.ap-blog"
+    url        = ""
+    weight     = 3
+    parent     = "menu.allpages"
+    post       = 4
+
+[[menu.main]]
+    name       = "Blog Listing Big"
+    url        = "/blog/"
+    weight     = 1
+    parent     = "section.ap-blog"
+
+```
+
+The above example shows a reduced version of the *All Pages* menu item from the example site. As you can see,
+we first create menu items with an identifier starting with `section.`. If you create entries like this, these
+will appear as section headers in your drop down. 
+
+Each of these entries contain values for both the `weight` and `post` attribute. The `post` attribute is hijacked
+to indicate in which column a section will be put in. Within a column, the `weight` value is respected to show the
+sections top to bottom.
+
+Use to the unique section identifier (e.g. `section.ap-blog`) as the `parent` value to add a menu item to a specific
+section. Using `weight` and `post` on the sections allow you to balance the columns with approximately the same
+amount of entries.
+
+To display a 2 column wide image and 2 columns of menu items, the process is similar as above. However, we hijack
+the `url` field of the top level menu item to link the image from our static assets:
+
+```
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "menu.portfolio"
+    url        = "/img/template-homepage.png"
+    weight     = 3
+```
+
+When a `url` is filled in, only column 1 and 2 (the `post` value in the section menu items) will be displayed.
+When using an image, don't configure section menu items in column 3 or 4. **These will not be rendered.**
 
 **Important:** Do not change the `identifier` key of existing menu entries!
 
@@ -201,13 +329,13 @@ The social links on the right side are configured as a top-level menu.
     weight = 1
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
-    pre = "<i class='fa fa-2x fa-github'></i>"
+    pre = "<i class='fas fa-2x fa-github'></i>"
 
 [[menu.topbar]]
     weight = 2
     name = "Facebook"
     url = "http://facebook.com"
-    pre = "<i class='fa fa-2x fa-facebook'></i>"
+    pre = "<i class='fas fa-2x fa-facebook'></i>"
 ```
 
 ### Blog post thumbnails
@@ -253,16 +381,19 @@ image: "img/carousel/template-easy-code.png"
 
 The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
 
-Once the carousel is configured, it must be explicitly enabled in the `config.toml` file.
+Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 
 ```toml
-[params.carousel]
+[params.carouselHomepage]
     enable = true
+    auto_play = true
+    slide_speed = 2000
+    pagination_speed = 1000
 ```
 
 #### Features
 
-Features are also defined in the `data` directory just like the carousel.
+Features are also defined in the `data` directory just like the carousel:
 
 ```
 data
@@ -275,22 +406,32 @@ data
     └── webdesign.yaml
 ```
 
-A feature file looks like this.
+The content of the `consulting.yaml` example feature file looks like this:
 
 ```yaml
 weight: 4
 name: "Consulting"
-icon: "fa fa-lightbulb-o"
+icon: "fas fa-lightbulb"
+url: ""
 description: "Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring."
 ```
 
-The `icon` field is the CSS class of an icon. In this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/).
+The meaning of the individual YAML keys is as follows:
 
-Once you have completed your features, enable them in the `config.toml` file.
+| Key | Description |
+| --- | ----------- |
+| `weight` | A means to set the order of multiple features; features with a lower `weight` are displayed first (left to right, top to bottom) |
+| `name` | The title text below the feature icon; Markdown is supported |
+| `icon` | The CSS class of the feature icon; in this example we have used icons powered by [FontAwesome](http://fontawesome.io/icons/) |
+| `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
+| `description` | A short text below the title text to describe the feature; Markdown is supported |
+
+Once you have completed your features, enable them in the `config.toml` file. Also the number of elements per row can be defined, by default is 3 (choose a divisor of 12 like 2, 3, 4 or 6).
 
 ```toml
 [params.features]
     enable = true
+    cols = 3
 ```
 
 #### Testimonials
@@ -335,7 +476,7 @@ You can enable it in the configuration file.
 ```toml
 [params.see_more]
     enable = true
-    icon = "fa fa-file-code-o"
+    icon = "far fa-file-alt"
     title = "Do you want to see more?"
     subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
     link_url = "http://your-site.com/more"
@@ -379,17 +520,60 @@ Then, you can enable the section in the configuration file.
 
 #### Recent posts
 
-The recent posts sections shows the four latest published blog posts, with their featured image and a summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
+The recent posts sections shows the four latest published blog posts, with their featured image and an optional summary. It defaults to show recent posts from all [main sections](https://gohugo.io/functions/where/#mainsections). This is either the section with the most posts or can be set explicitly in the configuration file (see linked docs).
 
 You can enable it in the configuration file.
 
 ```toml
+summaryLength = 70
+
 [params.recent_posts]
     enable = true
     title = "From our blog"
     subtitle = "Pellen"
+    hide_summary = false
 ```
 
+Recent posts use `.Summary` property and by default, Hugo automatically takes the first 70 words of your content as its summary and stores it into the `.Summary` page variable for use in your templates. You may customize the summary length by setting summaryLength in your site configuration.
+
+#### Footer
+
+In the footer there are three blocks customizables: `About us`, `Recent posts` and `contact`. Each block can be set via parameters.
+
+##### About us
+
+A text can be defined, in case there is no text defined the entire block will be hidden:
+
+```toml
+[params]
+    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+```
+
+##### Recent posts
+
+Recent posts block can be enabled or disabled (hidden).
+
+```toml
+[params.footer.recent_posts]
+    enable = true
+```
+
+##### Contact
+
+A text can be defined, in case there is no text defined the entire block will be hidden:
+
+```toml
+[params]
+    address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
+      </p>
+      """
+```
 
 ### Meta tags
 
