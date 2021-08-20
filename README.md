@@ -94,6 +94,7 @@ style = "default"
 ```
 
 Available options are: `default` (light-blue), `blue`, `green`, `marsala`, `pink`, `red`, `turquoise`, `violet`.
+There is the possibility to override the CSS and set your custom styles, override this file `static/css/custom.css` in your site.
 
 
 ### Comments
@@ -529,7 +530,7 @@ summaryLength = 70
 [params.recent_posts]
     enable = true
     title = "From our blog"
-    subtitle = "Pellen
+    subtitle = "Pellen"
     hide_summary = false
 ```
 
@@ -641,6 +642,11 @@ Which results in the following HTML:
 <meta name="twitter:description" content="Frequently asked questions">
 ```
 
+If your site needs a custom Javascript library or CSS style you can override this file `layouts/partials/custom_headers.html` with the proper content like:
+
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+```
 
 ## Usage
 
