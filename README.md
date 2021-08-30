@@ -158,7 +158,7 @@ Example configuration:
     direction = "Desamparados Station, Distrito de Lima 15001, Peru"
 ```
 
-Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Visitors can send up to a 1000 emails each month for free.
+Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Formspree and the submissions for the free plan are limited, [checkout the plans for details](https://formspree.io/plans).
 
 To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
 
