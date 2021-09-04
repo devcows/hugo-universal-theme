@@ -215,7 +215,7 @@ It is also possible to display a dropdown menu with 4 columns. This theme suppor
 * 4 columns of menu items with sections
 * 2 column wide image + 2 columns of menu items with sections
 
-To display 4 columns of menu items, start using sections. Sections are menu items threated special by this theme:
+To display 4 columns of menu items, start using sections. Sections are menu items treated special by this theme:
 
 ```
 [[menu.main]]
