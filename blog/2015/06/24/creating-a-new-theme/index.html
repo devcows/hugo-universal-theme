@@ -6,9 +6,9 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>Creating a new theme</title>
 <meta name=author content="DevCows">
-<meta name=keywords content="devows,hugo,go,theme">
+<meta name=keywords content="devcows,hugo,go,theme">
 <meta name=description content="This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content.">
-<meta name=generator content="Hugo 0.87.0">
+<meta name=generator content="Hugo 0.88.0">
 <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800" rel=stylesheet type=text/css>
 <link rel=stylesheet href=//use.fontawesome.com/releases/v5.11.2/css/all.css>
 <link rel=stylesheet href=//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
@@ -224,7 +224,7 @@ June 24, 2015
 <p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
 <p>In this tutorial, commands that you enter will start with the &ldquo;$&rdquo; prompt. The output will follow. Lines that start with &ldquo;#&rdquo; are comments that I&rsquo;ve added to explain a point. When I show updates to a file, the &ldquo;:wq&rdquo; on the last line means to save the file.</p>
 <p>Here&rsquo;s an example:</p>
-<pre><code>## this is a comment
+<pre tabindex=0><code>## this is a comment
 $ echo this is a command
 this is a command
 
@@ -283,7 +283,7 @@ $
 <h2 id=create-a-new-site>Create a New Site</h2>
 <p>Let&rsquo;s use Hugo to create a new web site. I&rsquo;m a Mac user, so I&rsquo;ll create mine in my home directory, in the Sites folder. If you&rsquo;re using Linux, you might have to create the folder first.</p>
 <p>The &ldquo;new site&rdquo; command will create a skeleton of a site. It will give you the basic directory structure and a useable configuration file.</p>
-<pre><code>$ hugo new site ~/Sites/zafta
+<pre tabindex=0><code>$ hugo new site ~/Sites/zafta
 $ cd ~/Sites/zafta
 $ ls -l
 total 8
@@ -299,7 +299,7 @@ $
 <p>The other directories (archetypes/, layouts/, and static/) are used when customizing a theme. That&rsquo;s a topic for a different tutorial, so please ignore them for now.</p>
 <h3 id=generate-the-html-for-the-new-site>Generate the HTML For the New Site</h3>
 <p>Running the <code>hugo</code> command with no options will read all the available content and generate the HTML files. It will also copy all static files (that&rsquo;s everything that&rsquo;s not content). Since we have an empty site, it won&rsquo;t do much, but it will do it very quickly.</p>
-<pre><code>$ hugo --verbose
+<pre tabindex=0><code>$ hugo --verbose
 INFO: 2014/09/29 Using config file: config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
 WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
@@ -313,7 +313,7 @@ in 2 ms
 $
 </code></pre><p>The &ldquo;<code>--verbose</code>&rdquo; flag gives extra information that will be helpful when we build the template. Every line of the output that starts with &ldquo;INFO:&rdquo; or &ldquo;WARN:&rdquo; is present because we used that flag. The lines that start with &ldquo;WARN:&rdquo; are warning messages. We&rsquo;ll go over them later.</p>
 <p>We can verify that the command worked by looking at the directory again.</p>
-<pre><code>$ ls -l
+<pre tabindex=0><code>$ ls -l
 total 8
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
 -rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
@@ -323,7 +323,7 @@ drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
 $
 </code></pre><p>See that new public/ directory? Hugo placed all generated content there. When you&rsquo;re ready to publish your web site, that&rsquo;s the place to start. For now, though, let&rsquo;s just confirm that we have what we&rsquo;d expect from a site with no content.</p>
-<pre><code>$ ls -l public
+<pre tabindex=0><code>$ ls -l public
 total 16
 -rw-r--r--  1 quoha  staff  416 Sep 29 17:02 index.xml
 -rw-r--r--  1 quoha  staff  262 Sep 29 17:02 sitemap.xml
@@ -331,7 +331,7 @@ $
 </code></pre><p>Hugo created two XML files, which is standard, but there are no HTML files.</p>
 <h3 id=test-the-new-site>Test the New Site</h3>
 <p>Verify that you can run the built-in web server. It will dramatically shorten your development cycle if you do. Start it by running the &ldquo;server&rdquo; command. If it is successful, you will see output similar to the following:</p>
-<pre><code>$ hugo server --verbose
+<pre tabindex=0><code>$ hugo server --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
 WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
@@ -346,11 +346,11 @@ Serving pages from /Users/quoha/Sites/zafta/public
 Web Server is available at http://localhost:1313
 Press Ctrl+C to stop
 </code></pre><p>Connect to the listed URL (it&rsquo;s on the line that starts with &ldquo;Web Server&rdquo;). If everything is working correctly, you should get a page that shows the following:</p>
-<pre><code>index.xml
+<pre tabindex=0><code>index.xml
 sitemap.xml
 </code></pre><p>That&rsquo;s a listing of your public/ directory. Hugo didn&rsquo;t create a home page because our site has no content. When there&rsquo;s no index.html file in a directory, the server lists the files in the directory, which is what you should see in your browser.</p>
 <p>Let’s go back and look at those warnings again.</p>
-<pre><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
+<pre tabindex=0><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
 WARN: 2014/09/29 Unable to locate layout: [404.html]
 </code></pre><p>That second warning is easier to explain. We haven’t created a template to be used to generate “page not found errors.” The 404 message is a topic for a separate tutorial.</p>
 <p>Now for the first warning. It is for the home page. You can tell because the first layout that it looked for was “index.html.” That’s only used by the home page.</p>
@@ -362,7 +362,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html]
 <p>All themes have opinions on content and layout. For example, Zafta uses &ldquo;post&rdquo; over &ldquo;blog&rdquo;. Strong opinions make for simpler templates but differing opinions make it tougher to use themes. When you build a theme, consider using the terms that other themes do.</p>
 <h3 id=create-a-skeleton>Create a Skeleton</h3>
 <p>Use the hugo &ldquo;new&rdquo; command to create the skeleton of a theme. This creates the directory structure and places empty files for you to fill out.</p>
-<pre><code>$ hugo new theme zafta
+<pre tabindex=0><code>$ hugo new theme zafta
 
 $ ls -l
 total 8
@@ -386,7 +386,7 @@ $ find themes -type f | xargs ls -l
 $
 </code></pre><p>The skeleton includes templates (the files ending in .html), license file, a description of your theme (the theme.toml file), and an empty archetype.</p>
 <p>Please take a minute to fill out the theme.toml and LICENSE.md files. They&rsquo;re optional, but if you&rsquo;re going to be distributing your theme, it tells the world who to praise (or blame). It&rsquo;s also nice to declare the license so that people will know how they can use the theme.</p>
-<pre><code>$ vi themes/zafta/theme.toml
+<pre tabindex=0><code>$ vi themes/zafta/theme.toml
 author = &quot;michael d henderson&quot;
 description = &quot;a minimal working template&quot;
 license = &quot;MIT&quot;
@@ -398,7 +398,7 @@ tags = [&quot;tags&quot;, &quot;categories&quot;]
 ## also edit themes/zafta/LICENSE.md and change
 ## the bit that says &quot;YOUR_NAME_HERE&quot;
 </code></pre><p>Note that the the skeleton&rsquo;s template files are empty. Don&rsquo;t worry, we&rsquo;ll be changing that shortly.</p>
-<pre><code>$ find themes/zafta -name '*.html' | xargs ls -l
+<pre tabindex=0><code>$ find themes/zafta -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/single.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/index.html
@@ -408,7 +408,7 @@ $
 </code></pre><h3 id=update-the-configuration-file-to-use-the-theme>Update the Configuration File to Use the Theme</h3>
 <p>Now that we&rsquo;ve got a theme to work with, it&rsquo;s a good idea to add the theme name to the configuration file. This is optional, because you can always add &ldquo;-t zafta&rdquo; on all your commands. I like to put it the configuration file because I like shorter command lines. If you don&rsquo;t put it in the configuration file or specify it on the command line, you won&rsquo;t use the template that you&rsquo;re expecting to.</p>
 <p>Edit the file to add the theme, add a title for the site, and specify that all of our content will use the TOML format.</p>
-<pre><code>$ vi config.toml
+<pre tabindex=0><code>$ vi config.toml
 theme = &quot;zafta&quot;
 baseurl = &quot;&quot;
 languageCode = &quot;en-us&quot;
@@ -419,7 +419,7 @@ MetaDataFormat = &quot;toml&quot;
 $
 </code></pre><h3 id=generate-the-site>Generate the Site</h3>
 <p>Now that we have an empty theme, let&rsquo;s generate the site again.</p>
-<pre><code>$ hugo --verbose
+<pre tabindex=0><code>$ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -433,7 +433,7 @@ in 2 ms
 $
 </code></pre><p>Did you notice that the output is different? The warning message for the home page has disappeared and we have an additional information line saying that Hugo is syncing from the theme&rsquo;s directory.</p>
 <p>Let&rsquo;s check the public/ directory to see what Hugo&rsquo;s created.</p>
-<pre><code>$ ls -l public
+<pre tabindex=0><code>$ ls -l public
 total 16
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 css
 -rw-r--r--  1 quoha  staff    0 Sep 29 17:56 index.html
@@ -450,17 +450,17 @@ $
 </ol>
 <h4 id=the-home-page-1>The Home Page</h4>
 <p>Hugo supports many different types of templates. The home page is special because it gets its own type of template and its own template file. The file, layouts/index.html, is used to generate the HTML for the home page. The Hugo documentation says that this is the only required template, but that depends. Hugo&rsquo;s warning message shows that it looks for three different templates:</p>
-<pre><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
+<pre tabindex=0><code>WARN: 2014/09/29 Unable to locate layout: [index.html _default/list.html _default/single.html]
 </code></pre><p>If it can&rsquo;t find any of these, it completely skips creating the home page. We noticed that when we built the site without having a theme installed.</p>
 <p>When Hugo created our theme, it created an empty home page template. Now, when we build the site, Hugo finds the template and uses it to generate the HTML for the home page. Since the template file is empty, the HTML file is empty, too. If the template had any rules in it, then Hugo would have used them to generate the home page.</p>
-<pre><code>$ find . -name index.html | xargs ls -l
+<pre tabindex=0><code>$ find . -name index.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 20:21 ./public/index.html
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
 $
 </code></pre><h4 id=the-magic-of-static>The Magic of Static</h4>
 <p>Hugo does two things when generating the site. It uses templates to transform content into HTML and it copies static files into the site. Unlike content, static files are not transformed. They are copied exactly as they are.</p>
 <p>Hugo assumes that your site will use both CSS and JavaScript, so it creates directories in your theme to hold them. Remember opinions? Well, Hugo&rsquo;s opinion is that you&rsquo;ll store your CSS in a directory named css/ and your JavaScript in a directory named js/. If you don&rsquo;t like that, you can change the directory names in your theme directory or even delete them completely. Hugo&rsquo;s nice enough to offer its opinion, then behave nicely if you disagree.</p>
-<pre><code>$ find themes/zafta -type d | xargs ls -ld
+<pre tabindex=0><code>$ find themes/zafta -type d | xargs ls -ld
 drwxr-xr-x  7 quoha  staff  238 Sep 29 17:38 themes/zafta
 drwxr-xr-x  3 quoha  staff  102 Sep 29 17:31 themes/zafta/archetypes
 drwxr-xr-x  5 quoha  staff  170 Sep 29 17:31 themes/zafta/layouts
@@ -491,7 +491,7 @@ $
 <p>Hugo&rsquo;s built in web server supports live reload. As pages are saved on the server, the browser is told to refresh the page. Usually, this happens faster than you can say, &ldquo;Wow, that&rsquo;s totally amazing.&rdquo;</p>
 <h3 id=development-commands>Development Commands</h3>
 <p>Use the following commands as the basis for your workflow.</p>
-<pre><code>## purge old files. hugo will recreate the public directory.
+<pre tabindex=0><code>## purge old files. hugo will recreate the public directory.
 ##
 $ rm -rf public
 ##
@@ -499,7 +499,7 @@ $ rm -rf public
 ##
 $ hugo server --watch --verbose
 </code></pre><p>Here&rsquo;s sample output showing Hugo detecting a change to the template for the home page. Once generated, the web browser automatically reloaded the page. I&rsquo;ve said this before, it&rsquo;s amazing.</p>
-<pre><code>$ rm -rf public
+<pre tabindex=0><code>$ rm -rf public
 $ hugo server --watch --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -535,7 +535,7 @@ in 1 ms
 <p>We could update one of the default templates, but a good design decision is to update the most specific template available. That&rsquo;s not a hard and fast rule (in fact, we&rsquo;ll break it a few times in this tutorial), but it is a good generalization.</p>
 <h3 id=make-a-static-home-page>Make a Static Home Page</h3>
 <p>Right now, that page is empty because we don&rsquo;t have any content and we don&rsquo;t have any logic in the template. Let&rsquo;s change that by adding some text to the template.</p>
-<pre><code>$ vi themes/zafta/layouts/index.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -546,7 +546,7 @@ in 1 ms
 
 $
 </code></pre><p>Build the web site and then verify the results.</p>
-<pre><code>$ hugo --verbose
+<pre tabindex=0><code>$ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -569,7 +569,7 @@ $ cat public/index.html
 &lt;/html&gt;
 </code></pre><h4 id=live-reload-1>Live Reload</h4>
 <p>Note: If you&rsquo;re running the server with the <code>--watch</code> option, you&rsquo;ll see different content in the file:</p>
-<pre><code>$ cat public/index.html
+<pre tabindex=0><code>$ cat public/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -585,7 +585,7 @@ $ cat public/index.html
 <h4 id=create-new-posts>Create New Posts</h4>
 <p>Now that we have the home page generating static content, let&rsquo;s add some content to the site. We&rsquo;ll display these posts as a list on the home page and on their own page, too.</p>
 <p>Hugo has a command to generate a skeleton post, just like it does for sites and themes.</p>
-<pre><code>$ hugo --verbose new post/first.md
+<pre tabindex=0><code>$ hugo --verbose new post/first.md
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 attempting to create  post/first.md of post
 INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/default.md
@@ -594,7 +594,7 @@ ERROR: 2014/09/29 Unable to Cast &lt;nil&gt; to map[string]interface{}
 $
 </code></pre><p>That wasn&rsquo;t very nice, was it?</p>
 <p>The &ldquo;new&rdquo; command uses an archetype to create the post file. Hugo created an empty default archetype file, but that causes an error when there&rsquo;s a theme. For me, the workaround was to create an archetypes file specifically for the post type.</p>
-<pre><code>$ vi themes/zafta/archetypes/post.md
+<pre tabindex=0><code>$ vi themes/zafta/archetypes/post.md
 +++
 Description = &quot;&quot;
 Tags = []
@@ -649,7 +649,7 @@ my second post
 
 $
 </code></pre><p>Build the web site and then verify the results.</p>
-<pre><code>$ rm -rf public
+<pre tabindex=0><code>$ rm -rf public
 $ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -664,7 +664,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 in 4 ms
 $
 </code></pre><p>The output says that it created 2 pages. Those are our new posts:</p>
-<pre><code>$ find public -type f -name '*.html' | xargs ls -l
+<pre tabindex=0><code>$ find public -type f -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff  78 Sep 29 22:13 public/index.html
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/first/index.html
 -rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/index.html
@@ -677,7 +677,7 @@ $
 <p>There are three other types of templates: partials, content views, and terms. We will not go into much detail on these.</p>
 <h3 id=add-content-to-the-homepage>Add Content to the Homepage</h3>
 <p>The home page will contain a list of posts. Let&rsquo;s update its template to add the posts that we just created. The logic in the template will run every time we build the site.</p>
-<pre><code>$ vi themes/zafta/layouts/index.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -700,7 +700,7 @@ $
 <p>The &ldquo;end&rdquo; command signals the end of the range iterator. The engine loops back to the top of the iteration when it finds &ldquo;end.&rdquo; Everything between the &ldquo;range&rdquo; and &ldquo;end&rdquo; is evaluated every time the engine goes through the iteration. In this file, that would cause the title from the first ten pages to be output as heading level one.</p>
 <p>It&rsquo;s helpful to remember that some variables, like .Data, are created before any output files. Hugo loads every content file into the variable and then gives the template a chance to process before creating the HTML files.</p>
 <p>Build the web site and then verify the results.</p>
-<pre><code>$ rm -rf public
+<pre tabindex=0><code>$ rm -rf public
 $ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -736,13 +736,13 @@ $
 <p>We&rsquo;re working with posts, which are in the content/post/ directory. That means that their section is &ldquo;post&rdquo; (and if we don&rsquo;t do something weird, their type is also &ldquo;post&rdquo;).</p>
 <p>Hugo uses the section and type to find the template file for every piece of content. Hugo will first look for a template file that matches the section or type name. If it can&rsquo;t find one, then it will look in the _default/ directory. There are some twists that we&rsquo;ll cover when we get to categories and tags, but for now we can assume that Hugo will try post/single.html, then _default/single.html.</p>
 <p>Now that we know the search rule, let&rsquo;s see what we actually have available:</p>
-<pre><code>$ find themes/zafta -name single.html | xargs ls -l
+<pre tabindex=0><code>$ find themes/zafta -name single.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  132 Sep 29 17:31 themes/zafta/layouts/_default/single.html
 </code></pre><p>We could create a new template, post/single.html, or change the default. Since we don&rsquo;t know of any other content types, let&rsquo;s start with updating the default.</p>
 <p>Remember, any content that we haven&rsquo;t created a template for will end up using this template. That can be good or bad. Bad because I know that we&rsquo;re going to be adding different types of content and we&rsquo;re going to end up undoing some of the changes we&rsquo;ve made. It&rsquo;s good because we&rsquo;ll be able to see immediate results. It&rsquo;s also good to start here because we can start to build the basic layout for the site. As we add more content types, we&rsquo;ll refactor this file and move logic around. Hugo makes that fairly painless, so we&rsquo;ll accept the cost and proceed.</p>
 <p>Please see the Hugo documentation on template rendering for all the details on determining which template to use. And, as the docs mention, if you&rsquo;re building a single page application (SPA) web site, you can delete all of the other templates and work with just the default single page. That&rsquo;s a refreshing amount of joy right there.</p>
 <h4 id=update-the-template-file>Update the Template File</h4>
-<pre><code>$ vi themes/zafta/layouts/_default/single.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/_default/single.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -757,7 +757,7 @@ $
 
 $
 </code></pre><p>Build the web site and verify the results.</p>
-<pre><code>$ rm -rf public
+<pre tabindex=0><code>$ rm -rf public
 $ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -806,7 +806,7 @@ $
 </code></pre><p>Notice that the posts now have content. You can go to localhost:1313/post/first to verify.</p>
 <h3 id=linking-to-content>Linking to Content</h3>
 <p>The posts are on the home page. Let&rsquo;s add a link from there to the post. Since this is the home page, we&rsquo;ll update its template.</p>
-<pre><code>$ vi themes/zafta/layouts/index.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -816,7 +816,7 @@ $
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>Build the web site and verify the results.</p>
-<pre><code>$ rm -rf public
+<pre tabindex=0><code>$ rm -rf public
 $ hugo --verbose
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
@@ -852,13 +852,13 @@ $
 </code></pre><h3 id=create-a-post-listing>Create a Post Listing</h3>
 <p>We have the posts displaying on the home page and on their own page. We also have a file public/post/index.html that is empty. Let&rsquo;s make it show a list of all posts (not just the first ten).</p>
 <p>We need to decide which template to update. This will be a listing, so it should be a list template. Let&rsquo;s take a quick look and see which list templates are available.</p>
-<pre><code>$ find themes/zafta -name list.html | xargs ls -l
+<pre tabindex=0><code>$ find themes/zafta -name list.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
 </code></pre><p>As with the single post, we have to decide to update _default/list.html or create post/list.html. We still don&rsquo;t have multiple content types, so let&rsquo;s stay consistent and update the default list template.</p>
 <h2 id=creating-top-level-pages>Creating Top Level Pages</h2>
 <p>Let&rsquo;s add an &ldquo;about&rdquo; page and display it at the top level (as opposed to a sub-level like we did with posts).</p>
 <p>The default in Hugo is to use the directory structure of the content/ directory to guide the location of the generated html in the public/ directory. Let&rsquo;s verify that by creating an &ldquo;about&rdquo; page at the top level:</p>
-<pre><code>$ vi content/about.md
+<pre tabindex=0><code>$ vi content/about.md
 +++
 title = &quot;about&quot;
 description = &quot;about this site&quot;
@@ -871,7 +871,7 @@ slug = &quot;about time&quot;
 i'm speechless
 :wq
 </code></pre><p>Generate the web site and verify the results.</p>
-<pre><code>$ find public -name '*.html' | xargs ls -l
+<pre tabindex=0><code>$ find public -name '*.html' | xargs ls -l
 -rw-rw-r--  1 mdhender  staff   334 Sep 27 15:08 public/about-time/index.html
 -rw-rw-r--  1 mdhender  staff   527 Sep 27 15:08 public/index.html
 -rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
@@ -879,7 +879,7 @@ i'm speechless
 -rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
 </code></pre><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/&rsquo;. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
 <p>One other thing. Take a look at the home page.</p>
-<pre><code>$ cat public/index.html
+<pre tabindex=0><code>$ cat public/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -893,7 +893,7 @@ i'm speechless
         + 'script&gt;')&lt;/script&gt;&lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>Notice that the &ldquo;about&rdquo; link is listed with the posts? That&rsquo;s not desirable, so let&rsquo;s change that first.</p>
-<pre><code>$ vi themes/zafta/layouts/index.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/index.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -915,14 +915,14 @@ i'm speechless
 :wq
 </code></pre><p>Generate the web site and verify the results. The home page has two sections, posts and pages, and each section has the right set of headings and links in it.</p>
 <p>But, that about page still renders to about-time/index.html.</p>
-<pre><code>$ find public -name '*.html' | xargs ls -l
+<pre tabindex=0><code>$ find public -name '*.html' | xargs ls -l
 -rw-rw-r--  1 mdhender  staff    334 Sep 27 15:33 public/about-time/index.html
 -rw-rw-r--  1 mdhender  staff    645 Sep 27 15:33 public/index.html
 -rw-rw-r--  1 mdhender  staff    358 Sep 27 15:33 public/post/first-post/index.html
 -rw-rw-r--  1 mdhender  staff      0 Sep 27 15:33 public/post/index.html
 -rw-rw-r--  1 mdhender  staff    342 Sep 27 15:33 public/post/second-post/index.html
 </code></pre><p>Knowing that hugo is using the slug to generate the file name, the simplest solution is to change the slug. Let&rsquo;s do it the hard way and change the permalink in the configuration file.</p>
-<pre><code>$ vi config.toml
+<pre tabindex=0><code>$ vi config.toml
 [permalinks]
   page = &quot;/:title/&quot;
   about = &quot;/:filename/&quot;
@@ -932,7 +932,7 @@ i'm speechless
 <p>We can put the common bits into a shared template that&rsquo;s stored in the themes/zafta/layouts/partials/ directory.</p>
 <h3 id=create-the-header-and-footer-partials>Create the Header and Footer Partials</h3>
 <p>In Hugo, a partial is a sugar-coated template. Normally a template reference has a path specified. Partials are different. Hugo searches for them along a TODO defined search path. This makes it easier for end-users to override the theme&rsquo;s presentation.</p>
-<pre><code>$ vi themes/zafta/layouts/partials/header.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/partials/header.html
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -947,12 +947,12 @@ $ vi themes/zafta/layouts/partials/footer.html
 :wq
 </code></pre><h3 id=update-the-home-page-template-to-use-the-partials>Update the Home Page Template to Use the Partials</h3>
 <p>The most noticeable difference between a template call and a partials call is the lack of path:</p>
-<pre><code>{{ template &quot;theme/partials/header.html&quot; . }}
+<pre tabindex=0><code>{{ template &quot;theme/partials/header.html&quot; . }}
 </code></pre><p>versus</p>
-<pre><code>{{ partial &quot;header.html&quot; . }}
+<pre tabindex=0><code>{{ partial &quot;header.html&quot; . }}
 </code></pre><p>Both pass in the context.</p>
 <p>Let&rsquo;s change the home page template to use these new partials.</p>
-<pre><code>$ vi themes/zafta/layouts/index.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/index.html
 {{ partial &quot;header.html&quot; . }}
 
   &lt;h1&gt;posts&lt;/h1&gt;
@@ -973,7 +973,7 @@ $ vi themes/zafta/layouts/partials/footer.html
 :wq
 </code></pre><p>Generate the web site and verify the results. The title on the home page is now &ldquo;your title here&rdquo;, which comes from the &ldquo;title&rdquo; variable in the config.toml file.</p>
 <h3 id=update-the-default-single-template-to-use-the-partials>Update the Default Single Template to Use the Partials</h3>
-<pre><code>$ vi themes/zafta/layouts/_default/single.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/_default/single.html
 {{ partial &quot;header.html&quot; . }}
 
   &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
@@ -986,9 +986,9 @@ $ vi themes/zafta/layouts/partials/footer.html
 <p>It&rsquo;s common to have posts display the date that they were written or published, so let&rsquo;s add that. The front matter of our posts has a variable named &ldquo;date.&rdquo; It&rsquo;s usually the date the content was created, but let&rsquo;s pretend that&rsquo;s the value we want to display.</p>
 <h3 id=add-date-published-to-the-template>Add “Date Published” to the Template</h3>
 <p>We&rsquo;ll start by updating the template used to render the posts. The template code will look like:</p>
-<pre><code>{{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }}
+<pre tabindex=0><code>{{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }}
 </code></pre><p>Posts use the default single template, so we&rsquo;ll change that file.</p>
-<pre><code>$ vi themes/zafta/layouts/_default/single.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/_default/single.html
 {{ partial &quot;header.html&quot; . }}
 
   &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
@@ -1002,7 +1002,7 @@ $ vi themes/zafta/layouts/partials/footer.html
 <p>The &ldquo;if&rdquo; solution works for sites that have just a couple of content types. It aligns with the principle of &ldquo;code for today,&rdquo; too.</p>
 <p>Let&rsquo;s assume, though, that we&rsquo;ve made our site so complex that we feel we have to create a new template type. In Hugo-speak, we&rsquo;re going to create a section template.</p>
 <p>Let&rsquo;s restore the default single template before we forget.</p>
-<pre><code>$ mkdir themes/zafta/layouts/post
+<pre tabindex=0><code>$ mkdir themes/zafta/layouts/post
 $ vi themes/zafta/layouts/_default/single.html
 {{ partial &quot;header.html&quot; . }}
 
@@ -1012,7 +1012,7 @@ $ vi themes/zafta/layouts/_default/single.html
 {{ partial &quot;footer.html&quot; . }}
 :wq
 </code></pre><p>Now we&rsquo;ll update the post&rsquo;s version of the single template. If you remember Hugo&rsquo;s rules, the template engine will use this version over the default.</p>
-<pre><code>$ vi themes/zafta/layouts/post/single.html
+<pre tabindex=0><code>$ vi themes/zafta/layouts/post/single.html
 {{ partial &quot;header.html&quot; . }}
 
   &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
