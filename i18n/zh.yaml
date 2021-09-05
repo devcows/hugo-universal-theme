@@ -7,6 +7,9 @@
 - id: portedBy
   translation: "移植到 Hugo 来自"
 
+- id: contactURL
+  translation: "contact"
+
 - id: contactGoTo
   translation: "跳到联系页面"
 
