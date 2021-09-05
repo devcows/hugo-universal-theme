@@ -50,7 +50,7 @@
 
             {{ .Site.Params.address | safeHTML }}
 
-            <a href="/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
+            <a href="{{ default "/contact" .Site.Params.contact_url }}" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
 
             <hr class="hidden-md hidden-lg hidden-sm">
 
