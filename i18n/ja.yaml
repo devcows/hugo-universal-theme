@@ -7,6 +7,9 @@
 - id: portedBy
   translation: "Hugo への移植"
 
+- id: contactURL
+  translation: "contact"
+
 - id: contactGoTo
   translation: "お問い合わせはこちら"
 
