@@ -560,10 +560,11 @@ Recent posts block can be enabled or disabled (hidden).
 
 ##### Contact
 
-A text can be defined, in case there is no text defined the entire block will be hidden:
+In contact section there is a button to redirect to contact page, there is the possibility to customize the url also a contact text can be defined, in case there is no text defined the entire block will be hidden:
 
 ```toml
 [params]
+    contact_url = "/contact"
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
         <br>Newtown upon River
