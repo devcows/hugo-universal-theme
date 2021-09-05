@@ -564,7 +564,7 @@ In contact section there is a button to redirect to contact page, there is the p
 
 ```toml
 [params]
-    contact_url = "/contact1"
+    contact_url = "/contact"
     address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
         <br>13/25 New Avenue
         <br>Newtown upon River
