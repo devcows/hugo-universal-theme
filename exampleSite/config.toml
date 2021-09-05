@@ -355,24 +355,30 @@ paginate = 10
 
 [[menu.topbar]]
     weight = 1
+    name = "Phone"
+    url = "tel:+12 34 567 89 01"
+    pre = "<i class='fas fa-2x fa-phone'></i>"
+
+[[menu.topbar]]
+    weight = 2
     name = "GitHub"
     url = "https://github.com/devcows/hugo-universal-theme"
     pre = "<i class='fab fa-2x fa-github'></i>"
 
 [[menu.topbar]]
-    weight = 2
+    weight = 3
     name = "Facebook"
     url = "http://facebook.com"
     pre = "<i class='fab fa-2x fa-facebook'></i>"
 
 [[menu.topbar]]
-    weight = 3
+    weight = 4
     name = "Twitter"
     url = "http://twitter.com"
     pre = "<i class='fab fa-2x fa-twitter'></i>"
 
 [[menu.topbar]]
-    weight = 4
+    weight = 5
     name = "Email"
     url = "mailto:hello@universal.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
