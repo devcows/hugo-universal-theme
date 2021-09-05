@@ -7,6 +7,9 @@
 - id: portedBy
   translation: "Portad till Hugo av"
 
+- id: contactURL
+  translation: "contact"
+
 - id: contactGoTo
   translation: "Gå till kontaktsidan"
 
