@@ -1,0 +1,116 @@
+- id: home
+  translation: "Główna"
+
+- id: templateBy
+  translation: "Szablon stworzony przez"
+
+- id: portedBy
+  translation: "Przeportowany do Hugo przez"
+
+- id: contactGoTo
+  translation: "Przejdź do strony kontaktu"
+
+- id: contactAddrTitle
+  translation: "Adres"
+
+- id: contactTitle
+  translation: "Kontakt"
+
+- id: contactForm
+  translation: "Formularz kontaktowy"
+
+- id: contactName
+  translation: "Twoje imię"
+
+- id: contactMail
+  translation: "Twój e-mail"
+
+- id: contactMessage
+  translation: "Twoja wiadomość"
+
+- id: contactSend
+  translation: "Wyślij wiadomość"
+
+- id: navHome
+  translation: "przejdź do strony głównej"
+
+- id: navToggle
+  translation: "Przełącz nawigację"
+
+- id: categoriesTitle
+  translation: "Kategorie"
+
+- id: searchTitle
+  translation: "Wyszukiwanie"
+
+- id: tagsTitle
+  translation: "Tagi"
+
+- id: continueReading
+  translation: "Kontynuuj czytanie"
+
+- id: readMore
+  translation: "Czytaj dalej"
+
+- id: authorBy
+  translation: "Autor"
+
+- id: recentPosts
+  translation: "Ostatnie posty"
+
+- id: aboutUs
+  translation: "O nas"
+
+- id: newer
+  translation: "Nowsze"
+
+- id: older
+  translation: "Starsze"
+
+- id: publishedOn
+  translation: "dnia"
+
+- id: 404Error
+  translation: "Błąd 404: nie znaleziono strony"
+
+- id: 404Message
+  translation: "Przepraszamy – ta strona nie jest już tu dostępna"
+
+- id: 404NavHome
+  translation: "Przejdź do strony głównej"
+
+- id: January
+  translation: Styczeń
+
+- id: February
+  translation: Luty
+
+- id: March
+  translation: Marzec
+
+- id: April
+  translation: Kwiecień
+
+- id: May
+  translation: Maj
+
+- id: June
+  translation: Czerwiec
+
+- id: July
+  translation: Lipiec
+
+- id: August
+  translation: Sierpień
+
+- id: September
+  translation: Wrzesień
+
+- id: October
+  translation: Październik
+
+- id: November
+  translation: Listopad
+
+- id: December
+  translation: Grudzień
