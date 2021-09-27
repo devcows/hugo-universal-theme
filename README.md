@@ -664,7 +664,7 @@ For more information check out the official [Hugo documentation](http://gohugo.i
 
 ## Contributing
 
-Did you found a bug or got an idea for a new feature? Feel free to use the [issue tracker](https://github.com/devcows/hugo-universal-theme/issues) to let us know. Or make directly a [pull request](https://github.com/devcows/hugo-universal-theme/pulls).
+Did you find a bug or do you have an idea for a new feature? Feel free to use the [issue tracker](https://github.com/devcows/hugo-universal-theme/issues) to let us know. Or make a [pull request](https://github.com/devcows/hugo-universal-theme/pulls) directly.
 
 
 ## License
