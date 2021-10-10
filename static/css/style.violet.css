@@ -7,7 +7,7 @@
   --form-shadow: rgba(152, 109, 189, 0.6);
   --pagination-bg: #e2d6ed;
   --link-hover-bg: #7f4daa;
-  --navbar-focus: #986dbd;
+  --navbar-focus: #cab3dd;
 }
 
 .clearfix:before,
@@ -3093,7 +3093,7 @@ fieldset[disabled] .btn-template-primary.active {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #555555;
-  background-color: #cab3dd;
+  background-color: var(--navbar-focus);
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
