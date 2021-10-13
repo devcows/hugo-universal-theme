@@ -36,7 +36,7 @@
                     {{ $active = "active" }}
                   {{ end }}
 
-                  {{ if and (or (eq $current.URL .URL) (eq "term" $current.Kind)) (in (slice "page" "term") $current.Kind) }}
+                  {{ if and (or (eq $current.RelPermalink .URL) (eq "term" $current.Kind)) (in (slice "page" "term") $current.Kind) }}
                     {{ range (split .URL "/") }}
                       {{ if eq "blog" . }}
                         {{ $active = "active" }}
