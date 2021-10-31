@@ -28,10 +28,10 @@
 - id: contactMessage
   translation: "Ihre Nachricht an uns"
 
-- id: contactSend 
+- id: contactSend
   translation: "Nachricht senden"
 
-- id: navHome 
+- id: navHome
   translation: "zur Hauptseite"
 
 - id: navToggle
@@ -95,10 +95,10 @@
   translation: Mai
 
 - id: June
-  translation: June
+  translation: Juni
 
 - id: July
-  translation: Juni
+  translation: Juli
 
 - id: August
   translation: August
