@@ -39,7 +39,7 @@
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
                             <p class="author-category">
 			    {{ if isset .Params "authors" }}
-			      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
+			      {{ i18n "authorBy" }} {{ range $index, $author := .Params.authors }}{{ if $index }}, {{ end }}<a href="{{ (printf "%s/%s" ("authors" | relLangURL) ($author | urlize)) }}">{{ $author }}</a>{{ end }}
                             {{ end }}
                             {{ if .Params.date }}
                                 {{ $createdAt := .Date.Format .Site.Params.date_format }}
