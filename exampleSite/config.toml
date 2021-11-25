@@ -388,6 +388,7 @@ paginate = 10
     author = "DevCows"
     defaultKeywords = ["devcows", "hugo", "go"]
     mainSections = ["blog"]
+    ListItemCount = "5"
     defaultDescription = "Site template made by devcows using hugo"
 
     # Social media
