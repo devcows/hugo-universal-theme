@@ -485,7 +485,7 @@ paginate = 10
     slide_speed = 2000
     pagination_speed = 1000
 
-[params.carouselTestimonals]
+[params.carouselTestimonials]
     items = 4
     auto_play = false
     slide_speed = 2000
@@ -494,7 +494,7 @@ paginate = 10
 [params.carouselHomepage]
     # All carousel items are defined in their own files. You can find example items
     # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
     enable = true
     auto_play = true
     slide_speed = 2000
@@ -505,13 +505,13 @@ paginate = 10
     cols = 3 # Default: 3, Available values 2,3,4,6
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
 
 [params.testimonials]
     enable = true
     # All testimonials are defined in their own files. You can find example items
     # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
     title = "Testimonials"
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
@@ -527,7 +527,7 @@ paginate = 10
     enable = true
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
+    # For more information take a look at the README.
     title = "Our Clients"
     subtitle = ""
 
