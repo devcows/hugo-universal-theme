@@ -17,30 +17,37 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 
 ## Table of Contents
 
-* [Features](#features)
-* [Installation](#installation)
-* [Configuration](#configuration)
-  * [Style](#style)
-  * [Comments](#comments)
-  * [Google Analytics](#google-analytics)
-  * [Contact form](#contact-form)
-  * [Menu](#menu)
-  * [Sidebar widgets](#sidebar-widgets)
-  * [Blog post thumbnails](#blog-post-thumbnails)
-  * [Top bar](#top-bar)
-  * [Landing page](#landing-page)
-    * [Carousel](#carousel)
-    * [Features](#features)
-    * [Testimonials](#testimonials)
-    * [See more](#see-more)
-    * [Clients](#clients)
-    * [Recent posts](#recent-posts)
-    * [Footer](#footer)
-  * [Meta tags](#meta-tags)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [License](#license)
-* [Thanks](#thanks)
+- [Universal Theme for Hugo](#universal-theme-for-hugo)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+    - [Language](#language)
+    - [Style](#style)
+    - [Comments](#comments)
+    - [Google Analytics](#google-analytics)
+    - [Logo](#logo)
+    - [Contact form](#contact-form)
+    - [Menu](#menu)
+    - [Sidebar widgets](#sidebar-widgets)
+    - [Top bar](#top-bar)
+    - [Blog post thumbnails](#blog-post-thumbnails)
+    - [Landing page](#landing-page)
+      - [Carousel](#carousel)
+      - [Features](#features-1)
+      - [Testimonials](#testimonials)
+      - [See more](#see-more)
+      - [Clients](#clients)
+      - [Recent posts](#recent-posts)
+      - [Footer](#footer)
+        - [About us](#about-us)
+        - [Recent posts](#recent-posts-1)
+        - [Contact](#contact)
+    - [Meta tags](#meta-tags)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Thanks](#thanks)
 
 ## Features
 
@@ -377,9 +384,10 @@ description: >
     <li>Easily to change fonts</li>
   </ul>
 image: "img/carousel/template-easy-code.png"
+href: "https://devcows.github.io/hugo-universal-theme/"
 ```
 
-The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. And the `image` must contain the relative path to the image inside the `static` directory.
+The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. The `image` must contain the relative path to the image inside the `static` directory. The optional `href` field contains a relative or absolute url that the user will be redirected to when clicking the carousel (specific to each carousel item).
 
 Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
 

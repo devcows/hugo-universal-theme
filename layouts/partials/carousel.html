@@ -10,15 +10,21 @@
                 data-pagination-speed="{{ default 1000 .Site.Params.CarouselHomepage.pagination_speed }}">
                 {{ range sort .Site.Data.carousel "weight" }}
                 <div class="item">
-                    <div class="row">
-                        <div class="col-sm-5 right">
-                            <h1>{{ .title }}</h1>
-                            {{ .description | safeHTML }}
+                    {{ if .href }}
+                    <a href="{{ .href }}">
+                    {{ end }}
+                        <div class="row">
+                            <div class="col-sm-5 right">
+                                <h1>{{ .title }}</h1>
+                                {{ .description | safeHTML }}
+                            </div>
+                            <div class="col-sm-7">
+                                <img class="img-responsive" src="{{ .image }}" alt="">
+                            </div>
                         </div>
-                        <div class="col-sm-7">
-                            <img class="img-responsive" src="{{ .image }}" alt="">
-                        </div>
-                    </div>
+                    {{ if .href }}
+                    </a>
+                    {{ end }}
                 </div>
                 {{ end }}
             </div>
