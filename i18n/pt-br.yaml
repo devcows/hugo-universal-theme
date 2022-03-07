@@ -2,7 +2,7 @@
   translation: "Página Inicial"
 
 - id: templateBy
-  translation: "Template por"
+  translation: "Tema por"
 
 - id: portedBy
   translation: "Portado para o Hugo por"
@@ -44,7 +44,7 @@
   translation: "Buscar"
 
 - id: tagsTitle
-  translation: "Tags"
+  translation: "Etiquetas"
 
 - id: continueReading
   translation: "Continuar lendo"
@@ -56,13 +56,13 @@
   translation: "Por"
 
 - id: recentPosts
-  translation: "Posts recentes"
+  translation: "Publicações recentes"
 
 - id: aboutUs
   translation: "Sobre nós"
 
 - id: newer
-  translation: "Mais novos"
+  translation: "Mais recentes"
 
 - id: older
   translation: "Mais antigos"
@@ -71,46 +71,46 @@
   translation: "em"
 
 - id: 404Error
-  translation: "Error 404: Page not found"
+  translation: "Erro 404: Página não encontrada"
 
 - id: 404Message
-  translation: "We are sorry – this page is not here anymore"
+  translation: "Pedimos desculpa – esta página já não existe"
 
 - id: 404NavHome
   translation: "Vá à página inicial"
 
 - id: January
-  translation: January
+  translation: Janeiro
 
 - id: February
-  translation: February
+  translation: Fevereiro
 
 - id: March
-  translation: March
+  translation: Março
 
 - id: April
-  translation: April
+  translation: Abril
 
 - id: May
-  translation: May
+  translation: Maio
 
 - id: June
-  translation: June
+  translation: Junho
 
 - id: July
-  translation: July
+  translation: Julho
 
 - id: August
-  translation: August
+  translation: Agosto
 
 - id: September
-  translation: September
+  translation: Setembro
 
 - id: October
-  translation: October
+  translation: Outubro
 
 - id: November
-  translation: November
+  translation: Novembro
 
 - id: December
-  translation: December
+  translation: Dezembro
