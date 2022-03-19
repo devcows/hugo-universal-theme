@@ -127,7 +127,7 @@ Leave the `googleAnalytics` key empty to disable it.
 
 ### Logo
 
-A logo can be selected, two parameters `logo` and `logo_small` can be defined. By default `logo` is used for medium and big screens and the `logo_small` value will be used when the site is rendered on small screens. Also there is the posibility to disable the logo and render a alternative text.
+A logo can be selected, two parameters `logo` and `logo_small` can be defined. By default `logo` is used for medium and big screens and the `logo_small` value will be used when the site is rendered on small screens. Also there is the possibility to disable the logo and render a alternative text.
 
 ```toml
 [params]
@@ -343,6 +343,15 @@ The social links on the right side are configured as a top-level menu.
     name = "Facebook"
     url = "http://facebook.com"
     pre = "<i class='fas fa-2x fa-facebook'></i>"
+```
+
+### Menu behavior
+
+The dropdown menu is displayed by default when the user clicks on the menu item. However, you can also use the `dropdown_mouse_over` setting to change this behavior and use the mouse over instead.
+
+```toml
+[params]
+    dropdown_mouse_over = true
 ```
 
 ### Blog post thumbnails
