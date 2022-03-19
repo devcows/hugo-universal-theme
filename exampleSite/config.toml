@@ -445,6 +445,8 @@ paginate = 10
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
+    dropdown_mouse_over = false
+
     disabled_logo = false
     logo_text = "Universal"
 
