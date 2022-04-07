@@ -16,6 +16,9 @@ summaryLength = 70
 # Define the number of posts per page
 paginate = 10
 
+# not pluralize title pages by default
+pluralizelisttitles = false
+
 [menu]
 
 
@@ -388,7 +391,7 @@ paginate = 10
     author = "DevCows"
     defaultKeywords = ["devcows", "hugo", "go"]
     mainSections = ["blog"]
-    defaultDescription = "Site template made by devcows using hugo"
+    defaultDescription = "Site template made by Devcows using Hugo"
 
     # Social media
     facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
