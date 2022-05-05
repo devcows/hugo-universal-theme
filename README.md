@@ -552,6 +552,7 @@ summaryLength = 70
 ```
 
 Recent posts use `.Summary` property and by default, Hugo automatically takes the first 70 words of your content as its summary and stores it into the `.Summary` page variable for use in your templates. You may customize the summary length by setting summaryLength in your site configuration.
+When setting the `hide_summary` configuration property to `true` the summary will be hidden on the recent posts as well as the blogs list page.
 
 #### Footer
 
