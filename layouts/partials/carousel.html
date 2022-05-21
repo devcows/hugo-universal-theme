@@ -15,7 +15,7 @@
                     {{ end }}
                         <div class="row">
                             <div class="col-sm-5 right">
-                                <h1>{{ .title }}</h1>
+                                <h1>{{ .title | safeHTML }}</h1>
                                 {{ .description | safeHTML }}
                             </div>
                             <div class="col-sm-7">
