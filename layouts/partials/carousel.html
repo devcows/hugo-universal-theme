@@ -11,11 +11,11 @@
                 {{ range sort .Site.Data.carousel "weight" }}
                 <div class="item">
                     {{ if .href }}
-                    <a href="{{ .href }}">
+                    <a href="{{ .href }}" target="_blank" title="{{ .title | safeHTML }}">
                     {{ end }}
                         <div class="row">
                             <div class="col-sm-5 right">
-                                <h1>{{ .title }}</h1>
+                                <h1>{{ .title | safeHTML }}</h1>
                                 {{ .description | safeHTML }}
                             </div>
                             <div class="col-sm-7">
