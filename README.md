@@ -58,7 +58,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
   * Features
   * Customers
   * Recent posts
-* Contact form by Formspree
+* Contact form
 * Google search
 * Disqus comments
 * Google Analytics
@@ -102,6 +102,16 @@ style = "default"
 
 Available options are: `default` (light-blue), `blue`, `green`, `marsala`, `pink`, `red`, `turquoise`, `violet`.
 There is the possibility to override the CSS and set your custom styles, override this file `static/css/custom.css` in your site.
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+ 
+  ```
+ <form action="https://fabform.io/f/{form-id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="email" type="email">
+  <button type="submit">Submit</button> 
+ </form>
+```
 
 
 ### Comments
