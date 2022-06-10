@@ -49,7 +49,7 @@
                                           {{ if gt (len .Params.categories) 0 }}
                                           in 
                                           {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}
-                                              <a href="{{ "categories/" | relURL }}{{ . | urlize | lower }}">{{ $category }}</a>{{ end }}
+                                              <a href="{{ "categories/" | relLangURL }}{{ . | urlize | lower }}">{{ $category }}</a>{{ end }}
                                           {{ end }}
                                           {{ end }}
 
