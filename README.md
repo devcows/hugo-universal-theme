@@ -74,6 +74,19 @@ $ cd themes
 $ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
+To make first successful launch perform these steps:
+
+* After the theme cloned open `{site_root}\themes\hugo-universal-theme\exampleSite` folder.
+* Copy `content`, `data`, `static` and `config.toml` to your `{site_root}` folder. Replace files, if necessary.
+* Then open `config.toml` and remove: `themesDir = "../.."` line.
+
+Now you can launch the project locally using: `hugo server -D`.
+
+To launch it on the server change the `baseurl` in `config.toml` file to a URL that your site will be served from, like so:
+```
+baseurl = "https://<username>.github.io/hugo-universal-theme/"
+```
+
 For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
 
 
