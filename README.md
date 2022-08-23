@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
-Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
+Universal is a clean and stylish website template built with [Bootstrap](https://www.scaler.com/topics/css/bootstrap/). It stands out with its clean design and elegant typography.
 
 Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
 
