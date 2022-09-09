@@ -3,45 +3,6 @@
   max-height: 190px;
 }
 
-/* break long word and change font */
-body {
-  word-break: break-word;
-  font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-}
-
-#post-content h3 {
-  text-align:left; color:#fcf8f8; line-height:1.75;
-  font-family:-apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;
-  font-size:20px; font-weight:bold; margin:2em 8px 0.75em 0;
-  padding-bottom:.1em; padding-left:8px; 
-  background-image: linear-gradient(to right bottom, rgb(0, 188, 212), rgb(63, 81, 181)); 
-  border-left:7px solid rgb(51, 51, 51); border-radius: 5px; 
-}
-
-#post-content h2{
-  margin-right: 5px; padding: 8px 10px; letter-spacing: 2px; font-size:24px;font-weight:bold;
-  background-image: linear-gradient(to right bottom, rgb(0, 188, 212), rgb(63, 81, 181));
-  background-color: rgb(63, 81, 181); color: rgb(255, 255, 255); 
-  border-left: 10px solid rgb(51, 51, 51); border-radius: 5px; 
-  text-shadow: rgb(102, 102, 102) 1px 1px 1px; box-shadow: rgb(102, 102, 102) 1px 1px 2px;
-}
-
-#post-content strong {
-  text-align: left; color: #ff5f2e; line-height: 1.75;font-size: 15px; font-weight: bold;
-  font-family: -apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;
-}
-
-#post-content a {
-  text-align: left; color: #0080ff; line-height: 1.75;
-  font-family: -apple-system-font,BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB , Microsoft YaHei UI , Microsoft YaHei ,Arial,sans-serif;
-  font-size: 15px; text-decoration: none; border-bottom: 1px solid #d1e9ff;
-}
-
-#post-content blockquote{display: block; padding: 15px 15px 15px 1rem; font-size: 0.9em; margin: 1em 0px; color: rgb(8, 9, 10); border-left: 6px solid rgb(89, 134, 179); background: rgb(242, 247, 251); overflow: auto; overflow-wrap: normal; word-break: normal;}
-
-#post-content blockquote p{margin: 0px;}
-
 .box-image-text .image img {
   max-height: 190px;
   margin: auto;
