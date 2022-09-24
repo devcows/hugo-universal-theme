@@ -2183,6 +2183,12 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-post #post-content {
   margin-bottom: 20px;
 }
+#blog-post #post-content img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
 #blog-post .comment {
   margin-bottom: 25px;
 }
