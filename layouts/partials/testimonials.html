@@ -1,5 +1,6 @@
 {{ if isset .Site.Params "testimonials" }}
 {{ if .Site.Params.testimonials.enable }}
+{{ if isset .Site.Data "testimonials" }}
 {{ if gt (len .Site.Data.testimonials) 0 }}
 <section class="bar background-pentagon no-mb">
     <div class="container">
@@ -48,6 +49,7 @@
     </div>
 </section>
 <!-- /.bar -->
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
