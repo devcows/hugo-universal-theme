@@ -1,5 +1,6 @@
 {{ if isset .Site.Params "clients" }}
 {{ if .Site.Params.clients.enable }}
+{{ if isset .Site.Data "clients" }}
 {{ if gt (len .Site.Data.clients) 0 }}
 <section class="bar background-gray no-mb">
     <div class="container">
@@ -35,6 +36,7 @@
         </div>
     </div>
 </section>
+{{ end }}
 {{ end }}
 {{ end }}
 {{ end }}
