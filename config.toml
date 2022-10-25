@@ -1,7 +1,7 @@
 baseurl = "https://Amayara.com/" # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "Amayara Soutions"
 theme = "hugo-universal-theme"
-themesDir = "../.."
+themesDir = "./theme"
 languageCode = "fr-fr"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "fr"
