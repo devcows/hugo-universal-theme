@@ -42,21 +42,21 @@ pluralizelisttitles = true
 
 [[menu.topbar]]
     weight = 1
-    name = "Phone"
-    url = "tel:+1 514 576 3085"
-    pre = "<i class='fas fa-2x fa-phone'></i>"
-
-[[menu.topbar]]
-    weight = 1
     name = "linkedin-in"
     url = "https://www.linkedin.com/company/amayara-solutions-inc/"
-    pre = "<i class='fa-brands fa-2x fa-linkedin-in'></i>"
+    pre = "<i class='fab fa-2x fa-linkedin'></i>"
 
 [[menu.topbar]]
-    weight = 5
+    weight = 2
     name = "Email"
     url = "mailto:contact@amayara.com"
     pre = "<i class='fas fa-2x fa-envelope'></i>"
+
+[[menu.topbar]]
+    weight = 3
+    name = "Phone"
+    url = "tel:+1 514 576 3085"
+    pre = "<i class='fas fa-2x fa-phone'></i>"
 
 [params]
     viewMorePostLink = "/blog/"

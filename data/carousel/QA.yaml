@@ -2,10 +2,9 @@ weight: 3
 title: "QA& AUTOMATISATIONS DES TESTS"
 description: >
   <ul class="list-style-none">
-     <li>Notre équipe specialise offre des services cles en main qui se compose de : </li>
+     <li>Notre équipe specialise offre des services cles en main qui se compose de: </li>
      <li>Automatisation de tests</li>
      <li>tests logiciels divers</li>
      <li>solutions de tests de perfomance adapté</li>
    </ul>
 image: "img/carousel/template-QA-testing.png"
-href: "faq"
