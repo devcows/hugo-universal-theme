@@ -49,6 +49,9 @@
           <h4>{{ i18n "contactTitle" }}</h4>
 
             {{ .Site.Params.address | safeHTML }}
+           
+
+            {{ .Site.Params.address2 | safeHTML }}
 
 	    <a href="{{ default "/contact" .Site.Params.contact_url }}" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
 
@@ -58,7 +61,7 @@
         <!-- /.col-md-4 -->
         {{ end }}
 
-    </div>
+
     <!-- /.container -->
 </footer>
 

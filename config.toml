@@ -20,22 +20,26 @@ paginate = 10
 pluralizelisttitles = true
 
 [menu]
-
-
 # Main menu
 [[menu.main]]
-    name       = "Home"
+    name       = "Acceuil"
     identifier = "menu.home"
     url        = "/"
     weight     = 1
 
+[[menu.main]]
+    identifier = "carriere"
+    name       = "carrière"
+    url        = "/carriere/"
+    weight     = 2
+    post       = 2
 
 
 [[menu.main]]
     identifier = "contact"
     name       = "Contact"
     url        = "/contact/"
-    weight     = 7
+    weight     = 3
 
 
 # Top bar social links menu
@@ -59,11 +63,11 @@ pluralizelisttitles = true
     pre = "<i class='fas fa-2x fa-phone'></i>"
 
 [params]
-    viewMorePostLink = "/blog/"
+    viewMorePostLink = "/carriere/"
     author = "AMAYARA SOLUTIONS INC"
-    defaultKeywords = ["devcows", "hugo", "go"]
-    mainSections = ["blog"]
-    defaultDescription = "Site template made by Devcows using Hugo"
+    defaultKeywords = ["carriere"]
+    mainSections = ["carriere"]
+    defaultDescription = "Job opening for solutions AMAYARA INC, Tunisie"
 
     # Social media
     #facebook_site = "" # the Facebook handle of your site ('https://www.facebook.com/HANDLE')
