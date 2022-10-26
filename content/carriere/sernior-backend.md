@@ -58,3 +58,5 @@ Tu es reconnu pour ton esprit logique et ta soif d’apprendre? On a besoin de g
 -   Des bureaux trippants: environnement épuré au style industriel, cuisine toute équipée et parfaite pour les 5 à 7, stationnement gratuit, bornes de recharges
 -   Un gym accessible 24h/24 et des midis sportifs (volleyball, Spike Ball, Ping pong, Vélo)
 -   Et encore plus!
+
+### **Envoyer votre CV a HR@amayara.com**

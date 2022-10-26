@@ -7,7 +7,7 @@ banner = "img/banners/jobOpenning.jpeg"
 
 Tu es reconnu pour ton esprit logique et ta soif d’apprendre? On a besoin de gens passionnés comme toi!
 
-Amayara souhaite accueillir un(e) **Développeur / Développeuse Frontend**  **Sénior** expérimenté pour venir jouer un rôle clé  pour son client au **Canada** dans l’accomplissement de notre mission: révolutionner l’industrie de la restauration!
+ **Amayara Solutions** souhaite accueillir un(e) **Développeur / Développeuse Frontend**  **Sénior** expérimenté pour venir jouer un rôle clé  pour son client au **Canada** dans l’accomplissement de notre mission: révolutionner l’industrie de la restauration!
 
 ### **Travailler dans l’équipe de développement chez Amayara c’est :**
 
@@ -60,3 +60,5 @@ Amayara souhaite accueillir un(e) **Développeur / Développeuse Frontend**  **S
 -   Des bureaux trippants: environnement épuré au style industriel, cuisine toute équipée et parfaite pour les 5 à 7, stationnement gratuit, bornes de recharges
 -   Un gym accessible 24h/24 et des midis sportifs (volleyball, Spike Ball, Ping pong, Vélo)
 -   Et encore plus!
+
+### **Envoyer votre CV a HR@amayara.com**

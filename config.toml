@@ -160,8 +160,8 @@ pluralizelisttitles = true
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on +1 514 576 3085 or contact@amayara.com.</p>
-      <p class="hidden-md hidden-lg"><a href="tel:+1 514 576 3085" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+    text = """<p class="hidden-sm hidden-xs">Contact us on CA: +1 514 576 3085 TN: +216 56 058 366 or contact@amayara.com.</p>
+      <p class="hidden-md hidden-lg"><a href="tel:+1 514 576 3085 /" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
       <a href="mailto:contact@amayara.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """
