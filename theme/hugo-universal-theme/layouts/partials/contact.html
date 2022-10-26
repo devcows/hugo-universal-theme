@@ -69,6 +69,16 @@
 
             {{ end }}
 
+            {{ if isset .Site.Params "address2" }}
+            <section>
+
+              <h3 class="text-uppercase"> {{ i18n "contactAddrTitle" }}</h3>
+
+                {{ .Site.Params.address2 | safeHTML }}
+
+            </section>
+
+            {{ end }}
         </div>
 
     </div>

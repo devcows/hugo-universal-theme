@@ -14,4 +14,19 @@
         <div id="map" />
     {{ end }}
   {{ end }}
+  {{ if isset .Site.Params "latitude2" }}
+  {{ if isset .Site.Params "longitude2" }}
+      <div class="hidden">
+        <input id="gmap-lat" value="{{ .Site.Params.latitude }}" />
+        <input id="gmap-lng" value="{{ .Site.Params.longitude }}" />
+        <input id="gmap-marker" value="{{ "img/marker.png" | relURL }}" />
+        {{ if isset .Site.Params "direction" }}
+          <input id="gmap-dir" value="{{ .Site.Params.direction }}" />
+        {{ else }}
+          <input id="gmap-dir" value="{{ .Site.Params.latitude }},{{ .Site.Params.longitude }}" />
+        {{ end }}
+      </div>
+      <div id="map" />
+  {{ end }}
+{{ end }}
 {{ end }}

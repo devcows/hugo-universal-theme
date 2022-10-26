@@ -77,6 +77,9 @@ pluralizelisttitles = true
     latitude = "45.5376812"
     longitude = "-73.6072546"
 
+    latitude2 = "36.8529956"
+    longitude2 = "10.2957936"
+
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "green"
 
@@ -129,7 +132,7 @@ pluralizelisttitles = true
     logo_small = "img/logo3.png"
     contact_url = "/contact"
     address = """<p class="text-uppercase"><strong>AMAYARA SOLUTIONS INC.</strong>
-        <br>6685 avenue de chateaubriand
+        <br>Avenue de chateaubriand
         <br>Montreal
         <br>H2S 2N6
         <br>QC
