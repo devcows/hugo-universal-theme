@@ -194,7 +194,7 @@ pluralizelisttitles = true
     pagination_speed = 1000
 
 [params.features]
-    enable = false
+    enable = true
     cols = 3 # Default: 3, Available values 2,3,4,6
     # All features are defined in their own files. You can find example items
     # at 'exampleSite/data/features'.
@@ -209,12 +209,12 @@ pluralizelisttitles = true
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
 [params.see_more]
-    enable = false
+    enable = true
     icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
+    title = "Vous voulez en savoir plus?"
+    subtitle = ""
+    link_url = "contact"
+    link_text = "contactez nous"
 
 [params.clients]
     enable = false
@@ -231,7 +231,7 @@ pluralizelisttitles = true
     hide_summary = false
 
 [params.footer.recent_posts]
-    enable = false
+    enable = true
 
 [taxonomies]
   category = "categories"
