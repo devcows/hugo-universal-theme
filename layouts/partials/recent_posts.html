@@ -19,6 +19,7 @@
                 {{ range first 4 $posts.Pages }}
                 <div class="col-md-3 col-sm-6">
                     <div class="box-image-text blog">
+                        {{ if not (default false .Site.Params.recent_posts.hide_image) }}
                         <div class="top">
                             <div class="image" style="overflow:hidden">
                                 {{ if isset .Params "banner" }}
@@ -34,6 +35,7 @@
                                 </p>
                             </div>
                         </div>
+                        {{ end }}
 
                         <div class="content">
                             <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
