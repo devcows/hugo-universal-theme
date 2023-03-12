@@ -1,7 +1,4 @@
-# Universal Theme for Hugo
-
-[![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
-
+# Universal Theme for Hugo | Canadian Data Guy
 Universal is a clean and stylish website template built with [Bootstrap](https://getbootstrap.com/docs/3.4/getting-started/). It stands out with its clean design and elegant typography.
 
 Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.github.io/hugo-universal-theme/)
@@ -17,7 +14,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
 
 ## Table of Contents
 
-- [Universal Theme for Hugo](#universal-theme-for-hugo)
+- [Universal Theme for Hugo | Canadian Data Guy](#universal-theme-for-hugo--canadian-data-guy)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Installation](#installation)
@@ -31,6 +28,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     - [Menu](#menu)
     - [Sidebar widgets](#sidebar-widgets)
     - [Top bar](#top-bar)
+    - [Menu behavior](#menu-behavior)
     - [Blog post thumbnails](#blog-post-thumbnails)
     - [Landing page](#landing-page)
       - [Carousel](#carousel)
