@@ -1,4 +1,4 @@
-baseurl = "https://devcows.github.io/hugo-universal-theme/" # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
+baseURL = 'https://base.canadiandataguy.com/' # Configure URL. if using gh-pages https://github.com/<username>/hugo-universal-theme URL: https://<username>.github.io/hugo-universal-theme/
 title = "Canadian Data Guy"
 theme = "hugo-universal-theme"
 
@@ -17,7 +17,7 @@ summaryLength = 70
 paginate = 10
 
 # not pluralize title pages by default
-pluralizelisttitles = false
+pluralizelisttitles = true
 
 [menu]
 
@@ -383,13 +383,13 @@ pluralizelisttitles = false
 
 [params]
     viewMorePostLink = "/blog/"
-    author = "Jitesh Soni"
+    author = "Canadian Data Guy"
     defaultKeywords = ["devcows", "hugo", "go"]
     mainSections = ["blog"]
     defaultDescription = "Site built using Hugo"
 
     # Social media
-    default_sharing_image = "img/sharing-default.png"
+    default_sharing_image = "img/Canadian Data Guy-logos.jpeg"
 
     # Google Maps widget: If `googleMapsApiKey` is not set, no key will be passed to Google (which likely results in a broken map widget).
     enableGoogleMaps = true
@@ -415,7 +415,8 @@ pluralizelisttitles = false
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io endpoint url
-    formspree_action = "https://formspree.io/sample/of/endpoint"
+    #formspree_action = "https://formspree.io/sample/of/endpoint"
+    formspree_action ="https://formspree.io/f/xayzjrzy"
     contact_form_ajax = false
 
     # Formspree form supports Google reCAPTCHA Key (type v2).
@@ -429,33 +430,29 @@ pluralizelisttitles = false
     #   2. select reCAPTCHA v2 and checkbox widget type.
     #   3. remember site key and secret key.
     #   4. enter secret key into "Custom reCAPTCHA Key" field in your Formspree form setting page.
-    #   5. change `enableRecaptchaInContactForm` is to true
+    #   5. change `enableRecaptchaInContactForm` is to false
     #   6. enter site key into `googleRecaptchaKey` to enable a recaptcha widget in your page.
     #
     enableRecaptchaInContactForm = false
-    googleRecaptchaKey = "site_key_for_google_recaptcha"
+    googleRecaptchaKey = "6Ldc1QUlAAAAAO_4M9cklpnsjsPyUGku5sOZ4BVf"
 
-    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
-    copyright = "Copyright (c) 2015 - 2016, YourCompany; all rights reserved."
+    about_us = "<p>We offer expertise and consulting in data engineering, analytics and cloud computing.</p>"
+    copyright = "Copyright (c) 2023, Canadian Data Guy Corp; all rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "March 11, 2023"
 
-    dropdown_mouse_over = false
+    dropdown_mouse_over = true
 
     disabled_logo = false
     logo_text = "Canadian Data Guy"
 
-    logo = "img/logo.png"
-    logo_small = "img/logo-small.png"
+    logo = "img/cdg5.png"
+    logo_small = "img/cdg5.png"
     contact_url = "/contact"
-    address = """<p class="text-uppercase"><strong>Universal Ltd.</strong>
-        <br>13/25 New Avenue
-        <br>Newtown upon River
-        <br>45Y 73J
-        <br>England
-        <br>
-        <strong>Great Britain</strong>
+    address = """<p class="text-uppercase"><strong>Canadian Data Guy Corp.</strong>
+        <br>Toronto, 
+        <strong>Canada</strong>
       </p>
       """
 
@@ -512,13 +509,6 @@ pluralizelisttitles = false
     title = "Testimonials"
     subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
 
-[params.see_more]
-    enable = true
-    icon = "far fa-file-alt"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
 
 [params.clients]
     enable = true
@@ -531,7 +521,7 @@ pluralizelisttitles = false
 [params.recent_posts]
     enable = true
     title = "From our blog"
-    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+    subtitle = "canada habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
     hide_summary = false
 
 [params.footer.recent_posts]
