@@ -60,6 +60,7 @@ pluralizelisttitles = false
     url        = "/blog/"
     weight     = 5
 
+
 [[menu.main]]
     identifier = "About Me"
     name       = "About Me"
