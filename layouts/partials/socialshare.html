@@ -1,0 +1,60 @@
+<!-- Social Share Button HTML -->
+{{- if .Param "socialshare" }}
+  {{ $title := .Title }}
+  {{ $url := printf "%s" .Permalink }}
+  {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
+
+  <section class="social-share">
+    <ul class="share-icons">
+      <!-- Twitter -->
+      {{ if .Site.Params.social.share.twitter }}
+      <li>
+        <a href="https://twitter.com/intent/tweet?hashtags=codingnconcepts&amp;url={{ .Permalink }}&amp;text={{ .Title }}" target="_blank" rel="noopener" aria-label="Share on Twitter" class="share-btn twitter">
+          {{ partial "svg/twitter.svg" (dict "class" "widget-social__link-icon") }}
+          <p>Twitter</p>
+          </a>
+      </li>
+      {{ end }}
+
+      <!-- Facebook -->
+      {{ if .Site.Params.social.share.facebook }}
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u={{ $url }}" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn facebook">
+          {{ partial "svg/facebook.svg" (dict "class" "widget-social__link-icon") }}
+          <p>Facebook</p>
+          </a>
+      </li>
+      {{ end }}
+
+      <!-- LinkedIn -->
+      {{ if .Site.Params.social.share.linkedin }}
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $url }}&amp;source={{ $url }}&amp;title={{ $title }}&amp;summary={{ $title }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn linkedin">
+          {{ partial "svg/linkedin.svg" (dict "class" "widget-social__link-icon") }}
+            <p>LinkedIn</p>
+          </a>
+      </li>
+      {{ end }}
+
+      <!-- WhatsApp -->
+      {{ if .Site.Params.social.share.whatsapp }}
+      <li>
+        <a href="whatsapp://send?text={{ $body }}" target="_blank" class="share-btn whatsapp">
+          {{ partial "svg/whatsapp.svg" (dict "class" "widget-social__link-icon") }}
+          <p>Email</p>
+        </a>
+      </li>
+      {{ end }}
+
+      <!-- Email -->
+      {{ if .Site.Params.social.share.email }}
+      <li>
+        <a href="mailto:?subject={{ .Site.Title }} - {{ $title }}.&amp;body={{ $body }}" target="_blank" class="share-btn email">
+          {{ partial "svg/email.svg" (dict "class" "widget-social__link-icon") }}
+          <p>Email</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+  {{ end }}
+{{- end }}

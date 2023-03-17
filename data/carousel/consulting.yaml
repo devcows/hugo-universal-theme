@@ -1,6 +1,9 @@
-weight: 4
-title: "Strategic Data Consulting"
-subtitle: 
-    <p>We help design, develop, and implement a full-stack data strategy. From choosing the right tools, data processing framweork, analytical engine and dashboards.</p>
+weight: 1
+title: "We Solve Data Problems"
+description: 
+  <ul class="list-style-none">
+    <li> With over a decade of experience designing data engineering and analytics solutions for startups to large enterprises. </li>
+  </ul>
+
 image: "img/carousel/template-easy-code.png"
-href: "https://devcows.github.io/hugo-universal-theme/"
+href: "/contact"

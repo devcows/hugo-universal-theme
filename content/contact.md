@@ -1,10 +1,8 @@
 +++
 title = "Contact"
 id = "contact"
+
 +++
 
-# We are here to help you
-
-Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.
-
-Please feel free to contact us, our customer service center is working for you 24/7.
+## Do you need Data Expertise?
+Does your company have a project that requires data engineering, data architecture or streaming expertise? Don't hesitate to email us. We are happy to answer any questions or requests you may have. We can help with one-off projects or ongoing efforts to advance the shift to a more data-driven culture. Empower leaders and teams better to use data as a tool in the decision-making process. 

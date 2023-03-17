@@ -66,13 +66,16 @@
                 {{ .Site.Params.address | safeHTML }}
 
             </section>
-
+            {{ partial "share-buttons.html" . }}
             {{ end }}
 
         </div>
+        
 
     </div>
+
     <!-- /.row -->
 </div>
 
-{{ partial "map.html" . }}
+<!--{{ partial "map.html" . }}  -->
+

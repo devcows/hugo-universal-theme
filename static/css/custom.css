@@ -11,3 +11,7 @@
 .box-simple {
   min-height: 230px;
 }
+
+.post-content {
+  font-size: 24px;
+}

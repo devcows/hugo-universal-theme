@@ -1,0 +1,7 @@
+{{ $url := .Get "url" }}
+{{ with $url }}
+  <div class="medium-post">
+    <script async src="https://static.medium.com/embed.js"></script>
+    <a class="m-story" href="{{ . }}" data-height="auto" data-width="100%"></a>
+  </div>
+{{ end }}
