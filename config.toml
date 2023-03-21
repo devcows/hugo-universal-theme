@@ -58,8 +58,20 @@ pluralizelisttitles = false
     name       = "Blog"
     identifier = "menu.blog"
     url        = "/blog/"
-    weight     = 5
+    weight     = 2
 
+
+[[menu.main]]
+    name       = "Portfolio"
+    identifier = "menu.portfolio"
+    weight     = 4
+
+[[menu.main]]
+    name       = "Databricks Customer Success Stories"
+    url        = "/Databricks Customer Success Stories/"
+    weight     = 1
+    parent     = "menu.portfolio"
+    post       = 1
 
 [[menu.main]]
     identifier = "About Me"
@@ -162,7 +174,8 @@ pluralizelisttitles = false
     copyright = "Copyright (c) 2023, Canadian Data Guy Corp; all rights reserved."
 
     # Format dates with Go's time formatting
-    date_format = "6 January 2006"
+    #date_format = "6 January 2006"
+    date_format = "January 2, 2006"
 
     dropdown_mouse_over = true
 
@@ -182,14 +195,14 @@ pluralizelisttitles = false
 
 # Enable or disable top bar with social icons
 [params.topbar]
-    enable = true
+    enable = false
 
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]
     categories = true
     tags = true
-    search = true
+    search = false
 
 [params.carouselCustomers]
     items = 3
@@ -199,7 +212,7 @@ pluralizelisttitles = false
 
 [params.carouselTestimonials]
     items = 4
-    auto_play = false
+    auto_play = true
     slide_speed = 2000
     pagination_speed = 1000
 
@@ -225,11 +238,18 @@ pluralizelisttitles = false
     # at 'exampleSite/data/testimonials'.
     # For more information take a look at the README.
     title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    subtitle = ""
 
+[params.coachingtestimonials]
+    enable = false
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more information take a look at the README.
+    title = "Coaching Reviews "
+    subtitle = ""
 
 [params.clients]
-    enable = true
+    enable = false
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
     # For more information take a look at the README.

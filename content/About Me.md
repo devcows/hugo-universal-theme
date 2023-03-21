@@ -14,3 +14,16 @@ In my free time, I love to travel so much so that in April 2022, I finished my 1
 Alright, now click on a few buttons and scroll through the pages to learn more about me and how I can help you. See you on the other side!
 
 
+## Career Timeline
+* 2022 - Present: Specialist Data Architect at Databricks
+* 2015 - 2022: Data Engineer, Data Architect at Amazon/AWS
+* 2014 - 2015: Data Engineer, ZS Associates
+* 2012 - 2014: Business Intelligence Engineer, TCS
+
+## Education
+* Master of Science in Big Data from Simon Fraser University, Canada
+* Bachelor of Technology from GGSIPU
+  
+
+
+
