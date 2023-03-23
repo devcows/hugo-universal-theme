@@ -3,7 +3,7 @@ title: "Merge Multiple Spark Streams Into A Delta Table"
 date: 2022-10-13T04:09:03-05:00
 draft: false
 tags : ["merge","optimize","z order","foreachBatch"]
-categories : ["streaming","spark streaming"]
+categories : ["streaming","spark streaming", "databricks"]
 banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*mJcyWScvq8JuU0cg_yQN5g.png"
 ---
 This blog will discuss how to read from multiple Spark Streams and merge/upsert data into a single Delta Table. We will also optimize/cluster data of the delta table.

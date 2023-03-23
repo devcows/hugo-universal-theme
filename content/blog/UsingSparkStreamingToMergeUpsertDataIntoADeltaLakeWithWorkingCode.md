@@ -3,7 +3,7 @@ title: "Using Spark Streaming to merge/upsert data into a Delta Lake with workin
 date: 2022-10-12T04:06:14-05:00
 draft: false
 tags : ["merge","optimize","z order","foreachBatch","kafka"]
-categories : ["streaming","spark streaming"]
+categories : ["streaming","spark streaming" ,"databricks"]
 banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*7Vzrx4tKynxXNKNg.jpg"
 ---
 This blog will discuss how to read from a Spark Streaming and merge/upsert data into a Delta Lake. We will also optimize/cluster data of the delta table. In the end, we will show how to start a streaming pipeline with the previous target table as the source.

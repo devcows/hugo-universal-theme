@@ -2,7 +2,7 @@
 title: "Spark Streaming Best Practices-A bare minimum checklist for beginners"
 date: 2022-10-27T05:32:28-05:00
 draft: false
-tags : ["delta","databricks"]
+tags : ["delta"]
 categories : ["best practices","spark streaming"]
 banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*cz6kE2uu4BUvfTo6.jpg"
 ---

@@ -2,8 +2,8 @@
 title: "ARC Uses a Lakehouse Architecture for Real-time Data Insights That Optimize Drilling Performance and Lower Carbon Emissions"
 date: 2022-05-24T17:35:21-05:00
 draft: false
-tags : ["customer stories","databricks"]
-categories : ["Arc Resources","power bi","spark","delta","optimize","spark streaming"]
+tags : ["spark","delta","optimize","spark streaming"]
+categories : ["customer stories"]
 banner: "https://www.databricks.com/wp-content/uploads/2022/05/db-120-blog-img-1.png"
 ---
 

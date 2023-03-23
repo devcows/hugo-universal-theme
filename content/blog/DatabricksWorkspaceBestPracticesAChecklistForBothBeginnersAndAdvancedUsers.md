@@ -2,8 +2,8 @@
 title: "Databricks Workspace Best Practices- A checklist for both beginners and Advanced Users"
 date: 2023-02-23T17:35:21-05:00
 draft: false
-tags : ["workspace","databricks"]
-categories : ["best practices"]
+tags : ["workspace"]
+categories : ["best practices","databricks"]
 banner: "https://miro.medium.com/v2/resize:fit:720/0*On2cbUBjrA__byVR"
 ---
 

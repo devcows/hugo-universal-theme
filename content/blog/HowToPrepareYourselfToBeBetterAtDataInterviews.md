@@ -2,8 +2,8 @@
 title: "How to prepare yourself to be better at Data Interviews?"
 date: 2023-01-27T17:35:21-05:00
 draft: false
-tags : ["books","sql","big data"]
-categories : ["interviewing"]
+tags : ["books"]
+categories : ["interviewing","coaching"]
 banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*HaEcA9459qFpzSyFKC8Lgw.jpeg"
 ---
 

@@ -2,8 +2,8 @@
 title: "How Audantic Uses Databricks Delta Live Tables to Increase Productivity for Real Estate Market Segments"
 date: 2022-05-05T17:35:21-05:00
 draft: false
-tags : ["customer stories","databricks"]
-categories : ["Audantic","delta live tables","spark","delta","optimize","spark streaming"]
+tags : ["delta live tables","spark","delta","optimize","spark streaming"]
+categories : ["customer stories","databricks"]
 banner: "https://www.databricks.com/wp-content/uploads/2022/04/db-80-blog-img-2.png"
 ---
 

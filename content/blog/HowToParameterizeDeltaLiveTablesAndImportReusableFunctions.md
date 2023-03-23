@@ -2,8 +2,8 @@
 title: "How to parameterize Delta Live Tables and import reusable functions"
 date: 2022-12-13T17:35:21-05:00
 draft: false
-tags : ["delta live tables","databricks"]
-categories : ["streaming","spark streaming"]
+tags : ["delta live tables"]
+categories : ["streaming","spark streaming","databricks"]
 banner: "https://miro.medium.com/v2/resize:fit:720/0*-xOdeCgLJ0kOG2oG"
 ---
 

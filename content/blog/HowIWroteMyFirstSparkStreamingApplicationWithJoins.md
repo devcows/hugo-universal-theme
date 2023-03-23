@@ -3,7 +3,7 @@ title: "How I wrote my first Spark Streaming Application with Joins?"
 date: 2023-01-25T17:35:21-05:00
 draft: false
 tags : ["streaming"]
-categories : ["streaming","spark streaming"]
+categories : ["streaming","spark streaming", "databricks"]
 banner: "https://miro.medium.com/v2/resize:fit:720/0*IUhD1QKtwgHKBdb8"
 ---
 
