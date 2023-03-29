@@ -126,3 +126,8 @@ Please spare some time to look at the below to help absorb the above content fur
 2. https://www.databricks.com/blog/2022/12/12/streaming-production-collected-best-practices.html
 
 
+
+## Footnotes
+
+If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, Python, SQL, Terraform, and other big data technologies, check out my [other blogs and follow](https://canadiandataguy.medium.com/).
+
