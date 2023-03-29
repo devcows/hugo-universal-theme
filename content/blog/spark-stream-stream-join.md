@@ -511,3 +511,8 @@ If you have reached so far, you now have a working pipeline and a solid example 
  4. [https://www.databricks.com/blog/2022/08/22/feature-deep-dive-watermarking-apache-spark-structured-streaming.html](https://www.databricks.com/blog/2022/08/22/feature-deep-dive-watermarking-apache-spark-structured-streaming.html)
 
  5. [https://docs.databricks.com/structured-streaming/delta-lake.html#process-initial-snapshot-without-data-being-dropped](https://docs.databricks.com/structured-streaming/delta-lake.html#process-initial-snapshot-without-data-being-dropped)
+
+
+## Footnotes
+
+If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, DBT, Python, SQL, Terraform, and other big data technologies, check out my [other blogs and follow](https://canadiandataguy.medium.com/).

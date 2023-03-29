@@ -11,3 +11,9 @@ To support our data-driven initiatives, we had ‘stitched’ together various s
 
 
 https://www.databricks.com/blog/2022/05/05/how-audantic-uses-databricks-delta-live-tables-to-increase-productivity-for-real-estate-market-segments.html
+
+
+
+## Footnotes
+
+If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, DBT, Python, SQL, Terraform, and other big data technologies, check out my [other blogs and follow](https://canadiandataguy.medium.com/).
