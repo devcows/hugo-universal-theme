@@ -1,0 +1,46 @@
+{{ with .Site.Data.skillSection }}
+{{ if .enable }}
+<section class="section skill", id="skills">
+
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="skill__thumb">
+                    <div class="skill__thumb_pattern">
+                        <img src="images/hero/figure-svg.svg" alt="">
+                    </div>
+                    <div class="skill__thumb_image">
+                        <img src="{{ .image | absURL }}" alt="skill-img" style='
+                                        -webkit-mask: url({{"images/skill/skill-mask-svg.svg" | absURL}});
+                                        -webkit-mask-repeat: no-repeat;
+                                        -webkit-mask-size: contain;
+                                        -webkit-mask-position: left left;
+                                    '>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="skill__progress">
+                    <div class="skill__progress_heading mb-5">
+                        <span class="top-title pre-line">{{ .topTitle }}</span>
+                        {{ .content | markdownify }}
+                    </div>
+                    {{ $section := .skill }}
+                    {{ range $section }}
+                    <div class="skill__progress_item">
+                        <span class="d-inline-block text-dark"> {{ .title }} </span>
+                        <div class="progress-value float-right"><span>{{ .percent }}</span>%</div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width:{{ .percent }}%;" aria-valuemin="0"
+                                aria-valuemax="{{ .percent }}"></div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

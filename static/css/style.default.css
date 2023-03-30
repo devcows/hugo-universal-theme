@@ -127,7 +127,7 @@ div.section {
   vertical-align: middle;
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 30px;
   border-radius: 15px;
 }
@@ -199,7 +199,7 @@ ul.list-style-none {
 }
 .pages-listing .item .text p {
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 .banner {
@@ -249,7 +249,7 @@ ul.list-style-none {
 }
 #top p {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 #top .social {
   float: right;
@@ -262,7 +262,7 @@ ul.list-style-none {
   height: 24px;
   border-radius: 12px;
   line-height: 24px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 #top .social a:hover {
@@ -290,7 +290,7 @@ ul.list-style-none {
   float: right;
 }
 #top .login a {
-  font-size: 12px;
+  font-size: 14px;
   color: #eeeeee;
   margin-right: 15px;
   text-decoration: none;
@@ -368,7 +368,7 @@ ul.list-style-none {
 .navbar ul.dropdown-menu li a {
   position: relative;
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
   display: block;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -421,7 +421,7 @@ ul.list-style-none {
 .navbar .yamm-content ul li a {
   position: relative;
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
   display: block;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -542,13 +542,13 @@ ul.list-style-none {
 }
 .btn-sm {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 0;
 }
 .btn-xs {
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 0;
 }
@@ -934,7 +934,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .panel.sidebar-menu .panel-body label {
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
 }
 .panel.sidebar-menu .panel-body label:hover {
   color: #555555;
@@ -963,7 +963,7 @@ fieldset[disabled] .btn-template-primary.active {
   display: block;
   padding: 10px 15px;
   padding-left: 30px;
-  font-size: 12px;
+  font-size: 14px;
   color: #999999;
 }
 .panel.sidebar-menu ul.nav ul li a:hover,
@@ -988,7 +988,7 @@ fieldset[disabled] .btn-template-primary.active {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
 }
 .panel.sidebar-menu ul.tag-cloud li a:hover {
@@ -1052,7 +1052,7 @@ fieldset[disabled] .btn-template-primary.active {
 .panel.sidebar-menu ul.popular li p.date,
 .panel.sidebar-menu ul.recent li p.date {
   float: right;
-  font-size: 12px;
+  font-size: 14px;
   color: #999999;
 }
 .panel.sidebar-menu ul.popular li:last-child,
@@ -1060,7 +1060,7 @@ fieldset[disabled] .btn-template-primary.active {
   border-bottom: none;
 }
 .panel.sidebar-menu .text-widget {
-  font-size: 12px;
+  font-size: 14px;
 }
 .panel.sidebar-menu.with-icons ul.nav li a:after {
   font-family: 'FontAwesome';
@@ -1331,7 +1331,7 @@ fieldset[disabled] .btn-template-primary.active {
 .testimonials .item .testimonial .name-picture p {
   color: #999999;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .testimonials .item .testimonial .name-picture img {
   float: right;
@@ -1354,7 +1354,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .team-member p.role {
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
@@ -1397,7 +1397,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .team-member .text p {
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
 }
 .team-member .social,
 .team-member-detail .social {
@@ -2081,7 +2081,7 @@ fieldset[disabled] .btn-template-primary.active {
   color: #999999;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.08em;
 }
 #blog-listing-medium .post .author-category a {
@@ -2089,7 +2089,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #blog-listing-medium .post .date-comments {
   float: right;
-  font-size: 12px;
+  font-size: 14px;
 }
 #blog-listing-medium .post .date-comments a {
   color: #999999;
@@ -2159,7 +2159,7 @@ fieldset[disabled] .btn-template-primary.active {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 14px;
 }
 .box-image-text.blog .author-category a {
   font-weight: 500;
@@ -2210,7 +2210,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #blog-post .comment .posted {
   color: #999999;
-  font-size: 12px;
+  font-size: 14px;
 }
 #blog-post .comment .reply {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -2335,7 +2335,7 @@ fieldset[disabled] .btn-template-primary.active {
   transform: scale(1.1, 1.1);
 }
 .goToDescription {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -2600,7 +2600,7 @@ fieldset[disabled] .btn-template-primary.active {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 12px;
+  font-size: 14px;
 }
 #footer .blog-entries .item .name h5 a {
   color: #eeeeee;
@@ -2625,7 +2625,7 @@ fieldset[disabled] .btn-template-primary.active {
   background: #333;
   color: #ccc;
   padding: 50px 0;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 28px;
 }
 #copyright p {
@@ -3413,7 +3413,7 @@ p {
   }
 }
 .text-small {
-  font-size: 12px;
+  font-size: 14px;
 }
 .text-large {
   font-size: 18px;

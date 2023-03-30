@@ -1,0 +1,30 @@
+<div class="container" id="about_me">
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <section>
+                {{ if isset .Site.Params "formspree_action" }}
+
+                {{ partial "hero.html" . }}
+                {{ partial "skillSection.html" . }}
+                {{ partial "resumeSection.html" . }}                
+ <!--               {{ partial "portfolioSection.html" . }}
+                {{ partial "serviceSection.html" . }}
+          {{ partial "share-buttons.html" . }}
+                 -->
+                {{ end }}
+
+            </section>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- /.row -->
+</div>
+
+<!-- {{ partial "map.html" . }}  -->
+

@@ -1,0 +1,14 @@
+---
+enable: true
+topTitle: About
+title: >
+  ## About me 
+  
+  A girl who loves to Code and talk about Data
+content: >
+  I'm a self-taught developer who enjoy the ongoing pursuit of knowledge and skills outside of the formal education system. I'm interested in collaborating with people from different background and experience in order to achieve organizational goals. Besides programming, I love cooking, gardening, hiking, and blogging.
+# button1Name: Skills
+# button2Name: Resume
+# button1Target: skill
+# button2Target: resume
+image: img/chicago.png

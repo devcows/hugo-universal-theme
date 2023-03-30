@@ -1,0 +1,105 @@
+---
+enable: true
+topTitle: 
+title: >
+  ## 
+  
+# button1Name: Contact
+tab1Name: Experiences
+tab1Target: experience
+tab2Name: Education & Certifications
+tab2Target: education
+
+education:
+  - content: >
+      #### Specialist Data Architect | Databricks
+
+      *  Work on solving Streaming & scaling challenges with Big Data across
+      customers
+      
+      * Author blogs with best practices and solution accelerators
+      
+      * Enhanced productivity for Audantic by reducing their line of code by
+      66% and reduced their development time of Lake House by 86%.
+      
+      * Significantly reduced carbon footprint for a customer and co-authored
+      a blog post detailing design and implementation.
+
+      * Work with strategic customers to solve challenging technical
+      problems, provide business value, guide product roadmap, and ensure
+      success on the Databricks platform.
+
+      * Collaborate with teams at large on strategic programs to scale our
+      organization, design & build internal accelerators, and share best
+      practices.
+
+      * Hire and mentor new talent
+    time: 2021-2023
+  - content: >
+      #### Data Engineer/ Data Architect| Amazon/ AWS
+
+      * Built real time data processing platform and CI/CD pipelines with ACID properties while ensuring operational excellence
+      
+      * Craft and support 50+ datasets by processing multiple TBs of data
+      per day serving 600+ Analysts and Economists
+      
+      * Responsible for building GDPR & CCPA compliant data lake
+      
+      * Strategize customer cloud adoption journey and leverage the
+      power of the cloud to run big data analytics at scale
+      
+      * Interact with customers and identify their pain points across the
+      system and drive projects to remove them
+      
+      * Work with customers as a trusted advisor to drive visibility to best
+      practices, access to internal resources, expertise on the very latest
+      features, and accountability for the AWS platform to help them
+      achieve their business goals and objectives
+      
+      * Migrated tables with huge volumes (100-350 TB) from Oracle to
+      Redshift, by using massively parallel processing architecture which
+      improved the availability of critical datasets by 96%
+      
+      * Interacted with appropriate departments to develop and
+      accomplish a road map to ensure that systems run smoothly in
+      projected peak traffic.
+    time: 2015-2021
+  - content: >
+      #### ETL & Reporting Developer | ZS Associates
+        * Designed and developed a multi-country (23) data warehouse by
+        transforming domain knowledge acquired from the client into a
+        technical artifact.
+        * Solely responsible for data warehouse performance tuning and
+        recognized for quickly diagnosing system issues
+
+    time: 2014-2015
+  - content: >
+      #### Business Intelligence Reporting | Tata Consultancy Services
+
+      * Developed Key Performance Indicators for business reports using
+      SAP Business Objects to drive analytics
+      
+      * Awarded with the LIREL honor (Leadership, Integrity, Respect for
+      individual, Excellence, Learning & sharing), the core 5 values of
+      Tata Consultancy Services
+    time: 2012-2014
+experience:
+
+  - content: >
+      #### Master of Computing Science in Big Data
+
+      **Simon Fraser University, Canada**
+    time: Aug 2015- May 2017
+  - content: >
+      #### Databricks Developer
+    time: 2022
+  - content: >
+      #### Azure Fundamentals
+    time: 2021   
+  - content: >
+      #### AWS Developer
+    time: 2019
+  - content: >
+      #### AWS Solutions Architect
+    time: 2018                    
+# buttonTarget: resume
