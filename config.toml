@@ -41,7 +41,7 @@ pluralizelisttitles = false
 
 [[menu.main]]
     name       = "how to prepare for data interviews"
-    url        = "https://canadiandataguy.medium.com/how-to-prepare-yourself-to-be-better-at-data-interviews-8916965b105a"
+    url        = "/blog/howtoprepareyourselftobebetteratdatainterviews"
     weight     = 2
     parent     = "menu.coaching"
 
