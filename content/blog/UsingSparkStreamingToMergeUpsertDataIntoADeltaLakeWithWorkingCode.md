@@ -148,4 +148,4 @@ Reference: [https://docs.databricks.com/delta/delta-change-data-feed.html#use-de
 
 ## Footnotes
 
-If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, DBT, Python, SQL, Terraform, and other big data technologies, check out my [other blogs and follow](https://canadiandataguy.medium.com/).
+If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, DBT, Python, SQL, Terraform, and other big data technologies, check out my [other blogs](https://canadiandataguy.com/).
