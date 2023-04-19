@@ -1,19 +1,23 @@
 ---
-title: "Spark Streaming Best Practices-A bare minimum checklist for beginners"
-date: 2022-10-27T05:32:28-05:00
+title: Spark Streaming Best Practices-A bare minimum checklist for Beginners and Advanced Users
+description: ""
+date: 2023-04-19T01:04:45.471Z
+preview: ""
 draft: false
 tags : ["delta"]
 categories : ["best practices","spark streaming"]
 banner: "https://miro.medium.com/v2/resize:fit:720/format:webp/0*cz6kE2uu4BUvfTo6.jpg"
 ---
 
-## Spark Streaming Best Practices-A bare minimum checklist for beginners
+## Spark Streaming Best Practices-A bare minimum checklist for Beginners and Advanced Users
 
 Most good things in life come with a nuance. While learning Streaming a few years ago, I spent hours searching for best practices. However, I would find answers to be complicated to make sense for a beginner’s mind. Thus, I devised a set of best practices that should hold true in almost all scenarios.
 
+The below checklist is not ordered, you should aim to check off as many items as you can.
+
 ![](https://cdn-images-1.medium.com/max/5200/0*cz6kE2uu4BUvfTo6.jpg)
 
-Here is my best practices checklist for Spark Streaming without a specific order:
+## Beginners best practices checklist for Spark Streaming:
 
 * [ ] Choose a trigger interval over nothing at all because it helps control storage transaction api/Listing costs. This is because some Spark jobs have a component which requires a s3/adls listing operation. If our processing is very fast think <1 sec, we will keep repeating these operations and lead to unintended costs. Example .trigger(processingTime=’5 seconds’)
 
@@ -23,7 +27,7 @@ Here is my best practices checklist for Spark Streaming without a specific order
 
 * [ ] Name your streaming query so it is easily identifiable in the Spark UI Streaming tab.
 
-**.option(“queryName”, “IngestFromKafka”)**
+.option(“queryName”, “IngestFromKafka”)
 
     (input_stream
        .select(col("eventId").alias("key"), to_json(struct(col('action'), col('time'), col('processingTime'))).alias("value"))
@@ -49,9 +53,39 @@ Here is my best practices checklist for Spark Streaming without a specific order
 
 * [ ] Check if a sort merge join can be changed to Broadcast hash join. Only possible if the dataset being joined is small. The dataset being broadcasted should be around 100 MB. Increase auto-broadcast hash join threshold to 1gb if needed try a bigger instance family.
 
-Learn more in-depth [best practices from this page](https://docs.microsoft.com/en-us/azure/databricks/structured-streaming/production) & [youtube video](https://www.youtube.com/watch?v=u2YItAN7TDg&t=1974s). If you do not want to worry about nitty-gritty details of streaming, then try out [delta live tables](https://www.databricks.com/product/delta-live-tables).
+## Advanced best practices checklist for Spark Streaming:
 
+* Establish a naming convention for your checkpoint: Over the course of the life of your table, you will end up having multiple checkpoints due to application upgrades, logic changes, etc. Give your checkpoint a meaningful name something which tells the following:
+  * Target table name
+  * Starting timestamp: When the checkpoint came into existence
+  * Example naming conventions can be :
+    * Generic {table_location}/_checkpoints/_{target_table_name}_starting_timestamp{_actual_timestamp[}](https://lablab.ai/event)
+    * If source is Delta then use startingVersion {table_location}/_checkpoints/_{target_table_name}_startingVersion{_startingVersion[}](https://lablab.ai/event)
 
-## Footnotes
+* See Shuffle Spill (Disk) on Spark UI to be as minimum as possible. Ideally zero only shuffle read should be there. Shuffle spill disappears from UI if it’s zero.
 
-If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, DBT, Python, SQL, Terraform, and other big data technologies, check out my [other blogs and follow](https://canadiandataguy.medium.com/).
+* Use rocks DB , if there are stateful transformations.
+
+* Prefer to Azure Event Hub using it it’s Kafka connector. For Azure EventHubs, the number of cores must be == to number of partitions. With Kafka connector it is different, as it can split Kafka partition into multiple Spark partitions, and this is one of the reasons to go with Kafka protocol on EventHubs.
+
+* If there is state always have a watermark so it can clean itself. In case you need to have infinite state, recommend you to store that in a Delta table and zorder on necessary column so lookups are fast.
+
+* At big scale, think close to Trillions of records in state store. If there is a deduplicate requirement, use delta merge approach over drop duplicate to avoid state store growing very large.
+
+* Azure instance family choices:
+  * F-series for map-heavy streams — parsing, json deserialization, etc.
+  * Fsv2-series if doing multiple streams from the same source or need a little spill space.
+  * DS_v2-series for streams that join tables or do aggregations. Also for delta optimize (both bin-packing and Z-Ordering) scheduled jobs
+  * L series has direct attached SSD which helps Delta caching
+
+* Don’t set the sql.shuffle.partitions too high — ideally they should be set to be equal to the total number of worker cores. You will need to clear the check point if it is not changing. It is because checkpoint has stored this information and is using that.
+
+## References:
+
+ 1. [best practices from this page](https://docs.microsoft.com/en-us/azure/databricks/structured-streaming/production)
+
+ 2. [youtube video](https://www.youtube.com/watch?v=u2YItAN7TDg&t=1974s) with tips on how to scale at production
+
+### Footnote:
+
+Thank you for taking the time to read this article. If you found it helpful or enjoyable, please consider clapping to show appreciation and help others discover it. Don’t forget to follow me for more insightful content, and visit my website [**CanadianDataGuy.com](https://canadiandataguy.com)** for additional resources and information. Your support and feedback are essential to me, and I appreciate your engagement with my work.
