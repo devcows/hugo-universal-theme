@@ -2182,6 +2182,7 @@ fieldset[disabled] .btn-template-primary.active {
 }
 #blog-post #post-content {
   margin-bottom: 20px;
+  font-size: 18px;
 }
 #blog-post #post-content img{
   max-width: 100%;
