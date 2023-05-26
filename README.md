@@ -74,7 +74,7 @@ $ cd themes
 $ git clone https://github.com/devcows/hugo-universal-theme
 ```
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+For more information read the official [setup guide](https://gohugo.io/installation/) of Hugo.
 
 
 ## Configuration
