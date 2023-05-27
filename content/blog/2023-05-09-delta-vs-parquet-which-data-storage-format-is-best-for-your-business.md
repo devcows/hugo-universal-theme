@@ -3,7 +3,7 @@ title: "Delta vs Parquet: Why Delta has won the game?"
 description: ""
 date: 2023-05-09T15:27:37.781Z
 preview: ""
-draft: false
+draft: true
 tags: ["delta","parquet"]
 categories: ["spark"]
 ---
@@ -20,8 +20,23 @@ In the world of big data, there are many file formats available to store data. T
 
 
 ## Pros and Cons
-||Parquet| Delta|
+
+#### Pros
+|Parquet| Delta|
+|---|---|
+|Columnar storage: Parquet is designed to store data in a columnar format, which can significantly improve query performance. Because data is stored in columns rather than rows, queries can quickly skip over columns that are not needed.| Delta is built on top of the Parquet format, which means it inherits many of its performance and efficiency benefits.| 
+|||
+|||
+|||
+|||
+|||
+
+
+
+
+|Pros|Parquet| Delta|
 |---|---|---|
+| Pros |
 |Pros| 1. Columnar storage: Parquet is designed to store data in a columnar format, which can significantly improve query performance. Because data is stored in columns rather than rows, queries can quickly skip over columns that are not needed. <br><br> 2. Compression: Parquet has built-in compression capabilities, which can reduce the amount of disk space required to store data. This can help reduce storage costs.<br><br> 3. Wide adoption: Parquet has become a de facto standard for storing big data in Hadoop and other big data frameworks, so there are many tools and libraries available that support it.|     1. Delta is built on top of the Parquet format, which means it inherits many of its performance and efficiency benefits. <br><br> 2. It adds support for transactional operations, such as ACID (Atomicity, Consistency, Isolation, Durability) transactions, making it suitable for use cases where data consistency and integrity are critical. <br><br> 3. Delta provides built-in support for data versioning, which makes it easy to track changes to data over time. <br><br> 4. It includes features like schema enforcement and data validation to ensure data quality.|
 |Cons|1. Not ideal for small files: Parquet is optimized for storing large files, so it may not be the best choice if you need to store many small files. <br><br> 2. Slow writes: Writing data to Parquet can be slow, especially if you are using compression.| 1. Limited adoption: Delta is a relatively new file format, so it may not be as widely adopted as Parquet. <br><br> 2. More complex: Delta has more features than Parquet, which can make it more complex to use and maintain. <br><br> 3. Higher storage costs: Delta stores additional metadata to support its versioning and transaction features, which can increase storage costs.| 
 ||||
