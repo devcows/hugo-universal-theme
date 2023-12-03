@@ -14,4 +14,4 @@ hugo
 
 # Publish to Firebase
 firebase use --add "$FIREBASE_PROJECT" production
-firebase deploy -m "Commit SHA: $GITHUB_SHA" --token "$FIREBASE_TOKEN" --only hosting
+firebase deploy -m "Commit SHA: $GITHUB_SHA" --token "$FIREBASE_TOKEN" --only hosting --project "$FIREBASE_PROJECT"

@@ -1,7 +1,7 @@
 FROM node:alpine
 MAINTAINER info@canadidandataguy.com
 
-ENV HUGO_VERSION 0.120.4
+ENV HUGO_VERSION 0.74.3
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit
 
 # install hugo
