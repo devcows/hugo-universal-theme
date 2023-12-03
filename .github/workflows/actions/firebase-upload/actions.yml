@@ -1,0 +1,18 @@
+name: 'Build Hugo Site and Deploy to FireBase'
+description: 'Builds the site using Hugo, and deploy it to Firebase Hosting'
+
+branding:
+  icon: 'arrow-up-circle'
+  color: 'green'
+
+inputs:
+  firebase-token:
+    description: 'Firebase token (obtained via firebase tools -- firebase login:ci)'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'docker/Dockerfile'
+  args:
+    - ${{ inputs.firebase-token }}
+    - ${{ inputs.firebase-project }}
