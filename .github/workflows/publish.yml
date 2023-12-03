@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@2
+        uses: actions/checkout@v1
         with:
           submodules: true
       - name: Upload to FireBase Hosting
