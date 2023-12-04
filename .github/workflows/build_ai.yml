@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: List the folder
-        run: ls -l .
+        run: ls -l
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
