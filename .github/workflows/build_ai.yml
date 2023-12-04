@@ -3,13 +3,11 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:
-      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
     defaults:
       run:
-        working-directory: ./public
+        working-directory: ./exampleSite
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -22,7 +20,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: latest
-          extended: false
+          extended: true
 
       - name: Build Site with Hugo
         run: hugo
