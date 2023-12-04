@@ -5,9 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-    defaults:
-      run:
-        working-directory: ./hugo-universal-theme
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
