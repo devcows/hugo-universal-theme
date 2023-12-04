@@ -1,0 +1,39 @@
+name: Build project with Hugo AI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    defaults:
+      run:
+        working-directory: ./public
+
+    steps:
+      - name: Create public directory (if needed)
+        run: mkdir -p public
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: false
+
+      - name: Build Site with Hugo
+        run: hugo
+
+      - name: List output for debugging
+        run: ls -l ./public
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
