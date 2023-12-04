@@ -1,15 +1,13 @@
 {
-    "name": "Your Environment Name",
-    "build": {
-        "dockerfile": "Dockerfile",
-        // If your Dockerfile is in a subdirectory, specify the path like "context": ".devcontainer"
-    },
-    "settings": {
-        // Any VS Code settings you want to apply
-    },
-    "extensions": [
-        // List any VS Code extensions you want pre-installed
-    ],
-    "forwardPorts": [1313, 5000],
-    "postCreateCommand": "echo 'Environment setup complete!'"
+    "name": "my-project-devcontainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // Any generic, debian-based image.
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {
+            "version": "1.18"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:1": {
+            "version": "latest",
+            "moby": true
+        }
+    }
 }
