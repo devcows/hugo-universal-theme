@@ -1,20 +1,4 @@
 {
-  "functions": [
-    {
-      "source": "functions",
-      "codebase": "default"
-    },
-    {
-      "source": "universal-canadiandataguy",
-      "codebase": "universal-canadiandataguy",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log"
-      ]
-    }
-  ],
   "database": {
     "rules": "database.rules.json"
   },
