@@ -9,7 +9,7 @@ categories: ["databricks","spark"]
 banner: "https://cdn-images-1.medium.com/max/2000/0*QQtHSumIKaAxKya8"
 ---
 
-## Solving Delta Table Concurrency Issues: Practical Code Solutions & Insights
+## Solving Delta Table Concurrency Issues
 
 Delta Lake is a powerful technology for bringing ACID transactions to your data lakes. It allows multiple operations to be performed on a dataset concurrently. However, dealing with concurrent operations can sometimes be tricky and may lead to issues such as `ConcurrentAppendException`, `ConcurrentDeleteReadException,` and `ConcurrentDeleteDeleteException.` In this blog post, we will explore why these issues occur and how to handle them effectively using a Python function, and how to avoid them with table design and using isolation levels and write conflicts.
 
