@@ -25,6 +25,13 @@ jobs:
       - name: Build Site with Hugo
         run: hugo
 
+      - name: pwd
+        run: pwd
+
+
+      - name: List output for current dir
+        run: ls -l .
+
       - name: List output for debugging
         run: ls -l ./public
 
