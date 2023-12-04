@@ -1,7 +1,7 @@
 ---
 title: "Solving Delta Table Concurrency Issues: Practical Code Solutions & Insights"
 description: ""
-date: 2023-09-29T17:29:06.599Z
+date: 2023-09-30T17:29:06.599Z
 preview: ""
 draft: false
 tags: ["delta","concurrency"]
