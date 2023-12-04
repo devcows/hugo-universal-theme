@@ -7,13 +7,13 @@
 <meta name="googlebot" content="index,follow,snippet,archive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>python</title>
+<title>Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale</title>
 <meta name="author" content="Canadian Data Guy" />
 
 
 
 
-<meta name="keywords" content="devcows, hugo, go">
+<meta name="keywords" content="devcows, hugo, go, delta">
 
 
 <meta name="description" content="">
@@ -63,31 +63,22 @@
 
 
 
+<meta property="og:updated_time" content="2023-09-12T17:29:06Z">
 
-<meta property="og:locale" content="en_us">
-<meta property="og:site_name" content="Canadian Data Guy">
-<meta property="og:title" content="python">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://canadiandataguy.com/tags/python/" />
-<meta property="og:description" content="">
-<meta property="og:image" content="https://canadiandataguy.com/img/Canadian%20Data%20Guy-logos.jpeg">
-<meta property="og:image:type" content="image/jpeg">
-
-
-
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
-
-
-<meta property="og:updated_time" content="2023-04-23T21:38:16Z">
+  
+  
+  <meta property="article:section" content="databricks">
+  <meta property="article:tag" content="delta">
+  
+  
+  <meta property="article:published_time" content="2023-09-12T17:29:06Z">
+  <meta property="article:modified_time" content="2023-09-12T17:29:06Z">
 
 
 
 <meta name="twitter:card" content="summary">
 
-<meta name="twitter:title" content="python">
-
-<meta name="twitter:image" content="https://canadiandataguy.com/img/Canadian%20Data%20Guy-logos.jpeg">
+<meta name="twitter:title" content="Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at …">
 
 <meta name="twitter:description" content="">
 
@@ -108,10 +99,10 @@
             <div class="navbar-header">
                 <a class="navbar-brand home" href="/">
                     
-                      <img src="/img/cdg5.png" alt="python logo" class="hidden-xs hidden-sm" />
-                      <img src="/img/cdg5.png" alt="python logo" class="visible-xs visible-sm" />
+                      <img src="/img/cdg5.png" alt="Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale logo" class="hidden-xs hidden-sm" />
+                      <img src="/img/cdg5.png" alt="Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale logo" class="visible-xs visible-sm" />
                     
-                    <span class="sr-only">python - go to homepage</span>
+                    <span class="sr-only">Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -135,12 +126,6 @@
                   
 
                   
-                    
-                      
-                    
-                      
-                    
-                  
 
                   
                   <li class="dropdown ">
@@ -154,17 +139,9 @@
                   
 
                   
-
+                    
                   
-                    
-                      
-                    
-                      
-                        
-                      
-                    
-                      
-                    
+
                   
 
                   
@@ -180,10 +157,6 @@
 
                   
 
-                  
-                    
-                      
-                    
                   
 
                   
@@ -208,10 +181,6 @@
 
                   
 
-                  
-                    
-                      
-                    
                   
 
                   
@@ -241,14 +210,6 @@
                   
 
                   
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                  
 
                   
                   <li class="dropdown ">
@@ -263,14 +224,6 @@
 
                   
 
-                  
-                    
-                      
-                    
-                      
-                    
-                      
-                    
                   
 
                   
@@ -305,7 +258,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>python</h1>
+                <h1>Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale</h1>
             </div>
         </div>
     </div>
@@ -314,88 +267,94 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
                         
-                        
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/">
-                                          
-                                          <img src="https://cdn-images-1.medium.com/max/9400/0*Bsp64aQg2c2IYu9R" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/">A Productive Life: How to Parallelize Code Execution in Python</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          
-                                          
-                                          
-
-                                        </p>
-                                        
-
-                                        
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-                                            
-                                        
-
-                                        <p class="date-comments">
-                                            <a href="https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/"><i class="far fa-calendar"></i> April 23, 2023</a>
-                                        </p>
-                                        
-                                    </div>
-                                    
-                                    <p class="intro">A Productive Life: How to Parallelize Code Execution in Python Asynchronous programming has become increasingly popular in recent years, especially in web development, where it is used to build high-performance, scalable applications. Python has built-in support for asynchronous programming through the asyncio module, which provides a powerful framework for writing asynchronous code.
-In this blog post, we will explore the asyncio module in Python 3.10 and learn how to run tasks in parallel using the new features introduced in this version.</p>
-                                    <p class="read-more"><a href="https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                    
-                                </div>
-                            </div>
-                        </section>
+                          <p class="text-muted text-uppercase mb-small text-right">
+                            
+                            
+                            
+                              
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                              September 12, 2023
+                            
+                          </p>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
+                        <div id="post-content">
+                          <h2 id="optimizing-databricks-sql-achieving-blazing-fast-query-speeds-at-scale">Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale</h2>
+<p>In this data age, delivering a seamless user experience is paramount. While there are numerous ways to measure this experience, one metric stands tall when evaluating the responsiveness of applications and databases: the P99 latency. Especially vital for SQL queries, this seemingly esoteric number is, in reality, a powerful gauge of the experience we provide to our customers. Why is it so crucial? And how can we optimize it to ensure our databases aren’t just fast, but consistently reliable for 99% of our users? Join us as we demystify P99 latency and delve into strategies to fine-tune it in Databricks SQL.</p>
+<p><img src="https://cdn-images-1.medium.com/max/11438/0*57KLQ0FORwBigKqQ" alt="Photo by Håkon Sataøen on Unsplash"></p>
+<h2 id="what-is-p99-latency">What is P99 Latency?</h2>
+<p>The P99 latency (also known as the 99th percentile latency) for SQL queries is a metric used to measure the response time of SQL queries in a database system. It represents the latency at which 99% of the queries have a response time less than or equal to the P99 latency value, and 1% have a response time greater than the P99 latency value.</p>
+<blockquote>
+<p>In other words, P99 latency helps you understand the worst-case response time for most of your SQL queries. It is often used to evaluate the performance of a database system and ensure that the vast majority of queries are responding quickly, even under heavy load.</p>
+</blockquote>
+<p>For example, if the P99 latency for a particular SQL query is 100 milliseconds, it means that 99% of the time, that query will execute in 100 milliseconds or less. However, in 1% of cases, it may take longer than 100 milliseconds.</p>
+<h3 id="to-achieve-a-p99-latency-of-5-seconds-in-databricks-sql-you-can-follow-these-steps">To achieve a P99 latency of 5 seconds in Databricks SQL, you can follow these steps:</h3>
+<ol>
+<li>
+<p>Optimize the table hourly by applying a WHERE filter on the timestamp.</p>
+</li>
+<li>
+<p>Use at least a Medium instance of DBSQL. Larger instances provide better query performance if queries rely on caching. Caching is done at the instance level; if you have N small instances, then you will have N copies of Cached data occupying memory.</p>
+</li>
+<li>
+<p>Set spark.databricks.delta.stalenessLimit to x minutes per business requirements<a href="http://spark.databricks.delta.stalenessLimit">. This parameter defines how many minutes of old data are acceptable.</a></p>
+</li>
+<li>
+<p>Ensure that the columns used in the WHERE clause are part of the first 32 columns.</p>
+</li>
+<li>
+<p>Run VACUUM tables at daily or weekly cadence.</p>
+</li>
+<li>
+<p>Once you have achieved your P99 latency with the above suggestions, try DBSQL Serverless and monitor P99 latency. Serverless DB Sql would give you faster startup times and more performance because of faster auto-scaling capabilities.</p>
+</li>
+</ol>
+<blockquote>
+<p>If you need to power an application with minimum latency, it’s possible to pre-cache data using specific commands. However, it’s important to take caution while using these commands as misconfiguration can cause more harm than good. It’s recommended to reach out to me or your Databricks representative for the command and have the scenario validated with Databricks before implementing it. I have not included the command in the blog to avoid any mishaps.</p>
+</blockquote>
+<h2 id="reference">Reference:</h2>
+<ol>
+<li>spark.databricks.delta.stalenessLimit <a href="https://docs.databricks.com/en/delta/best-practices.html#manage-data-recency">https://docs.databricks.com/en/delta/best-practices.html#manage-data-recency</a></li>
+</ol>
+<!-- raw HTML omitted -->
+<p><a href="https://www.youtube.com/watch?v=rJDkfRPUebw&amp;t=629s">3. https://www.youtube.com/watch?v=rJDkfRPUebw&amp;t=629s</a></p>
 
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
+                        </div>
+                        
+                        
+
                     </div>
                     
 
@@ -576,7 +535,7 @@ nav.sharebuttons li > a:hover .will-change { fill: #444444 }
                 <a href="/tags/parallelization"><i class="fas fa-tags"></i> parallelization</a>
             </li>
             
-            <li class="active">
+            <li >
                 <a href="/tags/python"><i class="fas fa-tags"></i> python</a>
             </li>
             
@@ -628,6 +587,7 @@ nav.sharebuttons li > a:hover .will-change { fill: #444444 }
 
                 </div>
                 
+
             </div>
             
         </div>

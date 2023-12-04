@@ -24,6 +24,13 @@
 1. Getting Started with Viewing and Organizing Dashboards: Accessing Your Dashboards: Navigate to the workspace browser and click “Workspace” in the sidebar.</description>
     </item>
     <item>
+      <title>Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale</title>
+      <link>https://canadiandataguy.com/blog/2023-09-12-optimizing-databricks-sql-achieving-blazing-fast-query-speeds-at-scale/</link>
+      <pubDate>Tue, 12 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-12-optimizing-databricks-sql-achieving-blazing-fast-query-speeds-at-scale/</guid>
+      <description>Optimizing Databricks SQL: Achieving Blazing-Fast Query Speeds at Scale In this data age, delivering a seamless user experience is paramount. While there are numerous ways to measure this experience, one metric stands tall when evaluating the responsiveness of applications and databases: the P99 latency. Especially vital for SQL queries, this seemingly esoteric number is, in reality, a powerful gauge of the experience we provide to our customers. Why is it so crucial?</description>
+    </item>
+    <item>
       <title>A Productive Life: How to Parallelize Code Execution in Python</title>
       <link>https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/</link>
       <pubDate>Sun, 23 Apr 2023 21:38:16 +0000</pubDate>
