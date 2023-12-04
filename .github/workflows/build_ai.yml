@@ -5,7 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      
+    defaults:
+      run:
+        working-directory: ./public          
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
