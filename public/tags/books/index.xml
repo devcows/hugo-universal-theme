@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>books on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/books/</link>
+    <description>Recent content in books on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Jan 2023 17:35:21 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to prepare yourself to be better at Data Interviews?</title>
+      <link>https://canadiandataguy.com/blog/howtoprepareyourselftobebetteratdatainterviews/</link>
+      <pubDate>Fri, 27 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtoprepareyourselftobebetteratdatainterviews/</guid>
+      <description>How to prepare yourself to be better at Data Interviews? In this blog, let’s talk about some specific actions you can take to perform better at Data Interviews. Below is general advice based on my experience coaching 100+ candidates and my industry experience being on both sides of the table.
+Popular skill set as of 2023 still seems to be SQL, Python &amp;amp; Big Data fundamentals. Here is how to prepare for each of them.</description>
+    </item>
+  </channel>
+</rss>

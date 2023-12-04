@@ -1,0 +1,150 @@
+[debug] [2023-12-04T04:31:24.479Z] ----------------------------------------------------------------------
+[debug] [2023-12-04T04:31:24.480Z] Command:       /opt/homebrew/Cellar/node/21.3.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2023-12-04T04:31:24.481Z] CLI Version:   12.9.1
+[debug] [2023-12-04T04:31:24.481Z] Platform:      darwin
+[debug] [2023-12-04T04:31:24.481Z] Node Version:  v21.3.0
+[debug] [2023-12-04T04:31:24.481Z] Time:          Sun Dec 03 2023 21:31:24 GMT-0700 (Mountain Standard Time)
+[debug] [2023-12-04T04:31:24.481Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-04T04:31:24.516Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-04T04:31:24.516Z] > authorizing via signed-in user (info@canadiandataguy.com)
+[debug] [2023-12-04T04:31:24.516Z] [iam] checking project universal-canadiandataguy for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-12-04T04:31:24.517Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/universal-canadiandataguy:testIamPermissions [none]
+[debug] [2023-12-04T04:31:24.517Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/universal-canadiandataguy:testIamPermissions x-goog-quota-user=projects/universal-canadiandataguy
+[debug] [2023-12-04T04:31:24.517Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/universal-canadiandataguy:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-12-04T04:31:24.672Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/universal-canadiandataguy:testIamPermissions 200
+[debug] [2023-12-04T04:31:24.672Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/universal-canadiandataguy:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-12-04T04:31:24.672Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/universal-canadiandataguy/serviceAccounts/universal-canadiandataguy@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-12-04T04:31:24.672Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/universal-canadiandataguy/serviceAccounts/universal-canadiandataguy@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-04T04:31:25.163Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/universal-canadiandataguy/serviceAccounts/universal-canadiandataguy@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-12-04T04:31:25.163Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/universal-canadiandataguy/serviceAccounts/universal-canadiandataguy@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-12-04T04:31:25.164Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy [none]
+[debug] [2023-12-04T04:31:25.365Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy 200
+[debug] [2023-12-04T04:31:25.366Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy {"projectId":"universal-canadiandataguy","projectNumber":"213665248940","displayName":"universal-canadiandataguy","name":"projects/universal-canadiandataguy","resources":{"hostingSite":"universal-canadiandataguy","realtimeDatabaseInstance":"universal-canadiandataguy-default-rtdb","storageBucket":"universal-canadiandataguy.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_86c29658-bcde-4e92-a49f-6cca9d11383f"}
+[debug] [2023-12-04T04:31:25.366Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy [none]
+[debug] [2023-12-04T04:31:25.520Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy 200
+[debug] [2023-12-04T04:31:25.520Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy {"projectId":"universal-canadiandataguy","projectNumber":"213665248940","displayName":"universal-canadiandataguy","name":"projects/universal-canadiandataguy","resources":{"hostingSite":"universal-canadiandataguy","realtimeDatabaseInstance":"universal-canadiandataguy-default-rtdb","storageBucket":"universal-canadiandataguy.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_86c29658-bcde-4e92-a49f-6cca9d11383f"}
+[info] 
+[info] === Deploying to 'universal-canadiandataguy'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting, remoteconfig 
+[info] i  database: checking rules syntax... 
+[debug] [2023-12-04T04:31:25.526Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/universal-canadiandataguy/locations/-/instances/universal-canadiandataguy-default-rtdb [none]
+[debug] [2023-12-04T04:31:25.978Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/universal-canadiandataguy/locations/-/instances/universal-canadiandataguy-default-rtdb 200
+[debug] [2023-12-04T04:31:25.978Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/universal-canadiandataguy/locations/-/instances/universal-canadiandataguy-default-rtdb {"name":"projects/213665248940/locations/us-central1/instances/universal-canadiandataguy-default-rtdb","project":"projects/213665248940","databaseUrl":"https://universal-canadiandataguy-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-12-04T04:31:25.980Z] >>> [apiv2][query] PUT https://universal-canadiandataguy-default-rtdb.firebaseio.com/.settings/rules.json dryRun=true
+[debug] [2023-12-04T04:31:25.980Z] >>> [apiv2][body] PUT https://universal-canadiandataguy-default-rtdb.firebaseio.com/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-12-04T04:31:26.212Z] <<< [apiv2][status] PUT https://universal-canadiandataguy-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-12-04T04:31:26.212Z] <<< [apiv2][body] PUT https://universal-canadiandataguy-default-rtdb.firebaseio.com/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules syntax for database universal-canadiandataguy-default-rtdb is valid 
+[debug] [2023-12-04T04:31:26.213Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy [none]
+[debug] [2023-12-04T04:31:26.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy 200
+[debug] [2023-12-04T04:31:26.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy {"projectId":"universal-canadiandataguy","projectNumber":"213665248940","displayName":"universal-canadiandataguy","name":"projects/universal-canadiandataguy","resources":{"hostingSite":"universal-canadiandataguy","realtimeDatabaseInstance":"universal-canadiandataguy-default-rtdb","storageBucket":"universal-canadiandataguy.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_86c29658-bcde-4e92-a49f-6cca9d11383f"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-12-04T04:31:26.319Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test [none]
+[debug] [2023-12-04T04:31:26.319Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test [omitted]
+[debug] [2023-12-04T04:31:26.694Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test 200
+[debug] [2023-12-04T04:31:26.694Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test {}
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-12-04T04:31:26.696Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test [none]
+[debug] [2023-12-04T04:31:26.696Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test [omitted]
+[debug] [2023-12-04T04:31:26.809Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test 200
+[debug] [2023-12-04T04:31:26.809Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/universal-canadiandataguy:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-12-04T04:31:26.810Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy [none]
+[debug] [2023-12-04T04:31:26.954Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy 200
+[debug] [2023-12-04T04:31:26.954Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy {"projectId":"universal-canadiandataguy","projectNumber":"213665248940","displayName":"universal-canadiandataguy","name":"projects/universal-canadiandataguy","resources":{"hostingSite":"universal-canadiandataguy","realtimeDatabaseInstance":"universal-canadiandataguy-default-rtdb","storageBucket":"universal-canadiandataguy.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_86c29658-bcde-4e92-a49f-6cca9d11383f"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: preparing codebase universal-canadiandataguy for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-12-04T04:31:26.955Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-12-04T04:31:26.955Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/universal-canadiandataguy
+[debug] [2023-12-04T04:31:26.956Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-12-04T04:31:26.956Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/universal-canadiandataguy
+[debug] [2023-12-04T04:31:26.956Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudbuild.googleapis.com [none]
+[debug] [2023-12-04T04:31:26.956Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudbuild.googleapis.com x-goog-quota-user=projects/universal-canadiandataguy
+[debug] [2023-12-04T04:31:26.957Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/artifactregistry.googleapis.com [none]
+[debug] [2023-12-04T04:31:26.957Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/artifactregistry.googleapis.com x-goog-quota-user=projects/universal-canadiandataguy
+[debug] [2023-12-04T04:31:27.274Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudfunctions.googleapis.com 200
+[debug] [2023-12-04T04:31:27.274Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-12-04T04:31:27.291Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/artifactregistry.googleapis.com 200
+[debug] [2023-12-04T04:31:27.291Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-12-04T04:31:27.514Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/runtimeconfig.googleapis.com 200
+[debug] [2023-12-04T04:31:27.514Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-12-04T04:31:27.514Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudbuild.googleapis.com 200
+[debug] [2023-12-04T04:31:27.514Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/universal-canadiandataguy/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-12-04T04:31:27.514Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy/adminSdkConfig [none]
+[debug] [2023-12-04T04:31:27.644Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy/adminSdkConfig 200
+[debug] [2023-12-04T04:31:27.644Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/universal-canadiandataguy/adminSdkConfig {"projectId":"universal-canadiandataguy","databaseURL":"https://universal-canadiandataguy-default-rtdb.firebaseio.com","storageBucket":"universal-canadiandataguy.appspot.com","locationId":"us-central"}
+[debug] [2023-12-04T04:31:27.644Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/universal-canadiandataguy/configs [none]
+[debug] [2023-12-04T04:31:28.161Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/universal-canadiandataguy/configs 200
+[debug] [2023-12-04T04:31:28.161Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/universal-canadiandataguy/configs {}
+[debug] [2023-12-04T04:31:28.164Z] Validating nodejs source
+[debug] [2023-12-04T04:31:28.647Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-12-04T04:31:28.648Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2023-12-04T04:31:28.648Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-04T04:31:28.652Z] Found firebase-functions binary at '/Users/platouser/hugo-universal-theme/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8171
+
+[debug] [2023-12-04T04:31:28.985Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-12-04T04:31:34.003Z] Validating nodejs source
+[debug] [2023-12-04T04:31:34.388Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-12-04T04:31:34.389Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase universal-canadiandataguy to determine what to deploy 
+[debug] [2023-12-04T04:31:34.389Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-12-04T04:31:34.390Z] Found firebase-functions binary at '/Users/platouser/hugo-universal-theme/universal-canadiandataguy/node_modules/.bin/firebase-functions'
+[info] Serving at port 8109
+
+[debug] [2023-12-04T04:31:34.722Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}

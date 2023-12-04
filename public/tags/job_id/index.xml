@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>job_id on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/job_id/</link>
+    <description>Recent content in job_id on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Feb 2023 17:35:21 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/job_id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to get the Job ID and Run ID for a Databricks Job</title>
+      <link>https://canadiandataguy.com/blog/howtogetthejobidandrunidforadatabricksjob/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtogetthejobidandrunidforadatabricksjob/</guid>
+      <description>How to get the Job ID and Run ID for a Databricks Job with working code Sometimes there is a need to store or print system-generated values like job_id, run_id, start_time, etc. These entities are called ‘task parameter variables’. A list of supported parameters is listed here.
+This is a simple 2-step process:
+Pass the parameter when defining the job/task
+Get/Fetch and print the values
+Step 1: Pass the parameters Step 2: Get/Fetch and print the values print(f&amp;quot;&amp;quot;&amp;quot; job_id: {dbutils.</description>
+    </item>
+  </channel>
+</rss>

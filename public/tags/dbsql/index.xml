@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dbsql on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/dbsql/</link>
+    <description>Recent content in dbsql on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/dbsql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Databricks SQL Dashboards Guide: Tips and Tricks to Master Thems</title>
+      <link>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</link>
+      <pubDate>Fri, 15 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</guid>
+      <description>Databricks SQL Dashboards Guide: Tips and Tricks to Master Them Welcome to the world of Databricks SQL Dashboards! You&amp;rsquo;re in the right place if you want to learn how to go beyond just building visualizations and add some tricks to your arsenal. This guide will walk you through creating, managing, and optimizing your Databricks SQL dashboards.
+1. Getting Started with Viewing and Organizing Dashboards: Accessing Your Dashboards: Navigate to the workspace browser and click “Workspace” in the sidebar.</description>
+    </item>
+  </channel>
+</rss>

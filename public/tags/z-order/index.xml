@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>z order on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/z-order/</link>
+    <description>Recent content in z order on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Oct 2022 04:09:03 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/z-order/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Merge Multiple Spark Streams Into A Delta Table</title>
+      <link>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</guid>
+      <description>Merge Multiple Spark Streams Into A Delta Table with working code This blog will discuss how to read from multiple Spark Streams and merge/upsert data into a single Delta Table. We will also optimize/cluster data of the delta table.
+Overall, the process works in the following manner:
+Read data from a streaming source
+Use this special function ***foreachBatch. ***Using this we will call any user-defined function responsible for all the processing.</description>
+    </item>
+    <item>
+      <title>Using Spark Streaming to merge/upsert data into a Delta Lake with working code</title>
+      <link>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</link>
+      <pubDate>Wed, 12 Oct 2022 04:06:14 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</guid>
+      <description>Using Spark Streaming to merge/upsert data into a Delta Lake with working code This blog will discuss how to read from a Spark Streaming and merge/upsert data into a Delta Lake. We will also optimize/cluster data of the delta table. In the end, we will show how to start a streaming pipeline with the previous target table as the source.
+Overall, the process works in the following manner, we read data from a streaming source and use this special function ***foreachBatch.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/categories/</link>
+    <description>Recent content in Categories on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>databricks</title>
+      <link>https://canadiandataguy.com/categories/databricks/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/categories/databricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>spark</title>
+      <link>https://canadiandataguy.com/categories/spark/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/categories/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>best practices</title>
+      <link>https://canadiandataguy.com/categories/best-practices/</link>
+      <pubDate>Wed, 19 Apr 2023 01:04:45 +0000</pubDate>
+      <guid>https://canadiandataguy.com/categories/best-practices/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>spark streaming</title>
+      <link>https://canadiandataguy.com/categories/spark-streaming/</link>
+      <pubDate>Wed, 19 Apr 2023 01:04:45 +0000</pubDate>
+      <guid>https://canadiandataguy.com/categories/spark-streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>streaming</title>
+      <link>https://canadiandataguy.com/categories/streaming/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/categories/streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>coaching</title>
+      <link>https://canadiandataguy.com/categories/coaching/</link>
+      <pubDate>Fri, 27 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/categories/coaching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>interviewing</title>
+      <link>https://canadiandataguy.com/categories/interviewing/</link>
+      <pubDate>Fri, 27 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/categories/interviewing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>customer stories</title>
+      <link>https://canadiandataguy.com/categories/customer-stories/</link>
+      <pubDate>Tue, 24 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/categories/customer-stories/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

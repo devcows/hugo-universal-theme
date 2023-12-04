@@ -1,0 +1,12 @@
+<svg id="_101-pie-chart" data-name="101-pie-chart" xmlns="http://www.w3.org/2000/svg" width="63.93" height="63.93" viewBox="0 0 63.93 63.93">
+  <g id="Group_1237" data-name="Group 1237" transform="translate(0 5.304)">
+    <g id="Group_1236" data-name="Group 1236">
+      <path id="Path_1444" data-name="Path 1444" d="M30.592,68.88V40.846H29.313A29.313,29.313,0,1,0,58.625,70.159V68.88H30.592ZM29.313,96.915a26.756,26.756,0,0,1-1.279-53.482v28h28A26.789,26.789,0,0,1,29.313,96.915Z" transform="translate(0 -40.846)" fill="#bc7296"/>
+    </g>
+  </g>
+  <g id="Group_1239" data-name="Group 1239" transform="translate(33.339)">
+    <g id="Group_1238" data-name="Group 1238">
+      <path id="Path_1445" data-name="Path 1445" d="M258.01,0h-1.279V30.592h30.592V29.313A29.346,29.346,0,0,0,258.01,0Zm1.279,28.034V2.587a26.794,26.794,0,0,1,25.447,25.447H259.288Z" transform="translate(-256.731)" fill="#bc7296"/>
+    </g>
+  </g>
+</svg>

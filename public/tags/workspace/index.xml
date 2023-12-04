@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workspace on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/workspace/</link>
+    <description>Recent content in workspace on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Feb 2023 17:35:21 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/workspace/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Databricks Workspace Best Practices- A checklist for both beginners and Advanced Users</title>
+      <link>https://canadiandataguy.com/blog/databricksworkspacebestpracticesachecklistforbothbeginnersandadvancedusers/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/databricksworkspacebestpracticesachecklistforbothbeginnersandadvancedusers/</guid>
+      <description>Databricks Workspace Best Practices- A checklist for both beginners and Advanced Users Most good things in life come with a nuance. While learning Databricks a few years ago, I spent hours searching for best practices. Thus, I devised a set of best rules that should hold in almost all scenarios. These will help you start on the right foot.
+Here are some basic rules for using Databricks Workspace: Version control everything: Use Repos and organize your notebooks and folders: Keep your notebooks and files in folders to make them easy to find and manage.</description>
+    </item>
+  </channel>
+</rss>

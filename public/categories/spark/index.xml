@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spark on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/categories/spark/</link>
+    <description>Recent content in spark on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/categories/spark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp; Insights</title>
+      <link>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</guid>
+      <description>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp;amp; Insights Delta Lake is a powerful technology for bringing ACID transactions to your data lakes. It allows multiple operations to be performed on a dataset concurrently. However, dealing with concurrent operations can sometimes be tricky and may lead to issues such as ConcurrentAppendException, ConcurrentDeleteReadException, and ConcurrentDeleteDeleteException. In this blog post, we will explore why these issues occur and how to handle them effectively using a Python function, and how to avoid them with table design and using isolation levels and write conflicts.</description>
+    </item>
+    <item>
+      <title>Databricks SQL Dashboards Guide: Tips and Tricks to Master Thems</title>
+      <link>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</link>
+      <pubDate>Fri, 15 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</guid>
+      <description>Databricks SQL Dashboards Guide: Tips and Tricks to Master Them Welcome to the world of Databricks SQL Dashboards! You&amp;rsquo;re in the right place if you want to learn how to go beyond just building visualizations and add some tricks to your arsenal. This guide will walk you through creating, managing, and optimizing your Databricks SQL dashboards.
+1. Getting Started with Viewing and Organizing Dashboards: Accessing Your Dashboards: Navigate to the workspace browser and click “Workspace” in the sidebar.</description>
+    </item>
+    <item>
+      <title>How to Cut Your Data Processing Costs by 30% with Graviton</title>
+      <link>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</link>
+      <pubDate>Sun, 23 Apr 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</guid>
+      <description>How to Cut Your Data Processing Costs by 30% with Graviton What is AWS Graviton ? AWS Graviton is a family of Arm-based processors that are designed by AWS to provide cost-effective and high-performance computing for cloud workloads. Graviton processors are built using 64-bit Arm, which are optimized for power efficiency and performance. They offer a more cost-effective alternative to traditional x86-based processors, making them a popular choice for running a variety of workloads on AWS.</description>
+    </item>
+  </channel>
+</rss>

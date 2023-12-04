@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>streaming on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/categories/streaming/</link>
+    <description>Recent content in streaming on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Mar 2023 06:32:42 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/categories/streaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to write your first Spark application with Stream-Stream Joins with working code.</title>
+      <link>https://canadiandataguy.com/blog/spark-stream-stream-join/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/spark-stream-stream-join/</guid>
+      <description>How to write your first Spark application with Stream-Stream Joins with working code. Have you been waiting to try Streaming but cannot take the plunge?
+In a single blog, we will teach you whatever needs to be understood about Streaming Joins. We will give you a working code which you can use for your next Streaming Pipeline.
+The steps involved:
+Create a fake dataset at scale Set a baseline using traditional SQL Define Temporary Streaming Views Inner Joins with optional Watermarking Left Joins with Watermarking The cold start edge case: withEventTimeOrder Cleanup What is Stream-Stream Join?</description>
+    </item>
+    <item>
+      <title>Dive Deep into Spark Streaming Checkpoint</title>
+      <link>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</link>
+      <pubDate>Tue, 21 Mar 2023 06:14:44 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</guid>
+      <description>From Beginner to Pro: A Comprehensive Guide to understanding the Spark Streaming Checkpoint Spark is a distributed computing framework that allows for processing large datasets in parallel across a cluster of computers. When running a Spark job, it is not uncommon to encounter failures due to various issues such as network or hardware failures, software bugs, or even insufficient memory. One way to address these issues is to re-run the entire job from the beginning, which can be time-consuming and inefficient.</description>
+    </item>
+    <item>
+      <title>Delta Live Tables Advanced Q &amp; A</title>
+      <link>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</link>
+      <pubDate>Fri, 03 Mar 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</guid>
+      <description>Delta Live Tables Advanced Q &amp;amp; A This is primarily written for those folks who are trying to handle edge cases.
+Q1.) DLT Pipeline was deleted, but the Delta table exists. What to do now? What if the owner has left the org Step 1.) Verify via CLI if the pipeline has been deleted
+databricks --profile &amp;lt;your_env&amp;gt; pipelines list databricks --profile &amp;lt;your_env&amp;gt; pipelines get --pipeline-id &amp;lt;deleted_pipeline_id&amp;gt; Step 2.) Create a new pipeline with the existing storage path</description>
+    </item>
+    <item>
+      <title>How I wrote my first Spark Streaming Application with Joins?</title>
+      <link>https://canadiandataguy.com/blog/howiwrotemyfirstsparkstreamingapplicationwithjoins/</link>
+      <pubDate>Wed, 25 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howiwrotemyfirstsparkstreamingapplicationwithjoins/</guid>
+      <description>How I wrote my first Spark Streaming Application with Joins with working code When I started learning about Spark Streaming, I could not find enough code/material which could kick-start my journey and build my confidence. I wrote this blog to fill this gap which could help beginners understand how simple streaming is and build their first application.
+In this blog, I will explain most things by first principles to increase your understanding and confidence and you walk away with code for your first Streaming application.</description>
+    </item>
+    <item>
+      <title>How to upgrade your Spark Stream application with a new checkpoint!</title>
+      <link>https://canadiandataguy.com/blog/howtoupgradeyoursparkstreamapplicationwithanewcheckpoint/</link>
+      <pubDate>Wed, 25 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtoupgradeyoursparkstreamapplicationwithanewcheckpoint/</guid>
+      <description>How to upgrade your Spark Stream application with a new checkpoint With working code Sometimes in life, we need to make breaking changes which require us to create a new checkpoint. Some example scenarios:
+You are doing a code/application change where you are changing logic
+Major Spark Version upgrade from Spark 2.x to Spark 3.x
+The previous deployment was wrong, and you want to reprocess from a certain point
+There could be plenty of scenarios where you want to control precisely which data(Kafka offsets) need to be processed.</description>
+    </item>
+    <item>
+      <title>How to parameterize Delta Live Tables and import reusable functions</title>
+      <link>https://canadiandataguy.com/blog/howtoparameterizedeltalivetablesandimportreusablefunctions/</link>
+      <pubDate>Tue, 13 Dec 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtoparameterizedeltalivetablesandimportreusablefunctions/</guid>
+      <description>How to parameterize Delta Live Tables and import reusable functions with working code This blog will discuss passing custom parameters to a Delta Live Tables (DLT) pipeline. Furthermore, we will discuss importing functions defined in other files or locations. You can import files from the current directory or a specified location using sys.path.append().
+Update: As of *December 2022, you can directly import files if the reusable_functions.py file exists in the same repository by just using the import command, which is the preferred approach.</description>
+    </item>
+    <item>
+      <title>Merge Multiple Spark Streams Into A Delta Table</title>
+      <link>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</guid>
+      <description>Merge Multiple Spark Streams Into A Delta Table with working code This blog will discuss how to read from multiple Spark Streams and merge/upsert data into a single Delta Table. We will also optimize/cluster data of the delta table.
+Overall, the process works in the following manner:
+Read data from a streaming source
+Use this special function ***foreachBatch. ***Using this we will call any user-defined function responsible for all the processing.</description>
+    </item>
+    <item>
+      <title>Using Spark Streaming to merge/upsert data into a Delta Lake with working code</title>
+      <link>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</link>
+      <pubDate>Wed, 12 Oct 2022 04:06:14 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</guid>
+      <description>Using Spark Streaming to merge/upsert data into a Delta Lake with working code This blog will discuss how to read from a Spark Streaming and merge/upsert data into a Delta Lake. We will also optimize/cluster data of the delta table. In the end, we will show how to start a streaming pipeline with the previous target table as the source.
+Overall, the process works in the following manner, we read data from a streaming source and use this special function ***foreachBatch.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>checkpoint on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/checkpoint/</link>
+    <description>Recent content in checkpoint on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 23 Mar 2023 06:32:42 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/checkpoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to write your first Spark application with Stream-Stream Joins with working code.</title>
+      <link>https://canadiandataguy.com/blog/spark-stream-stream-join/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/spark-stream-stream-join/</guid>
+      <description>How to write your first Spark application with Stream-Stream Joins with working code. Have you been waiting to try Streaming but cannot take the plunge?
+In a single blog, we will teach you whatever needs to be understood about Streaming Joins. We will give you a working code which you can use for your next Streaming Pipeline.
+The steps involved:
+Create a fake dataset at scale Set a baseline using traditional SQL Define Temporary Streaming Views Inner Joins with optional Watermarking Left Joins with Watermarking The cold start edge case: withEventTimeOrder Cleanup What is Stream-Stream Join?</description>
+    </item>
+    <item>
+      <title>Dive Deep into Spark Streaming Checkpoint</title>
+      <link>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</link>
+      <pubDate>Tue, 21 Mar 2023 06:14:44 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</guid>
+      <description>From Beginner to Pro: A Comprehensive Guide to understanding the Spark Streaming Checkpoint Spark is a distributed computing framework that allows for processing large datasets in parallel across a cluster of computers. When running a Spark job, it is not uncommon to encounter failures due to various issues such as network or hardware failures, software bugs, or even insufficient memory. One way to address these issues is to re-run the entire job from the beginning, which can be time-consuming and inefficient.</description>
+    </item>
+    <item>
+      <title>How to upgrade your Spark Stream application with a new checkpoint!</title>
+      <link>https://canadiandataguy.com/blog/howtoupgradeyoursparkstreamapplicationwithanewcheckpoint/</link>
+      <pubDate>Wed, 25 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtoupgradeyoursparkstreamapplicationwithanewcheckpoint/</guid>
+      <description>How to upgrade your Spark Stream application with a new checkpoint With working code Sometimes in life, we need to make breaking changes which require us to create a new checkpoint. Some example scenarios:
+You are doing a code/application change where you are changing logic
+Major Spark Version upgrade from Spark 2.x to Spark 3.x
+The previous deployment was wrong, and you want to reprocess from a certain point
+There could be plenty of scenarios where you want to control precisely which data(Kafka offsets) need to be processed.</description>
+    </item>
+  </channel>
+</rss>

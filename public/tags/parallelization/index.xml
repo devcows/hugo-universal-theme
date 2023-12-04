@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>parallelization on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/parallelization/</link>
+    <description>Recent content in parallelization on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2023 21:38:16 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/parallelization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Productive Life: How to Parallelize Code Execution in Python</title>
+      <link>https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/</link>
+      <pubDate>Sun, 23 Apr 2023 21:38:16 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-04-23-a-productive-life-how-to-parallelize-code-execution-in-python/</guid>
+      <description>A Productive Life: How to Parallelize Code Execution in Python Asynchronous programming has become increasingly popular in recent years, especially in web development, where it is used to build high-performance, scalable applications. Python has built-in support for asynchronous programming through the asyncio module, which provides a powerful framework for writing asynchronous code.
+In this blog post, we will explore the asyncio module in Python 3.10 and learn how to run tasks in parallel using the new features introduced in this version.</description>
+    </item>
+  </channel>
+</rss>

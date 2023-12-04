@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>How I wrote my first Spark Streaming Application with Joins?</title>
+<meta name="author" content="Canadian Data Guy" />
+
+
+
+
+<meta name="keywords" content="devcows, hugo, go, streaming">
+
+
+<meta name="description" content="">
+
+<meta name="generator" content="Hugo 0.120.4">
+
+
+<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link href="/css/animate.css" rel="stylesheet">
+
+
+
+  <link href="/css/style.red.css" rel="stylesheet" id="theme-stylesheet">
+
+
+
+<link href="/css/custom.css?1701664283" rel="stylesheet">
+
+
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+
+
+<link href="/css/owl.carousel.css" rel="stylesheet">
+<link href="/css/owl.theme.css" rel="stylesheet">
+
+
+<link rel="alternate" href="https://canadiandataguy.com/index.xml" type="application/rss+xml" title="Canadian Data Guy">
+
+
+
+
+
+
+
+<meta property="og:updated_time" content="2023-01-25T17:35:21-0500">
+
+  
+  
+  <meta property="article:section" content="streaming">
+  <meta property="article:tag" content="streaming">
+  
+  
+  <meta property="article:published_time" content="2023-01-25T17:35:21-0500">
+  <meta property="article:modified_time" content="2023-01-25T17:35:21-0500">
+
+
+
+<meta name="twitter:card" content="summary">
+
+<meta name="twitter:title" content="How I wrote my first Spark Streaming Application with Joins?">
+
+<meta name="twitter:description" content="">
+
+
+    
+  </head>
+
+  <body>
+
+    <div id="all">
+
+        
+
+
+        <header class="navbar-affixed-top" data-spy="affix" data-offset-top="62">
+    <div class="navbar navbar-default yamm mouseover" role="navigation" id="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand home" href="/">
+                    
+                      <img src="/img/cdg5.png" alt="How I wrote my first Spark Streaming Application with Joins? logo" class="hidden-xs hidden-sm" />
+                      <img src="/img/cdg5.png" alt="How I wrote my first Spark Streaming Application with Joins? logo" class="visible-xs visible-sm" />
+                    
+                    <span class="sr-only">How I wrote my first Spark Streaming Application with Joins? - go to homepage</span>
+                </a>
+                <div class="navbar-buttons">
+                    <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                      <span class="sr-only">Toggle Navigation</span>
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div class="navbar-collapse collapse" id="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                  
+
+                  
+                  
+                  
+
+                  
+
+                  
+
+                  
+
+                  
+                  <li class="dropdown ">
+                    <a href="/">Home</a>
+                  </li>
+                  
+                  
+                  
+                  
+
+                  
+
+                  
+                    
+                  
+
+                  
+
+                  
+                  <li class="dropdown active">
+                    <a href="/blog/">Blog</a>
+                  </li>
+                  
+                  
+                  
+                  
+
+                  
+
+                  
+
+                  
+
+                  
+                    
+                    
+                    <li class="dropdown ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="/databricks-customer-success-stories/">Databricks Customer Success Stories</a></li>
+                            
+                        </ul>
+                        
+                    </li>
+                  
+                  
+                  
+                  
+
+                  
+
+                  
+
+                  
+
+                  
+                    
+                    
+                    <li class="dropdown ">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Interview Coaching <span class="caret"></span></a>
+                        
+                        <ul class="dropdown-menu">
+                            
+                            <li><a href="/blog/youtube/">Youtube</a></li>
+                            
+                            <li><a href="/blog/howtoprepareyourselftobebetteratdatainterviews">how to prepare for data interviews</a></li>
+                            
+                            <li><a href="/blog/1-on-1-coaching/">1 on 1 coaching</a></li>
+                            
+                        </ul>
+                        
+                    </li>
+                  
+                  
+                  
+                  
+
+                  
+
+                  
+
+                  
+
+                  
+                  <li class="dropdown ">
+                    <a href="/about-me/">About Me</a>
+                  </li>
+                  
+                  
+                  
+                  
+
+                  
+
+                  
+
+                  
+
+                  
+                  <li class="dropdown ">
+                    <a href="/contact/">Contact</a>
+                  </li>
+                  
+                  
+                </ul>
+            </div>
+            
+
+            <div class="collapse clearfix" id="search">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                    <button type="submit" class="btn btn-template-main"><i class="fas fa-search"></i></button>
+                </span>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</header>
+
+
+
+
+        <div id="heading-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>How I wrote my first Spark Streaming Application with Joins?</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="content">
+            <div class="container">
+
+                <div class="row">
+
+                    
+
+                    <div class="col-md-9" id="blog-post">
+
+                        
+                          <p class="text-muted text-uppercase mb-small text-right">
+                            
+                            
+                            
+                              
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                                  
+                              
+                              January 25, 2023
+                            
+                          </p>
+                        
+
+                        <div id="post-content">
+                          <h2 id="how-i-wrote-my-first-spark-streaming-application-with-joins-with-working-code">How I wrote my first Spark Streaming Application with Joins with working code</h2>
+<p>When I started learning about Spark Streaming, I could not find enough code/material which could kick-start my journey and build my confidence. I wrote this blog to fill this gap which could help beginners understand how <a href="https://www.databricks.com/blog/2022/07/14/using-spark-structured-streaming-to-scale-your-analytics.html">simple streaming </a>is and build their first application.</p>
+<p>In this blog, I will explain most things by first principles to increase your understanding and confidence and you walk away with code for your first Streaming application.</p>
+<p><img src="https://cdn-images-1.medium.com/max/10644/0*IUhD1QKtwgHKBdb8" alt="Photo by Ian Schneider on Unsplash"></p>
+<h2 id="scenario">Scenario:</h2>
+<p>Let’s assume we have a streaming source with data arriving all the time. We want to add more attributes from another table( Think lookup table/ dimension table). Thus we will stream the data and join with the lookup table via Stream-Batch join. The result would be written as a Delta table, which could be used downstream for analytics or streaming.</p>
+<p><strong>Imports &amp; Parameters</strong></p>
+<pre><code>from pyspark.sql import functions as F
+from faker import Faker
+import uuid
+
+# define schema name and where should the table be stored
+schema_name = &quot;test_streaming_joins&quot;
+schema_storage_location = &quot;/tmp/CHOOSE_A_PERMANENT_LOCATION/&quot;
+
+
+# Please download this file from https://simplemaps.com/data/us-zips then download and place it at a location of your choice and then change the value for the variable below
+static_table_csv_file = &quot;/FileStore/jitesh.soni/data/us_zip_code_and_its_attributes.csv&quot;
+
+# Static table specification
+static_table_name = &quot;static_zip_codes&quot;
+
+
+# Target Stareaming Table specification
+target_table_name = &quot;joined_datasets&quot;
+
+# Recommend you to keep the checkpoint next to the Delta table so that you do have to notion about where the checkpoint is
+checkpoint_location = f&quot;{schema_storage_location}/{target_table_name}/_checkpoints/&quot;Create Target Database
+</code></pre>
+<ul>
+<li>
+<p>The below code will help create a schema/database with comments and storage locations for tables</p>
+<p>create_schema_sql = f&quot;&quot;&quot;
+CREATE SCHEMA IF NOT EXISTS {schema_name}
+COMMENT &lsquo;This is {schema_name} schema&rsquo;
+LOCATION &lsquo;{schema_storage_location}&rsquo;
+WITH DBPROPERTIES ( Owner=&lsquo;Jitesh&rsquo;);
+&quot;&quot;&quot;
+print(f&quot;create_schema_sql: {create_schema_sql}&quot;)</p>
+</li>
+</ul>
+<h3 id="generate-static-or-a-lookup-dataset"><strong>Generate Static Or a lookup Dataset</strong></h3>
+<p>We will use a public dataset <a href="https://simplemaps.com/data/us-zips">source</a> with attributes about a zip code. This could be any other static source or a Delta table being updated in parallel.</p>
+<p><strong>Note</strong>: If you pick a static source and start streaming, Spark Streaming will only read it once. If you have a few updates to the static source, you will have to restart the Spark Stream so it rereads the static source.</p>
+<p>Meanwhile, if you have the Delta table as a source, then Spark Streaming will identify the update automatically, and nothing extra needs to be done.</p>
+<pre><code>csv_df = (
+    spark.read.option(&quot;header&quot;, True)
+    .option(&quot;inferSchema&quot;, True)
+    .csv(static_table_csv_file)
+)
+display(csv_df)
+csv_df.write.saveAsTable(f&quot;{schema_name}.{static_table_name}&quot;)
+</code></pre>
+<p>Next, we will Z-order the table on the key, which would be used in joins. This will help Spark Streaming do efficient joins because the Delta table is sorted by join key with statistics about which file contains which key value.</p>
+<pre><code>spark.sql(
+    f&quot;&quot;&quot;
+    OPTIMIZE {schema_name}.{static_table_name} ZORDER BY (zip);
+    &quot;&quot;&quot;
+)
+</code></pre>
+<h3 id="generate-streaming-dataset">Generate Streaming Dataset</h3>
+<p>We will generate a Streaming dataset using the Faker library. In the below code, we will define a few user-defined functions.</p>
+<pre><code>fake = Faker()
+fake_id = F.udf(lambda: str(uuid.uuid4()))
+fake_firstname = F.udf(fake.first_name)
+fake_lastname = F.udf(fake.last_name)
+fake_email = F.udf(fake.ascii_company_email)
+# fake_date = F.udf(lambda:fake.date_time_this_month().strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+fake_address = F.udf(fake.address)
+fake_zipcode = F.udf(fake.zipcode)
+</code></pre>
+<p>Now, we will use *spark.readStream.format(“rate”) *to generate data at your desired rate.</p>
+<pre><code>streaming_df = (
+    spark.readStream.format(&quot;rate&quot;)
+    .option(&quot;numPartitions&quot;, 10)
+    .option(&quot;rowsPerSecond&quot;, 1 * 1000)
+    .load()
+    .withColumn(&quot;fake_id&quot;, fake_id())
+    .withColumn(&quot;fake_firstname&quot;, fake_firstname())
+    .withColumn(&quot;fake_lastname&quot;, fake_lastname())
+    .withColumn(&quot;fake_email&quot;, fake_email())
+    .withColumn(&quot;fake_address&quot;, fake_address())
+    .withColumn(&quot;fake_zipcode&quot;, fake_zipcode())
+)
+
+# You can uncomment the below display command to check if the code in this cell works
+# display(streaming_df)
+</code></pre>
+<h2 id="stream--static-join-or-stream--delta-join">Stream- Static Join or Stream -Delta Join</h2>
+<p>Structured Streaming supports joins (inner join and left join) between a streaming and a static DataFrame or a Delta Table. <a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html#support-matrix-for-joins-in-streaming-queries">However, a few types of stream-static outer Joins are not supported yet.</a></p>
+<pre><code>lookup_delta_df = spark.read.table(static_table_name)
+
+
+joined_streaming_df = streaming_df.join(
+    lookup_delta_df,
+    streaming_df[&quot;fake_zipcode&quot;] == lookup_delta_df[&quot;zip&quot;],
+    &quot;left_outer&quot;,
+).drop(&quot;fake_zipcode&quot;)
+# display(joined_streaming_df)
+</code></pre>
+<h3 id="orchestrate-the-pipeline-and-write-spark-stream-to-delta-table">Orchestrate the pipeline and write Spark Stream to Delta Table</h3>
+<p>Some Tips:</p>
+<ul>
+<li>
+<p>Give your streaming query a name. It’s good because this name will appear on Spark UI and help you monitor the stream.</p>
+</li>
+<li>
+<p>If you are not planning to run the Stream continuously then use <em>trigger(availableNow=True)</em>. This helps process all pending data and then stops the stream automatically.</p>
+<p>(
+joined_streaming_df.writeStream
+# .trigger(availableNow=True)
+.queryName(&ldquo;do_a_stream_join_with_the_delta_table&rdquo;)
+.option(&ldquo;checkpointLocation&rdquo;, checkpoint_location)
+.format(&ldquo;delta&rdquo;)
+.toTable(f&quot;{schema_name}.{target_table_name}&quot;)
+)</p>
+</li>
+</ul>
+<h3 id="download-the-codehttpsgithubcomjiteshsonimaterial_for_public_consumptionblobmainnotebooksspark_stream_static_joinpy"><a href="https://github.com/jiteshsoni/material_for_public_consumption/blob/main/notebooks/spark_stream_static_join.py">Download the code</a></h3>
+<h2 id="footnotes">Footnotes</h2>
+<p>If you’re interested in learning more and keeping up to date with the latest about Spark, Delta, Python, SQL, Terraform, and other big data technologies, check out my <a href="https://canadiandataguy.medium.com/">other blogs and follow</a>.</p>
+
+                        </div>
+                        
+                        
+
+                    </div>
+                    
+
+                    
+
+                    
+
+                    <div class="col-md-3">
+
+                        
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="sharebuttons">
+    <span>:</span>
+    <ul>
+        
+        
+        
+        <li><a href="https://t.me/+12065656859" target="_blank"><svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m25.4437935 0c13.5404221 0 24.5561688 10.9340909 24.5561688 24.3738636 0 13.4383117-11.0157467 24.3712663-24.5560065 24.3711039-4.0610389 0-8.0737013-1.0012987-11.624026-2.8982143l-12.97402593 4.1227273c-.06461039.0206169-.13084416.0305195-.19659091.0305195-.17159091 0-.33961039-.0681818-.46347403-.1946429-.17159091-.1746753-.23003247-.4311688-.15146104-.6631493l4.21801948-12.4423701c-2.20373376-3.724026-3.36704545-7.9790585-3.36704545-12.3259741 0-13.4397727 11.01688308-24.3738636 24.55844158-24.3738636zm-.0001624 5.07727273c-10.725974 0-19.45227269 8.65649347-19.45227269 19.29659087 0 4.0896104 1.28068182 8.0008117 3.70340909 11.3112013.125.1707793.15892857.3917208.09107143.5920455l-2.09805195 6.1897727 6.49918832-2.0659091c.064448-.0204545.1306818-.0305195.1967532-.0305195.125 0 .2491884.036039.3561689.1063312 3.1814935 2.0876624 6.8826298 3.1910714 10.7038961 3.1910714 10.7248376 0 19.4498376-8.6551948 19.4498376-19.2939935 0-10.6400974-8.7253246-19.29659087-19.45-19.29659087zm-6.6467532 7.85259737c.7225649 0 1.2425325.4384741 1.636039 1.3801948.1636363.3902598 1.7027597 4.1048702 1.788961 4.2772728.1050325.2060065.4300325.8439935.049513 1.6l-.0816559.1641233c-.1558441.3159091-.2902597.5886364-.5922078.9399351-.0969155.112013-.1956168.2308442-.2941558.349513-.2081169.250487-.4232143.5094156-.6217532.7058441-.0678572.0680195-.1993507.1998377-.2136364.2522728.000487 0 .0029221.0449675.0610389.1439935.4069806.6887987 3.375 4.7733766 7.2852273 6.4719156.1707792.0741883.7349026.3064935.7675325.3064935.0363636 0 .0970779-.0607143.1415584-.111526.3405844-.3849026 1.4428572-1.6733766 1.8069806-2.2146104.3220779-.4818182.7355519-.7271104 1.2277597-.7271104.3012987 0 .5845779.0926948.849026.1876624.6030564.2170398 3.8043369 1.7879312 4.3216328 2.0413055l.0686269.0335321c.4774351.2292208.8545455.4102273 1.0733766.7699676.3194805.5290584.1928572 1.9868506-.2873376 3.3211038-.609578 1.6939936-3.2894481 3.0826299-4.5089286 3.1907468l-.1788961.0170455c-.2819805.0277597-.6016234.0590909-1.000974.0590909l-.0944191-.0005452c-.9658464-.0112678-2.6415309-.2079278-6.0576913-1.5725068-3.6667208-1.4647727-7.2837663-4.6050325-10.1852273-8.8423701-.0501623-.0733766-.0847403-.124513-.1035714-.1496753-.7576299-.998539-2.5222403-3.624026-2.5222403-6.4047078 0-3.0896104 1.4788961-4.8464286 2.3530844-5.397565.8243507-.5196428 2.6887987-.7650974 3.0311689-.7795454.0351461-.0014814.0648513-.0027775.0900577-.0039117l.1047884-.0050457c.0548951-.0028933.0444193-.0028933.0863227-.0028933z" fill="#d5d5d5" class="will-change" fill-rule="nonzero"/><path d="m0 0h50v50h-50z"/></g></svg></a></li>
+        
+        <li><a href="https://canadiandataguy.medium.com/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16"> <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/> </svg>         
+          </a></li>
+        <li><a href="mailto:info@canadiandataguy.com" target="_blank"><svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m46.149789 6h-42.29957803c-2.12025316 0-3.85021097 1.72995781-3.85021097 3.85021097v29.78902953c0 2.1202532 1.72995781 3.850211 3.85021097 3.850211h42.29957803c2.1202532 0 3.850211-1.7299578 3.850211-3.850211v-29.78902953c0-2.12025316-1.7299578-3.85021097-3.850211-3.85021097zm-.5590717 2.84810127-20.3270042 17.38396623-20.32700424-17.38396623zm1.5611814 30.79113923c0 .5485232-.4535865 1.0021097-1.0021097 1.0021097h-42.29957803c-.54852321 0-1.0021097-.4535865-1.0021097-1.0021097v-28.8291139l21.48734173 18.3755274c.0105486.0105485.0316456.0210971.0421941.0316456.0105486.0105485.0316456.021097.0421941.0316455.0316456.0210971.0527426.0421941.0843882.0527427.0105485.0105485.0210971.0105485.0316456.021097.0421941.0210971.0843882.0421941.1265823.0632911.0105485 0 .021097.0105486.0316455.0105486.0316456.0105485.0632912.0316455.1054853.0421941.0105485 0 .0316455.0105485.0421941.0105485.0316455.0105485.0632911.021097.0949367.021097.0105485 0 .0316455.0105486.0421941.0105486.0316455.0105485.0738396.0105485.1054852.021097h.0316456c.042194 0 .0949367.0105485.1371308.0105485.042194 0 .0949367 0 .1371308-.0105485h.0316455c.0316456 0 .0738397-.0105485.1054853-.021097.0105485 0 .0316455-.0105486.0421941-.0105486.0316455-.0105485.0632911-.021097.0949367-.021097.0105485 0 .0316455-.0105485.0421941-.0105485.0316455-.0105486.0632911-.0210971.1054852-.0421941.0105485 0 .021097-.0105486.0316456-.0105486.042194-.021097.0843881-.042194.1265822-.0632911.0105486-.0105485.0210971-.0105485.0316456-.021097.0316456-.0210971.0527426-.0316456.0843882-.0527427.0105485-.0105485.0316456-.021097.0421941-.0316455s.0316456-.0210971.0421941-.0316456l20.9810126-17.9219409z" fill="#d5d5d5" class="will-change" fill-rule="nonzero"/><path d="m0 0h50v50h-50z"/></g></svg></a></li>
+    </ul>
+</nav>
+<style>
+.sharebuttons, .sharebuttons ul {display: flex; margin: 0.25rem 0; align-items: center;}
+.sharebuttons span {color: #bbb;}
+.sharebuttons ul li {list-style: none; margin: 0;}
+.sharebuttons ul li a {margin: 0 0.5rem; display: block;}
+.sharebuttons ul li:first-child a {margin: 0 0.2rem 0 0.5rem;}
+.sharebuttons ul li a svg {width: auto; height:4.1rem; display: block;}
+.will-change {transition: 250ms;} 
+nav.sharebuttons li > a:hover .will-change { fill: #444444 }
+</style>
+
+
+
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Categories</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            
+            
+            <li>
+                <a href="/categories/best-practices">BEST-PRACTICES (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/coaching">COACHING (3)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/customer-stories">CUSTOMER-STORIES (2)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/databricks">DATABRICKS (13)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/interviewing">INTERVIEWING (1)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/spark">SPARK (3)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/spark-streaming">SPARK-STREAMING (7)</a>
+            </li>
+            
+            <li>
+                <a href="/categories/streaming">STREAMING (8)</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="panel sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">Tags</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="tag-cloud">
+            
+            
+            <li >
+                <a href="/tags/books"><i class="fas fa-tags"></i> books</a>
+            </li>
+            
+            <li >
+                <a href="/tags/checkpoint"><i class="fas fa-tags"></i> checkpoint</a>
+            </li>
+            
+            <li >
+                <a href="/tags/coaching"><i class="fas fa-tags"></i> coaching</a>
+            </li>
+            
+            <li >
+                <a href="/tags/concurrency"><i class="fas fa-tags"></i> concurrency</a>
+            </li>
+            
+            <li >
+                <a href="/tags/cost-savings"><i class="fas fa-tags"></i> cost-savings</a>
+            </li>
+            
+            <li >
+                <a href="/tags/dbsql"><i class="fas fa-tags"></i> dbsql</a>
+            </li>
+            
+            <li >
+                <a href="/tags/delta"><i class="fas fa-tags"></i> delta</a>
+            </li>
+            
+            <li >
+                <a href="/tags/delta-live-tables"><i class="fas fa-tags"></i> delta-live-tables</a>
+            </li>
+            
+            <li >
+                <a href="/tags/foreachbatch"><i class="fas fa-tags"></i> foreachbatch</a>
+            </li>
+            
+            <li >
+                <a href="/tags/graviton"><i class="fas fa-tags"></i> graviton</a>
+            </li>
+            
+            <li >
+                <a href="/tags/interviewing"><i class="fas fa-tags"></i> interviewing</a>
+            </li>
+            
+            <li >
+                <a href="/tags/job_id"><i class="fas fa-tags"></i> job_id</a>
+            </li>
+            
+            <li >
+                <a href="/tags/kafka"><i class="fas fa-tags"></i> kafka</a>
+            </li>
+            
+            <li >
+                <a href="/tags/merge"><i class="fas fa-tags"></i> merge</a>
+            </li>
+            
+            <li >
+                <a href="/tags/optimize"><i class="fas fa-tags"></i> optimize</a>
+            </li>
+            
+            <li >
+                <a href="/tags/parallelization"><i class="fas fa-tags"></i> parallelization</a>
+            </li>
+            
+            <li >
+                <a href="/tags/python"><i class="fas fa-tags"></i> python</a>
+            </li>
+            
+            <li >
+                <a href="/tags/run_id"><i class="fas fa-tags"></i> run_id</a>
+            </li>
+            
+            <li >
+                <a href="/tags/spark"><i class="fas fa-tags"></i> spark</a>
+            </li>
+            
+            <li >
+                <a href="/tags/spark-streaming"><i class="fas fa-tags"></i> spark-streaming</a>
+            </li>
+            
+            <li >
+                <a href="/tags/streaming"><i class="fas fa-tags"></i> streaming</a>
+            </li>
+            
+            <li >
+                <a href="/tags/workspace"><i class="fas fa-tags"></i> workspace</a>
+            </li>
+            
+            <li >
+                <a href="/tags/youtube"><i class="fas fa-tags"></i> youtube</a>
+            </li>
+            
+            <li >
+                <a href="/tags/z-order"><i class="fas fa-tags"></i> z-order</a>
+            </li>
+            
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                        
+
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+        
+
+        <footer id="footer">
+    <div class="container">
+
+        
+        <div class="col-md-4 col-sm-6">
+            <h4>About us</h4>
+
+            <p>We offer expertise and consulting in data engineering, analytics and cloud computing.</p>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+        
+
+        <div class="col-md-4 col-sm-6">
+
+            
+
+        </div>
+        
+
+        
+        <div class="col-md-4 col-sm-6">
+
+          <h4>Contact</h4>
+
+            <p class="text-uppercase"><strong>Canadian Data Guy Corp.</strong>
+        <br>Toronto, Canada
+        </p>
+      
+
+	    <a href="/contact" class="btn btn-small btn-template-main">Go to contact page</a>
+
+            <hr class="hidden-md hidden-lg hidden-sm">
+
+        </div>
+        
+
+
+
+
+
+
+
+
+
+<nav class="sharebuttons">
+    <span>:</span>
+    <ul>
+        
+        
+        
+        <li><a href="https://t.me/+12065656859" target="_blank"><svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m25.4437935 0c13.5404221 0 24.5561688 10.9340909 24.5561688 24.3738636 0 13.4383117-11.0157467 24.3712663-24.5560065 24.3711039-4.0610389 0-8.0737013-1.0012987-11.624026-2.8982143l-12.97402593 4.1227273c-.06461039.0206169-.13084416.0305195-.19659091.0305195-.17159091 0-.33961039-.0681818-.46347403-.1946429-.17159091-.1746753-.23003247-.4311688-.15146104-.6631493l4.21801948-12.4423701c-2.20373376-3.724026-3.36704545-7.9790585-3.36704545-12.3259741 0-13.4397727 11.01688308-24.3738636 24.55844158-24.3738636zm-.0001624 5.07727273c-10.725974 0-19.45227269 8.65649347-19.45227269 19.29659087 0 4.0896104 1.28068182 8.0008117 3.70340909 11.3112013.125.1707793.15892857.3917208.09107143.5920455l-2.09805195 6.1897727 6.49918832-2.0659091c.064448-.0204545.1306818-.0305195.1967532-.0305195.125 0 .2491884.036039.3561689.1063312 3.1814935 2.0876624 6.8826298 3.1910714 10.7038961 3.1910714 10.7248376 0 19.4498376-8.6551948 19.4498376-19.2939935 0-10.6400974-8.7253246-19.29659087-19.45-19.29659087zm-6.6467532 7.85259737c.7225649 0 1.2425325.4384741 1.636039 1.3801948.1636363.3902598 1.7027597 4.1048702 1.788961 4.2772728.1050325.2060065.4300325.8439935.049513 1.6l-.0816559.1641233c-.1558441.3159091-.2902597.5886364-.5922078.9399351-.0969155.112013-.1956168.2308442-.2941558.349513-.2081169.250487-.4232143.5094156-.6217532.7058441-.0678572.0680195-.1993507.1998377-.2136364.2522728.000487 0 .0029221.0449675.0610389.1439935.4069806.6887987 3.375 4.7733766 7.2852273 6.4719156.1707792.0741883.7349026.3064935.7675325.3064935.0363636 0 .0970779-.0607143.1415584-.111526.3405844-.3849026 1.4428572-1.6733766 1.8069806-2.2146104.3220779-.4818182.7355519-.7271104 1.2277597-.7271104.3012987 0 .5845779.0926948.849026.1876624.6030564.2170398 3.8043369 1.7879312 4.3216328 2.0413055l.0686269.0335321c.4774351.2292208.8545455.4102273 1.0733766.7699676.3194805.5290584.1928572 1.9868506-.2873376 3.3211038-.609578 1.6939936-3.2894481 3.0826299-4.5089286 3.1907468l-.1788961.0170455c-.2819805.0277597-.6016234.0590909-1.000974.0590909l-.0944191-.0005452c-.9658464-.0112678-2.6415309-.2079278-6.0576913-1.5725068-3.6667208-1.4647727-7.2837663-4.6050325-10.1852273-8.8423701-.0501623-.0733766-.0847403-.124513-.1035714-.1496753-.7576299-.998539-2.5222403-3.624026-2.5222403-6.4047078 0-3.0896104 1.4788961-4.8464286 2.3530844-5.397565.8243507-.5196428 2.6887987-.7650974 3.0311689-.7795454.0351461-.0014814.0648513-.0027775.0900577-.0039117l.1047884-.0050457c.0548951-.0028933.0444193-.0028933.0863227-.0028933z" fill="#d5d5d5" class="will-change" fill-rule="nonzero"/><path d="m0 0h50v50h-50z"/></g></svg></a></li>
+        
+        <li><a href="https://canadiandataguy.medium.com/" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16"> <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/> </svg>         
+          </a></li>
+        <li><a href="mailto:info@canadiandataguy.com" target="_blank"><svg height="50" viewBox="0 0 50 50" width="50" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="m46.149789 6h-42.29957803c-2.12025316 0-3.85021097 1.72995781-3.85021097 3.85021097v29.78902953c0 2.1202532 1.72995781 3.850211 3.85021097 3.850211h42.29957803c2.1202532 0 3.850211-1.7299578 3.850211-3.850211v-29.78902953c0-2.12025316-1.7299578-3.85021097-3.850211-3.85021097zm-.5590717 2.84810127-20.3270042 17.38396623-20.32700424-17.38396623zm1.5611814 30.79113923c0 .5485232-.4535865 1.0021097-1.0021097 1.0021097h-42.29957803c-.54852321 0-1.0021097-.4535865-1.0021097-1.0021097v-28.8291139l21.48734173 18.3755274c.0105486.0105485.0316456.0210971.0421941.0316456.0105486.0105485.0316456.021097.0421941.0316455.0316456.0210971.0527426.0421941.0843882.0527427.0105485.0105485.0210971.0105485.0316456.021097.0421941.0210971.0843882.0421941.1265823.0632911.0105485 0 .021097.0105486.0316455.0105486.0316456.0105485.0632912.0316455.1054853.0421941.0105485 0 .0316455.0105485.0421941.0105485.0316455.0105485.0632911.021097.0949367.021097.0105485 0 .0316455.0105486.0421941.0105486.0316455.0105485.0738396.0105485.1054852.021097h.0316456c.042194 0 .0949367.0105485.1371308.0105485.042194 0 .0949367 0 .1371308-.0105485h.0316455c.0316456 0 .0738397-.0105485.1054853-.021097.0105485 0 .0316455-.0105486.0421941-.0105486.0316455-.0105485.0632911-.021097.0949367-.021097.0105485 0 .0316455-.0105485.0421941-.0105485.0316455-.0105486.0632911-.0210971.1054852-.0421941.0105485 0 .021097-.0105486.0316456-.0105486.042194-.021097.0843881-.042194.1265822-.0632911.0105486-.0105485.0210971-.0105485.0316456-.021097.0316456-.0210971.0527426-.0316456.0843882-.0527427.0105485-.0105485.0316456-.021097.0421941-.0316455s.0316456-.0210971.0421941-.0316456l20.9810126-17.9219409z" fill="#d5d5d5" class="will-change" fill-rule="nonzero"/><path d="m0 0h50v50h-50z"/></g></svg></a></li>
+    </ul>
+</nav>
+<style>
+.sharebuttons, .sharebuttons ul {display: flex; margin: 0.25rem 0; align-items: center;}
+.sharebuttons span {color: #bbb;}
+.sharebuttons ul li {list-style: none; margin: 0;}
+.sharebuttons ul li a {margin: 0 0.5rem; display: block;}
+.sharebuttons ul li:first-child a {margin: 0 0.2rem 0 0.5rem;}
+.sharebuttons ul li a svg {width: auto; height:4.1rem; display: block;}
+.will-change {transition: 250ms;} 
+nav.sharebuttons li > a:hover .will-change { fill: #444444 }
+</style>
+        
+        
+
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+<div id="copyright">
+    <div class="container">
+        <div class="col-md-12">
+            
+            <p class="pull-left">Copyright (c) 2023, Canadian Data Guy Corp; all rights reserved.</p>
+            
+            <p class="pull-right">
+              Template by <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+              
+
+              Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+    
+
+    
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0/jquery.counterup.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax.js"></script>
+
+
+<script src="/js/front.js"></script>
+
+
+<script src="/js/owl.carousel.min.js"></script>
+
+
+
+  </body>
+</html>

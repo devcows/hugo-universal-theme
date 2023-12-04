@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graviton on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/graviton/</link>
+    <description>Recent content in graviton on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/graviton/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Cut Your Data Processing Costs by 30% with Graviton</title>
+      <link>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</link>
+      <pubDate>Sun, 23 Apr 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</guid>
+      <description>How to Cut Your Data Processing Costs by 30% with Graviton What is AWS Graviton ? AWS Graviton is a family of Arm-based processors that are designed by AWS to provide cost-effective and high-performance computing for cloud workloads. Graviton processors are built using 64-bit Arm, which are optimized for power efficiency and performance. They offer a more cost-effective alternative to traditional x86-based processors, making them a popular choice for running a variety of workloads on AWS.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>optimize on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/optimize/</link>
+    <description>Recent content in optimize on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Oct 2022 04:09:03 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/optimize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Merge Multiple Spark Streams Into A Delta Table</title>
+      <link>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</guid>
+      <description>Merge Multiple Spark Streams Into A Delta Table with working code This blog will discuss how to read from multiple Spark Streams and merge/upsert data into a single Delta Table. We will also optimize/cluster data of the delta table.
+Overall, the process works in the following manner:
+Read data from a streaming source
+Use this special function ***foreachBatch. ***Using this we will call any user-defined function responsible for all the processing.</description>
+    </item>
+    <item>
+      <title>Using Spark Streaming to merge/upsert data into a Delta Lake with working code</title>
+      <link>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</link>
+      <pubDate>Wed, 12 Oct 2022 04:06:14 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</guid>
+      <description>Using Spark Streaming to merge/upsert data into a Delta Lake with working code This blog will discuss how to read from a Spark Streaming and merge/upsert data into a Delta Lake. We will also optimize/cluster data of the delta table. In the end, we will show how to start a streaming pipeline with the previous target table as the source.
+Overall, the process works in the following manner, we read data from a streaming source and use this special function ***foreachBatch.</description>
+    </item>
+    <item>
+      <title>ARC Uses a Lakehouse Architecture for Real-time Data Insights That Optimize Drilling Performance and Lower Carbon Emissions</title>
+      <link>https://canadiandataguy.com/blog/arcresources/</link>
+      <pubDate>Tue, 24 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/arcresources/</guid>
+      <description>ARC has deployed the Databricks Lakehouse Platform to enable its drilling engineers to monitor operational metrics in near real-time, so that we can proactively identify any potential issues and enable agile mitigation measures. In addition to improving drilling precision, this solution has helped us in reducing drilling time for one of our fields. Time saving translates to reduction in fuel used and therefore a reduction in CO2 footprint that result from drilling operations.</description>
+    </item>
+    <item>
+      <title>How Audantic Uses Databricks Delta Live Tables to Increase Productivity for Real Estate Market Segments</title>
+      <link>https://canadiandataguy.com/blog/audantic/</link>
+      <pubDate>Thu, 05 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/audantic/</guid>
+      <description>To support our data-driven initiatives, we had ‘stitched’ together various services for ETL, orchestration, ML leveraging AWS, Airflow, where we saw some success but quickly turned into an overly complex system that took nearly five times as long to develop compared to the new solution. Our team captured high-level metrics comparing our previous implementation and current lakehouse solution. As you can see from the table below, we spent months developing our previous solution and had to write approximately 3 times as much code.</description>
+    </item>
+  </channel>
+</rss>

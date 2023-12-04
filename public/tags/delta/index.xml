@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>delta on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/delta/</link>
+    <description>Recent content in delta on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/delta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp; Insights</title>
+      <link>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</guid>
+      <description>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp;amp; Insights Delta Lake is a powerful technology for bringing ACID transactions to your data lakes. It allows multiple operations to be performed on a dataset concurrently. However, dealing with concurrent operations can sometimes be tricky and may lead to issues such as ConcurrentAppendException, ConcurrentDeleteReadException, and ConcurrentDeleteDeleteException. In this blog post, we will explore why these issues occur and how to handle them effectively using a Python function, and how to avoid them with table design and using isolation levels and write conflicts.</description>
+    </item>
+    <item>
+      <title>Spark Streaming Best Practices-A bare minimum checklist for Beginners and Advanced Users</title>
+      <link>https://canadiandataguy.com/blog/2023-04-18-spark-streaming-best-practices-a-bare-minimum-checklist-for-beginners-and-advanced-users/</link>
+      <pubDate>Wed, 19 Apr 2023 01:04:45 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-04-18-spark-streaming-best-practices-a-bare-minimum-checklist-for-beginners-and-advanced-users/</guid>
+      <description>Spark Streaming Best Practices-A bare minimum checklist for Beginners and Advanced Users Most good things in life come with a nuance. While learning Streaming a few years ago, I spent hours searching for best practices. However, I would find answers to be complicated to make sense for a beginner’s mind. Thus, I devised a set of best practices that should hold true in almost all scenarios.
+The below checklist is not ordered, you should aim to check off as many items as you can.</description>
+    </item>
+    <item>
+      <title>ARC Uses a Lakehouse Architecture for Real-time Data Insights That Optimize Drilling Performance and Lower Carbon Emissions</title>
+      <link>https://canadiandataguy.com/blog/arcresources/</link>
+      <pubDate>Tue, 24 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/arcresources/</guid>
+      <description>ARC has deployed the Databricks Lakehouse Platform to enable its drilling engineers to monitor operational metrics in near real-time, so that we can proactively identify any potential issues and enable agile mitigation measures. In addition to improving drilling precision, this solution has helped us in reducing drilling time for one of our fields. Time saving translates to reduction in fuel used and therefore a reduction in CO2 footprint that result from drilling operations.</description>
+    </item>
+    <item>
+      <title>How Audantic Uses Databricks Delta Live Tables to Increase Productivity for Real Estate Market Segments</title>
+      <link>https://canadiandataguy.com/blog/audantic/</link>
+      <pubDate>Thu, 05 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/audantic/</guid>
+      <description>To support our data-driven initiatives, we had ‘stitched’ together various services for ETL, orchestration, ML leveraging AWS, Airflow, where we saw some success but quickly turned into an overly complex system that took nearly five times as long to develop compared to the new solution. Our team captured high-level metrics comparing our previous implementation and current lakehouse solution. As you can see from the table below, we spent months developing our previous solution and had to write approximately 3 times as much code.</description>
+    </item>
+  </channel>
+</rss>

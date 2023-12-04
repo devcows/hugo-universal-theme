@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spark on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/spark/</link>
+    <description>Recent content in spark on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 May 2022 17:35:21 -0500</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARC Uses a Lakehouse Architecture for Real-time Data Insights That Optimize Drilling Performance and Lower Carbon Emissions</title>
+      <link>https://canadiandataguy.com/blog/arcresources/</link>
+      <pubDate>Tue, 24 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/arcresources/</guid>
+      <description>ARC has deployed the Databricks Lakehouse Platform to enable its drilling engineers to monitor operational metrics in near real-time, so that we can proactively identify any potential issues and enable agile mitigation measures. In addition to improving drilling precision, this solution has helped us in reducing drilling time for one of our fields. Time saving translates to reduction in fuel used and therefore a reduction in CO2 footprint that result from drilling operations.</description>
+    </item>
+    <item>
+      <title>How Audantic Uses Databricks Delta Live Tables to Increase Productivity for Real Estate Market Segments</title>
+      <link>https://canadiandataguy.com/blog/audantic/</link>
+      <pubDate>Thu, 05 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/audantic/</guid>
+      <description>To support our data-driven initiatives, we had ‘stitched’ together various services for ETL, orchestration, ML leveraging AWS, Airflow, where we saw some success but quickly turned into an overly complex system that took nearly five times as long to develop compared to the new solution. Our team captured high-level metrics comparing our previous implementation and current lakehouse solution. As you can see from the table below, we spent months developing our previous solution and had to write approximately 3 times as much code.</description>
+    </item>
+  </channel>
+</rss>

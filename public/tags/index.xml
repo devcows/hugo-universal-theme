@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/</link>
+    <description>Recent content in Tags on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>concurrency</title>
+      <link>https://canadiandataguy.com/tags/concurrency/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>delta</title>
+      <link>https://canadiandataguy.com/tags/delta/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/delta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>dbsql</title>
+      <link>https://canadiandataguy.com/tags/dbsql/</link>
+      <pubDate>Fri, 15 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/dbsql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>cost-savings</title>
+      <link>https://canadiandataguy.com/tags/cost-savings/</link>
+      <pubDate>Sun, 23 Apr 2023 21:38:16 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/cost-savings/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>parallelization</title>
+      <link>https://canadiandataguy.com/tags/parallelization/</link>
+      <pubDate>Sun, 23 Apr 2023 21:38:16 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/parallelization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>python</title>
+      <link>https://canadiandataguy.com/tags/python/</link>
+      <pubDate>Sun, 23 Apr 2023 21:38:16 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>graviton</title>
+      <link>https://canadiandataguy.com/tags/graviton/</link>
+      <pubDate>Sun, 23 Apr 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/graviton/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>checkpoint</title>
+      <link>https://canadiandataguy.com/tags/checkpoint/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/checkpoint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>spark streaming</title>
+      <link>https://canadiandataguy.com/tags/spark-streaming/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/spark-streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>streaming</title>
+      <link>https://canadiandataguy.com/tags/streaming/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>delta live tables</title>
+      <link>https://canadiandataguy.com/tags/delta-live-tables/</link>
+      <pubDate>Fri, 03 Mar 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/delta-live-tables/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>job_id</title>
+      <link>https://canadiandataguy.com/tags/job_id/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/job_id/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>run_id</title>
+      <link>https://canadiandataguy.com/tags/run_id/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/run_id/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>workspace</title>
+      <link>https://canadiandataguy.com/tags/workspace/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/workspace/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>books</title>
+      <link>https://canadiandataguy.com/tags/books/</link>
+      <pubDate>Fri, 27 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/books/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>kafka</title>
+      <link>https://canadiandataguy.com/tags/kafka/</link>
+      <pubDate>Wed, 25 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/kafka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>foreachBatch</title>
+      <link>https://canadiandataguy.com/tags/foreachbatch/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/foreachbatch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>merge</title>
+      <link>https://canadiandataguy.com/tags/merge/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/merge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>optimize</title>
+      <link>https://canadiandataguy.com/tags/optimize/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/optimize/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>z order</title>
+      <link>https://canadiandataguy.com/tags/z-order/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/z-order/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>spark</title>
+      <link>https://canadiandataguy.com/tags/spark/</link>
+      <pubDate>Tue, 24 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/tags/spark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>coaching</title>
+      <link>https://canadiandataguy.com/tags/coaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/coaching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>interviewing</title>
+      <link>https://canadiandataguy.com/tags/interviewing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/interviewing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>youtube</title>
+      <link>https://canadiandataguy.com/tags/youtube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://canadiandataguy.com/tags/youtube/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

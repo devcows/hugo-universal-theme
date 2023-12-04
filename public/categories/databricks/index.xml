@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>databricks on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/categories/databricks/</link>
+    <description>Recent content in databricks on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Sep 2023 17:29:06 +0000</lastBuildDate>
+    <atom:link href="https://canadiandataguy.com/categories/databricks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp; Insights</title>
+      <link>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</link>
+      <pubDate>Fri, 29 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-29-solvingdeltatableconcurrencyissuespracticalcodesolutionsinsights/</guid>
+      <description>Solving Delta Table Concurrency Issues: Practical Code Solutions &amp;amp; Insights Delta Lake is a powerful technology for bringing ACID transactions to your data lakes. It allows multiple operations to be performed on a dataset concurrently. However, dealing with concurrent operations can sometimes be tricky and may lead to issues such as ConcurrentAppendException, ConcurrentDeleteReadException, and ConcurrentDeleteDeleteException. In this blog post, we will explore why these issues occur and how to handle them effectively using a Python function, and how to avoid them with table design and using isolation levels and write conflicts.</description>
+    </item>
+    <item>
+      <title>Databricks SQL Dashboards Guide: Tips and Tricks to Master Thems</title>
+      <link>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</link>
+      <pubDate>Fri, 15 Sep 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-09-15-databricks-sql-dashboards-guide-tips-and-tricks-to-master-them/</guid>
+      <description>Databricks SQL Dashboards Guide: Tips and Tricks to Master Them Welcome to the world of Databricks SQL Dashboards! You&amp;rsquo;re in the right place if you want to learn how to go beyond just building visualizations and add some tricks to your arsenal. This guide will walk you through creating, managing, and optimizing your Databricks SQL dashboards.
+1. Getting Started with Viewing and Organizing Dashboards: Accessing Your Dashboards: Navigate to the workspace browser and click “Workspace” in the sidebar.</description>
+    </item>
+    <item>
+      <title>How to Cut Your Data Processing Costs by 30% with Graviton</title>
+      <link>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</link>
+      <pubDate>Sun, 23 Apr 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-04-23-how-to-cut-your-data-processing-costs-by-30-with-graviton/</guid>
+      <description>How to Cut Your Data Processing Costs by 30% with Graviton What is AWS Graviton ? AWS Graviton is a family of Arm-based processors that are designed by AWS to provide cost-effective and high-performance computing for cloud workloads. Graviton processors are built using 64-bit Arm, which are optimized for power efficiency and performance. They offer a more cost-effective alternative to traditional x86-based processors, making them a popular choice for running a variety of workloads on AWS.</description>
+    </item>
+    <item>
+      <title>How to write your first Spark application with Stream-Stream Joins with working code.</title>
+      <link>https://canadiandataguy.com/blog/spark-stream-stream-join/</link>
+      <pubDate>Thu, 23 Mar 2023 06:32:42 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/spark-stream-stream-join/</guid>
+      <description>How to write your first Spark application with Stream-Stream Joins with working code. Have you been waiting to try Streaming but cannot take the plunge?
+In a single blog, we will teach you whatever needs to be understood about Streaming Joins. We will give you a working code which you can use for your next Streaming Pipeline.
+The steps involved:
+Create a fake dataset at scale Set a baseline using traditional SQL Define Temporary Streaming Views Inner Joins with optional Watermarking Left Joins with Watermarking The cold start edge case: withEventTimeOrder Cleanup What is Stream-Stream Join?</description>
+    </item>
+    <item>
+      <title>Dive Deep into Spark Streaming Checkpoint</title>
+      <link>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</link>
+      <pubDate>Tue, 21 Mar 2023 06:14:44 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/frombeginnertoproacomprehensiveguidetounderstandingthesparkstreamingcheckpoint/</guid>
+      <description>From Beginner to Pro: A Comprehensive Guide to understanding the Spark Streaming Checkpoint Spark is a distributed computing framework that allows for processing large datasets in parallel across a cluster of computers. When running a Spark job, it is not uncommon to encounter failures due to various issues such as network or hardware failures, software bugs, or even insufficient memory. One way to address these issues is to re-run the entire job from the beginning, which can be time-consuming and inefficient.</description>
+    </item>
+    <item>
+      <title>Delta Live Tables Advanced Q &amp; A</title>
+      <link>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</link>
+      <pubDate>Fri, 03 Mar 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</guid>
+      <description>Delta Live Tables Advanced Q &amp;amp; A This is primarily written for those folks who are trying to handle edge cases.
+Q1.) DLT Pipeline was deleted, but the Delta table exists. What to do now? What if the owner has left the org Step 1.) Verify via CLI if the pipeline has been deleted
+databricks --profile &amp;lt;your_env&amp;gt; pipelines list databricks --profile &amp;lt;your_env&amp;gt; pipelines get --pipeline-id &amp;lt;deleted_pipeline_id&amp;gt; Step 2.) Create a new pipeline with the existing storage path</description>
+    </item>
+    <item>
+      <title>Databricks Workspace Best Practices- A checklist for both beginners and Advanced Users</title>
+      <link>https://canadiandataguy.com/blog/databricksworkspacebestpracticesachecklistforbothbeginnersandadvancedusers/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/databricksworkspacebestpracticesachecklistforbothbeginnersandadvancedusers/</guid>
+      <description>Databricks Workspace Best Practices- A checklist for both beginners and Advanced Users Most good things in life come with a nuance. While learning Databricks a few years ago, I spent hours searching for best practices. Thus, I devised a set of best rules that should hold in almost all scenarios. These will help you start on the right foot.
+Here are some basic rules for using Databricks Workspace: Version control everything: Use Repos and organize your notebooks and folders: Keep your notebooks and files in folders to make them easy to find and manage.</description>
+    </item>
+    <item>
+      <title>How to get the Job ID and Run ID for a Databricks Job</title>
+      <link>https://canadiandataguy.com/blog/howtogetthejobidandrunidforadatabricksjob/</link>
+      <pubDate>Thu, 23 Feb 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtogetthejobidandrunidforadatabricksjob/</guid>
+      <description>How to get the Job ID and Run ID for a Databricks Job with working code Sometimes there is a need to store or print system-generated values like job_id, run_id, start_time, etc. These entities are called ‘task parameter variables’. A list of supported parameters is listed here.
+This is a simple 2-step process:
+Pass the parameter when defining the job/task
+Get/Fetch and print the values
+Step 1: Pass the parameters Step 2: Get/Fetch and print the values print(f&amp;quot;&amp;quot;&amp;quot; job_id: {dbutils.</description>
+    </item>
+    <item>
+      <title>How I wrote my first Spark Streaming Application with Joins?</title>
+      <link>https://canadiandataguy.com/blog/howiwrotemyfirstsparkstreamingapplicationwithjoins/</link>
+      <pubDate>Wed, 25 Jan 2023 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howiwrotemyfirstsparkstreamingapplicationwithjoins/</guid>
+      <description>How I wrote my first Spark Streaming Application with Joins with working code When I started learning about Spark Streaming, I could not find enough code/material which could kick-start my journey and build my confidence. I wrote this blog to fill this gap which could help beginners understand how simple streaming is and build their first application.
+In this blog, I will explain most things by first principles to increase your understanding and confidence and you walk away with code for your first Streaming application.</description>
+    </item>
+    <item>
+      <title>How to parameterize Delta Live Tables and import reusable functions</title>
+      <link>https://canadiandataguy.com/blog/howtoparameterizedeltalivetablesandimportreusablefunctions/</link>
+      <pubDate>Tue, 13 Dec 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/howtoparameterizedeltalivetablesandimportreusablefunctions/</guid>
+      <description>How to parameterize Delta Live Tables and import reusable functions with working code This blog will discuss passing custom parameters to a Delta Live Tables (DLT) pipeline. Furthermore, we will discuss importing functions defined in other files or locations. You can import files from the current directory or a specified location using sys.path.append().
+Update: As of *December 2022, you can directly import files if the reusable_functions.py file exists in the same repository by just using the import command, which is the preferred approach.</description>
+    </item>
+    <item>
+      <title>Merge Multiple Spark Streams Into A Delta Table</title>
+      <link>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</link>
+      <pubDate>Thu, 13 Oct 2022 04:09:03 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/mergemultiplesparkstreamsintoadeltatable/</guid>
+      <description>Merge Multiple Spark Streams Into A Delta Table with working code This blog will discuss how to read from multiple Spark Streams and merge/upsert data into a single Delta Table. We will also optimize/cluster data of the delta table.
+Overall, the process works in the following manner:
+Read data from a streaming source
+Use this special function ***foreachBatch. ***Using this we will call any user-defined function responsible for all the processing.</description>
+    </item>
+    <item>
+      <title>Using Spark Streaming to merge/upsert data into a Delta Lake with working code</title>
+      <link>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</link>
+      <pubDate>Wed, 12 Oct 2022 04:06:14 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/usingsparkstreamingtomergeupsertdataintoadeltalakewithworkingcode/</guid>
+      <description>Using Spark Streaming to merge/upsert data into a Delta Lake with working code This blog will discuss how to read from a Spark Streaming and merge/upsert data into a Delta Lake. We will also optimize/cluster data of the delta table. In the end, we will show how to start a streaming pipeline with the previous target table as the source.
+Overall, the process works in the following manner, we read data from a streaming source and use this special function ***foreachBatch.</description>
+    </item>
+    <item>
+      <title>How Audantic Uses Databricks Delta Live Tables to Increase Productivity for Real Estate Market Segments</title>
+      <link>https://canadiandataguy.com/blog/audantic/</link>
+      <pubDate>Thu, 05 May 2022 17:35:21 -0500</pubDate>
+      <guid>https://canadiandataguy.com/blog/audantic/</guid>
+      <description>To support our data-driven initiatives, we had ‘stitched’ together various services for ETL, orchestration, ML leveraging AWS, Airflow, where we saw some success but quickly turned into an overly complex system that took nearly five times as long to develop compared to the new solution. Our team captured high-level metrics comparing our previous implementation and current lakehouse solution. As you can see from the table below, we spent months developing our previous solution and had to write approximately 3 times as much code.</description>
+    </item>
+  </channel>
+</rss>

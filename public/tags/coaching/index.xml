@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>coaching on Canadian Data Guy</title>
+    <link>https://canadiandataguy.com/tags/coaching/</link>
+    <description>Recent content in coaching on Canadian Data Guy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://canadiandataguy.com/tags/coaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1 on 1 Interview Coaching</title>
+      <link>https://canadiandataguy.com/blog/1-on-1-coaching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/1-on-1-coaching/</guid>
+      <description>Welcome! I am a Super Coach . I have worked at some of the biggest tech companies, including Databricks &amp;amp; Amazon. I make great efforts to use my platform to share resources and show folks the path of growth that exists without taking the management ladder track while inspiring many immigrants and people of colour to understand and realize their true market potential. To further my mission, I help folks negotiate job offers, $2+ Million negotiated so far.</description>
+    </item>
+    <item>
+      <title>Youtube</title>
+      <link>https://canadiandataguy.com/blog/youtube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/youtube/</guid>
+      <description> </description>
+    </item>
+  </channel>
+</rss>
