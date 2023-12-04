@@ -21,7 +21,7 @@ jobs:
       - name: Build Site with Hugo
         run: hugo
 
-      - name: List output for debugging
+      - name: List output for current directory
         run: ls -l .
 
       - name: List output for debugging
