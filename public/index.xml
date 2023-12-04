@@ -202,14 +202,6 @@ Overall, the process works in the following manner, we read data from a streamin
 Audantic To support our data-driven initiatives, we had ‘stitched’ together various services for ETL, orchestration, ML leveraging AWS, Airflow, where we saw some success but quickly turned into an overly complex system that took nearly five times as long to develop compared to the new solution. Our team captured high-level metrics comparing our previous implementation and current lakehouse solution.</description>
     </item>
     <item>
-      <title>FAQ</title>
-      <link>https://canadiandataguy.com/faq/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://canadiandataguy.com/faq/</guid>
-      <description>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-1. WHAT TO DO IF I HAVE STILL NOT RECEIVED THE ORDER? Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</description>
-    </item>
-    <item>
       <title>Youtube</title>
       <link>https://canadiandataguy.com/blog/youtube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -186,7 +186,7 @@ pluralizelisttitles = false
     logo_small = "img/cdg5.png"
     contact_url = "/contact"
     address = """<p class="text-uppercase"><strong>Canadian Data Guy Corp.</strong>
-        <br>Toronto, Canada
+        <br>Calgary, Canada
         </p>
       """
 

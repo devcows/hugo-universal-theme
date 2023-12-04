@@ -1,6 +1,6 @@
 ---
 title: "Footnotes"
-date: 2022-10-12T04:06:14-05:00
+date: 2023-10-12T04:06:14-05:00
 draft: true
 ---
 
