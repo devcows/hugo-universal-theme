@@ -1,14 +1,15 @@
 {
-    "name": "Firebase and Hugo Development",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
-    "settings": { 
-        "terminal.integrated.shell.linux": "/bin/bash"
+    "name": "Your Environment Name",
+    "build": {
+        "dockerfile": "Dockerfile",
+        // If your Dockerfile is in a subdirectory, specify the path like "context": ".devcontainer"
+    },
+    "settings": {
+        // Any VS Code settings you want to apply
     },
     "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        // List any VS Code extensions you want pre-installed
     ],
-    "forwardPorts": [4000, 5000],
-    "postCreateCommand": "npm install -g firebase-tools && wget https://github.com/gohugoio/hugo/releases/download/v0.82.0/hugo_0.82.0_Linux-64bit.deb && dpkg -i hugo_0.82.0_Linux-64bit.deb",
-    "remoteUser": "vscode"
+    "forwardPorts": [1313, 5000],
+    "postCreateCommand": "echo 'Environment setup complete!'"
 }
