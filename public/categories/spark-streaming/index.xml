@@ -21,9 +21,8 @@ The below checklist is not ordered, you should aim to check off as many items as
       <link>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</link>
       <pubDate>Fri, 03 Mar 2023 17:35:21 -0500</pubDate>
       <guid>https://canadiandataguy.com/blog/deltalivetablesadvancedqa/</guid>
-      <description>Delta Live Tables Advanced Q &amp;amp; A This is primarily written for those folks who are trying to handle edge cases.
-Q1.) DLT Pipeline was deleted, but the Delta table exists. What to do now? What if the owner has left the org Step 1.) Verify via CLI if the pipeline has been deleted
-databricks --profile &amp;lt;your_env&amp;gt; pipelines list databricks --profile &amp;lt;your_env&amp;gt; pipelines get --pipeline-id &amp;lt;deleted_pipeline_id&amp;gt; Step 2.) Create a new pipeline with the existing storage path</description>
+      <description>Delta Live Tables Advanced Q &amp;amp; A This is primarily written for those trying to handle edge cases.
+Q1.) How can a single/unified table be built with historical backfill and ongoing streaming Kafka data? The streaming table built using DLT allows writes to the table outside of the DLT. Thus, you can build and run your DLT pipeline with Kafka as a source, generating the physical table with a name. Then, you can do a streaming write to this table outside DLT.</description>
     </item>
     <item>
       <title>How I wrote my first Spark Streaming Application with Joins?</title>

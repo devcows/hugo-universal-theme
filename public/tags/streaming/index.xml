@@ -6,8 +6,16 @@
     <description>Recent content in streaming on Canadian Data Guy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Mar 2023 06:32:42 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Jun 2023 17:29:06 +0000</lastBuildDate>
     <atom:link href="https://canadiandataguy.com/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplifying Real-time Data Processing with Spark Streaming’s foreachBatch with working code</title>
+      <link>https://canadiandataguy.com/blog/2023-06-06-simplifying-real-time-data-processing-with-spark-streamings-foreachbatch-with-working-code/</link>
+      <pubDate>Tue, 06 Jun 2023 17:29:06 +0000</pubDate>
+      <guid>https://canadiandataguy.com/blog/2023-06-06-simplifying-real-time-data-processing-with-spark-streamings-foreachbatch-with-working-code/</guid>
+      <description>Simplifying Real-time Data Processing with Spark Streaming’s foreachBatch with working code Comprehensive guide to implementing a fully operational Streaming Pipeline that can be tailored to your specific needs. In this working example, you will learn how to parameterize the ForEachBatch function.
+Spark Streaming &amp;amp; foreachBatch Spark Streaming is a powerful tool for processing streaming data. It allows you to process data as it arrives, without having to wait for the entire dataset to be available.</description>
+    </item>
     <item>
       <title>How to write your first Spark application with Stream-Stream Joins with working code.</title>
       <link>https://canadiandataguy.com/blog/spark-stream-stream-join/</link>
