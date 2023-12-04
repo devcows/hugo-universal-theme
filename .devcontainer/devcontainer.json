@@ -1,7 +1,14 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-  },
-  "ghcr.io/devcontainers/features/hugo:1": {},
-  "ghcr.io/devcontainers-contrib/features/firebase-cli:2": {}
+    "name": "Firebase and Hugo Development",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14",
+    "settings": { 
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+    ],
+    "forwardPorts": [4000, 5000],
+    "postCreateCommand": "npm install -g firebase-tools && wget https://github.com/gohugoio/hugo/releases/download/v0.82.0/hugo_0.82.0_Linux-64bit.deb && dpkg -i hugo_0.82.0_Linux-64bit.deb",
+    "remoteUser": "vscode"
 }
