@@ -22,6 +22,9 @@ jobs:
         run: hugo
 
       - name: List output for debugging
+        run: ls -l .
+
+      - name: List output for debugging
         run: ls -l public
 
       - name: Deploy to Firebase
