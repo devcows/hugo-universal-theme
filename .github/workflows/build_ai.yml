@@ -21,9 +21,6 @@ jobs:
       - name: List the folder
         run: ls -l .
 
-      - name: List output for debugging
-        run: ls -l ./public
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
