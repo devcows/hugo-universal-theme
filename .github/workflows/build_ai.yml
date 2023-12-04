@@ -7,7 +7,7 @@ jobs:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     defaults:
       run:
-        working-directory: ./exampleSite
+        working-directory: .
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
