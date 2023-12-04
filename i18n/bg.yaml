@@ -1,0 +1,116 @@
+- id: home
+  translation: "Начало"
+
+- id: templateBy
+  translation: "Шаблон от"
+
+- id: portedBy
+  translation: "Портиран към Хюго от"
+
+- id: contactGoTo
+  translation: "Към страницата за контакт"
+
+- id: contactAddrTitle
+  translation: "Адрес"
+
+- id: contactTitle
+  translation: "Контакт"
+
+- id: contactForm
+  translation: "Формуляр за връзка"
+
+- id: contactName
+  translation: "Вашето име"
+
+- id: contactMail
+  translation: "Вашият имейл"
+
+- id: contactMessage
+  translation: "Вашето съобщение"
+
+- id: contactSend
+  translation: "Изпрати съобщение"
+
+- id: navHome
+  translation: "към началната страница"
+
+- id: navToggle
+  translation: "Превключи навигация"
+
+- id: categoriesTitle
+  translation: "Категории"
+
+- id: searchTitle
+  translation: "Търсене"
+
+- id: tagsTitle
+  translation: "Етикети"
+
+- id: continueReading
+  translation: "Продължи да четеш"
+
+- id: readMore
+  translation: "Прочети още"
+
+- id: authorBy
+  translation: "От"
+
+- id: recentPosts
+  translation: "Нови постове"
+
+- id: aboutUs
+  translation: "За нас"
+
+- id: newer
+  translation: "По-нови"
+
+- id: older
+  translation: "По-стари"
+
+- id: publishedOn
+  translation: "на"
+
+- id: 404Error
+  translation: "Грешка 404: Страницата не е намерена"
+
+- id: 404Message
+  translation: "Извинете - тази страница вече не е тук"
+
+- id: 404NavHome
+  translation: "Към началната страница"
+
+- id: January
+  translation: Януари
+
+- id: February
+  translation: Февруари
+
+- id: March
+  translation: Март
+
+- id: April
+  translation: Април
+
+- id: May
+  translation: Май
+
+- id: June
+  translation: Юни
+
+- id: July
+  translation: Юли
+
+- id: August
+  translation: Август
+
+- id: September
+  translation: Септември
+
+- id: October
+  translation: Октомври
+
+- id: November
+  translation: Ноември
+
+- id: December
+  translation: Декември
