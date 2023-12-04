@@ -9,7 +9,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: public
+        working-directory: ./public
 
     steps:
       - name: Checkout repository
