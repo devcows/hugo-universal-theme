@@ -38,3 +38,4 @@ jobs:
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
+        working-directory: hugo-universal-theme/exampleSite
