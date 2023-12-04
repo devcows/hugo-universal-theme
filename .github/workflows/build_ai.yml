@@ -12,9 +12,6 @@ jobs:
         working-directory: ./public
 
     steps:
-      - name: Create public directory (if needed)
-        run: mkdir -p public
-
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
