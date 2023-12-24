@@ -1,0 +1,4 @@
+{{/* responsive image support for Markdown Post */}}
+<p>
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" class="img-responsive center-block" {{ with .Title }} title="{{ . }}"{{ end }} />
+</p>
