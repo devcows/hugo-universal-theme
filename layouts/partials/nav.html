@@ -48,7 +48,7 @@
                     <!-- Check if the first child marks a menu section identifier -->
                     {{ $hasSections := (hasPrefix (index .Children 0).Identifier "section.") }}
                     <li class="dropdown{{ if $hasSections }} use-yamm yamm-fw{{end}} {{ $active }}">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ .Name }} <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ i18n .Identifier | default .Name}} <span class="caret"></span></a>
                         {{ if $hasSections }}
                         <ul class="dropdown-menu">
                             <li>
@@ -56,18 +56,18 @@
                             <div class="row">
                                 {{ if ne .URL "" }}
                                 <div class="col-sm-6">
-                                    <img src="{{ .URL }}" class="img-responsive hidden-xs"/>
+                                    <img src="{{ .URL | absLangURL }}" class="img-responsive hidden-xs"/>
                                 </div>
                                 {{ end }}
                                 <div class="col-sm-3">
                                 {{ range .Children.ByWeight }}
                                     {{ $column := printf "%s" .Post }}
                                     {{ if eq $column "1" }}
-                                    <h5>{{ .Name }}</h5>
+                                    <h5>{{ i18n .Identifier | default .Name}}</h5>
                                     {{ if .HasChildren }}
                                     <ul>
                                     {{ range .Children.ByWeight }}
-                                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                    <li><a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a></li>
                                     {{- end }}
                                     </ul>
                                     {{ end }}
@@ -78,11 +78,11 @@
                                 {{ range .Children.ByWeight }}
                                     {{ $column := printf "%s" .Post }}
                                     {{ if eq $column "2" }}
-                                    <h5>{{ .Name }}</code></h5>
+                                    <h5>{{ i18n .Identifier | default .Name}}</code></h5>
                                     {{ if .HasChildren }}
                                     <ul>
                                     {{ range .Children.ByWeight }}
-                                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                    <li><a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a></li>
                                     {{ end }}
                                     </ul>
                                     {{ end }}
@@ -94,11 +94,11 @@
                                 {{ range .Children }}
                                     {{ $column := printf "%s" .Post }}
                                     {{ if eq $column "3" }}
-                                    <h5>{{ .Name }}</code></h5>
+                                    <h5>{{ i18n .Identifier | default .Name}}</code></h5>
                                     {{ if .HasChildren }}
                                     <ul>
                                     {{ range .Children.ByWeight }}
-                                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                    <li><a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a></li>
                                     {{ end }}
                                     </ul>
                                     {{ end }}
@@ -109,11 +109,11 @@
                                 {{ range .Children }}
                                     {{ $column := printf "%s" .Post }}
                                     {{ if eq $column "4" }}
-                                    <h5>{{ .Name }}</code></h5>
+                                    <h5>{{ i18n .Identifier | default .Name}}</code></h5>
                                     {{ if .HasChildren }}
                                     <ul>
                                     {{ range .Children.ByWeight }}
-                                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                                    <li><a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a></li>
                                     {{ end }}
                                     </ul>
                                     {{ end }}
@@ -128,14 +128,14 @@
                         {{ else }}
                         <ul class="dropdown-menu">
                             {{ range .Children.ByWeight }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            <li><a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a></li>
                             {{ end }}
                         </ul>
                         {{ end }}
                     </li>
                   {{ else }}
                   <li class="dropdown {{ $active }}">
-                    <a href="{{ .URL }}">{{ .Name }}</a>
+                    <a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name}}</a>
                   </li>
                   {{ end }}
                   {{ end }}
