@@ -28,6 +28,7 @@ This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/unive
     - [Google Analytics](#google-analytics)
     - [Logo](#logo)
     - [Contact form](#contact-form)
+    - [Documentation template](#documentation-template)
     - [Menu](#menu)
     - [Sidebar widgets](#sidebar-widgets)
     - [Top bar](#top-bar)
@@ -177,6 +178,24 @@ To enable the form in the contact page, just type your Formspree email in the `c
     enableRecaptchaInContactForm = true
     googleRecaptchaKey = "site_key_for_google_recaptcha"
 ```
+
+
+### Documentation template
+
+You can optionally create documentation pages using a specific template.
+
+A documentation page is just like a regular Hugo page. But it must be in the `docs` folder of the `content` directory.
+
+This template provides a wider content page thanks to the `container-fluid` div, a menu listing all the documentatins pages on the left sidebar and a table of contents for the current page on the right sidebar. You can enable or disable those two sidebars by setting `params.docs.menu` and `params.docs.toc` to `true` or `false`.
+
+Example configuration:
+
+```toml
+[params.docs]
+    menu = true
+    toc = true
+```
+
 
 ### Menu
 
