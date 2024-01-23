@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Kategori"
 
+- id: menuTitle
+  translation: "Menú"
+
 - id: searchTitle
   translation: "Cari"
 
 - id: tagsTitle
   translation: "Tags"
+
+- id: tocTitle
+  translation: "Ringkasan"
 
 - id: continueReading
   translation: "Lanjutkan membaca"

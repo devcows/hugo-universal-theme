@@ -1,0 +1,49 @@
+{{ $docsSection := default "docs" .Site.Params.docsSection  }}
+{{ if eq $docsSection "*" }}
+{{ $docsSection = "/" }}{{/* Backward compatibility */}}
+{{ end }}
+
+{{ with .Site.GetPage $docsSection }}
+{{ template "docs-section-children" (dict "Section" . "CurrentPage" $) }}
+{{ end }}
+
+{{ define "docs-section-children" }}{{/* (dict "Section" .Section "CurrentPage" .CurrentPage) */}}
+<ul>
+    {{ range (where .Section.Pages "Params.docshidden" "ne" true) }}
+    {{ if .IsSection }}
+        <li {{- if .Params.docsFlatSection }} class="docs-section-flat" {{ end -}}>
+        {{ template "docs-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+        {{ template "docs-section-children" (dict "Section" . "CurrentPage" $.CurrentPage) }}
+        </li>
+    {{ else if and .IsPage .Content }}
+        <li>
+        {{ template "docs-page-link" (dict "Page" . "CurrentPage" $.CurrentPage) }}
+        </li>
+    {{ end }}
+    {{ end }}
+</ul>
+{{ end }}
+
+{{ define "docs-page-link" }}{{/* (dict "Page" .Page "CurrentPage" .CurrentPage) */}}
+{{ $current := eq .CurrentPage .Page }}
+{{ $ancestor := .Page.IsAncestor .CurrentPage }}
+
+{{ if .Page.Params.docsCollapseSection }}
+    <input type="checkbox" id="section-{{ md5 .Page }}" class="toggle" {{ if or $current $ancestor }}checked{{ end }} />
+    <label for="section-{{ md5 .Page }}" class="flex justify-between">
+    <a {{ if .Page.Content }}href="{{ .Page.RelPermalink }}"{{ else }}role="button"{{ end }} class="{{ if $current }}active{{ end }}">
+        {{- partial "docs/title.html" .Page -}}
+    </a>
+    </label>
+{{ else if .Page.Params.docsHref }}
+    <a href="{{ .Page.Params.docsHref }}" class="{{ if $current }}active{{ end }}" target="_blank" rel="noopener">
+    {{- partial "docs/title.html" .Page -}}
+    </a>
+{{ else if .Page.Content }}
+    <a href="{{ .Page.RelPermalink }}" class="{{ if $current }}active{{ end }}">
+    {{- partial "docs/title.html" .Page -}}
+    </a>
+{{ else }}
+    <span>{{- partial "docs/title.html" .Page -}}</span>
+{{ end }}
+{{ end }}

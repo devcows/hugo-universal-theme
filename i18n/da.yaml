@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Kategorier"
 
+- id: menuTitle
+  translation: "Menu"
+
 - id: searchTitle
   translation: "Søg"
 
 - id: tagsTitle
   translation: "Tags"
+
+- id: tocTitle
+  translation: "Indholdsfortegnelse"
 
 - id: continueReading
   translation: "Læs videre"

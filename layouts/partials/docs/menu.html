@@ -1,0 +1,13 @@
+{{ if isset .Site.Params.docs "menu" }}
+{{ if .Site.Params.docs.menu }}
+<div class="panel panel-default sidebar-menu docs-menu">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ i18n "menuTitle" }}</h3>
+    </div>
+    
+    <div class="panel-body">
+        {{ partial "docs/menu-filetree.html" . }}
+    </div>
+</div>
+{{ end }}
+{{ end }}

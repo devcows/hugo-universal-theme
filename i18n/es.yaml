@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Categorias"
 
+- id: menuTitle
+  translation: "Menú"
+
 - id: searchTitle
   translation: "Buscar"
 
 - id: tagsTitle
   translation: "Palabras clave"
+
+- id: tocTitle
+  translation: "Sommario"
 
 - id: continueReading
   translation: "Continuar leyendo"

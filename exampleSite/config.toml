@@ -19,6 +19,11 @@ paginate = 10
 # not pluralize title pages by default
 pluralizelisttitles = false
 
+[markup]
+
+[markup.tableOfContents]
+  startLevel = 1
+
 [menu]
 
 
@@ -477,6 +482,11 @@ pluralizelisttitles = false
       <a href="mailto:hello@universal.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
       """
+
+# Enable and disable menu and toc for docs sidebars
+[params.docs]
+    menu = true
+    toc = true
 
 # Enable and disable widgets for the right sidebar
 [params.widgets]

@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Kategorie"
 
+- id: menuTitle
+  translation: "Jídelní lístek"
+
 - id: searchTitle
   translation: "Hledat"
 
 - id: tagsTitle
   translation: "Tags"
+
+- id: tocTitle
+  translation: "Obsah"
 
 - id: continueReading
   translation: "Pokračovat ve čtení"

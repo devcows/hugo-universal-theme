@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Categorieën"
 
+- id: menuTitle
+  translation: "Menu"
+
 - id: searchTitle
   translation: "Zoeken"
 
 - id: tagsTitle
   translation: "Tags"
+
+- id: tocTitle
+  translation: "Inhoudsopgave"
 
 - id: continueReading
   translation: "Ga door met lezen"

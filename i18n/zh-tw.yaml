@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "分類"
 
+- id: menuTitle
+  translation: "Menu"
+
 - id: searchTitle
   translation: "搜尋"
 
 - id: tagsTitle
   translation: "標籤"
+
+- id: tocTitle
+  translation: "Table of contents"
 
 - id: continueReading
   translation: "繼續閱讀"
