@@ -139,6 +139,16 @@
                   </li>
                   {{ end }}
                   {{ end }}
+                  {{ range $translations := $.Page.Page.Translations }}
+                    {{ $lang_to_flag := dict "fi" "🇫🇮" "en" "🇬🇧"}}
+                    {{ range $lang, $flag := $lang_to_flag }}
+                      {{ with eq $translations.Language.Lang $lang }}
+                        <li class="dropdown">
+                          <a href="{{ $translations.RelPermalink }}">{{ $flag }}</a>
+                        </li>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
                 </ul>
             </div>
             <!--/.nav-collapse -->
