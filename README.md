@@ -9,6 +9,10 @@ Demo site: [https://devcows.github.io/hugo-universal-theme](https://devcows.gith
 Sponsor this project:
 - [https://paypal.me/ryanfox1985](https://paypal.me/ryanfox1985)
 - [https://www.patreon.com/ryanfox1985](https://www.patreon.com/ryanfox1985)
+- BTC wallet
+```
+1My6zRZA4YKdX78aiZKZhWUWfFmCSDafZ6
+```
 
 This Hugo theme was ported from [Bootstrapious](http://bootstrapious.com/p/universal-business-e-commerce-template) for training and fun. It has a very nice and customizable landing page, a comments system by Disqus, site search by Google, contact forms by Formspree, Google Analytics, and optional widgets for the sidebar.
 
