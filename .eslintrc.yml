@@ -1,6 +1,5 @@
 extends: standard
 plugins:
-  - standard
   - promise
 env:
   jquery: true
