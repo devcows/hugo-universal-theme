@@ -113,10 +113,12 @@ There is the possibility to override the CSS and set your custom styles, overrid
 The optional comments system is powered by [Disqus](https://disqus.com). If you want to enable comments, create an account in Disqus and write down your shortname.
 
 ```toml
-disqusShortname = "devcows"
+[services]
+[services.disqus]
+Shortname = "devcows"
 ```
 
-You can disable the comments system by leaving the `disqusShortname` empty.
+You can disable the comments system by leaving the `Shortname` empty.
 
 
 ### Google Analytics
@@ -124,10 +126,12 @@ You can disable the comments system by leaving the `disqusShortname` empty.
 You can optionally enable Google Analytics. Type your tracking code in the ``.
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+[services]
+[services.googleAnalytics]
+id = "UA-XXXXX-X"
 ```
 
-Leave the `googleAnalytics` key empty to disable it.
+Leave the `id` key empty to disable it.
 
 ### Logo
 
