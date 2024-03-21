@@ -1,0 +1,141 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "content",
+      "path": "[[workspace]]/content",
+      "originalPath": "[[workspace]]/content"
+    },
+    {
+      "title": "archetypes",
+      "path": "[[workspace]]/archetypes",
+      "originalPath": "[[workspace]]/archetypes"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/content/blog",
+      "originalPath": "[[workspace]]/content/blog"
+    },
+    {
+      "title": "layouts",
+      "path": "[[workspace]]/layouts",
+      "originalPath": "[[workspace]]/layouts"
+    },
+    {
+      "title": "archetypes",
+      "path": "[[workspace]]/layouts/archetypes",
+      "originalPath": "[[workspace]]/layouts/archetypes"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/exampleSite/content/blog",
+      "originalPath": "[[workspace]]/exampleSite/content/blog"
+    },
+    {
+      "title": "archetypes",
+      "path": "[[workspace]]/themes/hugo-universal-theme/archetypes",
+      "originalPath": "[[workspace]]/themes/hugo-universal-theme/archetypes"
+    },
+    {
+      "title": "blog",
+      "path": "[[workspace]]/themes/hugo-universal-theme/exampleSite/content/blog"
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "big data",
+    "books",
+    "checkpoint",
+    "coaching",
+    "customer stories",
+    "databricks",
+    "delta",
+    "delta live tables",
+    "foreachBatch",
+    "go",
+    "golang",
+    "hugo",
+    "interviewing",
+    "ipsum",
+    "job_id",
+    "kafka",
+    "merge",
+    "optimize",
+    "programming",
+    "run_id",
+    "spark streaming",
+    "sql",
+    "streaming",
+    "theme",
+    "workspace",
+    "youtube",
+    "z order"
+  ],
+  "frontMatter.taxonomy.categories": [
+    "Arc Resources",
+    "Audantic",
+    "best practices",
+    "coaching",
+    "databricks",
+    "delta",
+    "delta live tables",
+    "interviewing",
+    "jobs",
+    "lorem",
+    "optimize",
+    "power bi",
+    "programming",
+    "pseudo",
+    "spark",
+    "spark streaming",
+    "starting",
+    "streaming"
+  ]
+}

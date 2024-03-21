@@ -1,0 +1,30 @@
+---
+enable: true
+topTitle: 
+content: >
+  ## What is my expertise?
+
+
+image: img/skills-small.jpg
+
+skill:
+  - title: Spark, Pyspark
+    percent: 90
+  - title: Real Time Data Streaming (Delta, Kafka, Kinesis, Event Hub) 
+    percent: 90
+  - title: SQL, Python
+    percent: 90
+  - title: Databricks, Delta Live Tables
+    percent: 85
+  - title: Database- Redshift, Snwoflake, Big Query, Oracle & Postgres
+    percent: 80
+  - title: Modern Data Stack (Data Build Tool, Dagster & Metabase)
+    percent: 70
+  - title: Continuous Integration & Continuous Deployment ( Github Actions, Azure DevOps )
+    percent: 70
+  - title: Data Vizualization ( Tableau, Power Bi, Metabase )
+    percent: 70
+  - title: No-SQL Databases ( Dynamo, Cosmos & Mongo)
+    percent: 60    
+  - title: Terraform & CDK
+    percent: 50
