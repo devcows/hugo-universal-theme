@@ -11,3 +11,59 @@
 .box-simple {
   min-height: 230px;
 }
+
+.docs-menu ul li a {
+  font-size: 15px;
+}
+
+.docs-menu ul li a.active {
+  color: #333333;
+  font-weight: bold;
+}
+
+.docs-menu ul li label {
+  margin-bottom: 0px;
+}
+
+.docs-menu ul li input.toggle {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+.docs-menu ul li input.toggle+label+ul {
+  display: none;
+}
+
+.docs-menu ul li input.toggle:checked+label+ul {
+  display: block;
+}
+
+.docs-menu ul li input.toggle+label::after {
+  content: "▸";
+  cursor: pointer;
+}
+
+.docs-menu ul li input.toggle:checked+label::after {
+  content: "▾";
+}
+
+.docs-content {
+  margin-bottom: 30px;
+}
+
+.docs-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 67px;
+  margin: -67px 0 0;
+}

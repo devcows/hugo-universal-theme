@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Категории"
 
+- id: menuTitle
+  translation: "Меню"
+
 - id: searchTitle
   translation: "Търсене"
 
 - id: tagsTitle
   translation: "Етикети"
+
+- id: tocTitle
+  translation: "Резюме"
 
 - id: continueReading
   translation: "Продължи да четеш"

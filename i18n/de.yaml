@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Kategorien"
 
+- id: menuTitle
+  translation: "Speisekarte"
+
 - id: searchTitle
   translation: "Suche"
 
 - id: tagsTitle
   translation: "Tags"
+
+- id: tocTitle
+  translation: "Inhaltsverzeichnis"
 
 - id: continueReading
   translation: "Weiterlesen"

@@ -1,0 +1,13 @@
+{{ if isset .Site.Params.docs "toc" }}
+{{ if .Site.Params.docs.toc }}
+<div class="panel panel-default sidebar-menu docs-toc">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ i18n "tocTitle" }}</h3>
+    </div>
+    
+    <div class="panel-body">
+        {{ .TableOfContents }}
+    </div>
+</div>
+{{ end }}
+{{ end }}

@@ -40,8 +40,14 @@
 - id: categoriesTitle
   translation: "カテゴリー"
 
+- id: menuTitle
+  translation: "Menu"
+
 - id: searchTitle
   translation: "検索"
+
+- id: tocTitle
+  translation: "Table of contents"
 
 - id: tagsTitle
   translation: "タグ"

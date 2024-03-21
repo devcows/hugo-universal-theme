@@ -40,11 +40,17 @@
 - id: categoriesTitle
   translation: "Categorii"
 
+- id: menuTitle
+  translation: "Meniul"
+
 - id: searchTitle
   translation: "Caută"
 
 - id: tagsTitle
   translation: "Etichete"
+
+- id: tocTitle
+  translation: "Cuprins"
 
 - id: continueReading
   translation: "Citește în continuare"
