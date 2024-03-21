@@ -21,6 +21,7 @@
             <div class="blog-entries">
                 {{ range first 3 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
                 <div class="item same-height-row clearfix">
+                    {{ if not (default false .Site.Params.footer.recent_posts.hide_image) }}
                     <div class="image same-height-always">
                         <a href="{{ .Permalink }}">
                           {{ if isset .Params "banner" }}
@@ -30,6 +31,7 @@
                           {{ end }}
                         </a>
                     </div>
+                    {{ end }}
                     <div class="name same-height-always">
                         <h5><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
                     </div>
