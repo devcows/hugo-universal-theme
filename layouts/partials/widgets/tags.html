@@ -12,7 +12,7 @@
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.tags }}
             <li {{ if eq $current.RelPermalink (printf "%s/%s/" ("tags" | relLangURL) ($name | urlize | lower)) }}class="active"{{ end }}>
-                <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}"><i class="fas fa-tags"></i> {{ $name }}</a>
+                <a href="{{ "tags/" | relLangURL }}{{ $name | urlize | lower }}/"><i class="fas fa-tags"></i> {{ $name }}</a>
             </li>
             {{ end }}
         </ul>
