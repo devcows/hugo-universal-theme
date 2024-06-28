@@ -1741,10 +1741,28 @@ fieldset[disabled] .btn-template-primary.active {
   border: none;
 }
 #heading-breadcrumbs {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-bw.png') center center;
+  background-repeat: no-repeat;
+  background-image: cover !important;
   padding: 20px 0;
   margin-bottom: 40px;
+  height: 30vh; 
+  background-size: 60% !important;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
+
+#heading-breadcrumbs div{
+  text-align: center;
+  
+}
+
+#heading-breadcrumbs h1{
+  color: white !important;
+}
+
+
 #heading-breadcrumbs.no-mb {
   margin-bottom: 0;
 }
