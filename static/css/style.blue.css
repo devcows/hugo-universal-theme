@@ -1174,6 +1174,8 @@ fieldset[disabled] .btn-template-primary.active {
 
 }
 
+
+
 .home-carousel .img-responsive {
   width: 100%;
   max-height: 590px !important;
@@ -1181,19 +1183,65 @@ fieldset[disabled] .btn-template-primary.active {
   object-position:center;
 }
 
+@media only screen and (max-width: 1050px) {
+  .home-carousel .container{
+    max-height: 350px !important;
+  
+  }
+  
+  
+  
+  .home-carousel .img-responsive {
+    max-height: 350px !important;
+
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .home-carousel .container{
+    max-height: 200px !important;
+  
+  }
+
+
+  
+  
+  
+  .home-carousel .img-responsive {
+    max-height: 200px !important;
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home-carousel .container{
+    max-height: 200px !important;
+  
+  }
+
+
+  
+  
+  
+  .home-carousel .img-responsive {
+    max-height: 200px !important;
+
+  }
+}
+
 .titulo-ane {
   position: absolute;
-  margin-left: 50%;
-  margin-top: 12%;
-  font-weight: 800;
-  font-size: 45px;
-  color: white;
   z-index:1;
   background-image: url('../img/logo-nova-1.png');
   background-repeat: no-repeat ;
   background-size: cover;
-  width: 100px;
   height: 100px;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .home-carousel .dark-mask {
