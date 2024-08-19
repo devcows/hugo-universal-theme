@@ -1164,6 +1164,38 @@ fieldset[disabled] .btn-template-primary.active {
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
+
+.home-carousel .container{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding: 0px;
+  width: 100% !important;
+  max-height: 590px !important;
+
+}
+
+.home-carousel .img-responsive {
+  width: 100%;
+  max-height: 590px !important;
+  object-fit:cover;
+  object-position:center;
+}
+
+.titulo-ane {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 12%;
+  font-weight: 800;
+  font-size: 45px;
+  color: white;
+  z-index:1;
+  background-image: url('../img/logo-nova-1.png');
+  background-repeat: no-repeat ;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
 .home-carousel .dark-mask {
   position: absolute;
   top: 0;
@@ -1174,10 +1206,7 @@ fieldset[disabled] .btn-template-primary.active {
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-.home-carousel .owl-carousel {
-  padding-top: 60px;
-  padding-bottom: 20px;
-}
+
 .home-carousel .owl-theme .owl-controls .owl-page span {
   background: #666;
 }
