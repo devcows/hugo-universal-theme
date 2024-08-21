@@ -1212,23 +1212,13 @@ fieldset[disabled] .btn-template-primary.active {
     max-height: 200px !important;
 
   }
-}
 
-@media only screen and (max-width: 600px) {
-  .home-carousel .container{
-    max-height: 200px !important;
-  
-  }
-
-
-  
-  
-  
-  .home-carousel .img-responsive {
-    max-height: 200px !important;
-
+  .titulo-ane{
+    height: 150px !important;
+    width: 150px !important;
   }
 }
+
 
 .titulo-ane {
   position: absolute;
@@ -1236,8 +1226,8 @@ fieldset[disabled] .btn-template-primary.active {
   background-image: url('../img/logo-nova-1.png');
   background-repeat: no-repeat ;
   background-size: cover;
-  height: 100px;
-  width: 100px;
+  height: 250px;
+  width: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
