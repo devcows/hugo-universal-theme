@@ -14,17 +14,11 @@
 
         {{ partial "nav.html" . }}
 
-        <p>O tipo desta página é: {{ .Type }}</p>
 
-        {{ if eq .Type "blog"}}
+        {{ partial "breadcrumbs-noticias.html" . }}
 
-        {{ partial "breadcrumbs-noticias.html" .}}
 
-        {{- else -}}
 
-        {{ partial "breadcrumbs.html" .}}
-
-        {{- end -}}
         <div id="content">
             <div class="container">
 
@@ -86,7 +80,6 @@
     <!-- /#all -->
 
     {{ partial "scripts.html" . }}
-
 
   </body>
 </html>
