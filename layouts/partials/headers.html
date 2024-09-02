@@ -3,7 +3,11 @@
 <meta name="googlebot" content="index,follow,snippet,archive">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {{ $title_plain := .Title | markdownify | plainify }}
-<title>{{ $title_plain }}</title>
+{{ if eq $title_plain "Academia Nacional de Engenharia"}}
+  <title>{{ $title_plain }}</title>
+{{- else -}}
+  <title>{{ $title_plain }} - Academia Nacional de Engenharia </title>
+{{- end -}}
 <meta name="author" content="{{ .Param "author" }}" />
 {{ $keywords := .Site.Params.defaultKeywords | default (slice "" | first 0) }}
 {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ $keywords = $keywords | append . }}{{ end }}{{ end }}
@@ -45,8 +49,8 @@
 ` | safeHTML }}
 
 <!-- Favicon and Apple touch icons-->
-<link rel="shortcut icon" href="{{ "https://github.com/Julenne/ane_site/blob/main/ane/static/img/icon-browser.png" | relURL }}" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | relURL }}" />
+<link rel="shortcut icon" href="{{ "img/icon-browser.png" | relURL }}" type="image/x-icon" />
+<!-- <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | relURL }}" /> -->
 
 <!-- owl carousel CSS -->
 <link href="{{ "css/owl.carousel.css" | relURL }}" rel="stylesheet">
