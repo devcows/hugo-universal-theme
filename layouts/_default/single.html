@@ -14,7 +14,13 @@
 
         {{ partial "nav.html" . }}
 
-        {{ partial "breadcrumbs.html" . }}
+        {{ if eq .Type "blog"}}
+
+        {{ partial "breadcrumbs-noticias.html" .}}
+
+        {{- else -}}
+
+        {{ partial "breadcrumbs.html" .}}
 
         <div id="content">
             <div class="container">
