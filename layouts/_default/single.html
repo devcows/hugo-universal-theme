@@ -14,8 +14,6 @@
 
         {{ partial "nav.html" . }}
 
-        <p>O tipo desta página é: {{ .Type }}</p>
-
         {{ if eq .Type "blog"}}
 
         {{ partial "breadcrumbs-noticias.html" .}}
