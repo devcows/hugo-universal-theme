@@ -1,6 +1,5 @@
 function showPopup(message) {
     
-    console.log(window.location.pathname)
     // Criar o fundo escurecido
     let overlay = document.createElement('div');
     overlay.style.position = 'fixed';
