@@ -6,12 +6,12 @@ $(document).ready(function () {
 
 function map () {
   if ($('#map').length) {
-    var lat = $('#gmap-lat').val()
-    var lng = $('#gmap-lng').val()
-    var direction = $('#gmap-dir').val()
-    var image = $('#gmap-marker').val()
+    const lat = $('#gmap-lat').val()
+    const lng = $('#gmap-lng').val()
+    const direction = $('#gmap-dir').val()
+    const image = $('#gmap-marker').val()
 
-    var styles =
+    const styles =
       [
         {
           'featureType': 'landscape', 'stylers': [{'saturation': -100}, {'lightness': 65}, {'visibility': 'on'}]
@@ -34,10 +34,10 @@ function map () {
         }
       ]
 
-    var map = new GMaps({
+    const map = new GMaps({
       el: '#map',
-      lat: lat,
-      lng: lng,
+      lat,
+      lng,
       zoomControl: true,
       zoomControlOpt: {
         style: 'SMALL',
@@ -49,16 +49,16 @@ function map () {
       overviewMapControl: false,
       scrollwheel: false,
       draggable: false,
-      styles: styles
+      styles
     })
 
     map.addMarker({
-      lat: lat,
-      lng: lng,
+      lat,
+      lng,
       icon: image,
       click: function (e) {
         // when we get an address with spaces ...
-        var url = 'https://maps.google.com?daddr=' + direction.split('match').join('replace')
+        const url = 'https://maps.google.com?daddr=' + direction.split('match').join('replace')
         window.open(url, '_blank')
       },
       title: direction

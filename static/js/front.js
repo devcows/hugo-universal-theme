@@ -25,7 +25,7 @@ $(function () {
 
 // Ajax contact
 function contactFormAjax () {
-  var form = $('.contact-form-ajax')
+  const form = $('.contact-form-ajax')
   if (typeof form === 'undefined') return false
   form.submit(function () {
     $this = $(this)
@@ -51,11 +51,11 @@ function demo () {
 
   $('#colour').change(function () {
     if ($(this).val() !== '') {
-      var themeCSSpath = 'css/style.' + $(this).val() + '.css'
+      const themeCSSpath = 'css/style.' + $(this).val() + '.css'
 
       $('link#theme-stylesheet').attr('href', themeCSSpath)
 
-      $.cookie('themeCSSpath', themeCSSpath, {expires: 365, path: '/'})
+      $.cookie('themeCSSpath', themeCSSpath, { expires: 365, path: '/' })
     }
 
     return false
@@ -63,14 +63,14 @@ function demo () {
 
   $('#layout').change(function () {
     if ($(this).val() !== '') {
-      var themeLayout = $(this).val()
+      const themeLayout = $(this).val()
 
       $('body').removeClass('wide')
       $('body').removeClass('boxed')
 
       $('body').addClass(themeLayout)
 
-      $.cookie('themeLayout', themeLayout, {expires: 365, path: '/'})
+      $.cookie('themeLayout', themeLayout, { expires: 365, path: '/' })
     }
 
     return false
@@ -162,8 +162,8 @@ function menuMouseOver () {
 
 /* animations */
 function animations () {
-  var delayTime = 0
-  $('[data-animate]').css({opacity: '0'})
+  let delayTime = 0
+  $('[data-animate]').css({ opacity: '0' })
   $('[data-animate]').waypoint(function () {
     delayTime += 150
     $(this).delay(delayTime).queue(function (next) {
@@ -180,7 +180,7 @@ function animations () {
   })
 
   $('[data-animate-hover]').hover(function () {
-    $(this).css({opacity: 1})
+    $(this).css({ opacity: 1 })
     $(this).addClass('animated')
     $(this).removeClass($(this).data('animate'))
     $(this).addClass($(this).data('animate-hover'))
@@ -191,12 +191,12 @@ function animations () {
 }
 
 function animationsSlider () {
-  var delayTimeSlider = 400
+  let delayTimeSlider = 400
 
   $('.owl-item:not(.active) [data-animate-always]').each(function () {
     $(this).removeClass('animated')
     $(this).removeClass($(this).data('animate-always'))
-    $(this).stop(true, true, true).css({opacity: 0})
+    $(this).stop(true, true, true).css({ opacity: 0 })
   })
 
   $('.owl-item.active [data-animate-always]').each(function () {
@@ -222,7 +222,7 @@ function counters () {
 /* picture zoom */
 function pictureZoom () {
   $('.product .image, .post .image, .photostream div').each(function () {
-    var imgHeight = $(this).find('img').height()
+    const imgHeight = $(this).find('img').height()
     if (imgHeight) {
       $(this).height(imgHeight)
     }
@@ -231,8 +231,8 @@ function pictureZoom () {
 
 /* full screen intro */
 function fullScreenContainer () {
-  var screenWidth = $(window).width() + 'px'
-  var screenHeight = '500px'
+  const screenWidth = $(window).width() + 'px'
+  let screenHeight = '500px'
 
   if ($(window).height() > 500) {
     screenHeight = $(window).height() + 'px'
@@ -250,7 +250,7 @@ function utils () {
 
   /* click on the box activates the radio */
   $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function () {
-    var radio = $(this).find(':radio')
+    const radio = $(this).find(':radio')
     radio.prop('checked', true)
   })
 
@@ -267,8 +267,8 @@ function utils () {
 
   /* animated scrolling */
   $('.scroll-to, .scroll-to-top').click(function (event) {
-    var fullUrl = this.href
-    var parts = fullUrl.split('#')
+    const fullUrl = this.href
+    const parts = fullUrl.split('#')
 
     if (parts.length > 1) {
       scrollTo(fullUrl)
@@ -277,10 +277,10 @@ function utils () {
   })
 
   function scrollTo (fullUrl) {
-    var parts = fullUrl.split('#')
-    var trgt = parts[1]
-    var targetOffset = $('#' + trgt).offset()
-    var targetTop = targetOffset.top - 100
+    const parts = fullUrl.split('#')
+    const trgt = parts[1]
+    const targetOffset = $('#' + trgt).offset()
+    let targetTop = targetOffset.top - 100
 
     if (targetTop < 0) {
       targetTop = 0
@@ -295,7 +295,7 @@ function utils () {
 /* product detail gallery */
 function productDetailGallery (confDetailSwitch) {
   $('.thumb:first').addClass('active')
-  var timer = setInterval(autoSwitch, confDetailSwitch)
+  let timer = setInterval(autoSwitch, confDetailSwitch)
 
   $('.thumb').click(function (e) {
     switchImage($(this))
@@ -311,7 +311,7 @@ function productDetailGallery (confDetailSwitch) {
   })
 
   function autoSwitch () {
-    var nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb')
+    let nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb')
     if (nextThumb.length === 0) {
       nextThumb = $('.thumb:first')
     }
@@ -320,7 +320,7 @@ function productDetailGallery (confDetailSwitch) {
 
   function switchImage (thumb) {
     $('.thumb').removeClass('active')
-    var bigUrl = thumb.attr('href')
+    const bigUrl = thumb.attr('href')
     thumb.addClass('active')
     $('#mainImage img').attr('src', bigUrl)
   }
@@ -339,8 +339,8 @@ function productDetailSizes () {
 
 $.fn.alignElementsSameHeight = function () {
   $('.same-height-row').each(function () {
-    var maxHeight = 0
-    var children = $(this).find('.same-height')
+    let maxHeight = 0
+    let children = $(this).find('.same-height')
     children.height('auto')
 
     if ($(window).width() > 768) {
@@ -364,7 +364,7 @@ $.fn.alignElementsSameHeight = function () {
   })
 }
 
-var windowWidth
+let windowWidth
 $(function () {
   windowWidth = $(window).width()
 
@@ -373,7 +373,7 @@ $(function () {
 })
 
 $(window).resize(function () {
-  var newWindowWidth = $(window).width()
+  const newWindowWidth = $(window).width()
 
   if (windowWidth !== newWindowWidth) {
     setTimeout(function () {
