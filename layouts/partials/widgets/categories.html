@@ -11,7 +11,7 @@
         <ul class="nav nav-pills nav-stacked">
             {{ $current := . }}
             {{ range $name, $items := .Site.Taxonomies.categories }}
-            <li{{ if eq $current.RelPermalink ($name | urlize | lower | printf "/categories/%s/") }} class="active"{{ end }}>
+            <li {{ if eq $current.RelPermalink ($name | urlize | lower | printf "/categories/%s/") }}class="active"{{ end }}>
                 <a href="{{ "categories/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }} ({{ len $items }})</a>
             </li>
             {{ end }}
