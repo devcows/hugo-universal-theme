@@ -1,0 +1,24 @@
+{{ if .Site.Params.widgets.series }}
+{{ if isset .Site.Taxonomies "series" }}
+{{ if not (eq (len .Site.Taxonomies.series) 0) }}
+<div class="panel panel-default sidebar-menu">
+
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ i18n "seriesTitle" }}</h3>
+    </div>
+
+    <div class="panel-body">
+        <ul class="nav nav-pills nav-stacked">
+            {{ $current := . }}
+            {{ range $name, $items := .Site.Taxonomies.series }}
+            <li{{ if eq $current.RelPermalink ($name | urlize | lower | printf "/series/%s/") }} class="active"{{ end }}>
+                <a href="{{ "series/" | relLangURL }}{{ $name | urlize | lower }}">{{ $name | upper }} ({{ len $items }})</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

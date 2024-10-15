@@ -39,6 +39,9 @@
 
 - id: categoriesTitle
   translation: "Kategorien"
+  
+- id: seriesTitle
+  translation: "Artikelserien"
 
 - id: searchTitle
   translation: "Suche"
