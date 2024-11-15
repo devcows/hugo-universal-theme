@@ -55,7 +55,7 @@ function showPopup(message) {
 
 
 // Exemplo de uso: Chamar a função para exibir o pop-up
-if (window.location.pathname == "/"){
+/*if (window.location.pathname == "/"){
     showPopup('<h2> </h2> <img style="width:30vw;height:auto"src="../img/Eventos/Programa-Seminario-A-Engenharia-Transformando-O-Pais/banner.jpg"> <p>Acesse a programação <a href="../arquivos-eventos/Programa-Seminario-A-Engenharia-Transformando-o-pais/Programa Simpósio ANE vdb 15 Ago 24 (1).docx">aqui</a></p> ');
 
-}
+}*/
