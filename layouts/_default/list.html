@@ -27,6 +27,7 @@
                         {{ range $paginator.Pages }}
                         <section class="post">
                             <div class="row">
+                                {{ if not (default false .Site.Params.recent_posts.hide_image) }}
                                 <div class="col-md-4">
                                   <div class="image">
                                       <a href="{{ .Permalink }}">
@@ -39,7 +40,10 @@
                                   </div>
                                 </div>
                                 <div class="col-md-8">
-                                    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                                {{ else }}
+                                <div class="col-md-12">
+                                {{ end }}
+                                        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                                     <div class="clearfix">
                                         <p class="author-category">
                                           {{ if isset .Params "authors" }}

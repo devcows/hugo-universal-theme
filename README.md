@@ -557,10 +557,12 @@ summaryLength = 70
     title = "From our blog"
     subtitle = "Pellen"
     hide_summary = false
+    hide_image = false
 ```
 
 Recent posts use `.Summary` property and by default, Hugo automatically takes the first 70 words of your content as its summary and stores it into the `.Summary` page variable for use in your templates. You may customize the summary length by setting summaryLength in your site configuration.
 When setting the `hide_summary` configuration property to `true` the summary will be hidden on the recent posts as well as the blogs list page.
+And also if you set `hide_image` configuration property to `true` the image will be hidden like `hide_summary`.
 
 #### Footer
 
@@ -577,11 +579,12 @@ A text can be defined, in case there is no text defined the entire block will be
 
 ##### Recent posts
 
-Recent posts block can be enabled or disabled (hidden).
+Recent posts block can be enabled or disabled (hidden). And you can use `hide_iamge` for `Recent posts` block on footer.
 
 ```toml
 [params.footer.recent_posts]
     enable = true
+    hide_image = false
 ```
 
 ##### Contact
