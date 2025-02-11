@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+  }
+
+  body {
+    @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-zinc-800/50 selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn {
+    position: relative;
+    @apply inline-flex items-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-white
+    transform transition-all duration-200 overflow-hidden
+    hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-zinc-950;
+  }
+
+  .btn::after {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 transition-opacity duration-300;
+  }
+
+  .btn:hover::after {
+    @apply opacity-100;
+  }
+
+  .btn-secondary {
+    position: relative;
+    @apply inline-flex items-center gap-2 rounded-full border border-zinc-700/50 bg-transparent px-4 py-2 text-sm font-medium text-zinc-300
+    transform transition-all duration-200 overflow-hidden
+    hover:text-white hover:border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-zinc-950;
+  }
+
+  .btn-secondary::after {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-secondary:hover::after {
+    @apply opacity-100;
+  }
+
+  .prose {
+    @apply max-w-none text-zinc-300;
+  }
+
+  .prose a {
+    @apply text-white underline decoration-zinc-700 underline-offset-2 hover:decoration-zinc-500 transition-all duration-200;
+  }
+
+  .nav-link {
+    @apply relative text-zinc-400 hover:text-white transition-colors duration-200;
+  }
+
+  .nav-link-active {
+    @apply text-white font-medium;
+  }
+
+  .nav-link-active::after {
+    content: '';
+    @apply absolute -bottom-1.5 left-0 h-px w-full bg-gradient-to-r from-blue-500/0 via-blue-500/70 to-blue-500/0;
+  }
+
+  .card {
+    position: relative;
+    @apply overflow-hidden rounded-2xl border border-zinc-800/50 bg-zinc-900/50 p-6
+    backdrop-blur-sm hover:bg-zinc-900/80 transition-all duration-300
+    hover:border-zinc-700/50 hover:shadow-lg hover:shadow-zinc-950/50;
+  }
+}
+
+/* Modern animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-700 hover:bg-zinc-600 transition-colors rounded-full;
+}
+
+/* Grid background */
+.grid-pattern {
+  background-image: 
+    radial-gradient(circle at center, rgb(39 39 42 / 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgb(39 39 42 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(39 39 42 / 0.1) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  background-position: center;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 
+    0 0 50px -12px rgb(244 244 245 / 0.1),
+    0 0 25px -12px rgb(59 130 246 / 0.1);
+}
+
+.glow-text {
+  text-shadow: 
+    0 0 30px rgb(244 244 245 / 0.2),
+    0 0 15px rgb(59 130 246 / 0.2);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
