@@ -2,26 +2,38 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function BookCall() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslations();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setSubmitted(true);
-    setLoading(false);
-    
-    // Here you would typically:
-    // 1. Send email to your CRM/email system
-    // 2. Redirect to calendar booking system
-    window.open('mailto:contact@amayara.com?subject=Book%20a%20Call&body=Hi%2C%20I%20would%20like%20to%20schedule%20a%20call%20to%20discuss%20QA%20services.%0A%0AMy%20email%3A%20' + email);
+    try {
+      const response = await fetch('/api/book-call', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error:', error);
+      // You might want to show an error message to the user here
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -41,11 +53,10 @@ export default function BookCall() {
           className="max-w-2xl mx-auto text-center"
         >
           <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="text-white">Ready to transform your</span>{' '}
-            <span className="gradient-text">QA process?</span>
+            <span className="text-white">{t('bookCall.title')}</span>
           </h2>
           <p className="mt-4 text-lg text-zinc-400">
-            Book a quick call with our QA experts and discover how we can help you achieve 80% test coverage in weeks, not years.
+            {t('bookCall.subtitle')}
           </p>
 
           <div className="mt-8">
@@ -59,7 +70,7 @@ export default function BookCall() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="email" className="sr-only">
-                      Email address
+                      {t('bookCall.form.email')}
                     </label>
                     <input
                       type="email"
@@ -67,7 +78,7 @@ export default function BookCall() {
                       id="email"
                       required
                       className="block w-full rounded-lg border border-zinc-700 bg-zinc-800/50 px-4 py-3 text-white placeholder-zinc-400 focus:border-blue-500 focus:ring-blue-500"
-                      placeholder="Enter your work email"
+                      placeholder={t('bookCall.form.email')}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -94,10 +105,10 @@ export default function BookCall() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           />
                         </svg>
-                        Processing...
+                        {t('bookCall.form.processing')}
                       </div>
                     ) : (
-                      'Book a Call'
+                      t('bookCall.form.button')
                     )}
                   </button>
                 </form>
@@ -123,10 +134,10 @@ export default function BookCall() {
                     </svg>
                   </div>
                   <h3 className="mt-4 text-xl font-semibold text-white">
-                    Thank you!
+                    {t('bookCall.form.success')}
                   </h3>
                   <p className="mt-2 text-zinc-400">
-                    We'll be in touch shortly to schedule your call.
+                    {t('bookCall.form.successMessage')}
                   </p>
                 </motion.div>
               )}
@@ -148,7 +159,7 @@ export default function BookCall() {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="text-sm text-zinc-400">15-minute call</span>
+              <span className="text-sm text-zinc-400">{t('bookCall.features.call')}</span>
             </div>
             <div className="flex items-center gap-2">
               <svg
@@ -164,7 +175,7 @@ export default function BookCall() {
                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="text-sm text-zinc-400">Quick response</span>
+              <span className="text-sm text-zinc-400">{t('bookCall.features.response')}</span>
             </div>
           </div>
         </motion.div>

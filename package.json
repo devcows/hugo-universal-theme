@@ -11,12 +11,15 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "@types/nodemailer": "^6.4.17",
     "framer-motion": "^11.0.3",
     "next": "14.1.0",
+    "nodemailer": "^6.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.9.4",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.16",

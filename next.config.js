@@ -7,18 +7,28 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-        pathname: '/**',
       },
       {
         protocol: 'https',
         hostname: 'logo.clearbit.com',
-        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'amayara.com',
       }
     ],
-    formats: ['image/avif', 'image/webp'],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['localhost'],
+    unoptimized: true
   },
+  // Handle static assets
+  basePath: '',
+  assetPrefix: ''
 }
 
 module.exports = nextConfig 

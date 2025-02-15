@@ -1,0 +1,9 @@
+{
+  "blog": {
+    "notFound": {
+      "title": "Post Not Found",
+      "description": "The blog post you're looking for doesn't exist.",
+      "backToBlog": "Back to Blog"
+    }
+  }
+} 

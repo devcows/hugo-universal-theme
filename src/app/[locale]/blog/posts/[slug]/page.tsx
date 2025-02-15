@@ -1,17 +1,20 @@
 'use client';
 
-import { useParams } from 'next/navigation';
 import { posts } from '@/data/blog';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { i18nConfig } from '@/i18n/config';
+import { useTranslations } from '@/hooks/useTranslations';
+import { Locale } from '@/i18n/config';
 
-export default function BlogPost() {
-  const { slug } = useParams();
+export default function BlogPost({
+  params: { locale, slug }
+}: {
+  params: { locale: Locale; slug: string }
+}) {
+  const { t } = useTranslations();
   const post = posts.find(p => p.href === `/blog/posts/${slug}`);
-  const defaultLocale = i18nConfig.defaultLocale;
 
   if (!post) {
     return (
@@ -19,10 +22,10 @@ export default function BlogPost() {
         <Navigation />
         <main className="container py-24">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-white">Post Not Found</h1>
-            <p className="mt-4 text-zinc-400">The blog post you're looking for doesn't exist.</p>
-            <Link href="/blog" className="mt-8 inline-block btn-secondary">
-              Back to Blog
+            <h1 className="text-3xl font-bold text-white">{t('blog.notFound.title')}</h1>
+            <p className="mt-4 text-zinc-400">{t('blog.notFound.description')}</p>
+            <Link href={`/${locale}/blog`} className="mt-8 inline-block btn-secondary">
+              {t('blog.notFound.backToBlog')}
             </Link>
           </div>
         </main>
@@ -31,7 +34,7 @@ export default function BlogPost() {
     );
   }
 
-  const postContent = post.translations[defaultLocale];
+  const postContent = post.translations[locale as keyof typeof post.translations];
 
   return (
     <div className="min-h-screen bg-zinc-950">

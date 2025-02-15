@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { heroContent } from '@/data/hero';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function Hero() {
+  const { t } = useTranslations();
+
   return (
     <div className="relative min-h-[90vh] flex items-center pt-24">
       {/* Background effects */}
@@ -22,11 +24,10 @@ export default function Hero() {
             className="max-w-2xl"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-              <span className="text-white">Quality Assurance</span>{' '}
-              <span className="gradient-text">as a Service</span>
+              <span className="text-white">{t('hero.title')}</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-zinc-400 leading-relaxed">
-              Transform your software quality with our comprehensive QA solutions. From manual testing to full automation, we ensure your applications meet the highest standards.
+              {t('hero.subtitle')}
             </p>
 
             <motion.div
@@ -36,7 +37,7 @@ export default function Hero() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link href="/contact" className="btn">
-                <span>Get Started</span>
+                <span>{t('hero.cta.primary')}</span>
                 <svg 
                   className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
                   viewBox="0 0 16 16" 
@@ -53,7 +54,7 @@ export default function Hero() {
                 </svg>
               </Link>
               <Link href="/services" className="btn-secondary">
-                <span>Our Services</span>
+                <span>{t('hero.cta.secondary')}</span>
                 <svg 
                   className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
                   viewBox="0 0 16 16" 
@@ -81,23 +82,23 @@ export default function Hero() {
             <div className="grid gap-6 sm:grid-cols-2">
               {[
                 {
-                  title: "Manual Testing",
-                  description: "Thorough testing by expert QA engineers for maximum precision and attention to detail.",
+                  title: t('hero.features.manualTesting.title'),
+                  description: t('hero.features.manualTesting.description'),
                   icon: "🎯"
                 },
                 {
-                  title: "Test Automation",
-                  description: "Automated testing solutions for consistent and efficient quality assurance.",
+                  title: t('hero.features.automation.title'),
+                  description: t('hero.features.automation.description'),
                   icon: "⚡"
                 },
                 {
-                  title: "QA Consulting",
-                  description: "Strategic guidance to optimize your testing processes and methodologies.",
+                  title: t('hero.features.consulting.title'),
+                  description: t('hero.features.consulting.description'),
                   icon: "💡"
                 },
                 {
-                  title: "Workflow Automation",
-                  description: "Streamline your processes with intelligent automation solutions powered by n8n.",
+                  title: t('hero.features.workflow.title'),
+                  description: t('hero.features.workflow.description'),
                   icon: "🔄"
                 }
               ].map((feature, index) => (
@@ -132,9 +133,9 @@ export default function Hero() {
         >
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-3xl mx-auto">
             {[
-              { number: "7+", label: "Years Experience" },
-              { number: "10+", label: "Projects Delivered" },
-              { number: "99%", label: "Client Satisfaction" }
+              { number: "7+", label: t('hero.stats.experience') },
+              { number: "10+", label: t('hero.stats.projects') },
+              { number: "99%", label: t('hero.stats.satisfaction') }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

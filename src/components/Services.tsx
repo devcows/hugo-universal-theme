@@ -1,58 +1,61 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from '@/hooks/useTranslations';
 
 export default function Services() {
+  const { t } = useTranslations();
+
   const services = [
     {
-      title: "Manual Testing",
-      description: "Our expert QA engineers perform thorough manual testing to ensure your application meets the highest quality standards. We cover functional testing, usability testing, and exploratory testing.",
+      title: t('services.qa.title'),
+      description: t('services.qa.description'),
       features: [
-        "Functional Testing",
-        "UI/UX Testing",
-        "Cross-browser Testing",
-        "Mobile App Testing",
-        "Regression Testing",
-        "User Acceptance Testing"
+        t('services.qa.features.manual'),
+        t('services.qa.features.regression'),
+        t('services.qa.features.acceptance'),
+        t('services.qa.features.compatibility'),
+        t('services.qa.features.bugs'),
+        t('services.qa.features.documentation')
       ],
       icon: "🎯"
     },
     {
-      title: "Test Automation",
-      description: "We implement efficient test automation solutions to speed up your testing process while maintaining high accuracy. Our automation frameworks are scalable and maintainable.",
+      title: t('services.automation.title'),
+      description: t('services.automation.description'),
       features: [
-        "Selenium WebDriver",
-        "Cypress",
-        "Playwright",
-        "API Testing",
-        "CI/CD Integration",
-        "Custom Framework Development"
+        t('services.automation.features.functional'),
+        t('services.automation.features.performance'),
+        t('services.automation.features.ci'),
+        t('services.automation.features.api'),
+        t('services.automation.features.cross'),
+        t('services.automation.features.reporting')
       ],
       icon: "⚡"
     },
     {
-      title: "Workflow Automation",
-      description: "Streamline your business processes with n8n, the leading low-code automation platform. Connect your applications and automate repetitive tasks to boost productivity.",
+      title: t('services.workflow.title'),
+      description: t('services.workflow.description'),
       features: [
-        "400+ App Integrations",
-        "Custom Workflows",
-        "Real-time Triggers",
-        "Data Processing",
-        "AI-powered Automation",
-        "Technical Support"
+        t('services.workflow.features.integration'),
+        t('services.workflow.features.automation'),
+        t('services.workflow.features.custom'),
+        t('services.workflow.features.triggers'),
+        t('services.workflow.features.ai'),
+        t('services.workflow.features.support')
       ],
       icon: "🔄"
     },
     {
-      title: "QA Consulting",
-      description: "Get strategic guidance to optimize your testing processes and methodologies. Our experts help you implement best practices and improve your QA strategy.",
+      title: t('services.development.title'),
+      description: t('services.development.description'),
       features: [
-        "Process Optimization",
-        "QA Strategy",
-        "Team Training",
-        "Tool Selection",
-        "Best Practices",
-        "Quality Metrics"
+        t('services.development.features.frameworks'),
+        t('services.development.features.tools'),
+        t('services.development.features.ci'),
+        t('services.development.features.scripts'),
+        t('services.development.features.monitoring'),
+        t('services.development.features.custom')
       ],
       icon: "💡"
     }
@@ -74,11 +77,10 @@ export default function Services() {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="text-3xl sm:text-4xl font-bold">
-            <span className="text-white">Our</span>{' '}
-            <span className="gradient-text">Services</span>
+            <span className="text-white">{t('services.title')}</span>
           </h2>
           <p className="mt-6 text-lg text-zinc-400">
-            We offer comprehensive QA solutions tailored to your needs. Our services ensure your software meets the highest quality standards while optimizing your testing processes.
+            {t('services.subtitle')}
           </p>
         </motion.div>
 
@@ -111,7 +113,7 @@ export default function Services() {
                 </p>
                 <div className="mt-auto">
                   <h4 className="text-sm font-semibold text-white mb-4">
-                    Key Features:
+                    {t('services.features')}:
                   </h4>
                   <ul className="grid grid-cols-2 gap-3">
                     {service.features.map((feature, featureIndex) => (

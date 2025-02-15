@@ -1,0 +1,9 @@
+{
+  "blog": {
+    "notFound": {
+      "title": "Article Non Trouvé",
+      "description": "L'article de blog que vous recherchez n'existe pas.",
+      "backToBlog": "Retour au Blog"
+    }
+  }
+} 

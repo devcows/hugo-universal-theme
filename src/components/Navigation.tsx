@@ -9,17 +9,30 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
-]
+import { useTranslations } from '@/hooks/useTranslations'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+  const { t, locale } = useTranslations()
+
+  const getLocalizedPath = (path: string) => {
+    return locale === 'en' ? path : `/${locale}${path}`;
+  };
+
+  const getImagePath = (path: string) => {
+    // Ensure the path is absolute from the root
+    return path.replace(/^\/[a-z]{2}\//, '/').replace(/^\//, '/');
+  };
+
+  const navigation = [
+    { name: t('navigation.home'), href: getLocalizedPath('/') },
+    { name: t('navigation.services'), href: getLocalizedPath('/services') },
+    { name: t('navigation.blog'), href: getLocalizedPath('/blog') },
+    { name: t('navigation.about'), href: getLocalizedPath('/about') },
+    { name: t('navigation.contact'), href: getLocalizedPath('/contact') }
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm border-b border-zinc-800">
@@ -27,14 +40,16 @@ export default function Navigation() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Amayara Solutions</span>
-            <Image
-              src="/img/logo.png"
-              alt="Amayara Solutions"
-              width={150}
-              height={40}
-              className="h-8 w-auto"
-              priority
-            />
+            <div className="flex items-center">
+              <h1 className="text-xl font-bold tracking-tight">
+                <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  AMAYARA
+                </span>
+                <span className="text-zinc-300 ml-1.5 text-base font-medium">
+                  Solutions
+                </span>
+              </h1>
+            </div>
           </Link>
         </div>
         
@@ -68,12 +83,13 @@ export default function Navigation() {
           ))}
         </div>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6">
+          <LanguageSwitcher />
           <Link 
             href="/contact" 
             className="group relative inline-flex items-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-white"
           >
-            <span>Start a Project</span>
+            <span>{t('navigation.startProject')}</span>
             <svg 
               className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
               viewBox="0 0 16 16" 
@@ -99,14 +115,16 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Amayara Solutions</span>
-              <Image
-                src="/img/logo.png"
-                alt="Amayara Solutions"
-                width={150}
-                height={40}
-                className="h-8 w-auto"
-                priority
-              />
+              <div className="flex items-center">
+                <h1 className="text-xl font-bold tracking-tight">
+                  <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    AMAYARA
+                  </span>
+                  <span className="text-zinc-300 ml-1.5 text-base font-medium">
+                    Solutions
+                  </span>
+                </h1>
+              </div>
             </Link>
             <button
               type="button"
@@ -136,13 +154,14 @@ export default function Navigation() {
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
+              <div className="py-6 space-y-4">
+                <LanguageSwitcher />
                 <Link
                   href="/contact"
                   className="group relative inline-flex w-full items-center justify-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <span>Start a Project</span>
+                  <span>{t('navigation.startProject')}</span>
                   <svg 
                     className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
                     viewBox="0 0 16 16" 
