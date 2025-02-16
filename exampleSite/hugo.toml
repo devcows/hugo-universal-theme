@@ -9,19 +9,21 @@ defaultContentLanguage = "en"
 # number of words of summarized post content (default 70)
 summaryLength = 70
 
-# Define the number of posts per page
-paginate = 10
-
 # not pluralize title pages by default
 pluralizelisttitles = false
 
 [services]
-[services.disqus]
-# Enable comments by entering your Disqus shortname
-Shortname = "devcows"
-[services.googleAnalytics]
-# Enable Google Analytics by entering your tracking code
-id = ""
+    # Enable comments by entering your Disqus shortname
+    [services.disqus]
+        shortname = "devcows"
+    # Enable Google Analytics by entering your tracking code
+    [services.googleAnalytics]
+        id = ""
+
+# Define the number of posts per page
+[pagination]
+    pagerSize = 10
+
 
 [menu]
 
@@ -374,14 +376,14 @@ id = ""
 [[menu.topbar]]
     weight = 3
     name = "Facebook"
-    url = "http://facebook.com"
+    url = "https://facebook.com"
     pre = "<i class='fab fa-2x fa-facebook'></i>"
 
 [[menu.topbar]]
     weight = 4
-    name = "Twitter"
-    url = "http://twitter.com"
-    pre = "<i class='fab fa-2x fa-twitter'></i>"
+    name = "X"
+    url = "https://x.com"
+    pre = "<i class='fab fa-2x fa-x-twitter'></i>"
 
 [[menu.topbar]]
     weight = 5
