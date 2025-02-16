@@ -19,7 +19,7 @@ export default function AboutPage() {
               className="max-w-2xl"
             >
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl text-white">
-                About Us
+                About
               </h1>
               <p className="mt-6 text-base text-zinc-400">
                 We are a team of passionate QA engineers and automation specialists dedicated to helping companies deliver high-quality software through effective testing and automation strategies.

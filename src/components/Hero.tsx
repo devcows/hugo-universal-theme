@@ -3,6 +3,14 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useTranslations } from '@/hooks/useTranslations';
+import { 
+  heroContainerVariants, 
+  heroContentVariants, 
+  blurBackgroundVariants,
+  staggerContainer,
+  cardHoverVariants,
+  scaleUpVariants
+} from '@/utils/animations';
 
 export default function Hero() {
   const { t } = useTranslations();
@@ -11,16 +19,30 @@ export default function Hero() {
     <div className="relative min-h-[90vh] flex items-center pt-24">
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute left-[10%] top-0 -z-10 h-[1000px] w-[1000px] rounded-full bg-blue-500/5 blur-[100px]" />
-        <div className="absolute right-[10%] bottom-0 -z-10 h-[1000px] w-[1000px] rounded-full bg-purple-500/5 blur-[100px]" />
+        <motion.div
+          variants={blurBackgroundVariants}
+          initial="hidden"
+          animate="visible"
+          className="absolute left-[10%] top-0 -z-10 h-[1000px] w-[1000px] rounded-full bg-blue-500/5"
+        />
+        <motion.div
+          variants={blurBackgroundVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.2 }}
+          className="absolute right-[10%] bottom-0 -z-10 h-[1000px] w-[1000px] rounded-full bg-purple-500/5"
+        />
       </div>
 
       <div className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <motion.div
+          variants={heroContainerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid lg:grid-cols-2 gap-12 items-center"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            variants={heroContentVariants}
             className="max-w-2xl"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
@@ -31,15 +53,13 @@ export default function Hero() {
             </p>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+              variants={staggerContainer}
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link href="/contact" className="btn">
                 <span>{t('hero.cta.primary')}</span>
                 <svg 
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" 
                   viewBox="0 0 16 16" 
                   fill="none" 
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +76,7 @@ export default function Hero() {
               <Link href="/services" className="btn-secondary">
                 <span>{t('hero.cta.secondary')}</span>
                 <svg 
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" 
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" 
                   viewBox="0 0 16 16" 
                   fill="none" 
                   xmlns="http://www.w3.org/2000/svg"
@@ -74,9 +94,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
+            variants={staggerContainer}
             className="lg:ml-auto"
           >
             <div className="grid gap-6 sm:grid-cols-2">
@@ -101,12 +119,12 @@ export default function Hero() {
                   description: t('hero.features.workflow.description'),
                   icon: "🔄"
                 }
-              ].map((feature, index) => (
+              ].map((feature) => (
                 <motion.div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
+                  variants={cardHoverVariants}
+                  initial="idle"
+                  whileHover="hover"
                   className="card group"
                 >
                   <div className="flex flex-col gap-4">
@@ -122,13 +140,14 @@ export default function Hero() {
               ))}
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Stats Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           className="mt-24 flex justify-center"
         >
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16 max-w-3xl mx-auto">
@@ -136,12 +155,10 @@ export default function Hero() {
               { number: "7+", label: t('hero.stats.experience') },
               { number: "10+", label: t('hero.stats.projects') },
               { number: "99%", label: t('hero.stats.satisfaction') }
-            ].map((stat, index) => (
+            ].map((stat) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
+                variants={scaleUpVariants}
                 className="text-center"
               >
                 <div className="text-3xl sm:text-3xl font-bold gradient-text">

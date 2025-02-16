@@ -25,13 +25,13 @@
   .btn {
     position: relative;
     @apply inline-flex items-center gap-2 rounded-full bg-zinc-800 px-4 py-2 text-sm font-medium text-white
-    transform transition-all duration-200 overflow-hidden
+    transform transition-all duration-300 ease-out overflow-hidden
     hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-zinc-950;
   }
 
   .btn::after {
     content: '';
-    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 transition-opacity duration-300 ease-out;
   }
 
   .btn:hover::after {
@@ -41,13 +41,13 @@
   .btn-secondary {
     position: relative;
     @apply inline-flex items-center gap-2 rounded-full border border-zinc-700/50 bg-transparent px-4 py-2 text-sm font-medium text-zinc-300
-    transform transition-all duration-200 overflow-hidden
+    transform transition-all duration-300 ease-out overflow-hidden
     hover:text-white hover:border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-zinc-950;
   }
 
   .btn-secondary::after {
     content: '';
-    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300;
+    @apply absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity duration-300 ease-out;
   }
 
   .btn-secondary:hover::after {
@@ -63,7 +63,7 @@
   }
 
   .nav-link {
-    @apply relative text-zinc-400 hover:text-white transition-colors duration-200;
+    @apply relative text-zinc-400 hover:text-white transition-colors duration-300 ease-out;
   }
 
   .nav-link-active {
@@ -72,14 +72,15 @@
 
   .nav-link-active::after {
     content: '';
-    @apply absolute -bottom-1.5 left-0 h-px w-full bg-gradient-to-r from-blue-500/0 via-blue-500/70 to-blue-500/0;
+    @apply absolute -bottom-1.5 left-0 h-px w-full bg-gradient-to-r from-blue-500/0 via-blue-500/70 to-blue-500/0 transition-all duration-300 ease-out;
   }
 
   .card {
     position: relative;
     @apply overflow-hidden rounded-2xl border border-zinc-800/50 bg-zinc-900/50 p-6
-    backdrop-blur-sm hover:bg-zinc-900/80 transition-all duration-300
-    hover:border-zinc-700/50 hover:shadow-lg hover:shadow-zinc-950/50;
+    backdrop-blur-sm transition-all duration-300 ease-out
+    hover:bg-zinc-900/80 hover:border-zinc-700/50 hover:shadow-lg hover:shadow-zinc-950/50
+    hover:scale-[1.02] hover:-translate-y-1;
   }
 }
 
@@ -97,11 +98,11 @@
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 .animate-pulse-slow {
-  animation: pulse 4s ease-in-out infinite;
+  animation: pulse 4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
 }
 
 /* Modern scrollbar */
@@ -115,7 +116,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-zinc-700 hover:bg-zinc-600 transition-colors rounded-full;
+  @apply bg-zinc-700 hover:bg-zinc-600 transition-colors duration-300 rounded-full;
 }
 
 /* Grid background */
@@ -134,20 +135,30 @@
   box-shadow: 
     0 0 50px -12px rgb(244 244 245 / 0.1),
     0 0 25px -12px rgb(59 130 246 / 0.1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glow:hover {
+  box-shadow: 
+    0 0 50px -12px rgb(244 244 245 / 0.2),
+    0 0 25px -12px rgb(59 130 246 / 0.2);
 }
 
 .glow-text {
   text-shadow: 
     0 0 30px rgb(244 244 245 / 0.2),
     0 0 15px rgb(59 130 246 / 0.2);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Gradient text */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Glass effect */
 .glass {
   @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }

@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: "Transform your business with cutting-edge technology solutions. Custom software development, cloud solutions, cybersecurity, and IT consulting services.",
   keywords: "IT Solutions, Software Development, Cloud Computing, Cybersecurity, Digital Transformation",
   metadataBase: new URL('https://amayara.com'),
+  icons: null,
   openGraph: {
     type: 'website',
     locale: 'en_US',
