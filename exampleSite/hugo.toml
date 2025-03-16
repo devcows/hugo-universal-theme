@@ -24,10 +24,8 @@ pluralizelisttitles = false
 [pagination]
     pagerSize = 10
 
-
-[menu]
-
 # Main menu
+[menu]
 [[menu.main]]
     name       = "Home"
     identifier = "menu.home"
@@ -551,6 +549,6 @@ pluralizelisttitles = false
     enable = true
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
-  author = "authors"
+    category = "categories"
+    tag = "tags"
+    author = "authors"
