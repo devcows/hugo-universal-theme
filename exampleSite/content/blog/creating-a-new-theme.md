@@ -991,7 +991,7 @@ Knowing that hugo is using the slug to generate the file name, the simplest solu
 $ vi config.toml
 [permalinks]
   page = "/:title/"
-  about = "/:filename/"
+  about = "/:contentbasename/"
 ```
 
 Generate the web site and verify that this didn't work. Hugo lets "slug" or "URL" override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.
