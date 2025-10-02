@@ -31,3 +31,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./exampleSite/public  # if not specified it defaults to ./public. source directory of the built files to make the deploy (must match the build to directory in config.toml), eg ./docs, ./public, ./exampleSite/public
           
+      - name: Build exampleSite
+        run: |
+          hugo --minify -s exampleSite -d ../public
