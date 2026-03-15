@@ -1,11 +1,11 @@
 {{ if isset .Site.Params "features" }}
 {{ if .Site.Params.features.enable }}
-{{ if isset .Site.Data "features" }}
-{{ if gt (len .Site.Data.features) 0 }}
+{{ if isset hugo.Data "features" }}
+{{ if gt (len hugo.Data.features) 0 }}
 <section class="bar background-white">
     <div class="container">
         {{ $elements := default 3 .Site.Params.features.cols }}
-        {{ $features := sort .Site.Data.features "weight" }}
+        {{ $features := sort hugo.Data.features "weight" }}
 
         {{ $total_rows := div (len $features) $elements }}
 
