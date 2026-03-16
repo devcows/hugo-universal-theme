@@ -408,6 +408,11 @@ pluralizelisttitles = false
     latitude = "-12.043333"
     longitude = "-77.028333"
 
+    # Tracking & Verification (optional)
+    # facebook_domain_verification = "your-verification-code"
+    # meta_pixel_id = "your-meta-pixel-id"
+    # gtm_id = "GTM-XXXXXXX"
+
     # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
     style = "default"
 

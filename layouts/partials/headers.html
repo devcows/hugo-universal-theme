@@ -102,3 +102,8 @@
 {{ end }}
 <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
 {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
+
+<!-- Tracking & Verification -->
+{{ partial "facebook-verification.html" . }}
+{{ partial "meta-pixel-head.html" . }}
+{{ partial "gtm-head.html" . }}
