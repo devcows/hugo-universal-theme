@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ipsum on Universal</title><link>https://devcows.github.io/hugo-universal-theme/tags/ipsum/</link><description>Recent content in Ipsum on Universal</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://devcows.github.io/hugo-universal-theme/tags/ipsum/index.xml" rel="self" type="application/rss+xml"/><item><title>Migrate from Jekyll</title><link>https://devcows.github.io/hugo-universal-theme/blog/1/01/01/migrate-from-jekyll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://devcows.github.io/hugo-universal-theme/blog/1/01/01/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">Move static content to &lt;code>static&lt;/code>&lt;/h2>
-&lt;p>Jekyll has a rule that any directory not starting with &lt;code>_&lt;/code> will be copied as-is to the &lt;code>_site&lt;/code> output. Hugo keeps all static content under &lt;code>static&lt;/code>. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p>
-&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ipsum on Universal</title><link>https://devcows.github.io/hugo-universal-theme/tags/ipsum/</link><description>Recent content in Ipsum on Universal</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://devcows.github.io/hugo-universal-theme/tags/ipsum/index.xml" rel="self" type="application/rss+xml"/><item><title>Migrate from Jekyll</title><link>https://devcows.github.io/hugo-universal-theme/blog/1/01/01/migrate-from-jekyll/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://devcows.github.io/hugo-universal-theme/blog/1/01/01/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static"&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
  ▾ images/
  logo.png
-&lt;/code>&lt;/pre>
-&lt;p>should become&lt;/p>
-&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;should become&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
  ▾ static/
  ▾ images/
  logo.png
-&lt;/code>&lt;/pre>
-&lt;p>Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code>CNAME&lt;/code>) to be moved to &lt;code>static&lt;/code>.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>
