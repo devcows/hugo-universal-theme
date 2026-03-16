@@ -1,0 +1,64 @@
+baseURL = "/"
+
+# Hugo Scroll is a "one page" website, so we disable these kinds of pages
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "en"
+
+theme = "hugo-scroll"
+
+# Browser tab title
+title = "Shawn Carol Mind Move"
+
+# Enable emoji processing in Markdown
+enableEmoji = true
+
+[params]
+    # Favicon
+    favicon = "images/favicon.png"
+
+    # Social preview image
+    images = ["images/cover-image.jpg"]
+
+    # OpenGraph site name
+    title = "Shawn Carol Mind Move"
+
+    # Site description for meta tags
+    description = "Mystical Influencer — Guiding you toward inner transformation and expanded consciousness."
+
+    # No language menu needed (single language)
+    language_menu = false
+
+    # Copyright line
+    copyright = "© Shawn Carol Mind Move"
+
+    # Keep the design-by attribution
+    hidedesignbyline = false
+
+    # Image processing options
+    image_options = "webp q90 lanczos photo"
+
+    [params.footer]
+    showContactIcons = true
+    showFooterLinks = false
+
+    [params.meta]
+        keywords = "mystical, mindset, transformation, influencer, consciousness, coaching, spiritual"
+
+    [[params.contacts]]
+        label = "Email"
+        value = "hello@shawnmindmove.com"
+        url = "mailto:hello@shawnmindmove.com"
+        icon = "fa fa-envelope"
+
+    [[params.contacts]]
+        label = "Instagram"
+        value = "Instagram"
+        url = "https://instagram.com"
+        icon = "fa-brands fa-instagram"
+
+    [[params.contacts]]
+        label = "YouTube"
+        value = "YouTube"
+        url = "https://youtube.com"
+        icon = "fa-brands fa-youtube"

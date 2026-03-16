@@ -1,16 +1,37 @@
-/* your styles go here */
-/* Example site test */
+/* Shawn Mind Move — Minimalist Mystical Styling */
 
-.box-image-text .image {
-    min-height: 190px;
-    max-height: 190px;
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
 }
 
-.box-image-text .image img {
-    max-height: 190px;
-    margin: auto;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
+/* Soften the carousel text */
+#headerwrap .carousel .item .container h1,
+#headerwrap .carousel .item .container h2 {
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+/* Minimal feature boxes */
 .box-simple {
-    min-height: 230px;
+    min-height: 200px;
+}
+
+.box-simple i {
+    opacity: 0.85;
+}
+
+/* Subtle see-more section */
+section#call-to-action {
+    letter-spacing: 1px;
+}
+
+/* Clean footer */
+#footer {
+    letter-spacing: 0.5px;
 }

@@ -3,3 +3,4 @@ public/
 npm-debug.log
 /node_modules/*
 exampleSite/.hugo_build.lock
+.Rproj.user

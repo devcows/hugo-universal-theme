@@ -1,0 +1,613 @@
+:root {
+  /* === Cover / Landing area === */
+  --cover-text-color: #37501a;
+  /* Used for Landing screen menu buttons, but potentially usable for highlighting other things */
+  --highlight: #86c440;
+  --highlight-contrast: var(--cover-text-color);
+  /*inverse colors used for :hover */
+  --highlight-inverse: var(--cover-text-color);
+  --highlight-inverse-contrast: white;
+  /* visual guard around title and description, when the feature is enabled */
+  --cover-title-and-description-guard-bg-color: rgba(255, 255, 255, 0.6);
+  --cover-title-text-shadow: white 0px 0px 7px;
+  /* === sticky top/left navigation menus === */
+  --sticky-menu-text-color: #9fd067;
+  /* === Alternating content (post) sections  === */
+  /* Light section - text color */
+  --section-light-text-color: #3a4145;
+  /* Light section - background color */
+  --section-light-bg-color: #f2efe8;
+  /* Dark section - text color */
+  --section-dark-text-color: var(--section-light-bg-color);
+  /* Dark section - background color */
+  --section-dark-bg-color: #b80135;
+  /* Light&Dark section >quote. Suppressive color, compared to 'Light section - text color'*/
+  --section-uni-quote: grey;
+  /* Light&Dark section `code` a bit darker than 'Light section - background color' */
+  --section-uni-code-bg-color: #e0ded7;
+  /* === Single pages=== */
+  --single-page-text-color: var(--section-light-text-color);
+  --single-page-bg-color: var(--section-light-bg-color);
+  /* === Footer === */
+  --footer-color-background: #22343a;
+  --footer-color: #bbc7cc;
+  /* === Lists === */
+  /* define list element for unnumbered lists, leave empty for default list element */
+  --ul-li-icon: fa-asterisk; }
+
+body {
+  --color-text: var(--section-light-text-color);
+  --color-background: var(--section-light-bg-color); }
+
+/* ===== Cover =======*/
+#blog-logo {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  margin: 0 auto;
+  line-height: 0; }
+
+#site-head.withCenteredImage {
+  /* can't be used together with video */
+  background: var(--section-light-bg-color) no-repeat center center; }
+
+#site-head, #site-head.withCenteredImage {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0rem;
+  text-align: center;
+  color: var(--cover-text-color);
+  background-size: cover;
+  /* Big cover video at the landing area */
+  /** The arrow button to scroll to content */ }
+  #site-head video, #site-head.withCenteredImage video {
+    bottom: 0;
+    height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: -100; }
+  #site-head .title-and-description-guard, #site-head.withCenteredImage .title-and-description-guard {
+    margin: auto;
+    padding: 0.6em;
+    background-color: var(--cover-title-and-description-guard-bg-color);
+    border-radius: 25px;
+    width: fit-content; }
+  #site-head .blog-title, #site-head.withCenteredImage .blog-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    text-shadow: var(--cover-title-text-shadow); }
+  #site-head .blog-description, #site-head.withCenteredImage .blog-description {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Roboto Slab", serif;
+    letter-spacing: 0;
+    text-shadow: var(--cover-title-text-shadow); }
+  #site-head #site-languages, #site-head.withCenteredImage #site-languages {
+    text-align: right; }
+  #site-head #site-languages .btn-lang, #site-head.withCenteredImage #site-languages .btn-lang {
+    text-decoration: none;
+    background-color: var(--highlight);
+    color: var(--highlight-contrast);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    font-size: 70%;
+    margin: 0 0 0 0.7rem;
+    padding: 0.3rem 0.7rem;
+    position: relative;
+    text-transform: uppercase; }
+    #site-head #site-languages .btn-lang.active, #site-head #site-languages .btn-lang:hover, #site-head.withCenteredImage #site-languages .btn-lang.active, #site-head.withCenteredImage #site-languages .btn-lang:hover {
+      color: var(--highlight-inverse-contrast);
+      background-color: var(--highlight-inverse); }
+  #site-head a.btn, #site-head #site-languages .btn-lang, #site-head.withCenteredImage a.btn, #site-head.withCenteredImage #site-languages .btn-lang {
+    font-family: "Oswald", sans-serif; }
+  #site-head a.btn, #site-head.withCenteredImage a.btn {
+    text-decoration: none;
+    background-color: var(--highlight);
+    color: var(--highlight-contrast);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: lighter; }
+    #site-head a.btn:hover, #site-head.withCenteredImage a.btn:hover {
+      color: var(--highlight-inverse-contrast);
+      background-color: var(--highlight-inverse); }
+  #site-head #header-arrow, #site-head.withCenteredImage #header-arrow {
+    font-size: 140px;
+    margin: -10px auto;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    bottom: -120px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s; }
+    #site-head #header-arrow:hover, #site-head.withCenteredImage #header-arrow:hover {
+      color: inherit;
+      opacity: 0.9; }
+
+/* Left sticky menu */
+.fixed-nav {
+  background-color: var(--section-light-bg-color);
+  border-radius: 0 25px 20px 0;
+  padding: 1em 1.5em;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 40px;
+  z-index: 99999;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 130%;
+  font-weight: bold; }
+
+a.fn-item {
+  display: block;
+  cursor: pointer;
+  opacity: 0.7;
+  text-decoration: none; }
+  a.fn-item:hover, a.fn-item.active {
+    color: var(--sticky-menu-text-color); }
+  a.fn-item.active {
+    opacity: 1; }
+
+/* ========= Content ==========*/
+.post-title {
+  margin: 0; }
+  .post-title a {
+    text-decoration: none; }
+
+.post-holder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  position: relative;
+  /* The triangular parts between posts */ }
+  .post-holder.dark {
+    --color-text: var(--section-dark-text-color);
+    --color-background: var(--section-dark-bg-color);
+    background-color: var(--section-dark-bg-color);
+    color: var(--section-dark-text-color); }
+    .post-holder.dark hr {
+      border-color: var(--section-dark-text-color); }
+    .post-holder.dark .post-after {
+      left: unset;
+      right: 6%;
+      border-top-color: var(--section-dark-bg-color); }
+  .post-holder .post-after {
+    position: absolute;
+    bottom: -40px;
+    z-index: 1;
+    left: 6%;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 50px solid var(--color-background);
+    border-radius: 25px; }
+
+/* Every post, on every page, gets this style on its <article> tag
+  Not inside the post holder as this also applies for single pages
+*/
+.post {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  margin: 0rem auto;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  height: 70%;
+  word-break: break-word;
+  hyphens: auto; }
+
+/* ======= Single pages =========== */
+.page-template {
+  background-color: var(--single-page-bg-color);
+  color: var(--single-page-text-color);
+  min-height: calc(100vh - 2em); }
+  .page-template .post {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-bottom: 1em; }
+  .page-template .post:after {
+    display: none; }
+  .page-template .post-header {
+    padding: 60px 0; }
+
+.post-content img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto; }
+
+/** ==========  Site footer ============ */
+.site-footer {
+  background: var(--footer-color-background);
+  color: var(--footer-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  position: relative;
+  margin: 0rem 0 0 0;
+  padding: 1rem 0;
+  line-height: 1.5em;
+  text-align: center; }
+
+.site-footer a {
+  color: var(--footer-color);
+  text-decoration: underline; }
+
+.site-footer a:hover {
+  color: var(--sticky-menu-text-color); }
+
+/* Footer Icons */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 8px; }
+
+/* Footer Links */
+.site-footer .links {
+  text-align: center; }
+  .site-footer .links ol {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0; }
+  .site-footer .links li {
+    margin-left: unset; }
+
+html {
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
+
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  line-height: 1.6em;
+  color: var(--section-light-text-color); }
+
+::-moz-selection {
+  color: #222;
+  background: #d6edff;
+  text-shadow: none; }
+
+::selection {
+  color: #222;
+  background: #d6edff;
+  text-shadow: none; }
+
+/** =========== Headings =========== */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif; }
+
+h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 120%;
+  margin-top: 0;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 0%; }
+
+h1 {
+  font-size: 5rem;
+  line-height: 1.2em;
+  letter-spacing: -2px;
+  text-indent: -3px; }
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  text-indent: -2px; }
+
+h3 {
+  font-size: 3.5rem; }
+
+h4 {
+  font-size: 3rem; }
+
+h5 {
+  font-size: 2.5rem; }
+
+h6 {
+  font-size: 2rem; }
+
+p {
+  margin: 1em 0; }
+
+/** ======== Links ========= */
+a {
+  color: inherit;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s; }
+  a:hover {
+    color: var(--sticky-menu-text-color); }
+  a.fa {
+    text-decoration: none; }
+
+/** ======== Lists ====================== */
+dl {
+  margin: 1.6em 0; }
+  dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em; }
+  dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em; }
+
+ul, ol {
+  margin: 1em 0; }
+  ul ol, ul ul, ol ol, ol ul {
+    margin: 0.4em 0; }
+
+li {
+  margin-left: 30px; }
+
+/** ======== Content semantics ============= */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid var(--color-text);
+  margin: 1.5em 0;
+  padding: 0; }
+
+/** Helper to be inserted by JS before quotations*/
+.quo {
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 20px; }
+
+blockquote {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0 1em -2.2em;
+  padding: 0 0 0 1em;
+  color: var(--section-uni-quote); }
+  blockquote p {
+    margin: 0.8em 0; }
+  blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #ccc; }
+    blockquote small:before {
+      content: "\2014 \00A0"; }
+  blockquote cite {
+    font-weight: bold; }
+    blockquote cite a {
+      font-weight: normal; }
+
+mark {
+  background-color: var(--sticky-menu-text-color);
+  filter: brightness(125%); }
+
+code, tt {
+  color: var(--section-light-text-color);
+  background-color: var(--section-uni-code-bg-color);
+  border-radius: 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.75em;
+  padding: 3px 5px; }
+
+code {
+  color: var(--section-light-text-color);
+  background-color: var(--section-uni-code-bg-color);
+  border-radius: 3px;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.75em;
+  padding: 3px 5px; }
+
+pre {
+  background: var(--section-light-text-color);
+  color: #e2e2e2;
+  border: 1px solid #343434;
+  border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: Inconsolata, monospace, sans-serif;
+  font-size: 0.9em;
+  margin: 1.6em 0;
+  padding: 10px;
+  white-space: pre;
+  overflow-x: scroll;
+  width: 100%; }
+  pre code, pre tt {
+    color: inherit;
+    background: transparent;
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    border: none;
+    padding: 0; }
+
+kbd {
+  color: var(--section-light-text-color);
+  background: var(--section-uni-code-bg-color);
+  border: var(--section-light-text-color) 1px solid;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+  padding: 1px 8px;
+  text-shadow: #fff 0 1px 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset; }
+
+/** ======== Tables ========= */
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-spacing: 0;
+  margin: 1.6em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent; }
+  table th,
+  table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top; }
+  table thead th,
+  table thead td {
+    border-bottom: 1px solid var(--color-text); }
+  table tbody > tr:nth-child(even) {
+    background-color: #fff5;
+    background-blend-mode: lighten; }
+  table.plain tbody > tr:nth-child(odd) > td, table.plain tbody > tr:nth-child(odd) > th {
+    background: transparent; }
+
+/** ======== Github integration ========= */
+.gist table {
+  margin: 0;
+  font-size: 1.4rem; }
+
+.gist .line-number {
+  min-width: 25px;
+  font-size: 1.1rem; }
+
+/* ==========================================================================
+   8. Media Queries - Smaller than 1130px
+   ========================================================================== */
+@media only screen and (max-width: 1130px) {
+  /* makes it a top sticky menu */
+  .fixed-nav {
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    z-index: 99999;
+    background: var(--color-background);
+    border-radius: 0;
+    text-align: center;
+    padding: 4px; }
+  a.fn-item {
+    display: inline;
+    margin-left: 10px; }
+  blockquote {
+    margin-left: 0; }
+  .post-holder {
+    padding-top: 20px; }
+  #site-head {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 240px;
+    padding: 15% 0;
+    height: 100%;
+    margin-bottom: 0rem; }
+  .blog-title {
+    font-size: 4rem;
+    letter-spacing: -1px; }
+  .blog-description {
+    font-size: 2.2rem;
+    line-height: 1.5em; }
+  .post {
+    font-size: 0.9em;
+    line-height: 1.6em; }
+  /* skip the top menu when scrolling */
+  .post-holder .post {
+    scroll-margin-top: 48px; }
+  .post-template .post {
+    padding-bottom: 1rem; }
+  .post-template .post-header {
+    padding: 40px 0; }
+  h1 {
+    font-size: 4.8rem;
+    text-indent: -2px; }
+  h2 {
+    font-size: 3.8rem; }
+  h3 {
+    font-size: 3.3rem; }
+  h4 {
+    font-size: 2.8rem; } }
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 500px
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+  .post-holder {
+    padding-top: 20px; }
+  #blog-logo {
+    max-height: 80px; }
+  .inner,
+  .pagination {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px; }
+  .post {
+    width: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 0.8em;
+    line-height: 1.6em; }
+  #site-head {
+    padding: 10% 0;
+    height: 65%; }
+  #header-arrow {
+    display: none; }
+  a.btn {
+    margin-top: 10px; }
+  .blog-title {
+    font-size: 3rem; }
+  .blog-description {
+    font-size: 2.2rem; }
+  h1,
+  h2 {
+    font-size: 3rem;
+    line-height: 1.1em;
+    letter-spacing: -1px; }
+  h3 {
+    font-size: 2.8rem; }
+  h4 {
+    font-size: 2.3rem; }
+  .post-template .post {
+    padding-bottom: 0; }
+  .post-template .post-header {
+    padding: 30px 0; }
+  .site-footer {
+    font-size: 1.1rem; } }

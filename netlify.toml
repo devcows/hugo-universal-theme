@@ -1,0 +1,6 @@
+[build]
+  command = "cd exampleSite && mkdir -p themes && ln -sf ../../themes/hugo-scroll themes/hugo-scroll && hugo -b $URL"
+  publish = "exampleSite/public"
+
+[build.environment]
+  HUGO_VERSION = "0.145.0"
