@@ -85,7 +85,7 @@ For more information read the official [setup guide](https://gohugo.io/installat
 
 After installing the Universal theme successfully, we recommend you to take a look at the [exampleSite](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite) directory. You will find a working Hugo site configured with the Universal theme that you can use as a starting point for your site.
 
-First, let's take a look at the [config.toml](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite/config.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
+First, let's take a look at the [hugo.toml](//github.com/devcows/hugo-universal-theme/tree/master/exampleSite/hugo.toml). It will be useful to learn how to customize your site. Feel free to play around with the settings.
 
 
 ### Language
@@ -159,7 +159,7 @@ id = "contact"
 +++
 ```
 
-You can enable or disable the Google Maps widget on the contact page by setting `params.enableGoogleMaps` to `true` or `false` in `config.toml`. Make sure to also provide a valid `googleMapsApiKey` if you decide to enable the widget – otherwise it likely won't work. By clicking on the pin, Google Maps opens a route description with the coordinates `latitude` and `longitude`. Additionally, you can define the `direction` if you want to have another destination for the directions or the Google Maps entry of your company. If `enableGoogleMaps` is set to `false` on the other hand, the subsequent `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored.
+You can enable or disable the Google Maps widget on the contact page by setting `params.enableGoogleMaps` to `true` or `false` in `hugo.toml`. Make sure to also provide a valid `googleMapsApiKey` if you decide to enable the widget – otherwise it likely won't work. By clicking on the pin, Google Maps opens a route description with the coordinates `latitude` and `longitude`. Additionally, you can define the `direction` if you want to have another destination for the directions or the Google Maps entry of your company. If `enableGoogleMaps` is set to `false` on the other hand, the subsequent `googleMapsApiKey`, `latitude`, `longitude` and `direction` will be ignored.
 
 Example configuration:
 
@@ -175,7 +175,7 @@ Example configuration:
 
 Since Hugo sites are static, the contact form uses [Formspree](https://formspree.io/) as a proxy. The form makes a POST request to their servers to send the actual email. Formspree and the submissions for the free plan are limited, [checkout the plans for details](https://formspree.io/plans).
 
-To enable the form in the contact page, just type your Formspree email in the `config.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
+To enable the form in the contact page, just type your Formspree email in the `hugo.toml` file, and specify whether to use ajax(paid) to send request or plain HTTP POST(free). Also there is the possibility to enable a captcha using recaptcha.
 
 ```toml
 [params]
@@ -406,7 +406,7 @@ href: "https://devcows.github.io/hugo-universal-theme/"
 
 The `weight` field determines the position of the entry. `title` is a text-only field. The `description` field accepts HTML code. The `image` must contain the relative path to the image inside the `static` directory. The optional `href` field contains a relative or absolute url that the user will be redirected to when clicking the carousel (specific to each carousel item).
 
-Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `config.toml` file.
+Once the carousel is configured, some options can be defined like: auto play, speed, etc. in the `hugo.toml` file.
 
 ```toml
 [params.carouselHomepage]
@@ -451,7 +451,7 @@ The meaning of the individual YAML keys is as follows:
 | `url` | An optional URL the feature icon should point to; if specified, the icon will become a clickable hyperlink |
 | `description` | A short text below the title text to describe the feature; Markdown is supported |
 
-Once you have completed your features, enable them in the `config.toml` file. Also the number of elements per row can be defined, by default is 3 (choose a divisor of 12 like 2, 3, 4 or 6).
+Once you have completed your features, enable them in the `hugo.toml` file. Also the number of elements per row can be defined, by default is 3 (choose a divisor of 12 like 2, 3, 4 or 6).
 
 ```toml
 [params.features]
@@ -604,9 +604,9 @@ In contact section there is a button to redirect to contact page, there is the p
 
 ### Meta tags
 
-The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `config.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
+The following [HTML metadata](https://www.w3schools.com/tags/tag_meta.asp) can be set for every page. While the default value for some of them can be defined in `hugo.toml`, all of these properties can also be set through the respective [Hugo front matter variables](https://gohugo.io/content-management/front-matter/#front-matter-variables):
 
-| HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `config.toml` |
+| HTML meta `name`/`property`                              | Hugo front matter variable | Default variable in `hugo.toml` |
 | :------------------------------------------------------- | :------------------------- | :-------------------------------- |
 | `article:author`                                         | `facebook_author`          | -                                 |
 | `article:publisher`                                      | `facebook_site`            | `facebook_site`                   |
@@ -623,7 +623,7 @@ Besides, certain [Open Graph](https://ogp.me/) metadata is automatically set:
 - `article:published_time`, `article:modified_time`, `og:updated_time` and `article:expiration_time` are set based on [Hugo's (predefined) front matter variables `date`, `publishDate`, `lastmod` and `expiryDate`](https://gohugo.io/content-management/front-matter/#predefined).
 - `article:section` and `article:tag` are set based on [Hugo's `categories` and `tags` taxonomies](https://gohugo.io/content-management/taxonomies/#default-taxonomies). Since there can only be one `article:section`, only the first element of the `categories` array is used as `article:section`.
 
-You can set default values for all pages in the `config.toml` file as below:
+You can set default values for all pages in the `hugo.toml` file as below:
 
 ```toml
 [params]
@@ -649,7 +649,7 @@ The resulting HTML will be the following:
 <meta name="twitter:site" content="@GoHugoIO">
 ```
 
-You can also override the default values from the `config.toml` by setting the respective keys in the individual pages front matter. As an example, here's the front matter from the [`faq.md` file](exampleSite/content/faq.md) in the [`exampleSite` directory](exampleSite):
+You can also override the default values from the `hugo.toml` by setting the respective keys in the individual pages front matter. As an example, here's the front matter from the [`faq.md` file](exampleSite/content/faq.md) in the [`exampleSite` directory](exampleSite):
 
 ```yaml
 +++
