@@ -247,6 +247,10 @@ ul.list-style-none {
   color: #eeeeee;
   padding: 10px 0;
 }
+#top .row {
+  display: flex;
+  align-items: center;
+}
 #top p {
   margin: 0;
   font-size: 12px;
