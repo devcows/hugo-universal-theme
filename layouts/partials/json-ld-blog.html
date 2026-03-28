@@ -1,0 +1,30 @@
+{{- $description := default .Site.Params.defaultDescription .Description | markdownify | plainify -}}
+{{- $image := .Params.banner | default .Site.Params.default_sharing_image -}}
+{{- $baseURL := .Site.BaseURL | strings.TrimRight "/" -}}
+{{- $orgName := .Site.Title -}}
+{{- with .Site.Params.organization }}{{ $orgName = .name | default $orgName }}{{ end -}}
+{{- $logo := .Site.Params.logo | default "" -}}
+{{- with .Site.Params.organization }}{{ $logo = .logo | default $logo }}{{ end -}}
+
+{{- $jsonLd := dict
+  "@context" "https://schema.org"
+  "@type" "BlogPosting"
+  "headline" .Title
+  "description" $description
+  "url" .Permalink
+  "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "author" (dict "@type" "Organization" "name" $orgName "url" $baseURL)
+  "publisher" (dict "@type" "Organization" "name" $orgName "logo" (dict "@type" "ImageObject" "url" (printf "%s/%s" $baseURL $logo)))
+-}}
+
+{{- with .Lastmod -}}
+{{- $jsonLd = merge $jsonLd (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) -}}
+{{- end -}}
+
+{{- if $image -}}
+{{- $jsonLd = merge $jsonLd (dict "image" (printf "%s/%s" $baseURL $image)) -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $jsonLd | jsonify | safeJS }}
+</script>

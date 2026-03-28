@@ -102,3 +102,7 @@
 {{ end }}
 <meta name="twitter:description" content="{{ $description_plain | truncate 200 }}">
 {{ with .Param "twitter_author" }}<meta name="twitter:creator" content="@{{ . }}">{{ end }}
+
+<!-- JSON-LD Structured Data -->
+{{ if and (eq .Section "blog") .IsPage }}{{ partial "json-ld-blog.html" . }}{{ end }}
+{{ if .Params.faq }}{{ partial "json-ld-faq.html" . }}{{ end }}
